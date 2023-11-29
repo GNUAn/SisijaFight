@@ -405,14 +405,6 @@ CMakeFiles\SisijaFight.dir\lib\soloud\src\backend\openal\soloud_openal_dll.c.obj
 CMakeFiles\SisijaFight.dir\lib\soloud\src\backend\portaudio\soloud_portaudio_dll.c.obj
 CMakeFiles\SisijaFight.dir\lib\soloud\src\backend\sdl\soloud_sdl1_dll.c.obj
 CMakeFiles\SisijaFight.dir\lib\soloud\src\backend\sdl\soloud_sdl2_dll.c.obj
-CMakeFiles\SisijaFight.dir\lib\enet\callbacks.c.obj
-CMakeFiles\SisijaFight.dir\lib\enet\compress.c.obj
-CMakeFiles\SisijaFight.dir\lib\enet\host.c.obj
-CMakeFiles\SisijaFight.dir\lib\enet\list.c.obj
-CMakeFiles\SisijaFight.dir\lib\enet\packet.c.obj
-CMakeFiles\SisijaFight.dir\lib\enet\peer.c.obj
-CMakeFiles\SisijaFight.dir\lib\enet\protocol.c.obj
-CMakeFiles\SisijaFight.dir\lib\enet\win32.c.obj
 CMakeFiles\SisijaFight.dir\Game\Audio\Backend.cpp.obj
 CMakeFiles\SisijaFight.dir\Game\Session.cpp.obj
 CMakeFiles\SisijaFight.dir\Game\Player\Player.cpp.obj
