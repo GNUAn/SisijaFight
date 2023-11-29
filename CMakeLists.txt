@@ -17,11 +17,9 @@ file(GLOB_RECURSE IRR_SRC "lib/Irrlicht/*.cpp")
 file(GLOB_RECURSE IRR_SRC_C "lib/Irrlicht/*.c")
 file(GLOB_RECURSE SOLOUD_SRC "lib/soloud/*.cpp")
 file(GLOB_RECURSE SOLOUD_SRC_C "lib/soloud/*.c")
-file(GLOB_RECURSE ENET_SRC_C "lib/enet/*.c")
 
 # Pfad zur JPEG-Bibliothek innerhalb von Irrlicht
 set(JPEG_LIB_PATH "lib/Irrlicht/jpeglib")
-set(ENET_LIB_PATH "lib/enet")
 
 # Ausschlussregeln für Windows
 if(WIN32)
@@ -30,9 +28,6 @@ if(WIN32)
         "${CMAKE_CURRENT_SOURCE_DIR}/${JPEG_LIB_PATH}/jmemdos.c"
         "${CMAKE_CURRENT_SOURCE_DIR}/${JPEG_LIB_PATH}/jmemname.c"
         "${CMAKE_CURRENT_SOURCE_DIR}/${JPEG_LIB_PATH}/jmemnobs.c"
-    )
-    list(REMOVE_ITEM ENET_SRC_C 
-        "${CMAKE_CURRENT_SOURCE_DIR}/${ENET_LIB_PATH}/unix.c"
     )
 endif()
 
@@ -53,11 +48,6 @@ if(UNIX AND NOT APPLE)
         # Füge weitere nicht benötigte Dateien für Unix/Linux hinzu
     )
 endif()
-if(UNIX)
-    list(REMOVE_ITEM ENET_SRC_C 
-        "${CMAKE_CURRENT_SOURCE_DIR}/${ENET_LIB_PATH}/win32.c"
-    )
-endif()
 
 include_directories("lib/Irrlicht/include")
 include_directories("lib/Irrlicht/aesGladman")
@@ -67,7 +57,7 @@ include_directories("lib/Irrlicht/libpng")
 include_directories("lib/Irrlicht/lzma")
 include_directories("lib/Irrlicht/zlib")
 include_directories("lib/soloud/include")
-include_directories("lib/enet/include")
+include_directories("lib/enet")
 include_directories("lib")
 
 add_executable (SisijaFight    "main.cpp" "Gamemodes/ClassicFight.cpp" "SGE/SisijaGraphicsUnitSubsystem.cpp" "SGE/SGU-S.h" "lib/json.hpp" ${IRR_SRC} ${IRR_SRC_C} ${SOLOUD_SRC} ${SOLOUD_SRC_C} ${ENET_SRC_C} "Game/Audio/Backend.h" "Game/Audio/Backend.cpp" "globals.h" "Game/Session.h" "Game/Session.cpp" "Game/EventReceivers/InGameEVR.h"  "Game/EventReceivers/LobbyEVR.h"  "Game/GUI/GUI.h" "Gamemodes/Gamemodes.h" "Network/NetworkHandler.h" "Game/Player/Player.h" "Game/Player/Player.cpp" "Game/World/World.h" "Game/World/World.cpp" "Game/EventReceivers/InGameEVR.cpp" "Game/EventReceivers/LobbyEVR.cpp")

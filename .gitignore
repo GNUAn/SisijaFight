@@ -29,3 +29,6 @@
 # VS files
 *.vsidx
 *.opendb
+*.db
+*.db-wal
+*.sqlite

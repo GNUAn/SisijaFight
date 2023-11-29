@@ -1,6 +1,8 @@
 #include "NetworkHandler.h"
 #include <json.hpp>
 #include "../globals.h"
+#define ENET_IMPLEMENTATION
+#include <enet.h>
 
 ENetPeer* peer;
 
