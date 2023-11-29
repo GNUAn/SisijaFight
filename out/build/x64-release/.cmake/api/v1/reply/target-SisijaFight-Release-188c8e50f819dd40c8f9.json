@@ -30,47 +30,11 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 73,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 77,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 62,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
-				"file" : 0,
 				"line" : 63,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 64,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 65,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 66,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
+				"command" : 1,
 				"file" : 0,
 				"line" : 67,
 				"parent" : 0
@@ -78,31 +42,67 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 68,
+				"line" : 52,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 69,
+				"line" : 53,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 70,
+				"line" : 54,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 71,
+				"line" : 55,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 57,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 58,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 59,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 60,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 61,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 80,
+				"line" : 70,
 				"parent" : 0
 			}
 		]
@@ -159,7 +159,7 @@
 				},
 				{
 					"backtrace" : 11,
-					"path" : "C:/Users/Lucas Gola/Desktop/Sisija/SisijaFight/SisijaFight/lib/enet/include"
+					"path" : "C:/Users/Lucas Gola/Desktop/Sisija/SisijaFight/SisijaFight/lib/enet"
 				},
 				{
 					"backtrace" : 12,
@@ -480,12 +480,12 @@
 				400,
 				401,
 				402,
-				418,
-				421,
-				428,
-				430,
-				431,
-				432
+				410,
+				413,
+				420,
+				422,
+				423,
+				424
 			]
 		},
 		{
@@ -538,7 +538,7 @@
 				},
 				{
 					"backtrace" : 11,
-					"path" : "C:/Users/Lucas Gola/Desktop/Sisija/SisijaFight/SisijaFight/lib/enet/include"
+					"path" : "C:/Users/Lucas Gola/Desktop/Sisija/SisijaFight/SisijaFight/lib/enet"
 				},
 				{
 					"backtrace" : 12,
@@ -651,15 +651,7 @@
 				405,
 				406,
 				407,
-				408,
-				409,
-				410,
-				411,
-				412,
-				413,
-				414,
-				415,
-				416
+				408
 			]
 		}
 	],
@@ -1103,20 +1095,12 @@
 				406,
 				407,
 				408,
-				409,
 				410,
-				411,
-				412,
 				413,
-				414,
-				415,
-				416,
-				418,
-				421,
-				428,
-				430,
-				431,
-				432
+				420,
+				422,
+				423,
+				424
 			]
 		},
 		{
@@ -1125,16 +1109,16 @@
 			[
 				3,
 				4,
+				409,
+				411,
+				412,
+				414,
+				415,
+				416,
 				417,
+				418,
 				419,
-				420,
-				422,
-				423,
-				424,
-				425,
-				426,
-				427,
-				429
+				421
 			]
 		}
 	],
@@ -3590,54 +3574,6 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
 			"path" : "lib/soloud/src/backend/sdl/soloud_sdl2_dll.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 1,
-			"path" : "lib/enet/callbacks.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 1,
-			"path" : "lib/enet/compress.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 1,
-			"path" : "lib/enet/host.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 1,
-			"path" : "lib/enet/list.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 1,
-			"path" : "lib/enet/packet.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 1,
-			"path" : "lib/enet/peer.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 1,
-			"path" : "lib/enet/protocol.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 1,
-			"path" : "lib/enet/win32.c",
 			"sourceGroupIndex" : 0
 		},
 		{

@@ -1,7 +1,8 @@
 #pragma once
 #include <thread>
 #include <string>
-#include <enet/enet.h>
+
+class EnetPacket;
 
 class Network {
 public:
