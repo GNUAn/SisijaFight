@@ -2,7 +2,7 @@
 #include <thread>
 #include <string>
 
-class EnetPacket;
+class ENetPacket;
 
 class Network {
 public:
