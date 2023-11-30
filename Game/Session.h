@@ -2,7 +2,6 @@
 #include <irrlicht.h>
 #include "GUI/GUI.h"
 #include "../Gamemodes/Gamemodes.h"
-#include "../Network/NetworkHandler.h"
 
 using namespace irr;
 using namespace gui;
@@ -10,6 +9,8 @@ using namespace core;
 using namespace video;
 
 extern bool game;
+
+class Network;
 
 enum S_EVR_CODE {
 	S_EVR_GAME, S_EVR_LOBBY
