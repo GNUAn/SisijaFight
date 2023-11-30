@@ -1,8 +1,9 @@
+#define ENET_IMPLEMENTATION
+#include <enet.h>
 #include "NetworkHandler.h"
 #include <json.hpp>
 #include "../globals.h"
-#define ENET_IMPLEMENTATION
-#include <enet.h>
+#include <iostream>
 
 ENetPeer* peer;
 
@@ -20,7 +21,7 @@ void Network::processRequest(ENetPacket* packet) {
 			clientID = json["CLIENTID"].get<int>();
 			std::cout << "Client ID: " << clientID << std::endl;
 		}
-		session.gamemode().hanldeNetwork(json);
+		Session->gamemode()->handleNetwork(json);
 	}
 	catch (const nlohmann::json::parse_error& e) {
 		std::cerr << "JSON Parsing Error: " << e.what() << std::endl;

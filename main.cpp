@@ -34,6 +34,10 @@ int main() {
 
 	gSoloud.init();
 
+	Sound s;
+	s.loadSound("test.ogg", true);
+	s.play();
+
 	while (device->run()) {
 		driver->beginScene(true, true, SColor(0, 255, 0, 0));
 		smgr->drawAll();

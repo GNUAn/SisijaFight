@@ -26,7 +26,7 @@
 	"objects" : 
 	[
 		{
-			"jsonFile" : "codemodel-v2-9cc0fd953edca6480890.json",
+			"jsonFile" : "codemodel-v2-8e4b8aa8aff21db4b72f.json",
 			"kind" : "codemodel",
 			"version" : 
 			{
@@ -35,7 +35,7 @@
 			}
 		},
 		{
-			"jsonFile" : "cache-v2-ade6369758a766a8ea9f.json",
+			"jsonFile" : "cache-v2-2e4b8736094082d79206.json",
 			"kind" : "cache",
 			"version" : 
 			{
@@ -90,7 +90,7 @@
 				"responses" : 
 				[
 					{
-						"jsonFile" : "cache-v2-ade6369758a766a8ea9f.json",
+						"jsonFile" : "cache-v2-2e4b8736094082d79206.json",
 						"kind" : "cache",
 						"version" : 
 						{
@@ -108,7 +108,7 @@
 						}
 					},
 					{
-						"jsonFile" : "codemodel-v2-9cc0fd953edca6480890.json",
+						"jsonFile" : "codemodel-v2-8e4b8aa8aff21db4b72f.json",
 						"kind" : "codemodel",
 						"version" : 
 						{
@@ -119,6 +119,70 @@
 					{
 						"jsonFile" : "toolchains-v1-33d97187a3a53c5d7115.json",
 						"kind" : "toolchains",
+						"version" : 
+						{
+							"major" : 1,
+							"minor" : 0
+						}
+					}
+				]
+			}
+		},
+		"client-vscode" : 
+		{
+			"query.json" : 
+			{
+				"requests" : 
+				[
+					{
+						"kind" : "cache",
+						"version" : 2
+					},
+					{
+						"kind" : "codemodel",
+						"version" : 2
+					},
+					{
+						"kind" : "toolchains",
+						"version" : 1
+					},
+					{
+						"kind" : "cmakeFiles",
+						"version" : 1
+					}
+				],
+				"responses" : 
+				[
+					{
+						"jsonFile" : "cache-v2-2e4b8736094082d79206.json",
+						"kind" : "cache",
+						"version" : 
+						{
+							"major" : 2,
+							"minor" : 0
+						}
+					},
+					{
+						"jsonFile" : "codemodel-v2-8e4b8aa8aff21db4b72f.json",
+						"kind" : "codemodel",
+						"version" : 
+						{
+							"major" : 2,
+							"minor" : 6
+						}
+					},
+					{
+						"jsonFile" : "toolchains-v1-33d97187a3a53c5d7115.json",
+						"kind" : "toolchains",
+						"version" : 
+						{
+							"major" : 1,
+							"minor" : 0
+						}
+					},
+					{
+						"jsonFile" : "cmakeFiles-v1-85aba4a71ec447bece4b.json",
+						"kind" : "cmakeFiles",
 						"version" : 
 						{
 							"major" : 1,

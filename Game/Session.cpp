@@ -1,4 +1,5 @@
 #include "Session.h"
+#include "../Network/NetworkHandler.h"
 
 bool game = false;
 
