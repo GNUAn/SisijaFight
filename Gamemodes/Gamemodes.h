@@ -7,6 +7,8 @@
 class GameMode {
 public:
 	void startGame(World* world, Player* mainPlayer);
-	void handleNetwork(nlohmann::json input);
+	void handleNetwork(nlohmann::json input) {
+
+	}
 	void createGUI(SGUI* env);
 };
