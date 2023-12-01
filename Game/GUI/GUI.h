@@ -9,6 +9,19 @@ struct LobbyReturnCode {
 	std::string serverAddress;
 };
 
-class Lobby {
-	void show();
+class GUIPage {
+public:
+	void draw(IrrlichtDevice* dev);
+	bool isFinished();
+};
+class GUIClass {
+public:
+	void draw(IrrlichtDevice* dev);
+};
+
+class Lobby : public GUIClass {
+public:
+	void draw(IrrlichtDevice* dev);
+private:
+
 };

@@ -6,4 +6,5 @@ bool GUIEventReceiver::OnEvent(const SEvent& event) {
 		subsystem->handle(event.GUIEvent);
 		return true;
 	}
+	return false;
 }

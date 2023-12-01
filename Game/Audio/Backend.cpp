@@ -1,8 +1,17 @@
 #include "Backend.h"
 
-
 // Globale Instanz der SoLoud-Engine
 SoLoud::Soloud gSoloud;
+
+Sound::Sound() : mIsStreamed(false), mIsLooping(false) {
+    // Initialisiere die globale SoLoud-Engine
+    gSoloud.init();
+}
+
+Sound::~Sound() {
+    // Aufräumarbeiten
+    stop();
+}
 
 void Sound::loadSound(const std::string& filename, bool streamed) {
     if (streamed) {
@@ -22,6 +31,10 @@ void Sound::play() {
     else {
         mHandle = gSoloud.play(mSound);
     }
+
+    if (mIsLooping) {
+        gSoloud.setLooping(mHandle, true);
+    }
 }
 
 void Sound::stop() {
@@ -34,4 +47,11 @@ void Sound::setVolume(float volume) {
 
 void Sound::setPosition(float x, float y, float z) {
     gSoloud.set3dSourcePosition(mHandle, x, y, z);
+}
+
+void Sound::setLooping(bool loop) {
+    mIsLooping = loop;
+    if (mHandle) {
+        gSoloud.setLooping(mHandle, loop);
+    }
 }

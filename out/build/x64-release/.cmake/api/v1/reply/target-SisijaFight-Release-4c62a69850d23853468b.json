@@ -479,7 +479,9 @@
 				421,
 				423,
 				424,
-				425
+				425,
+				426,
+				428
 			]
 		},
 		{
@@ -1098,7 +1100,9 @@
 				421,
 				423,
 				424,
-				425
+				425,
+				426,
+				428
 			]
 		},
 		{
@@ -1116,7 +1120,8 @@
 				417,
 				418,
 				420,
-				422
+				422,
+				427
 			]
 		}
 	],
@@ -3664,6 +3669,23 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Game/EventReceivers/LobbyEVR.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Game/GUI/Lobby.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Tools/GUITools.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Tools/GUITools.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
