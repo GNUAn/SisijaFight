@@ -60,7 +60,7 @@ include_directories("lib/soloud/include")
 include_directories("lib/enet")
 include_directories("lib")
 
-add_executable (SisijaFight "main.cpp" "Gamemodes/ClassicFight.cpp" "SGE/SisijaGraphicsUnitSubsystem.cpp" "SGE/SGU-S.h" "lib/json.hpp" ${IRR_SRC} ${IRR_SRC_C} ${SOLOUD_SRC} ${SOLOUD_SRC_C} ${ENET_SRC_C} "Game/Audio/Backend.h" "Game/Audio/Backend.cpp" "globals.h" "Game/Session.h" "Game/Session.cpp" "Game/EventReceivers/InGameEVR.h"  "Game/EventReceivers/LobbyEVR.h"  "Game/GUI/GUI.h" "Gamemodes/Gamemodes.h" "Network/NetworkHandler.h" "Network/NetworkHandler.cpp" "Game/Player/Player.h" "Game/Player/Player.cpp" "Game/World/World.h" "Game/World/World.cpp" "Game/EventReceivers/InGameEVR.cpp" "Game/EventReceivers/LobbyEVR.cpp")
+add_executable (SisijaFight "main.cpp" "Gamemodes/ClassicFight.cpp" "SGE/SisijaGraphicsUnitSubsystem.cpp" "SGE/SGU-S.h" "lib/json.hpp" ${IRR_SRC} ${IRR_SRC_C} ${SOLOUD_SRC} ${SOLOUD_SRC_C} ${ENET_SRC_C} "Game/Audio/Backend.h" "Game/Audio/Backend.cpp" "globals.h" "Game/Session.h" "Game/Session.cpp" "Game/EventReceivers/InGameEVR.h"  "Game/EventReceivers/LobbyEVR.h"  "Game/GUI/GUI.h" "Gamemodes/Gamemodes.h" "Network/NetworkHandler.h" "Network/NetworkHandler.cpp" "Game/Player/Player.h" "Game/Player/Player.cpp" "Game/World/World.h" "Game/World/World.cpp" "Game/EventReceivers/InGameEVR.cpp" "Game/EventReceivers/LobbyEVR.cpp"  "Game/GUI/Lobby.cpp" "Tools/GUITools.h" "Tools/GUITools.cpp")
 
 # Finde die notwendigen Bibliotheken je nach Betriebssystem
 if(WIN32)
