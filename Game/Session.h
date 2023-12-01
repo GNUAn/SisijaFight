@@ -18,6 +18,9 @@ enum S_EVR_CODE {
 
 class SFSession {
 public:
+	SFSession(IrrlichtDevice* dev) : _device(dev) {
+
+	}
 	void startGame(LobbyReturnCode& c);
 	GameMode* gamemode();
 	Lobby* lobby();
@@ -30,4 +33,5 @@ private:
 	World* _world;
 	Player* _mainplayer;
 	IEventReceiver* _evr;
+	IrrlichtDevice* _device;
 };

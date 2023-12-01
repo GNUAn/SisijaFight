@@ -1,16 +1,20 @@
 #include "SGE/SGU-S.h"
 #include "globals.h"
 #include "Game/Audio/Backend.h"
+#include <thread>
+#include "Tools/GUITools.h"
 
 SFSession* Session;
 SGES* GEngine;
+SGUI* GUIEngine;
+dimension2du screenSize;
 
 int main() {
 	SIrrlichtCreationParameters params = SIrrlichtCreationParameters();
 	params.AntiAlias = true;
 	params.AntiAlias = 24;
 	params.DriverType = EDT_OPENGL;
-	params.WindowSize = dimension2d<u32>(800, 700);
+	params.WindowSize = dimension2d<u32>(1000, 900);
 	params.Bits = 32;
 	params.Doublebuffer = true;
 	params.Stereobuffer = true;
@@ -24,26 +28,34 @@ int main() {
 
 	device->setWindowCaption(L"SisijaFight");
 	device->setResizable(true);
+	device->maximizeWindow();
 
 	IVideoDriver* driver = device->getVideoDriver();
 	ISceneManager* smgr = device->getSceneManager();
 	IGUIEnvironment* guienv = device->getGUIEnvironment();
 
+	device->run(); // Used to update the screenSize
+
+	screenSize = driver->getScreenSize();
+
 	GEngine = new SGES(device);
-	Session = new SFSession();
+	Session = new SFSession(device);
+	GUIEngine = new SGUI(device);
+
+	std::thread session(&SFSession::init, Session);
+	session.detach();
 
 	gSoloud.init();
 
 	Sound s;
 	s.loadSound("test.ogg", true);
 	s.play();
+	s.setLooping(true);
 
 	while (device->run()) {
-		driver->beginScene(true, true, SColor(0, 255, 0, 0));
+		driver->beginScene(true, true, getNewColor());
 		smgr->drawAll();
 		guienv->drawAll();
 		driver->endScene();
-		driver->drawStencilShadowVolume(true);
-		driver->drawStencilShadow();
 	}
 }

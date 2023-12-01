@@ -14,7 +14,7 @@ using namespace scene;
 
 class SGUI {
 public:
-	SGUI(IrrlichtDevice* dev) : _device(dev) {}
+	SGUI(IrrlichtDevice* dev);
 	void handle(SEvent::SGUIEvent event);
 	void addObject(IGUIElement* object, std::function<void(SEvent::SGUIEvent)> callback);
 private:
