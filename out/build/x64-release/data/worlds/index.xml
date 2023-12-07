@@ -1,0 +1,7 @@
+<Worlds>
+	<World>
+		<name>Example</name>
+		<path>example</path>
+		<icon>example/icon.png</icon>
+	</World>
+</Worlds>

@@ -1,13 +1,13 @@
 #include "GUITools.h"
 
-// Returns the percent-value of an float
+// Returns the percent-value of a float
 float p(float v, float p) {
     return (v / 100) * p;
 }
 
 // Returns the percent-value of an integer
 int p(int v, int p) {
-    return (v / 100) * p;
+    return (v * p) / 100;
 }
 
 irr::core::recti s_rect(int pX, int pY, int pW, int pH) {
@@ -44,6 +44,10 @@ Color HSVtoRGB(double h, double s, double v, double a) {
     }
 
     return Color(r * 255, g * 255, b * 255, a);
+}
+
+std::wstring stringToWString(const std::string& str) {
+    return std::wstring(str.begin(), str.end());
 }
 
 // Funktion, die bei jedem Aufruf eine neue Farbe zurückgibt
