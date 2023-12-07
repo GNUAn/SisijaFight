@@ -42,8 +42,7 @@ int main() {
 	Session = new SFSession(device);
 	GUIEngine = new SGUI(device);
 
-	std::thread session(&SFSession::init, Session);
-	session.detach();
+	Session->init();
 
 	gSoloud.init();
 

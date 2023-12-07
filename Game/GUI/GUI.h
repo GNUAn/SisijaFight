@@ -1,5 +1,7 @@
 #pragma once
 #include "../../Gamemodes/Gamemodes.h"
+#include "Elements/MeshViewer.h"
+#include "Elements/SuperTable.h"
 #include <string>
 
 struct LobbyReturnCode {
