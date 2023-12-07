@@ -14,8 +14,13 @@
   "ExpandedNodes": [
     "",
     "\\Game",
-    "\\Game\\EventReceivers",
-    "\\SGE"
+    "\\Game\\GUI",
+    "\\Game\\GUI\\Elements",
+    "\\Game\\GUI\\helpers",
+    "\\Network",
+    "\\SGE",
+    "\\Tools"
   ],
+  "SelectedNode": "\\Game\\GUI\\Lobby.cpp",
   "PreviewInSolutionExplorer": false
 }
