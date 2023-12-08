@@ -8,6 +8,7 @@ SFSession* Session;
 SGES* GEngine;
 SGUI* GUIEngine;
 dimension2du screenSize;
+IrrlichtDevice* device;
 
 int main() {
 	SIrrlichtCreationParameters params = SIrrlichtCreationParameters();
@@ -24,7 +25,7 @@ int main() {
 	params.UsePerformanceTimer = true;
 	params.WithAlphaChannel = true;
 	params.LoggingLevel = ELL_DEBUG;
-	IrrlichtDevice* device = createDeviceEx(params);
+	device = createDeviceEx(params);
 
 	device->setWindowCaption(L"SisijaFight");
 	device->setResizable(true);
