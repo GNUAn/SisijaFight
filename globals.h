@@ -7,4 +7,5 @@
 extern SFSession* Session;
 extern SGES* GEngine;
 extern SGUI* GUIEngine;
+extern IrrlichtDevice* device;
 extern dimension2du screenSize;
