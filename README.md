@@ -7,3 +7,4 @@ Open Source shooter-game with animal characters
 * Classic Fight: A typical deathmatch all-against-each-other (AAEO)
 * Tactic Fight: There are different teams and each Player has its own role (e.g. healer, solidier, leader...)
 * Story mode: play in different worlds and universes to free characters, wich will appear in the lobby to use!
+* * so that's the way to get new players
