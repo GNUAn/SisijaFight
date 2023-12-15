@@ -1,6 +1,7 @@
 # SisijaFight
 Open Source shooter-game with animal characters
-![Sisija Fight Logo made by DALLE3](https://github.com/SpringTech-Studios/SisijaFight/assets/128484007/ad4661cb-c491-4355-898e-9ddb79b52b2a)
+![Uploading DALL·E 2023-11-19 11.14.52 - Render of a highly realistic polar bear named Sisija, wearing full paintball gear including a helmet with a half-transparent rainbow-colored visor, sh.png…]()
+
 
 ### What is this Game about?
 SisijaFight is a little bit different from other shooters:
