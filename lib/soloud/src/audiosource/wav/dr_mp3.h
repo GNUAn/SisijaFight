@@ -621,14 +621,14 @@ static __inline__ __attribute__((always_inline)) void drmp3_cpuid(int CPUInfo[],
 #if defined(__PIC__)
     __asm__ __volatile__(
 #if defined(__x86_64__)
-        "push %%rbx\n"
-        "cpuid\n"
-        "xchgl %%ebx, %1\n"
-        "pop  %%rbx\n"
+        "push %%rbx/n"
+        "cpuid/n"
+        "xchgl %%ebx, %1/n"
+        "pop  %%rbx/n"
 #else
-        "xchgl %%ebx, %1\n"
-        "cpuid\n"
-        "xchgl %%ebx, %1\n"
+        "xchgl %%ebx, %1/n"
+        "cpuid/n"
+        "xchgl %%ebx, %1/n"
 #endif
         : "=a" (CPUInfo[0]), "=r" (CPUInfo[1]), "=c" (CPUInfo[2]), "=d" (CPUInfo[3])
         : "a" (InfoType));
@@ -3466,7 +3466,7 @@ static drmp3_result drmp3_wfopen(FILE** ppFile, const wchar_t* pFilePath, const 
             size_t i = 0;
             for (;;) {
                 if (pOpenMode[i] == 0) {
-                    pOpenModeMB[i] = '\0';
+                    pOpenModeMB[i] = '/0';
                     break;
                 }
 

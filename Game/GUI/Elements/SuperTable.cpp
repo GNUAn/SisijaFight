@@ -41,7 +41,7 @@ void CustomTable::draw() {
 
 GUILine::GUILine(IGUIEnvironment* env, IGUIElement* parent, s32 id)
     : IGUIElement(EGUIET_ELEMENT, env, parent, id, core::rect<s32>(0, 0, 0, 0)),
-    LineColor(255, 0, 0, 0), LineThickness(1.0f), LineStart(0, 0), LineEnd(0, 0)
+    LineColor(255,255,255,255), LineThickness(1.0f), LineStart(0, 0), LineEnd(0, 0)
 {
     // Setzen der Größe auf die Größe des übergeordneten Elements, wenn vorhanden
     if (parent) {

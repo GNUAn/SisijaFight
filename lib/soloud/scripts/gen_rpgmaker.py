@@ -825,31 +825,31 @@ module DL
   module CParser
     def parse_struct_signature(signature, tymap=nil)
       if( signature.is_a?(String) )
-        signature = signature.split(/\s*,\s*/)
+        signature = signature.split(//s*,/s*/)
       end
       mems = []
       tys  = []
       signature.each{|msig|
-        tks = msig.split(/\s+(\*)?/)
+        tks = msig.split(//s+(/*)?/)
         ty = tks[0..-2].join(" ")
         member = tks[-1]
 
         case ty
-        when /\[(\d+)\]/
+        when //[(/d+)/]/
           n = $1.to_i
-          ty.gsub!(/\s*\[\d+\]/,"")
+          ty.gsub!(//s*/[/d+/]/,"")
           ty = [ty, n]
-        when /\[\]/
-          ty.gsub!(/\s*\[\]/, "*")
+        when //[/]/
+          ty.gsub!(//s*/[/]/, "*")
         end
 
         case member
-        when /\[(\d+)\]/
+        when //[(/d+)/]/
           ty = [ty, $1.to_i]
-          member.gsub!(/\s*\[\d+\]/,"")
-        when /\[\]/
+          member.gsub!(//s*/[/d+/]/,"")
+        when //[/]/
           ty = ty + "*"
-          member.gsub!(/\s*\[\]/, "")
+          member.gsub!(//s*/[/]/, "")
         end
 
         mems.push(member)
@@ -860,16 +860,16 @@ module DL
 
     def parse_signature(signature, tymap=nil)
       tymap ||= {}
-      signature = signature.gsub(/\s+/, " ").strip
+      signature = signature.gsub(//s+/, " ").strip
       case signature
-      when /^([\w@\*\s]+)\(([\w\*\s\,\[\]]*)\)$/
+      when /^([/w@/*/s]+)/(([/w/*/s/,/[/]]*)/)$/
         ret = $1
         (args = $2).strip!
-        ret = ret.split(/\s+/)
-        args = args.split(/\s*,\s*/)
+        ret = ret.split(//s+/)
+        args = args.split(//s*,/s*/)
         func = ret.pop
-        if( func =~ /^\*/ )
-          func.gsub!(/^\*+/,"")
+        if( func =~ /^/*/ )
+          func.gsub!(/^/*+/,"")
           ret.push("*")
         end
         ret  = ret.join(" ")
@@ -918,7 +918,7 @@ module DL
         return TYPE_FLOAT
       when "double"
         return TYPE_DOUBLE
-      when /\*/, /\[\s*\]/
+      when //*/, //[/s*/]/
         return TYPE_VOIDP
       else
         if( tymap[ty] )
@@ -1045,7 +1045,7 @@ module DL
       @func_map[name] = f
       
       begin
-        /^(.+?):(\d+)/ =~ caller.first
+        /^(.+?):(/d+)/ =~ caller.first
         file, line = $1, $2.to_i
       rescue
         file, line = __FILE__, __LINE__+3
@@ -1074,7 +1074,7 @@ module DL
       end
       @func_map[name] = f
       begin
-        /^(.+?):(\d+)/ =~ caller.first
+        /^(.+?):(/d+)/ =~ caller.first
         file, line = $1, $2.to_i
       rescue
         file, line = __FILE__, __LINE__+3
@@ -1161,14 +1161,14 @@ module SoLoud
 
 """)
 
-fo.write("\t\t# Enumerations\n")
+fo.write("/t/t# Enumerations/n")
 for x in soloud_codegen.soloud_enum:
-    fo.write('\t\t' + x + '=' + str(soloud_codegen.soloud_enum[x])+ '\n')
-fo.write("\n")
-fo.write("\t\t# Raw DLL functions\n")
+    fo.write('/t/t' + x + '=' + str(soloud_codegen.soloud_enum[x])+ '/n')
+fo.write("/n")
+fo.write("/t/t# Raw DLL functions/n")
 
 for x in soloud_codegen.soloud_func:
-    fo.write('\t\textern "' + x[0] + ' ' + x[1] + '(')
+    fo.write('/t/textern "' + x[0] + ' ' + x[1] + '(')
     first = True
     for y in x[2]:
         if len(y) > 0:
@@ -1177,10 +1177,10 @@ for x in soloud_codegen.soloud_func:
             else:
                 fo.write(", ")
             fo.write(y[0])
-    fo.write(')"\n')
+    fo.write(')"/n')
 
-fo.write('\tend\n')
-fo.write('\n')
+fo.write('/tend/n')
+fo.write('/n')
 
 #################################################################
 #
@@ -1201,8 +1201,8 @@ fo.write('\n')
 #   end
 #
 
-fo.write('\n')
-fo.write('\t# OOP wrappers\n')
+fo.write('/n')
+fo.write('/t# OOP wrappers/n')
 
 def fix_default_param(defparam, classname):
     """ 'fixes' default parameters from C to what python expectes """
@@ -1217,22 +1217,22 @@ for x in soloud_codegen.soloud_type:
     for y in soloud_codegen.soloud_func:
         if (x + "_") == y[1][0:len(x)+1:]:
             if first:
-                fo.write('\n')
-                fo.write('\tclass %s\n'%(x))
-                fo.write('\t\t@objhandle=nil\n')
-                fo.write('\t\tattr_accessor :objhandle\n')
+                fo.write('/n')
+                fo.write('/tclass %s/n'%(x))
+                fo.write('/t/t@objhandle=nil/n')
+                fo.write('/t/tattr_accessor :objhandle/n')
                 for z in soloud_codegen.soloud_enum:
                     if z[0:len(x)+1] == x.upper()+'_':
                         s = str(soloud_codegen.soloud_enum[z])
-                        fo.write('\t\t%s=%s\n'%(z[len(x)+1::], s))
-                fo.write('\t\tdef initialize(*args)\n')
-                fo.write('\t\t\t@objhandle = SoLoud::CAPI.%s_create()\n'%(x))
-                fo.write('\t\tend')
-                fo.write('\n')
-                fo.write('\t\tdef destroy()\n')
-                fo.write('\t\t\tSoLoud::CAPI.%s_destroy(@objhandle)\n'%(x))
-                fo.write('\t\tend')
-                fo.write('\n')
+                        fo.write('/t/t%s=%s/n'%(z[len(x)+1::], s))
+                fo.write('/t/tdef initialize(*args)/n')
+                fo.write('/t/t/t@objhandle = SoLoud::CAPI.%s_create()/n'%(x))
+                fo.write('/t/tend')
+                fo.write('/n')
+                fo.write('/t/tdef destroy()/n')
+                fo.write('/t/t/tSoLoud::CAPI.%s_destroy(@objhandle)/n'%(x))
+                fo.write('/t/tend')
+                fo.write('/n')
                 
                 first = False
             funcname = y[1][len(x)+1::]
@@ -1243,7 +1243,7 @@ for x in soloud_codegen.soloud_type:
             if funcname == "create" or funcname == "destroy" or has_ex_variant(y[1]):
                 pass # omit create/destroy, handled by initialize/destroy
             else:
-                fo.write('\tdef %s('%pythonize_camelcase(funcname))
+                fo.write('/tdef %s('%pythonize_camelcase(funcname))
                 firstparam = True
                 for z in y[2]:
                     if len(z) > 1:
@@ -1257,8 +1257,8 @@ for x in soloud_codegen.soloud_type:
                             fo.write(z[1])
                             if len(z) > 2:
                                 fo.write("=" + fix_default_param(z[2], x)+"")
-                fo.write(')\n')
-                fo.write('\t\t')
+                fo.write(')/n')
+                fo.write('/t/t')
                 fo.write('SoLoud::CAPI.' + y[1] + '(@objhandle')
                 for z in y[2]:
                     if len(z) > 1:
@@ -1270,11 +1270,11 @@ for x in soloud_codegen.soloud_type:
                                 fo.write(z[1] + '.objhandle')
                             else:
                                 fo.write(z[1])
-                fo.write(')\n')            
-                fo.write('\t\tend\n')
+                fo.write(')/n')            
+                fo.write('/t/tend/n')
     if not first:
-        fo.write('\tend\n')
-fo.write('end\n')
+        fo.write('/tend/n')
+fo.write('end/n')
 
 print("rpgmaker_soloud.rb generated")
 

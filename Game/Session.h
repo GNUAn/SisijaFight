@@ -21,12 +21,14 @@ public:
 	SFSession(IrrlichtDevice* dev) : _device(dev) {
 
 	}
-	void startGame(LobbyReturnCode& c);
+	void endGame();
+	void startGame(LobbyReturnCode c, bool isGMGUIDone);
 	GameMode* gamemode();
 	Lobby* lobby();
 	void init();
 private:
 	void setEventReceiver(S_EVR_CODE s);
+	void startGameInternal(LobbyReturnCode c);
 	GameMode* _gamemode;
 	Network* _network;
 	Lobby* _lobby;

@@ -5,23 +5,36 @@ SGES::SGES(IrrlichtDevice* device) {
 	
 }
 
+void addObject(IRigidBody* node, IRigidBody* body, std::function<void(SGEvent)> callback) {
+    
+}
+
 SGUI::SGUI(IrrlichtDevice* dev) : _device(dev) {
 	auto guienv = _device->getGUIEnvironment();
+    guienv->setSkin(guienv->createSkin(EGST_BURNING_SKIN));
     IGUISkin* skin = guienv->getSkin();
     IGUIFont* calibri24 = guienv->getFont("data/fonts/Calibri24.xml");
     if (calibri24)
         skin->setFont(calibri24);
 
     // Farben und Stil des Skins anpassen
-    skin->setColor(EGDC_WINDOW, video::SColor(255, 60, 70, 80)); // Dunkelblauer Hintergrund
+ 
     skin->setColor(EGDC_BUTTON_TEXT, video::SColor(255, 255, 255, 255)); // Weißer Text
-    skin->setColor(EGDC_3D_FACE, video::SColor(255, 0, 150, 0)); // Grünliche Buttons
-    skin->setColor(EGDC_3D_SHADOW, video::SColor(255, 0, 100, 0)); // Dunkleres Grün für Schatten
     skin->setColor(EGDC_HIGH_LIGHT, video::SColor(255, 100, 200, 100)); // Hervorhebungsfarbe
     skin->setColor(EGDC_HIGH_LIGHT_TEXT, video::SColor(255, 255, 255, 255)); // Weißer Text für Hervorhebungen
     skin->setColor(EGDC_TOOLTIP_BACKGROUND, video::SColor(255, 50, 50, 50)); // Dunkelgrauer Tooltip-Hintergrund
     skin->setColor(EGDC_TOOLTIP, video::SColor(255, 255, 255, 255)); // Weißer Tooltip-Text
 
+}
+
+void SGUI::clearAll() {
+    IGUIElement* root;
+    root = _device->getGUIEnvironment()->getRootGUIElement();
+    for (auto& child : root->getChildren()) {
+        child->remove();
+        child->drop();
+    }
+    this->_handler_and_object_id.clear();
 }
 
 void SGUI::handle(SEvent::SGUIEvent event) {

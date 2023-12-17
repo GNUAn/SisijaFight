@@ -53,7 +53,7 @@ public class SoloudObject
 
 """)
 
-fo.write("\n")
+fo.write("/n")
 #################################################################
 
 def fix_default_param(defparam, classname):
@@ -80,21 +80,21 @@ for x in soloud_codegen.soloud_type:
     for y in soloud_codegen.soloud_func:
         if (x + "_") == y[1][0:len(x)+1:]:
             if first:
-                fo.write('\n')
-                fo.write('public class %s : SoloudObject\n{\n'%(x))
+                fo.write('/n')
+                fo.write('public class %s : SoloudObject/n{/n'%(x))
                 for z in soloud_codegen.soloud_enum:
                     if z[0:len(x)+1] == x.upper()+'_':
                         s = str(soloud_codegen.soloud_enum[z])
-                        fo.write('\tpublic const int %s = %s;\n'%(z[len(x)+1::], s))
-                fo.write('\n\t[LinkName(\"%s_create\")]\n\tprivate static extern void* create();\n'%(x))
-                fo.write('\tpublic this()\n\t{\n')
-                fo.write('\t\tobjhandle = create();\n')
-                fo.write('\t}\n')
+                        fo.write('/tpublic const int %s = %s;/n'%(z[len(x)+1::], s))
+                fo.write('/n/t[LinkName(/"%s_create/")]/n/tprivate static extern void* create();/n'%(x))
+                fo.write('/tpublic this()/n/t{/n')
+                fo.write('/t/tobjhandle = create();/n')
+                fo.write('/t}/n')
                 
-                fo.write('\n\t[LinkName(\"%s_destroy\")]\n\tprivate static extern void* destroy(void* aObjHandle);\n'%(x))                
-                fo.write('\tpublic ~this()\n\t{\n')
-                fo.write('\t\tdestroy(objhandle);\n')
-                fo.write('\t}\n')
+                fo.write('/n/t[LinkName(/"%s_destroy/")]/n/tprivate static extern void* destroy(void* aObjHandle);/n'%(x))                
+                fo.write('/tpublic ~this()/n/t{/n')
+                fo.write('/t/tdestroy(objhandle);/n')
+                fo.write('/t}/n')
                 
                 first = False
             funcname = y[1][len(x)+1::]
@@ -117,7 +117,7 @@ for x in soloud_codegen.soloud_type:
                 if y[0] == 'float *':
                     floatptr = True
                     ret = 'float *'
-                fo.write('\n\t[CLink]\n\tprivate static extern %s %s(void* aObjHandle'%(ret, y[1]))
+                fo.write('/n/t[CLink]/n/tprivate static extern %s %s(void* aObjHandle'%(ret, y[1]))
                 for z in y[2]:
                     if len(z) > 1:
                         if z[1] == 'a'+x:
@@ -125,9 +125,9 @@ for x in soloud_codegen.soloud_type:
                         else:
                             fo.write(', ')
                             fo.write(external_pointer_fix(C_TO_BF_TYPES[z[0]]) + ' ' + z[1])
-                fo.write(');\n')
+                fo.write(');/n')
                 
-                fo.write('\tpublic %s %s('%(C_TO_BF_TYPES[y[0]], funcname))
+                fo.write('/tpublic %s %s('%(C_TO_BF_TYPES[y[0]], funcname))
                 firstparm = True
                 for z in y[2]:
                     if len(z) > 1:
@@ -141,8 +141,8 @@ for x in soloud_codegen.soloud_type:
                             fo.write(C_TO_BF_TYPES[z[0]] + ' ' + z[1])
                             if len(z) > 2:
                                 fo.write(' = ' + fix_default_param(z[2], x))
-                fo.write(')\n\t{\n')
-                fo.write('\t\t')
+                fo.write(')/n/t{/n')
+                fo.write('/t/t')
                 if y[0] == 'void':
                     pass
                 elif charptr:
@@ -163,12 +163,12 @@ for x in soloud_codegen.soloud_type:
                                 fo.write(z[1] + '.objhandle')
                             else:
                                 fo.write(z[1])
-                fo.write(');\n')
-                fo.write('\t}\n')
+                fo.write(');/n')
+                fo.write('/t}/n')
     if not first:
-        fo.write('}\n')
+        fo.write('}/n')
 
-fo.write('}\n')
+fo.write('}/n')
 
 print("soloud.bf generated")
 
