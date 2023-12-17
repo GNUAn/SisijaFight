@@ -101,7 +101,7 @@ fo.write("""<!--SoLoud wrapper (extension) for game maker-->
   <files>
     <file>
       <filename>soloud_gamemaker_dll.dll</filename>
-      <origname>extensions\soloud_gamemaker_dll.dll</origname>
+      <origname>extensions/soloud_gamemaker_dll.dll</origname>
       <init></init>
       <final></final>
       <kind>1</kind>
@@ -129,10 +129,10 @@ fo.write("""<!--SoLoud wrapper (extension) for game maker-->
 """)
 
 for x in soloud_codegen.soloud_func:
-  fo.write("        <function>\n")
-  fo.write("          <name>" + x[1] + "</name>\n")
-  fo.write("          <externalName>" + x[1] + "</externalName>\n")
-  fo.write("          <kind>11</kind>\n")
+  fo.write("        <function>/n")
+  fo.write("          <name>" + x[1] + "</name>/n")
+  fo.write("          <externalName>" + x[1] + "</externalName>/n")
+  fo.write("          <kind>11</kind>/n")
   fo.write("          <help>Original function: ")
   fo.write(x[0] + " " + x[1] + "(")
   first = 1
@@ -143,31 +143,31 @@ for x in soloud_codegen.soloud_func:
       else:
         first = 0
       fo.write(p[0] + " " + p[1])
-  fo.write(")</help>\n")
-  fo.write("          <returnType>" + C_TO_GMX_TYPES[x[0]] + "</returnType>\n")
+  fo.write(")</help>/n")
+  fo.write("          <returnType>" + C_TO_GMX_TYPES[x[0]] + "</returnType>/n")
   argcount = 0
   for p in x[2]:
     if len(p) > 0:
       argcount = argcount + 1
   
-  fo.write("          <argCount>" + str(argcount) + "</argCount>\n")
-  fo.write("          <args>\n")
+  fo.write("          <argCount>" + str(argcount) + "</argCount>/n")
+  fo.write("          <args>/n")
   for p in x[2]:
     if len(p) > 0:
-      fo.write("            <arg>" + C_TO_GMX_TYPES[p[0]] + "</arg>\n")    
-  fo.write("          </args>\n")
-  fo.write("        </function>\n")
+      fo.write("            <arg>" + C_TO_GMX_TYPES[p[0]] + "</arg>/n")    
+  fo.write("          </args>/n")
+  fo.write("        </function>/n")
 
 fo.write("""      </functions>
       <constants>
 """)
       
 for x in soloud_codegen.soloud_enum:
-   fo.write("        <constant>\n")
-   fo.write("          <name>" + x + "</name>\n")
-   fo.write("          <value>" + str(soloud_codegen.soloud_enum[x]) + "</value>\n")
-   fo.write("          <hidden>0</hidden>\n")
-   fo.write("        </constant>\n")
+   fo.write("        <constant>/n")
+   fo.write("          <name>" + x + "</name>/n")
+   fo.write("          <value>" + str(soloud_codegen.soloud_enum[x]) + "</value>/n")
+   fo.write("          <hidden>0</hidden>/n")
+   fo.write("        </constant>/n")
 fo.write("""      </constants>
     </file>
   </files>
@@ -273,14 +273,14 @@ for x in soloud_codegen.soloud_func:
       else:
         first = 0
       fo.write(MASK_TYPES[p[0]] + " " + p[1])
-  fo.write(");\n")
+  fo.write(");/n")
 
-fo.write("\n")
+fo.write("/n")
 
 for x in soloud_codegen.soloud_func:
-  fo.write("dllproc_" + x[1] + " p_" + x[1] + " = NULL;\n")
+  fo.write("dllproc_" + x[1] + " p_" + x[1] + " = NULL;/n")
 
-fo.write("\n")
+fo.write("/n")
 
 C_TO_GMX_DLL_TYPES = {
     "int":"double",
@@ -326,15 +326,15 @@ for x in soloud_codegen.soloud_func:
       else:
         first = 0
       fo.write(C_TO_GMX_DLL_TYPES[p[0]] + " " + p[1])
-  fo.write(")\n")
-  fo.write("{\n")
-  fo.write("    if (p_" + x[1] + " == NULL)\n")
-  fo.write("        p_" + x[1] + " = getSoloudProc(\"" + x[1] + "\");\n")
-  fo.write("    if (p_" + x[1] + " == NULL)\n")
+  fo.write(")/n")
+  fo.write("{/n")
+  fo.write("    if (p_" + x[1] + " == NULL)/n")
+  fo.write("        p_" + x[1] + " = getSoloudProc(/"" + x[1] + "/");/n")
+  fo.write("    if (p_" + x[1] + " == NULL)/n")
   if (x[0] == "void"):
-    fo.write("        return 0;\n")
+    fo.write("        return 0;/n")
   else:
-    fo.write("        return (" + C_TO_GMX_DLL_TYPES[x[0]] + ")0;\n")
+    fo.write("        return (" + C_TO_GMX_DLL_TYPES[x[0]] + ")0;/n")
   if (x[0] == "void"):
     fo.write("    p_" + x[1] + "(")
   else:
@@ -354,21 +354,21 @@ for x in soloud_codegen.soloud_func:
       else:
         fo.write("(" + MASK_TYPES[p[0]] + ")" + p[1])
   if IS_HANDLE_TYPE[x[0]]:
-    fo.write("));\n")
+    fo.write("));/n")
   else:
-    fo.write(");\n")
+    fo.write(");/n")
   if (x[0] == "void"):
-    fo.write("  return 0;\n")
-  fo.write("}\n")
-  fo.write("\n")      
+    fo.write("  return 0;/n")
+  fo.write("}/n")
+  fo.write("/n")      
 
 fo.close()
 print("soloud_gamemaker_dll.c generated")
 
 fo = open("soloud_gamemaker_dll.def", "w")
-fo.write("EXPORTS\n")
+fo.write("EXPORTS/n")
 for x in soloud_codegen.soloud_func:
-  fo.write("\t" + x[1] + "\n")
+  fo.write("/t" + x[1] + "/n")
 fo.close()
 print("soloud_gamemaker_dll.def generated")
 

@@ -1,13 +1,19 @@
-#pragma once
-#include <thread>
+#ifndef NETWORK_H
+#define NETWORK_H
+
+#include <enet/enet.h>
 #include <string>
-#include <enet.h>
+#include <thread>
+
+extern int clientID;
 
 class Network {
 public:
-	void initNetwork();
-	void processRequest(ENetPacket* p);
-	void send(std::string data);
-private:
-	void internalThreadInit();
+    void processRequest(ENetPacket* packet);
+    void send(const std::string& data);
+    void internalThreadInit();
+    void initNetwork();
+    void end();
 };
+
+#endif // NETWORK_H

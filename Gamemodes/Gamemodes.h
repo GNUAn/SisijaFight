@@ -6,9 +6,16 @@
 
 class GameMode {
 public:
-	void startGame(World* world, Player* mainPlayer);
-	void handleNetwork(nlohmann::json input) {
+	virtual void startGame(World* world, Player* mainPlayer)=0;
+	virtual void handleNetwork(nlohmann::json input)=0;
+	virtual void createGUI(IGUIEnvironment* env)=0;
+	virtual void createInGameGUI(IGUIEnvironment* env) = 0;
+	virtual bool hasGUI()=0;
+};
 
-	}
-	void createGUI(SGUI* env);
+class ClassicFight : public GameMode{
+	void startGame(World* world, Player* mainPlayer) override;
+	void handleNetwork(nlohmann::json input) override;
+	void createInGameGUI(IGUIEnvironment* env);
+	bool hasGUI() { return false; }
 };

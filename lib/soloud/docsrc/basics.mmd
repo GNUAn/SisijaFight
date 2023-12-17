@@ -24,7 +24,7 @@ SoLoud object be a global variable), the back-end may end up trying to
 use resources that are no longer available. So, it's best to call the
 cleanup function manually.
 
-\pagebreak
+/pagebreak
 
 
 ## Basics
@@ -75,7 +75,7 @@ VITA_HOMEBREW | Vita console homebrew SDK
 NOSOUND       | No-sound driver
 NULLDRIVER    | Null driver
 
-\pagebreak
+/pagebreak
 
 
 ### Soloud.deinit()
@@ -124,17 +124,17 @@ sounds as soon as possible, the playClocked will delay the start of
 sounds so that rapidly launched sounds don't all get clumped to the
 start of the next outgoing sound buffer.
 
-\pagebreak
+/pagebreak
 
 Let's say we have a short sample and we want to play it repeatedly. 
 
-![Single blip](images/clocked_1)\ 
+![Single blip](images/clocked_1)/ 
 
 
 If our play calls are rapid enough, several calls will hit the same
 audio buffer, and the effect simply amplifies the sound:
 
-![blips via play()](images/clocked_2)\ 
+![blips via play()](images/clocked_2)/ 
 
 
 If we use playClocked instead, SoLoud will notice that several calls
@@ -142,7 +142,7 @@ are being made within one audio buffer, and will delay the later ones
 based on the time given as a parameter, resulting in what we wanted
 in the first place:
 
-![blips via playClocked](images/clocked_3)\ 
+![blips via playClocked](images/clocked_3)/ 
 
 
 The "pew pew" example gives an interactive and intuitive way of 
@@ -164,7 +164,7 @@ adjust the delay accordingly.
 Note that if your "physics time" granularity is low, playClocked is
 not really useful. Audio buffers tend to be 40ms long at most.
 
-\pagebreak
+/pagebreak
 
 ### Soloud.playBackground()
 

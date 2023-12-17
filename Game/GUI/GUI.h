@@ -3,6 +3,9 @@
 #include "Elements/MeshViewer.h"
 #include "Elements/SuperTable.h"
 #include <string>
+#include <irrlicht.h>
+
+using namespace irr;
 
 struct LobbyReturnCode {
 	GameMode* gamemode;
@@ -13,17 +16,20 @@ struct LobbyReturnCode {
 
 class GUIPage {
 public:
-	void draw(IrrlichtDevice* dev);
-	bool isFinished();
+	 void draw(IrrlichtDevice* dev);
+	 bool isFinished();
+	 void onFinish(std::function<void()> f);
+private:
+	std::function<void()> end;
+	bool finished;
+	void finish();
 };
 class GUIClass {
 public:
-	void draw(IrrlichtDevice* dev);
+	 void draw(IrrlichtDevice* dev);
 };
 
 class Lobby : public GUIClass {
 public:
-	void draw(IrrlichtDevice* dev);
-private:
-
+	void draw(IrrlichtDevice* dev) ;
 };

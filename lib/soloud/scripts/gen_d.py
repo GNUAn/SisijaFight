@@ -53,29 +53,29 @@ private struct SoloudObject
 
 # Forward declare ALL THE CLASSES
 for soloud_type in soloud_codegen.soloud_type:
-    #fo.write("public class %s;\n"%(soloud_type))
+    #fo.write("public class %s;/n"%(soloud_type))
     pass
 
 
 # Since there's no reason to use the "raw" data anymore,
 # skip generating the enum dictionary
 #
-#fo.write("# Enumerations\n")
-#fo.write("soloud_enum = {\n")
+#fo.write("# Enumerations/n")
+#fo.write("soloud_enum = {/n")
 #first = True
 #for x in soloud_codegen.soloud_enum:
 #    if first:
 #        first = False
 #    else:
-#        fo.write(",\n")
+#        fo.write(",/n")
 #    fo.write('"' + x + '": ' + str(soloud_codegen.soloud_enum[x]))
-#fo.write("\n}\n")
+#fo.write("/n}/n")
 
-fo.write("\n")
-# fo.write("# Raw DLL functions\n")
+fo.write("/n")
+# fo.write("# Raw DLL functions/n")
 # for x in soloud_codegen.soloud_func:
-#     fo.write(x[1] + ' = soloud_dll.' + x[1] + '\n')
-#     fo.write(x[1] + '.restype = ' + C_TO_D_TYPES[x[0]] + '\n')
+#     fo.write(x[1] + ' = soloud_dll.' + x[1] + '/n')
+#     fo.write(x[1] + '.restype = ' + C_TO_D_TYPES[x[0]] + '/n')
 #     fo.write(x[1] + '.argtypes = [')
 #     first = True
 #     for y in x[2]:
@@ -85,8 +85,8 @@ fo.write("\n")
 #             else:
 #                 fo.write(", ")
 #             fo.write(fudge_types(y[0]))
-#     fo.write(']\n')
-#     fo.write('\n')
+#     fo.write(']/n')
+#     fo.write('/n')
 #
 #################################################################
 #
@@ -125,26 +125,26 @@ for x in soloud_codegen.soloud_type:
         if (x + "_") == y[1][0:len(x)+1:]:
             if first:
                 # Declare creator and destroyer
-                function_decls += ('private static extern(C) int* %s_create();\n'%(x))
-                function_decls += ('private static extern(C) int* %s_destroy(int* aObjHandle);\n'%(x))
+                function_decls += ('private static extern(C) int* %s_create();/n'%(x))
+                function_decls += ('private static extern(C) int* %s_destroy(int* aObjHandle);/n'%(x))
 
-                fo.write('\n')
-                fo.write('public struct %s\n{\n'%(x))
-                fo.write('pure @safe nothrow @nogc:\n')
+                fo.write('/n')
+                fo.write('public struct %s/n{/n'%(x))
+                fo.write('pure @safe nothrow @nogc:/n')
                 for z in soloud_codegen.soloud_enum:
                     if z[0:len(x)+1] == x.upper()+'_':
                         s = str(soloud_codegen.soloud_enum[z])
-                        fo.write('\tpublic enum %s = %s;\n'%(z[len(x)+1::], s))
-                fo.write('\n')
+                        fo.write('/tpublic enum %s = %s;/n'%(z[len(x)+1::], s))
+                fo.write('/n')
 
-                fo.write('\tpublic SoloudObject soloudObject;\n')
-                fo.write('\talias soloudObject this;\n\n')
-                fo.write('\tpublic static create()\n\t{\n')
-                fo.write('\t\treturn %s(SoloudObject(%s_create()));\n'%(x, x))
-                fo.write('\t}\n\n')
-                fo.write('\t~this()\n\t{\n')
-                fo.write('\t\t%s_destroy(objhandle);\n'%(x))
-                fo.write('\t}\n\n')
+                fo.write('/tpublic SoloudObject soloudObject;/n')
+                fo.write('/talias soloudObject this;/n/n')
+                fo.write('/tpublic static create()/n/t{/n')
+                fo.write('/t/treturn %s(SoloudObject(%s_create()));/n'%(x, x))
+                fo.write('/t}/n/n')
+                fo.write('/t~this()/n/t{/n')
+                fo.write('/t/t%s_destroy(objhandle);/n'%(x))
+                fo.write('/t}/n/n')
 
                 first = False
             funcname = y[1][len(x)+1::]
@@ -164,9 +164,9 @@ for x in soloud_codegen.soloud_type:
                         else:
                             function_decls += ', '
                             function_decls += external_pointer_fix(C_TO_D_TYPES[z[0]]) + ' ' + z[1]
-                function_decls += ');\n'
+                function_decls += ');/n'
 
-                fo.write('\tpublic %s %s('%(C_TO_D_TYPES[y[0]], funcname))
+                fo.write('/tpublic %s %s('%(C_TO_D_TYPES[y[0]], funcname))
                 firstparm = True
                 for z in y[2]:
                     if len(z) > 1:
@@ -180,8 +180,8 @@ for x in soloud_codegen.soloud_type:
                             fo.write(C_TO_D_TYPES[z[0]] + ' ' + z[1])
                             if len(z) > 2:
                                 fo.write(' = ' + fix_default_param(z[2], x))
-                fo.write(')\n\t{\n')
-                fo.write('\t\t')
+                fo.write(')/n/t{/n')
+                fo.write('/t/t')
                 if y[0] == 'void':
                     pass
                 else:
@@ -198,10 +198,10 @@ for x in soloud_codegen.soloud_type:
                                 fo.write(z[1] + '.objhandle')
                             else:
                                 fo.write(z[1])
-                fo.write(');\n')
-                fo.write('\t}\n\n')
+                fo.write(');/n')
+                fo.write('/t}/n/n')
     if not first:
-        fo.write('}\n')
+        fo.write('}/n')
 
 fo.write(function_decls)
 
