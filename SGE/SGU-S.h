@@ -16,6 +16,11 @@ enum SGEvent {
 	SGE_COLLISION, // TODO: add other events
 };
 
+struct SceneNodeAndRigidBody {
+	ISceneNode* sceneNode;
+	IRigidBody* rigidBody;
+};
+
 class SGUI {
 public:
 	SGUI(IrrlichtDevice* dev);
@@ -32,10 +37,12 @@ private:
 class SGES {
 public:
 	SGES(IrrlichtDevice* dev);
-	void addObject(IRigidBody* node, IRigidBody* body, std::function<void(SGEvent)> callback);
+	void addObject(ISceneNode* node, IRigidBody* body, std::function<void(SGEvent)> callback);
+	void handle(irrBulletWorld* world);
 	void removeAllCallbacks();
 private:
 	std::map<int, std::function<void(SGEvent)>> _handler_and_object_id;
+	int _current_id_counter = 0;
 };
 
 class SCamera{
