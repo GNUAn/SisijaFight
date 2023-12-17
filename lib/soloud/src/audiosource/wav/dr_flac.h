@@ -1584,19 +1584,19 @@ static DRFLAC_INLINE drflac_bool32 drflac_has_sse41(void)
     extern __inline drflac_uint16 _watcom_bswap16(drflac_uint16);
     extern __inline drflac_uint32 _watcom_bswap32(drflac_uint32);
     extern __inline drflac_uint64 _watcom_bswap64(drflac_uint64);
-#pragma aux _watcom_bswap16 = \
-    "xchg al, ah" \
-    parm   [ax]   \
+#pragma aux _watcom_bswap16 = /
+    "xchg al, ah" /
+    parm   [ax]   /
     modify [ax];
-#pragma aux _watcom_bswap32 = \
-    "bswap eax"  \
-    parm   [eax] \
+#pragma aux _watcom_bswap32 = /
+    "bswap eax"  /
+    parm   [eax] /
     modify [eax];
-#pragma aux _watcom_bswap64 = \
-    "bswap eax"     \
-    "bswap edx"     \
-    "xchg eax,edx"  \
-    parm [eax edx]  \
+#pragma aux _watcom_bswap64 = /
+    "bswap eax"     /
+    "bswap edx"     /
+    "xchg eax,edx"  /
+    parm [eax edx]  /
     modify [eax edx];
 #endif
 
@@ -2833,11 +2833,11 @@ static DRFLAC_INLINE drflac_uint32 drflac__clz_msvc(drflac_cache_t x)
 
 #ifdef DRFLAC_IMPLEMENT_CLZ_WATCOM
 static __inline drflac_uint32 drflac__clz_watcom (drflac_uint32);
-#pragma aux drflac__clz_watcom = \
-    "bsr eax, eax" \
-    "xor eax, 31" \
-    parm [eax] nomemory \
-    value [eax] \
+#pragma aux drflac__clz_watcom = /
+    "bsr eax, eax" /
+    "xor eax, 31" /
+    parm [eax] nomemory /
+    value [eax] /
     modify exact [eax] nomemory;
 #endif
 
@@ -8478,7 +8478,7 @@ static drflac_result drflac_wfopen(FILE** ppFile, const wchar_t* pFilePath, cons
             size_t i = 0;
             for (;;) {
                 if (pOpenMode[i] == 0) {
-                    pOpenModeMB[i] = '\0';
+                    pOpenModeMB[i] = '/0';
                     break;
                 }
 

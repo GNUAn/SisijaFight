@@ -22,7 +22,7 @@ occasionally, or use some kind of low-pass filter, such as..
     
 While not perfect, that's way better than using the stream time directly.
 
-![Low-pass filtered time values](images/time)\ 
+![Low-pass filtered time values](images/time)/ 
 
 ### Soloud.getStreamPosition()
 
@@ -97,11 +97,11 @@ The returned pointer points at a buffer that's always around, but the
 data is only updated when calcFFT() is called.
 
 For the FFT to work, you also need to initialize SoLoud with the
-Soloud::ENABLE\_VISUALIZATION flag, or by enabling visualization with
+Soloud::ENABLE/_VISUALIZATION flag, or by enabling visualization with
 the Soloud.setVisualizationEnable() call. Otherwise the source data for the
 FFT calculation will not be gathered.
 
-\pagebreak
+/pagebreak
 
 ### Soloud.getWave()
 
@@ -118,7 +118,7 @@ data is only updated when getWave() is called. The data is the same that
 is used to generate visualization FFT data.
 
 For this function to work properly, you also need to initialize SoLoud
-with the Soloud::ENABLE\_VISUALIZATION flag or by enabling visualization with
+with the Soloud::ENABLE/_VISUALIZATION flag or by enabling visualization with
 the Soloud.setVisualizationEnable() call. Otherwise the source data
 will not be gathered, and the result is undefined (probably zero).
 

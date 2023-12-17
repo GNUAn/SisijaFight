@@ -1,6 +1,7 @@
 #include "helpers.h"
 #include <pugixml.hpp>
 #include <fstream>
+#include <string>
 
 using xml = pugi::xml_document;
 using node = pugi::xml_node;
@@ -16,7 +17,7 @@ std::vector<WorldInGUI> getWorlds(std::string path) {
 	for(node& n : index.child("Worlds").children("World")){
 		WorldInGUI w;
 		w.name = n.child("name").text().get();
-		w.path = n.child("path").text().get();
+		w.path = "data/worlds/" + std::string(n.child("path").text().get());
 		w.icon = n.child("icon").text().get();
 		worlds.push_back(w);
 	}

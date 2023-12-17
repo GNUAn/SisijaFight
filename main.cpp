@@ -1,14 +1,12 @@
 #include "SGE/SGU-S.h"
 #include "globals.h"
 #include "Game/Audio/Backend.h"
-#include <thread>
-#include "Tools/GUITools.h"
 
 SFSession* Session;
 SGES* GEngine;
 SGUI* GUIEngine;
 dimension2du screenSize;
-IrrlichtDevice* device;
+irr::IrrlichtDevice* device;
 
 int main() {
 	SIrrlichtCreationParameters params = SIrrlichtCreationParameters();
@@ -28,7 +26,7 @@ int main() {
 	device = createDeviceEx(params);
 
 	device->setWindowCaption(L"SisijaFight");
-	device->setResizable(true);
+	device->setResizable(false);
 	device->maximizeWindow();
 
 	IVideoDriver* driver = device->getVideoDriver();
@@ -53,7 +51,7 @@ int main() {
 	s.setLooping(true);
 
 	while (device->run()) {
-		driver->beginScene(true, true, getNewColor());
+		driver->beginScene(true, true, SColor(255,0,0,0));
 		smgr->drawAll();
 		guienv->drawAll();
 		driver->endScene();
