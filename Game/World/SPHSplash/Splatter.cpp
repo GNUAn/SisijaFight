@@ -7,16 +7,6 @@ using namespace core;
 using namespace scene;
 using namespace video;
 
-class PaintballCollisionCallback : public ICollisionCallback {
-public:
-	PaintballCollisionCallback(Paintball* pb) : paintball(pb){}
-	virtual bool onCollision(const ICollisionCallbackInformation* collisionInfo) {
-
-	}
-private:
-	Paintball* paintball;
-};
-
 void PaintballSimulator::addPaintball(vector3df start, vector3df target, irrBulletWorld* world) {
 	Paintball* paintball = new Paintball();
 	paintball->position = start;
