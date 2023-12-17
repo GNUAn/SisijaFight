@@ -5,8 +5,33 @@ SGES::SGES(IrrlichtDevice* device) {
 	
 }
 
-void addObject(IRigidBody* node, IRigidBody* body, std::function<void(SGEvent)> callback) {
-    
+void SGES::addObject(ISceneNode* node, IRigidBody* body, std::function<void(SGEvent)> callback) {
+    node->setID(_current_id_counter);
+    _handler_and_object_id[_current_id_counter] = callback;
+    _current_id_counter++;
+}
+
+void SGES::handle(irrBulletWorld* world) {
+    int numManifolds = world->getDispatcher()->getNumManifolds();
+    for (int i = 0; i < numManifolds; i++) {
+        btPersistentManifold* contactManifold = world->getDispatcher()->getManifoldByIndexInternal(i);
+        const btCollisionObject* objA = contactManifold->getBody0();
+        const btCollisionObject* objB = contactManifold->getBody1();
+
+        int numContacts = contactManifold->getNumContacts();
+        for (int j = 0; j < numContacts; j++) {
+            btManifoldPoint& pt = contactManifold->getContactPoint(j);
+            if (pt.getDistance() < 0.f) {
+                // Kollision erkannt!
+                const btCollisionObject* colObjA = static_cast<const btCollisionObject*>(objA);
+                const btCollisionObject* colObjB = static_cast<const btCollisionObject*>(objB);
+
+                // Führe hier die spezifische Logik für die Kollisionserkennung durch
+                onCollision(colObjA, colObjB);
+            }
+        }
+    }
+}
 }
 
 SGUI::SGUI(IrrlichtDevice* dev) : _device(dev) {
