@@ -14,11 +14,14 @@
   "ExpandedNodes": [
     "",
     "\\Game",
-    "\\Gamemodes",
+    "\\Game\\GUI",
+    "\\Game\\GUI\\Elements",
+    "\\Game\\GUI\\helpers",
+    "\\Game\\World",
+    "\\Game\\World\\SPHSplash",
     "\\Network",
     "\\SGE",
     "\\Tools"
   ],
-  "SelectedNode": "\\Network\\NetworkHandler.cpp",
   "PreviewInSolutionExplorer": false
 }
