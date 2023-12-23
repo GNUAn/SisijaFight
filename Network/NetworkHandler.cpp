@@ -5,7 +5,7 @@
 #include <vector>
 #include <string>
 #include <thread>
-#include "NetworkHandler.h"
+#include "NetworkHandler.hpp"
 
 ENetPeer* peer;
 int clientID = 62;

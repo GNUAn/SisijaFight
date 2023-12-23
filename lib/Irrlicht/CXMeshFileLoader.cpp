@@ -19,7 +19,7 @@
 #ifdef _DEBUG
 #define _XREADER_DEBUG
 #endif
-//#define BETTER_MESHBUFFER_SPLITTING_FOR_X
+#define BETTER_MESHBUFFER_SPLITTING_FOR_X
 
 namespace irr
 {

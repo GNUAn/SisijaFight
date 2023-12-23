@@ -14,14 +14,14 @@
   "ExpandedNodes": [
     "",
     "\\Game",
+    "\\Game\\EventReceivers",
     "\\Game\\GUI",
     "\\Game\\GUI\\Elements",
-    "\\Game\\GUI\\helpers",
     "\\Game\\World",
-    "\\Game\\World\\SPHSplash",
-    "\\Network",
-    "\\SGE",
-    "\\Tools"
+    "\\lib",
+    "\\lib\\Irrlicht",
+    "\\SGE"
   ],
+  "SelectedNode": "\\lib\\Irrlicht\\CGUIMeshViewer.cpp",
   "PreviewInSolutionExplorer": false
 }

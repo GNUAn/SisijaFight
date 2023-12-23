@@ -1,4 +1,4 @@
-#include "SGU-S.h"
+#include "SGU-S.hpp"
 
 SCamera::SCamera(ISceneManager* smgr) : _smgr(smgr) {
 	this->_internal_camera = smgr->addCameraSceneNode();
