@@ -1,13 +1,13 @@
-#include "GUI.h"
-#include "../../Tools/GUITools.h"
-#include "../../globals.h"
-#include "helpers/helpers.h"
+#include "GUI.hpp"
+#include "../../Tools/GUITools.hpp"
+#include "../../globals.hpp"
+#include "helpers/helpers.hpp"
 #include <irrlicht.h>
 #include <unordered_map>
 #include <cmath>
 #include <iostream>
 #include <pugixml.hpp>
-#include <../../globals.h>
+#include <Irrlicht/CGUIMeshViewer.h>
 
 void Lobby::draw(IrrlichtDevice* dev) {
 
@@ -56,7 +56,9 @@ void Lobby::draw(IrrlichtDevice* dev) {
 	l4->setLineStartEnd(position2di(0, newHeight), position2di(p(screenSize.Width, 100), newHeight));
 	l5->setLineStartEnd(position2di(p(screenSize.Width, 25), newHeight), position2di(p(screenSize.Width, 25), p(screenSize.Height, 100)));
 
-	InteractiveModelViewer* playerFrame = new InteractiveModelViewer(dev->getSceneManager());
+	IGUIMeshViewer* playerFrame = g->addMeshViewer(s_rect(75, std::round(((float)newHeight / (float)screenSize.Height) * 100) + 1, 25, 80 - std::round(((float)newHeight / (float)screenSize.Height) * 100) + 1));
+	playerFrame->setMesh(dev->getSceneManager()->getMesh("data/players/sisija/sisija.x"));
+	playerFrame->setFrameLoop(0, 60);
 
 	IGUIButton* assistantButton = g->addButton(s_rect(80, 80, 10, 20), 0, -1, L"Assistant", L"AI-Assistant Drady based on ChatGPT");
 	assistantButton->setImage(assistantLogo);

@@ -19,6 +19,7 @@ file(GLOB_RECURSE PUGIXML_SRC "lib/pugixml/*.cpp")
 file(GLOB_RECURSE OPENCL_SRC "lib/OpenCL/src/*.c" "lib/OpenCL/src/*.cpp")
 file(GLOB_RECURSE IBULLET_SRC "lib/irrbullet/*.cpp" "lib/irrbullet/.c" "lib/Bullet/*.cpp" "lib/Bullet/*.c")
 file(GLOB_RECURSE ENET_SRC "lib/enet/*.c")
+file(GLOB_RECURSE TGETTEXT_SRC "lib/tinygettext/src/*.cpp")
 
 # Pfad zur JPEG-Bibliothek innerhalb von Irrlicht
 set(JPEG_LIB_PATH "lib/Irrlicht/jpeglib")
@@ -71,9 +72,9 @@ include_directories("lib/Bullet/Extras/BulletRoboticsGUI" "lib/Bullet/Extras/Con
  "lib/Bullet/Extras/Serialize/makesdna"
  "lib/Bullet/Extras/Serialize/ReadBulletSample"
  "lib/Bullet/Extras/Serialize/BlenderSerialize")
+include_directories("lib/tinygettext/include")
 
-
-add_executable (SisijaFight "main.cpp" "Gamemodes/ClassicFight.cpp" "SGE/SisijaGraphicsUnitSubsystem.cpp" "SGE/SGU-S.h" "lib/json.hpp" ${IRR_SRC} ${SOLOUD_SRC} ${PUGIXML_SRC} ${IBULLET_SRC} ${ENET_SRC} "Game/Audio/Backend.h" "Game/Audio/Backend.cpp" "globals.h" "Game/Session.h" "Game/Session.cpp" "Game/EventReceivers/InGameEVR.h"  "Game/EventReceivers/LobbyEVR.h"  "Game/GUI/GUI.h" "Gamemodes/Gamemodes.h" "Network/NetworkHandler.h" "Network/NetworkHandler.cpp" "Game/Player/Player.h" "Game/Player/Player.cpp" "Game/World/World.h" "Game/World/World.cpp" "Game/EventReceivers/InGameEVR.cpp" "Game/EventReceivers/LobbyEVR.cpp"  "Game/GUI/Lobby.cpp" "Tools/GUITools.h" "Tools/GUITools.cpp" "Game/GUI/Elements/MeshViewer.h" "Game/GUI/Elements/MeshViewer.cpp" "Game/GUI/Elements/SuperTable.h" "Game/GUI/Elements/SuperTable.cpp" "Game/GUI/helpers/helpers.h" "Game/GUI/helpers/helpers.cpp"  "SGE/SCamera.cpp" "Game/World/SPHSplash/Splatter.hpp" "Game/World/SPHSplash/Splatter.cpp")
+add_executable (SisijaFight "main.cpp" "Gamemodes/ClassicFight.cpp" "SGE/SisijaGraphicsUnitSubsystem.cpp" "SGE/SGU-S.hpp" "lib/json.hpp" ${IRR_SRC} ${SOLOUD_SRC} ${PUGIXML_SRC} ${IBULLET_SRC} ${ENET_SRC} ${TGETTEXT_SRC} "Game/Audio/Backend.hpp" "Game/Audio/Backend.cpp" "globals.hpp" "Game/Session.hpp" "Game/Session.cpp" "Game/EventReceivers/InGameEVR.hpp"  "Game/EventReceivers/LobbyEVR.hpp"  "Game/GUI/GUI.hpp" "Gamemodes/Gamemodes.hpp" "Network/NetworkHandler.hpp" "Network/NetworkHandler.cpp" "Game/Player/Player.hpp" "Game/Player/Player.cpp" "Game/World/World.hpp" "Game/World/World.cpp" "Game/EventReceivers/InGameEVR.cpp" "Game/EventReceivers/LobbyEVR.cpp"  "Game/GUI/Lobby.cpp" "Tools/GUITools.hpp" "Tools/GUITools.cpp" "Game/GUI/Elements/SuperTable.hpp" "Game/GUI/Elements/SuperTable.cpp" "Game/GUI/helpers/helpers.hpp" "Game/GUI/helpers/helpers.cpp"  "SGE/SCamera.cpp" "Game/World/SPHSplash/Splatter.hpp" "Game/World/SPHSplash/Splatter.cpp"  "Tools/Translation/Translator.cpp" "Configurator.cpp" "compileConfig.h")
 
 # Finde die notwendigen Bibliotheken je nach BetriebssystemPENCL_SRC}
 if(WIN32)

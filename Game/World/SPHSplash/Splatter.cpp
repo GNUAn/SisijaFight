@@ -1,5 +1,5 @@
 #include "Splatter.hpp"
-#include "../../globals.h"
+#include "../../globals.hpp"
 #include <irrBullet.h>
 
 using namespace irr;

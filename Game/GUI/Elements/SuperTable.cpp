@@ -1,4 +1,4 @@
-#include "SuperTable.h"
+#include "SuperTable.hpp"
 
 CustomTable::CustomTable(IGUIEnvironment* env, IGUIElement* parent, s32 id, const core::rect<s32>& rectangle)
     : IGUIElement(EGUIET_ELEMENT, env, parent, id, rectangle),

@@ -1,4 +1,4 @@
-#include "World.h"
+#include "World.hpp"
 #include <pugixml.hpp>
 
 using namespace pugi;

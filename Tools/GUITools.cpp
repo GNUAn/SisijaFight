@@ -1,4 +1,4 @@
-#include "GUITools.h"
+#include "GUITools.hpp"
 
 // Returns the percent-value of a float
 float p(float v, float p) {

@@ -45,8 +45,12 @@ namespace gui
 		//! draws the element and its children
 		virtual void draw();
 
-	private:
+		virtual void setFrameLoop(s32 start, s32 end);
 
+	private:
+		core::vector3di loopingFrames;
+		s32 currentFrame;
+		core::vector3df m; // Center of the mesh
 		video::SMaterial Material;
 		scene::IAnimatedMesh* Mesh;
 	};

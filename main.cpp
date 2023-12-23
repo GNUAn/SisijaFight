@@ -1,6 +1,6 @@
-#include "SGE/SGU-S.h"
-#include "globals.h"
-#include "Game/Audio/Backend.h"
+#include "SGE/SGU-S.hpp"
+#include "globals.hpp"
+#include "Game/Audio/Backend.hpp"
 
 SFSession* Session;
 SGES* GEngine;
