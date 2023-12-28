@@ -3,7 +3,7 @@
 #include "../globals.hpp"
 #include <irrlicht.h>
 #include <string>
-#include <tinygettext/tinygettext.hpp>
+#include "Translation/Translator.hpp"
 
 #define gettext(arg) translate(arg)
 
