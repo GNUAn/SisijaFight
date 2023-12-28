@@ -14,14 +14,12 @@
   "ExpandedNodes": [
     "",
     "\\Game",
-    "\\Game\\GUI\\Elements",
+    "\\Game\\GUI",
     "\\lib",
-    "\\lib\\Irrlicht",
-    "\\lib\\Irrlicht\\MacOSX",
     "\\SGE",
     "\\Tools",
     "\\Tools\\Translation"
   ],
-  "SelectedNode": "\\CMakeLists.txt",
+  "SelectedNode": "\\Game\\GUI\\Lobby.cpp",
   "PreviewInSolutionExplorer": false
 }
