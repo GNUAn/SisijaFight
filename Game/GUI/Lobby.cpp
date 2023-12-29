@@ -60,7 +60,7 @@ void Lobby::draw(IrrlichtDevice* dev) {
 	playerFrame->setMesh(dev->getSceneManager()->getMesh("data/players/sisija/sisija.x"));
 	playerFrame->setFrameLoop(0, 60);
 
-	IGUIButton* assistantButton = g->addButton(s_rect(80, 80, 10, 20), 0, -1, L"Assistant", stringToWString(translate("AI-Assistant Drady based on ChatGPT")).c_str());
+	IGUIButton* assistantButton = g->addButton(s_rect(80, 80, 10, 20), 0, -1, L"Assistant", L"AI-Assistant Drady based on ChatGPT");
 	assistantButton->setImage(assistantLogo);
 	assistantButton->setScaleImage(true);
 	assistantButton->setUseAlphaChannel(true);
@@ -69,8 +69,8 @@ void Lobby::draw(IrrlichtDevice* dev) {
 	GUIEngine->addObject(assistantButton, [](const SEvent::SGUIEvent) {});
 
 	worldPreview = g->addImage(s_rect(50, std::round(((float)newHeight / (float)screenSize.Height) * 100) + 10, 25, 34));
-	worldLabelAuthor = g->addStaticText(stringToWString(translate("Level by: -select-a-world-first-")).c_str(), s_rect(50, std::round(((float)newHeight / (float)screenSize.Height) * 100) + 45, 25, 5), true, true, 0, -1, false);
-	worldMaxPlayerSupport = g->addStaticText(stringToWString(translate("Maximum number of supported Players: -select-a-world-first-")).c_str(), s_rect(50, std::round(((float)newHeight / (float)screenSize.Height) * 100) + 50, 25, 10), true, true, 0, -1, false);
+	worldLabelAuthor = g->addStaticText(stringToWString("Level by: -select-a-world-first-").c_str(), s_rect(50, std::round(((float)newHeight / (float)screenSize.Height) * 100) + 45, 25, 5), true, true, 0, -1, false);
+	worldMaxPlayerSupport = g->addStaticText(stringToWString("Maximum number of supported Players: -select-a-world-first-").c_str(), s_rect(50, std::round(((float)newHeight / (float)screenSize.Height) * 100) + 50, 25, 10), true, true, 0, -1, false);
 
 	IGUIComboBox* worldSelection = g->addComboBox(s_rect(50, std::round(((float)newHeight / (float)screenSize.Height) * 100)+1, 25, 7));
 
@@ -97,8 +97,8 @@ void Lobby::draw(IrrlichtDevice* dev) {
 					if (!r) { exit(5); }
 					std::string author = worldData.child("world").attribute("author").as_string();
 					std::string maxPlayers = worldData.child("world").attribute("maxPlayers").as_string();
-					worldLabelAuthor->setText(stringToWString((translate("Level by: ") + author)).c_str());
-					worldMaxPlayerSupport->setText(stringToWString((translate("Maximum number of Players: ") + maxPlayers)).c_str());
+					worldLabelAuthor->setText(stringToWString(("Level by: " + author)).c_str());
+					worldMaxPlayerSupport->setText(stringToWString(("Maximum number of Players: " + maxPlayers)).c_str());
 				}
 			}
 	);

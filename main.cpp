@@ -1,7 +1,6 @@
 #include "SGE/SGU-S.hpp"
 #include "globals.hpp"
 #include "Game/Audio/Backend.hpp"
-#include "Tools/Translation/Translator.hpp"
 
 SFSession* Session;
 SGES* GEngine;
@@ -20,7 +19,6 @@ int main() {
 	params.Stereobuffer = true;
 	params.Stencilbuffer = true;
 	params.DeviceType = EIDT_BEST;
-	params.Fullscreen = true;
 	params.DriverMultithreaded = false;
 	params.UsePerformanceTimer = true;
 	params.WithAlphaChannel = true;
@@ -34,8 +32,6 @@ int main() {
 	IVideoDriver* driver = device->getVideoDriver();
 	ISceneManager* smgr = device->getSceneManager();
 	IGUIEnvironment* guienv = device->getGUIEnvironment();
-
-	initTranslator();
 
 	device->run(); // Used to update the screenSize
 
