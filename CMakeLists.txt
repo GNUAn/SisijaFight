@@ -19,9 +19,12 @@ file(GLOB_RECURSE PUGIXML_SRC "lib/pugixml/*.cpp")
 file(GLOB_RECURSE OPENCL_SRC "lib/OpenCL/src/*.c" "lib/OpenCL/src/*.cpp")
 file(GLOB_RECURSE IBULLET_SRC "lib/irrbullet/*.cpp" "lib/irrbullet/.c" "lib/Bullet/*.cpp" "lib/Bullet/*.c")
 file(GLOB_RECURSE ENET_SRC "lib/enet/*.c")
+file(GLOB_RECURSE TGETTEXT_SRC "lib/tinygettext/src/*.cpp")
 
+# Pfad zur JPEG-Bibliothek innerhalb von Irrlicht
 set(JPEG_LIB_PATH "lib/Irrlicht/jpeglib")
 
+# Ausschlussregeln für Windows
 if(WIN32)
     list(REMOVE_ITEM IRR_SRC
         "${CMAKE_CURRENT_SOURCE_DIR}/${JPEG_LIB_PATH}/jmemmac.c"
@@ -31,6 +34,7 @@ if(WIN32)
     )
 endif()
 
+# Ausschlussregeln für Mac OS
 if(APPLE)
     list(REMOVE_ITEM IRR_SRC
         "${CMAKE_CURRENT_SOURCE_DIR}/${JPEG_LIB_PATH}/jmemdos.c"
@@ -39,6 +43,7 @@ if(APPLE)
     )
 endif()
 
+# Ausschlussregeln für Unix/Linux
 if(UNIX AND NOT APPLE)
     list(REMOVE_ITEM IRR_SRC
         "${CMAKE_CURRENT_SOURCE_DIR}/${JPEG_LIB_PATH}/jmemmac.c"
@@ -67,18 +72,26 @@ include_directories("lib/Bullet/Extras/BulletRoboticsGUI" "lib/Bullet/Extras/Con
  "lib/Bullet/Extras/Serialize/makesdna"
  "lib/Bullet/Extras/Serialize/ReadBulletSample"
  "lib/Bullet/Extras/Serialize/BlenderSerialize")
+include_directories("lib/tinygettext/include")
 
-add_executable (SisijaFight "main.cpp" "Gamemodes/ClassicFight.cpp" "SGE/SisijaGraphicsUnitSubsystem.cpp" "SGE/SGU-S.hpp" "lib/json.hpp" ${IRR_SRC} ${SOLOUD_SRC} ${PUGIXML_SRC} ${IBULLET_SRC} ${ENET_SRC} ${SDL_SRC} "Game/Audio/Backend.hpp" "Game/Audio/Backend.cpp" "globals.hpp" "Game/Session.hpp" "Game/Session.cpp" "Game/EventReceivers/InGameEVR.hpp"  "Game/EventReceivers/LobbyEVR.hpp"  "Game/GUI/GUI.hpp" "Gamemodes/Gamemodes.hpp" "Network/NetworkHandler.hpp" "Network/NetworkHandler.cpp" "Game/Player/Player.hpp" "Game/Player/Player.cpp" "Game/World/World.hpp" "Game/World/World.cpp" "Game/EventReceivers/InGameEVR.cpp" "Game/EventReceivers/LobbyEVR.cpp"  "Game/GUI/Lobby.cpp" "Tools/GUITools.hpp" "Tools/GUITools.cpp" "Game/GUI/Elements/SuperTable.hpp" "Game/GUI/Elements/SuperTable.cpp" "Game/GUI/helpers/helpers.hpp" "Game/GUI/helpers/helpers.cpp"  "SGE/SCamera.cpp" "Game/World/SPHSplash/Splatter.hpp" "Game/World/SPHSplash/Splatter.cpp"  "Tools/Translation/Translator.cpp" "Configurator.cpp" "compileConfig.h")
+add_executable (SisijaFight "main.cpp" "Gamemodes/ClassicFight.cpp" "SGE/SisijaGraphicsUnitSubsystem.cpp" "SGE/SGU-S.hpp" "lib/json.hpp" ${IRR_SRC} ${SOLOUD_SRC} ${PUGIXML_SRC} ${IBULLET_SRC} ${ENET_SRC} ${TGETTEXT_SRC} "Game/Audio/Backend.hpp" "Game/Audio/Backend.cpp" "globals.hpp" "Game/Session.hpp" "Game/Session.cpp" "Game/EventReceivers/InGameEVR.hpp"  "Game/EventReceivers/LobbyEVR.hpp"  "Game/GUI/GUI.hpp" "Gamemodes/Gamemodes.hpp" "Network/NetworkHandler.hpp" "Network/NetworkHandler.cpp" "Game/Player/Player.hpp" "Game/Player/Player.cpp" "Game/World/World.hpp" "Game/World/World.cpp" "Game/EventReceivers/InGameEVR.cpp" "Game/EventReceivers/LobbyEVR.cpp"  "Game/GUI/Lobby.cpp" "Tools/GUITools.hpp" "Tools/GUITools.cpp" "Game/GUI/Elements/SuperTable.hpp" "Game/GUI/Elements/SuperTable.cpp" "Game/GUI/helpers/helpers.hpp" "Game/GUI/helpers/helpers.cpp"  "SGE/SCamera.cpp" "Game/World/SPHSplash/Splatter.hpp" "Game/World/SPHSplash/Splatter.cpp"  "Tools/Translation/Translator.cpp" "Configurator.cpp" "compileConfig.h")
 
+# Finde die notwendigen Bibliotheken je nach BetriebssystemPENCL_SRC}
 if(WIN32)
+    # Für Windows, verlinke gegen die Winsock-Bibliothek
     target_link_libraries(SisijaFight wsock32 ws2_32)
     include_directories("C:/Program Files (x86)/Microsoft DirectX SDK (June 2010)/Include")
 elseif(UNIX AND NOT APPLE)
     
 elseif(APPLE)
+    # Für macOS, finde und verlinke gegen erforderliche Frameworks
     find_library(COCOA_LIBRARY Cocoa)
     find_library(IOKIT_LIBRARY IOKit)
     target_link_libraries(SisijaFight ${COCOA_LIBRARY} ${IOKIT_LIBRARY})
 endif()
 
-set_property(TARGET SisijaFight PROPERTY CXX_STANDARD 20)
+if (CMAKE_VERSION VERSION_GREATER 3.12)
+  set_property(TARGET SisijaFight PROPERTY CXX_STANDARD 20)
+endif()
+
+# TODO: Fügen Sie bei Bedarf Tests hinzu, und installieren Sie Ziele.

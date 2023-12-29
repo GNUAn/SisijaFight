@@ -1,15 +1,14 @@
 #include <pugixml.hpp>
-#include <string>
 
 struct SConfig {
 	//Localisation
-	std::string version = "0.2.1";
-	std::string lang = "de";
+	const char* version = "0.2.1";
+	const char* lang = "en";
 	//Player specific stuff
-	std::string tag, password;
+	const char* tag, * password;
 	//...
 };
 
 extern SConfig globalConfig;
 
-SConfig getConfiguraion();
+void getConfiguraion();
