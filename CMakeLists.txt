@@ -19,6 +19,7 @@ file(GLOB_RECURSE PUGIXML_SRC "lib/pugixml/*.cpp")
 file(GLOB_RECURSE OPENCL_SRC "lib/OpenCL/src/*.c" "lib/OpenCL/src/*.cpp")
 file(GLOB_RECURSE IBULLET_SRC "lib/irrbullet/*.cpp" "lib/irrbullet/.c" "lib/Bullet/*.cpp" "lib/Bullet/*.c")
 file(GLOB_RECURSE ENET_SRC "lib/enet/*.c")
+file(GLOB_RECURSE AS_SRC "lib/angelscript/*.cpp" "lib/angelscript/*.c")
 
 set(JPEG_LIB_PATH "lib/Irrlicht/jpeglib")
 
@@ -48,6 +49,7 @@ if(UNIX AND NOT APPLE)
 endif()
 
 include_directories("lib/Irrlicht/include")
+include_directories("lib/angelscript/include")
 include_directories("lib/Irrlicht/aesGladman")
 include_directories("lib/Irrlicht/bzip2")
 include_directories("lib/Irrlicht/jpeglib")
@@ -68,13 +70,57 @@ include_directories("lib/Bullet/Extras/BulletRoboticsGUI" "lib/Bullet/Extras/Con
  "lib/Bullet/Extras/Serialize/ReadBulletSample"
  "lib/Bullet/Extras/Serialize/BlenderSerialize")
 
-add_executable (SisijaFight "main.cpp" "Gamemodes/ClassicFight.cpp" "SGE/SisijaGraphicsUnitSubsystem.cpp" "SGE/SGU-S.hpp" "lib/json.hpp" ${IRR_SRC} ${SOLOUD_SRC} ${PUGIXML_SRC} ${IBULLET_SRC} ${ENET_SRC} ${SDL_SRC} "Game/Audio/Backend.hpp" "Game/Audio/Backend.cpp" "globals.hpp" "Game/Session.hpp" "Game/Session.cpp" "Game/EventReceivers/InGameEVR.hpp"  "Game/EventReceivers/LobbyEVR.hpp"  "Game/GUI/GUI.hpp" "Gamemodes/Gamemodes.hpp" "Network/NetworkHandler.hpp" "Network/NetworkHandler.cpp" "Game/Player/Player.hpp" "Game/Player/Player.cpp" "Game/World/World.hpp" "Game/World/World.cpp" "Game/EventReceivers/InGameEVR.cpp" "Game/EventReceivers/LobbyEVR.cpp"  "Game/GUI/Lobby.cpp" "Tools/GUITools.hpp" "Tools/GUITools.cpp" "Game/GUI/Elements/SuperTable.hpp" "Game/GUI/Elements/SuperTable.cpp" "Game/GUI/helpers/helpers.hpp" "Game/GUI/helpers/helpers.cpp"  "SGE/SCamera.cpp" "Game/World/SPHSplash/Splatter.hpp" "Game/World/SPHSplash/Splatter.cpp"  "Tools/Translation/Translator.cpp" "Configurator.cpp" "compileConfig.h")
+# for angelscript
+set(ARCHFLAGS "${CMAKE_SYSTEM_PROCESSOR}")
+if (APPLE AND NOT IOS)
+  if (${CMAKE_SYSTEM_PROCESSOR} MATCHES "arm")
+    set(ARCHFLAGS "aarch64")
+  endif ()
+endif ()
+
+if(MSVC AND CMAKE_CL_64)
+    enable_language(ASM_MASM)
+    if(CMAKE_ASM_MASM_COMPILER_WORKS)
+        set(AS_SRC ${AS_SRC} "lib/angelscript/src/as_callfunc_x64_msvc_asm.asm")
+    else()
+        message(FATAL ERROR "MSVC x86_64 target requires a working assembler")
+    endif()
+endif()
+
+if(${ARCHFLAGS} MATCHES "^arm")
+    enable_language(ASM)
+    if(CMAKE_ASM_COMPILER_WORKS)
+        set(ANGELSCRIPT_SOURCE ${ANGELSCRIPT_SOURCE} "lib/angelscript/src/as_callfunc_arm.cpp" "lib/angelscript/src/as_callfunc_arm_gcc.S")
+        set_property(SOURCE "lib/angelscript/src/as_callfunc_arm_gcc.S" APPEND PROPERTY COMPILE_FLAGS " -Wa,-mimplicit-it=always")
+    else()
+        message(FATAL ERROR "ARM target requires a working assembler")
+    endif()
+endif()
+
+if(${ARCHFLAGS} MATCHES "^aarch64")
+    enable_language(ASM)
+    if(CMAKE_ASM_COMPILER_WORKS)
+        if(NOT APPLE)
+            set(ANGELSCRIPT_SOURCE ${ANGELSCRIPT_SOURCE} "lib/angelscript/src/as_callfunc_arm64.cpp" "lib/angelscript/src/as_callfunc_arm64_gcc.S")
+        else()
+            set(ANGELSCRIPT_SOURCE ${ANGELSCRIPT_SOURCE} "lib/angelscript/src/as_callfunc_arm64.cpp" "lib/angelscript/src/as_callfunc_arm64_xcode.S")
+        endif()
+    else()
+        message(FATAL ERROR "ARM target requires a working assembler")
+    endif()
+endif()
+
+if(MSVC)
+    set(CMAKE_DEBUG_POSTFIX "d")  
+endif()
+
+add_executable (SisijaFight "src/main.cpp" "src/Gamemodes/ClassicFight.cpp" "src/SGE/SisijaGraphicsUnitSubsystem.cpp" "src/SGE/SGU-S.hpp" "lib/json.hpp" ${IRR_SRC} ${SOLOUD_SRC} ${PUGIXML_SRC} ${IBULLET_SRC} ${ENET_SRC} ${AS_SRC} "src/Game/Audio/Backend.hpp" "src/Game/Audio/Backend.cpp" "src/globals.hpp" "src/Game/Session.hpp" "src/Game/Session.cpp" "src/Game/EventReceivers/InGameEVR.hpp"  "src/Game/EventReceivers/LobbyEVR.hpp"  "src/Game/GUI/GUI.hpp" "src/Gamemodes/Gamemodes.hpp" "src/Network/NetworkHandler.hpp" "src/Network/NetworkHandler.cpp" "src/Game/Player/Player.hpp" "src/Game/Player/Player.cpp" "src/Game/World/World.hpp" "src/Game/World/World.cpp" "src/Game/EventReceivers/InGameEVR.cpp" "src/Game/EventReceivers/LobbyEVR.cpp"  "src/Game/GUI/Lobby.cpp" "src/Tools/GUITools.hpp" "src/Tools/GUITools.cpp" "src/Game/GUI/Elements/SuperTable.hpp" "src/Game/GUI/Elements/SuperTable.cpp" "src/Game/GUI/helpers/helpers.hpp" "src/Game/GUI/helpers/helpers.cpp"  "src/SGE/SCamera.cpp" "src/Game/World/SPHSplash/Splatter.hpp" "src/Game/World/SPHSplash/Splatter.cpp"  "src/Tools/Translation/Translator.cpp" "src/Configurator.cpp" "src/compileConfig.h")
 
 if(WIN32)
     target_link_libraries(SisijaFight wsock32 ws2_32)
     include_directories("C:/Program Files (x86)/Microsoft DirectX SDK (June 2010)/Include")
 elseif(UNIX AND NOT APPLE)
-    
+
 elseif(APPLE)
     find_library(COCOA_LIBRARY Cocoa)
     find_library(IOKIT_LIBRARY IOKit)

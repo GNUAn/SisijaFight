@@ -1,7 +1,13 @@
 {
-    "AI-Assistant Drady based on ChatGPT": "KI Assistent Drady auf ChatGPT Basis",
-    "Level by: -select-a-world-first-": "-Bitte erst eine Welt auswählen",
-    "Maximum number of supported Players: -select-a-world-first-": "-Bitte erst eine Welt auswählen",
+    "START": "STARTEN",
+    "Start Game": "Spiel Starten",
+    "Assistant": "Assistent",
+    "AI-Assistant Drady based on ChatGPT": "KI-Assistent Drady auf ChatGPT basis",
+    "Level by: -select-a-world-first-": "Bitte erst Welt auswählen!",
+    "Maximum number of supported Players: -select-a-world-first-": " ",
     "Level by: ": "Level von: ",
-    "Maximum number of Players: ": "Maximale Spieleranzahl: "
+    "Maximum number of Players: ": "Maximale Spieleranzahl: ",
+    "Classic Fight": "Klassischer Kampf",
+    "Tactic Fight": "Taktischer Kampf",
+    "Story Mode": "Geschichtsmodus"
 }
