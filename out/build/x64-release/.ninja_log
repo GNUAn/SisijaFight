@@ -3,11 +3,11 @@
 64	688	7256425431842086	CMakeFiles/SisijaFight.dir/lib/Irrlicht/CBSPMeshFileLoader.cpp.obj	2f4de70b03a581df
 7732	8174	7256425506956113	CMakeFiles/SisijaFight.dir/lib/soloud/src/filter/soloud_eqfilter.cpp.obj	9123dc8452c3964c
 128	272	7256425428066562	CMakeFiles/SisijaFight.dir/lib/Irrlicht/CD3D8ShaderMaterialRenderer.cpp.obj	1fa99065d3ccdf68
+115	266	7256425428066562	CMakeFiles/SisijaFight.dir/lib/Irrlicht/CD3D8Driver.cpp.obj	13699854e3e7bfc0
+1624	1756	7256425442849300	CMakeFiles/SisijaFight.dir/lib/Irrlicht/CImageLoaderDDS.cpp.obj	84bf3c709259ba1a
+3636	4038	7256425465687157	CMakeFiles/SisijaFight.dir/lib/Irrlicht/CReadFile.cpp.obj	ffd9dc6f45631c5d
 143	1828	7256425443630525	CMakeFiles/SisijaFight.dir/lib/Irrlicht/CD3D9Driver.cpp.obj	f465b9c379556176
 2255	3814	7256425463417135	CMakeFiles/SisijaFight.dir/lib/Irrlicht/CMY3DMeshFileLoader.cpp.obj	3287c9dfc4a1daa7
-115	266	7256425428066562	CMakeFiles/SisijaFight.dir/lib/Irrlicht/CD3D8Driver.cpp.obj	13699854e3e7bfc0
-3636	4038	7256425465687157	CMakeFiles/SisijaFight.dir/lib/Irrlicht/CReadFile.cpp.obj	ffd9dc6f45631c5d
-1624	1756	7256425442849300	CMakeFiles/SisijaFight.dir/lib/Irrlicht/CImageLoaderDDS.cpp.obj	84bf3c709259ba1a
 1570	2442	7256425449751094	CMakeFiles/SisijaFight.dir/lib/Irrlicht/CGeometryCreator.cpp.obj	6aa5f0dfd08dc0cf
 124	277	7256425428066562	CMakeFiles/SisijaFight.dir/lib/Irrlicht/CD3D8ParallaxMapRenderer.cpp.obj	217f8e9c4a1e05e2
 1641	2160	7256425446970645	CMakeFiles/SisijaFight.dir/lib/Irrlicht/CImageLoaderPCX.cpp.obj	169ab1c57e2bc5a1
@@ -246,7 +246,7 @@
 6009	6236	7256425487298669	CMakeFiles/SisijaFight.dir/lib/Irrlicht/jpeglib/jfdctfst.c.obj	18fbe187470152a4
 3101	4450	7256425469073002	CMakeFiles/SisijaFight.dir/lib/Irrlicht/COpenGLParallaxMapRenderer.cpp.obj	f0159655dabf002c
 2900	4676	7256425471897589	CMakeFiles/SisijaFight.dir/lib/Irrlicht/COpenGLDriver.cpp.obj	3a906b50de716893
-1445	1756	7255772203708797	SisijaFight.exe	f4bb4c9b7e8d159e
+1587	1984	7256465888052678	SisijaFight.exe	84ace997b9aeb3c4
 3733	4550	7256425469786483	CMakeFiles/SisijaFight.dir/lib/Irrlicht/CSTLMeshWriter.cpp.obj	96df6b3f729f99f9
 6230	6442	7256425489802730	CMakeFiles/SisijaFight.dir/lib/Irrlicht/jpeglib/wrppm.c.obj	aacaf42513e65e53
 8654	9195	7256425517311509	CMakeFiles/SisijaFight.dir/lib/Bullet/src/Bullet3Dynamics/ConstraintSolver/b3FixedConstraint.cpp.obj	238295de86342c24
@@ -596,6 +596,7 @@
 8917	9842	7256425523756216	CMakeFiles/SisijaFight.dir/lib/Bullet/src/Bullet3Serialize/Bullet2FileLoader/b3File.cpp.obj	2643092ccabef401
 9060	9957	7256425524893869	CMakeFiles/SisijaFight.dir/lib/Bullet/src/BulletCollision/BroadphaseCollision/btQuantizedBvh.cpp.obj	40eda83e7c4f4da4
 9535	10182	7256425527054560	CMakeFiles/SisijaFight.dir/lib/Bullet/src/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.cpp.obj	14cf152dd2ba53ef
+19	32	7256437237158855	CMakeFiles/SisijaFight.dir/lib/angelscript/src/as_callfunc_x64_msvc_asm.asm.obj	501bf5a6fcf6e3d
 9624	10009	7256425525484359	CMakeFiles/SisijaFight.dir/lib/Bullet/src/BulletCollision/CollisionDispatch/btManifoldResult.cpp.obj	142b0ac011ed453c
 9639	10156	7256425526738220	CMakeFiles/SisijaFight.dir/lib/Bullet/src/BulletCollision/CollisionDispatch/btSphereBoxCollisionAlgorithm.cpp.obj	968dc511c7e9f2a8
 9608	9964	7256425524893869	CMakeFiles/SisijaFight.dir/lib/Bullet/src/BulletCollision/CollisionDispatch/btHashedSimplePairCache.cpp.obj	8e31703712337f61
@@ -715,7 +716,7 @@
 16606	17398	7256425599312053	CMakeFiles/SisijaFight.dir/src/Game/GUI/helpers/helpers.cpp.obj	9463b05ca23e2f7a
 16488	17876	7256425604178421	CMakeFiles/SisijaFight.dir/src/Game/World/World.cpp.obj	5baae84dc18dd167
 16579	18876	7256425614235086	CMakeFiles/SisijaFight.dir/src/Tools/GUITools.cpp.obj	4cfa1600709c7832
-25	1601	7256426133477572	CMakeFiles/SisijaFight.dir/src/main.cpp.obj	bb05da404f2d9144
+21	1586	7256465884513137	CMakeFiles/SisijaFight.dir/src/main.cpp.obj	bb05da404f2d9144
 16565	18986	7256425615334383	CMakeFiles/SisijaFight.dir/src/Game/GUI/Lobby.cpp.obj	b1dc21eb9b28187c
 14554	14872	7256425574026527	CMakeFiles/SisijaFight.dir/lib/angelscript/add_on/scriptany/scriptany.cpp.obj	7294d64c30f14769
 14864	15116	7256425576536360	CMakeFiles/SisijaFight.dir/lib/angelscript/add_on/scripthandle/scripthandle.cpp.obj	4198c56c1c8d8711
@@ -754,7 +755,3 @@
 15903	17603	7256425601507227	CMakeFiles/SisijaFight.dir/lib/angelscript/src/as_restore.cpp.obj	88116074228ec4fc
 15627	18122	7256425606688273	CMakeFiles/SisijaFight.dir/lib/angelscript/src/as_compiler.cpp.obj	b035aefb6e94fdac
 16636	18881	7256425614235086	CMakeFiles/SisijaFight.dir/src/Game/World/SPHSplash/Splatter.cpp.obj	d0c8b8cc6287b2ea
-19	32	7256437237158855	CMakeFiles/SisijaFight.dir/lib/angelscript/src/as_callfunc_x64_msvc_asm.asm.obj	501bf5a6fcf6e3d
-33	361	7256437240146277	SisijaFight.exe	84ace997b9aeb3c4
-21	1586	7256465884513137	CMakeFiles/SisijaFight.dir/src/main.cpp.obj	bb05da404f2d9144
-1587	1984	7256465888052678	SisijaFight.exe	84ace997b9aeb3c4

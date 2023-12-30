@@ -13,13 +13,16 @@
   },
   "ExpandedNodes": [
     "",
-    "\\Game",
-    "\\Game\\GUI",
-    "\\Game\\GUI\\Elements",
-    "\\SGE",
-    "\\Tools",
-    "\\Tools\\Translation"
+    "\\lib",
+    "\\lib\\Irrlicht",
+    "\\src",
+    "\\src\\Game",
+    "\\src\\Game\\World",
+    "\\src\\Game\\World\\SPHSplash",
+    "\\src\\Network",
+    "\\src\\Tools",
+    "\\src\\Tools\\Translation"
   ],
-  "SelectedNode": "\\Game\\GUI\\Lobby.cpp",
+  "SelectedNode": "\\src\\main.cpp",
   "PreviewInSolutionExplorer": false
 }
