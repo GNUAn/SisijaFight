@@ -1,6 +1,6 @@
 #pragma once
 #include <irrlicht.h>
-#include <irrbullet.h>
+#include <irrBullet.h>
 #include <string>
 
 using namespace irr;
