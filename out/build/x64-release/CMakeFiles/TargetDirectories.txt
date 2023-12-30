@@ -1,3 +1,3 @@
-C:/Users/Lucas Gola/Desktop/Sisija/SisijaFight/SisijaFight/out/build/x64-release/CMakeFiles/SisijaFight.dir
-C:/Users/Lucas Gola/Desktop/Sisija/SisijaFight/SisijaFight/out/build/x64-release/CMakeFiles/edit_cache.dir
-C:/Users/Lucas Gola/Desktop/Sisija/SisijaFight/SisijaFight/out/build/x64-release/CMakeFiles/rebuild_cache.dir
+C:/Users/hanna/Desktop/Sisija/SisijaFight/out/build/x64-release/CMakeFiles/SisijaFight.dir
+C:/Users/hanna/Desktop/Sisija/SisijaFight/out/build/x64-release/CMakeFiles/edit_cache.dir
+C:/Users/hanna/Desktop/Sisija/SisijaFight/out/build/x64-release/CMakeFiles/rebuild_cache.dir
