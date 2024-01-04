@@ -1,28 +1,25 @@
 {
   "OutputFoldersPerTargetSystem": {
     "Lokaler Computer": [
-      "out\\build\\x64-debug",
+      "..\\SisijaFight-data\\application\\windows",
       "out\\install\\x64-debug",
-      "out\\build\\x64-release",
       "out\\install\\x64-release",
-      "out\\build\\x86-debug",
       "out\\install\\x86-debug",
-      "out\\build\\x86-release",
       "out\\install\\x86-release"
     ]
   },
   "ExpandedNodes": [
     "",
-    "\\lib",
-    "\\lib\\Irrlicht",
     "\\src",
     "\\src\\Game",
+    "\\src\\Game\\GUI",
     "\\src\\Game\\World",
     "\\src\\Game\\World\\SPHSplash",
     "\\src\\Network",
+    "\\src\\SGE",
     "\\src\\Tools",
     "\\src\\Tools\\Translation"
   ],
-  "SelectedNode": "\\src\\main.cpp",
+  "SelectedNode": "\\src\\SGE\\SisijaGraphicsUnitSubsystem.cpp",
   "PreviewInSolutionExplorer": false
 }

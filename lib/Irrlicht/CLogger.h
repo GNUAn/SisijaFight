@@ -27,7 +27,7 @@ public:
 	virtual void setLogLevel(ELOG_LEVEL ll);
 
 	//! Prints out a text into the log
-	virtual void log(const c8* text, ELOG_LEVEL ll=ELL_INFORMATION);
+	virtual void log(const c8* text, ELOG_LEVEL ll=ELL_INFORMATION, const char* caller="IrrlichtEngine");
 
 	//! Prints out a text into the log
 	virtual void log(const wchar_t* text, ELOG_LEVEL ll=ELL_INFORMATION);

@@ -21,6 +21,8 @@ file(GLOB_RECURSE IBULLET_SRC "lib/irrbullet/*.cpp" "lib/irrbullet/.c" "lib/Bull
 file(GLOB_RECURSE ENET_SRC "lib/enet/*.c")
 file(GLOB_RECURSE AS_SRC "lib/angelscript/*.cpp" "lib/angelscript/*.c")
 
+set(DIRR_STATIC_LIB_)
+
 set(JPEG_LIB_PATH "lib/Irrlicht/jpeglib")
 
 if(WIN32)
@@ -36,7 +38,8 @@ if(APPLE)
     list(REMOVE_ITEM IRR_SRC
         "${CMAKE_CURRENT_SOURCE_DIR}/${JPEG_LIB_PATH}/jmemdos.c"
         "${CMAKE_CURRENT_SOURCE_DIR}/${JPEG_LIB_PATH}/jmemnobs.c"
-        # Füge weitere nicht benötigte Dateien für Mac hinzu
+        file(GLOB_RECURSE ISRCMM "lib/Irrlicht/*.mm")
+        set(IRR_SRC IRR_SRC ISRCMM)
     )
 endif()
 
@@ -69,6 +72,8 @@ include_directories("lib/Bullet/Extras/BulletRoboticsGUI" "lib/Bullet/Extras/Con
  "lib/Bullet/Extras/Serialize/makesdna"
  "lib/Bullet/Extras/Serialize/ReadBulletSample"
  "lib/Bullet/Extras/Serialize/BlenderSerialize")
+
+ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D_IRR_STATIC_LIB_")
 
 # for angelscript
 set(ARCHFLAGS "${CMAKE_SYSTEM_PROCESSOR}")
@@ -114,7 +119,7 @@ if(MSVC)
     set(CMAKE_DEBUG_POSTFIX "d")  
 endif()
 
-add_executable (SisijaFight "src/main.cpp" "src/Gamemodes/ClassicFight.cpp" "src/SGE/SisijaGraphicsUnitSubsystem.cpp" "src/SGE/SGU-S.hpp" "lib/json.hpp" ${IRR_SRC} ${SOLOUD_SRC} ${PUGIXML_SRC} ${IBULLET_SRC} ${ENET_SRC} ${AS_SRC} "src/Game/Audio/Backend.hpp" "src/Game/Audio/Backend.cpp" "src/globals.hpp" "src/Game/Session.hpp" "src/Game/Session.cpp" "src/Game/EventReceivers/InGameEVR.hpp"  "src/Game/EventReceivers/LobbyEVR.hpp"  "src/Game/GUI/GUI.hpp" "src/Gamemodes/Gamemodes.hpp" "src/Network/NetworkHandler.hpp" "src/Network/NetworkHandler.cpp" "src/Game/Player/Player.hpp" "src/Game/Player/Player.cpp" "src/Game/World/World.hpp" "src/Game/World/World.cpp" "src/Game/EventReceivers/InGameEVR.cpp" "src/Game/EventReceivers/LobbyEVR.cpp"  "src/Game/GUI/Lobby.cpp" "src/Tools/GUITools.hpp" "src/Tools/GUITools.cpp" "src/Game/GUI/Elements/SuperTable.hpp" "src/Game/GUI/Elements/SuperTable.cpp" "src/Game/GUI/helpers/helpers.hpp" "src/Game/GUI/helpers/helpers.cpp"  "src/SGE/SCamera.cpp" "src/Game/World/SPHSplash/Splatter.hpp" "src/Game/World/SPHSplash/Splatter.cpp"  "src/Tools/Translation/Translator.cpp" "src/Configurator.cpp" "src/compileConfig.h")
+add_executable (SisijaFight "src/main.cpp" "src/Gamemodes/ClassicFight.cpp" "src/SGE/SisijaGraphicsUnitSubsystem.cpp" "src/SGE/SGU-S.hpp" "lib/json.hpp" ${IRR_SRC} ${SOLOUD_SRC} ${PUGIXML_SRC} ${IBULLET_SRC} ${ENET_SRC} ${AS_SRC} "src/Game/Audio/Backend.hpp" "src/Game/Audio/Backend.cpp" "src/globals.hpp" "src/Game/Session.hpp" "src/Game/Session.cpp" "src/Game/EventReceivers/InGameEVR.hpp"  "src/Game/EventReceivers/LobbyEVR.hpp"  "src/Game/GUI/GUI.hpp" "src/Gamemodes/Gamemodes.hpp" "src/Network/NetworkHandler.hpp" "src/Network/NetworkHandler.cpp" "src/Game/Player/Player.hpp" "src/Game/Player/Player.cpp" "src/Game/World/World.hpp" "src/Game/World/World.cpp" "src/Game/EventReceivers/InGameEVR.cpp" "src/Game/EventReceivers/LobbyEVR.cpp"  "src/Game/GUI/Lobby.cpp" "src/Tools/GUITools.hpp" "src/Tools/GUITools.cpp" "src/Game/GUI/Elements/SuperTable.hpp" "src/Game/GUI/Elements/SuperTable.cpp" "src/Game/GUI/helpers/helpers.hpp" "src/Game/GUI/helpers/helpers.cpp"  "src/SGE/SCamera.cpp" "src/Game/World/SPHSplash/Splatter.hpp" "src/Game/World/SPHSplash/Splatter.cpp"  "src/Tools/Translation/Translator.cpp" "src/Configurator.cpp" "src/compileConfig.h" "src/Game/Network/NetworkTools.cpp" "src/Game/GUI/Widgets.cpp")
 
 if(WIN32)
     target_link_libraries(SisijaFight wsock32 ws2_32)
@@ -126,5 +131,3 @@ elseif(APPLE)
     find_library(IOKIT_LIBRARY IOKit)
     target_link_libraries(SisijaFight ${COCOA_LIBRARY} ${IOKIT_LIBRARY})
 endif()
-
-set_property(TARGET SisijaFight PROPERTY CXX_STANDARD 20)

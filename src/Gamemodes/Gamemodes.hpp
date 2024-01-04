@@ -6,16 +6,21 @@
 
 class GameMode {
 public:
-	virtual void startGame(World* world, Player* mainPlayer)=0;
+	virtual void startGame(World* world, Player* mainPlayer, IrrlichtDevice* dev)=0;
 	virtual void handleNetwork(nlohmann::json input)=0;
 	virtual void createGUI(IGUIEnvironment* env)=0;
 	virtual void createInGameGUI(IGUIEnvironment* env) = 0;
 	virtual bool hasGUI()=0;
+protected:
+	IrrlichtDevice* _device;
+	Player* _player;
+	World* _world;
 };
 
 class ClassicFight : public GameMode{
-	void startGame(World* world, Player* mainPlayer) override;
+	void startGame(World* world, Player* mainPlayer, IrrlichtDevice* dev) override;
 	void handleNetwork(nlohmann::json input) override;
-	void createInGameGUI(IGUIEnvironment* env);
-	bool hasGUI() { return false; }
+	inline void createGUI(IGUIEnvironment* env) {};
+	void createInGameGUI(IGUIEnvironment* env) override;
+	inline bool hasGUI() { return false; }
 };
