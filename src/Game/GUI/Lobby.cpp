@@ -1,5 +1,4 @@
 #include "GUI.hpp"
-#include "../../Tools/GUITools.hpp"
 #include "../../globals.hpp"
 #include "helpers/helpers.hpp"
 #include <irrlicht.h>
@@ -8,10 +7,7 @@
 #include <iostream>
 #include <pugixml.hpp>
 #include <Irrlicht/CGUIMeshViewer.h>
-
-inline std::wstring translate(const std::string arg) {
-	return stringToWString(translator::translate(arg));
-}
+#include "../Session.hpp"
 
 void Lobby::draw(IrrlichtDevice* dev) {
 
@@ -21,23 +17,28 @@ void Lobby::draw(IrrlichtDevice* dev) {
 	static WorldInGUI currentWorld;
 	static std::unordered_map<int, WorldInGUI> world_and_id;
 
+	static GameMode* gamemode;
+
 	auto g = dev->getGUIEnvironment();
 
 	IGUIFont* arial = g->getFont("data/fonts/Arial.xml");
 
-	IGUIButton* buttonStart = g->addButton(s_rect(90, 80, 10, 20), 0, -1, translate("START").c_str(), translate("Start Game").c_str());
-	GUIEngine->addObject(buttonStart, [](const irr::SEvent::SGUIEvent& event)
+	static IGUIButton* buttonStart = g->addButton(s_rect(90, 80, 10, 20), 0, -1, translate("START").c_str());
+	GUIEngine->addObject(buttonStart, [&](const irr::SEvent::SGUIEvent& event)
 		{
 			if (event.EventType == EGET_BUTTON_CLICKED) {
 				event.Caller->setText(L"COOL!");
 				LobbyReturnCode r;
 				r.worldPath = currentWorld.path;
+				r.gamemode = gamemode;
 				GUIEngine->clearAll();
 				Session->startGame(r, false);
 			}
 		}
 	);
 	buttonStart->setOverrideFont(arial);
+	buttonStart->setEnabled(false);
+	buttonStart->setToolTipText(translate("Select a world first!").c_str());
 
 	ITexture* logo = dev->getVideoDriver()->getTexture("data/images/Logo16x9.png");
 	ITexture* assistantLogo = dev->getVideoDriver()->getTexture("data/images/Spring.png");
@@ -60,11 +61,10 @@ void Lobby::draw(IrrlichtDevice* dev) {
 	l4->setLineStartEnd(position2di(0, newHeight), position2di(p(screenSize.Width, 100), newHeight));
 	l5->setLineStartEnd(position2di(p(screenSize.Width, 25), newHeight), position2di(p(screenSize.Width, 25), p(screenSize.Height, 100)));
 
-	IGUIMeshViewer* playerFrame = g->addMeshViewer(s_rect(75, std::round(((float)newHeight / (float)screenSize.Height) * 100) + 1, 25, 80 - std::round(((float)newHeight / (float)screenSize.Height) * 100) + 1));
+	static IGUIMeshViewer* playerFrame = g->addMeshViewer(s_rect(75, std::round(((float)newHeight / (float)screenSize.Height) * 100) + 1, 25, 80 - std::round(((float)newHeight / (float)screenSize.Height) * 100) + 1));
 	playerFrame->setMesh(dev->getSceneManager()->getMesh("data/players/sisija/sisija.x"));
-	playerFrame->setFrameLoop(0, 60);
 
-	IGUIButton* assistantButton = g->addButton(s_rect(80, 80, 10, 20), 0, -1, translate("Assistant").c_str(), translate("AI-Assistant Drady based on ChatGPT").c_str());
+	static IGUIButton* assistantButton = g->addButton(s_rect(80, 80, 10, 20), 0, -1, translate("Assistant").c_str(), translate("AI-Assistant Drady based on ChatGPT").c_str());
 	assistantButton->setImage(assistantLogo);
 	assistantButton->setScaleImage(true);
 	assistantButton->setUseAlphaChannel(true);
@@ -76,7 +76,7 @@ void Lobby::draw(IrrlichtDevice* dev) {
 	worldLabelAuthor = g->addStaticText(translate("Level by: -select-a-world-first-").c_str(), s_rect(50, std::round(((float)newHeight / (float)screenSize.Height) * 100) + 45, 25, 5), true, true, 0, -1, false);
 	worldMaxPlayerSupport = g->addStaticText(translate("Maximum number of supported Players: -select-a-world-first-").c_str(), s_rect(50, std::round(((float)newHeight / (float)screenSize.Height) * 100) + 50, 25, 10), true, true, 0, -1, false);
 
-	IGUIComboBox* worldSelection = g->addComboBox(s_rect(50, std::round(((float)newHeight / (float)screenSize.Height) * 100) + 1, 25, 7));
+	static IGUIComboBox* worldSelection = g->addComboBox(s_rect(50, std::round(((float)newHeight / (float)screenSize.Height) * 100) + 1, 25, 7));
 
 	std::vector<WorldInGUI> worlds = getWorlds(WORLD_INDEX_PATH_DATA);
 
@@ -88,7 +88,7 @@ void Lobby::draw(IrrlichtDevice* dev) {
 	}
 
 	GUIEngine->addObject(worldSelection,
-		[](const irr::SEvent::SGUIEvent& event)
+		[&](const irr::SEvent::SGUIEvent& event)
 		{
 			if (event.EventType == EGET_COMBO_BOX_CHANGED) {
 				IGUIComboBox* e = (IGUIComboBox*)event.Caller;
@@ -103,6 +103,8 @@ void Lobby::draw(IrrlichtDevice* dev) {
 				std::string maxPlayers = worldData.child("world").attribute("maxPlayers").as_string();
 				worldLabelAuthor->setText(stringToWString((translator::translate("Level by: ") + author)).c_str());
 				worldMaxPlayerSupport->setText(stringToWString((translator::translate("Maximum number of Players: ") + maxPlayers)).c_str());
+				buttonStart->setEnabled(true);
+				buttonStart->setToolTipText(translate("Start Game").c_str());
 			}
 		}
 	);
@@ -113,6 +115,11 @@ void Lobby::draw(IrrlichtDevice* dev) {
 		GUIEngine->addObject(gamemodeSelection[i], [&, i](const SEvent::SGUIEvent& event)
 			{
 				if (event.EventType == EGET_CHECKBOX_CHANGED) {
+					switch (i) {
+					case 0:
+						gamemode = new ClassicFight();
+						break;
+					}
 					for (int li = 0; li < 3; li++) {
 						if (li != i) {
 							gamemodeSelection[li]->setChecked(false);
@@ -126,5 +133,3 @@ void Lobby::draw(IrrlichtDevice* dev) {
 	gamemodeSelection[1]->setText(translate("Tactic Fight").c_str());
 	gamemodeSelection[2]->setText(translate("Story Mode").c_str());
 }
-
-#undef translate

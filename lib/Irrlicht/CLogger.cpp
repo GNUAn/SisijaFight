@@ -3,9 +3,19 @@
 // For conditions of distribution and use, see copyright notice in irrlicht.h
 
 #include "CLogger.h"
+#include <iostream>
+#include <string>
 
 namespace irr
 {
+
+	const std::string RED = "\033[31m";
+	const std::string GREEN = "\033[32m";
+	const std::string YELLOW = "\033[33m";
+	const std::string BLUE = "\033[34m";
+	const std::string MAGENTA = "\033[35m";
+	const std::string CYAN = "\033[36m";
+	const std::string RESET = "\033[0m";
 
 	CLogger::CLogger(IEventReceiver* r)
 		: LogLevel(ELL_INFORMATION), Receiver(r)
@@ -28,7 +38,7 @@ namespace irr
 	}
 
 	//! Prints out a text into the log
-	void CLogger::log(const c8* text, ELOG_LEVEL ll)
+	void CLogger::log(const c8* text, ELOG_LEVEL ll, const char* caller)
 	{
 		if (ll < LogLevel)
 			return;
@@ -42,8 +52,24 @@ namespace irr
 			if (Receiver->OnEvent(event))
 				return;
 		}
-
-		os::Printer::print(text);
+		switch (ll) {
+		case ELL_DEBUG:
+			std::cout << CYAN;
+			break;
+		case ELL_ERROR:
+			std::cout << RED;
+			break;
+		case ELL_INFORMATION:
+			std::cout << BLUE;
+			break;
+		case ELL_WARNING:
+			std::cout << YELLOW;
+		case ELL_NONE:
+			std::cout << MAGENTA;
+			break;
+		}
+		std::cout << "[" << caller << "]: " << text << RESET << std::endl;
+		
 	}
 
 
@@ -53,10 +79,10 @@ namespace irr
 		if (ll < LogLevel)
 			return;
 
-		core::stringc s = text;
-		s += ": ";
+		std::string s = "IrrlichtEngine, ";
 		s += hint;
-		log (s.c_str(), ll);
+
+		log (text, ll, s.c_str());
 	}
 
 	//! Prints out a text into the log
@@ -66,7 +92,7 @@ namespace irr
 			return;
 
 		core::stringc s = text;
-		log(s.c_str(), ll);
+		log(s.c_str(), ll, "IrrlichtEngine");
 	}
 
 

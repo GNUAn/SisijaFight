@@ -20,7 +20,7 @@ void SFSession::init() {
 void SFSession::startGame(LobbyReturnCode c, bool isGMGUIDone) {
 	this->_gamemode = c.gamemode;
 	if (_gamemode->hasGUI()) {
-		_gamemode->createGUI(device->getGUIEnvironment());
+		_gamemode->createGUI(_device->getGUIEnvironment());
 	}
 	else {
 		startGameInternal(c);
@@ -37,6 +37,7 @@ void SFSession::startGameInternal(LobbyReturnCode c) {
 	this->_world = new World(_device, c.worldPath);
 	this->_world->loadEntities();
 	this->_network->startNetwork(c.serverAddress, SF_STANDARD_NETWORK_PORT);
+	this->_gamemode->startGame(_world, _mainplayer, _device);
 }
 void SFSession::setEventReceiver(S_EVR_CODE c) {
 	switch (c) {

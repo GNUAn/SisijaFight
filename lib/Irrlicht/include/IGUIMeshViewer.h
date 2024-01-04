@@ -43,8 +43,6 @@ namespace gui
 
 		//! Gets the material
 		virtual const video::SMaterial& getMaterial() const = 0;
-
-		virtual void setFrameLoop(s32 start, s32 end) = 0;
 	};
 
 

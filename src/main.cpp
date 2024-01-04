@@ -2,6 +2,7 @@
 #include "globals.hpp"
 #include "Game/Audio/Backend.hpp"
 #include "Tools/Translation/Translator.hpp"
+#include "Game/Session.hpp"
 
 SFSession* Session;
 SGES* GEngine;
@@ -48,6 +49,8 @@ int main() {
 	Session->init();
 
 	gSoloud.init();
+
+	checkProcessor();
 
 	Sound s;
 	s.loadSound("test.ogg", true);

@@ -1,6 +1,7 @@
+#pragma once
 #include <pugixml.hpp>
 
-struct SConfig {
+struct SFConfig {
 	//Localisation
 	const char* version = "0.2.1";
 	const char* lang = "de";
@@ -9,6 +10,6 @@ struct SConfig {
 	//...
 };
 
-extern SConfig globalConfig;
+extern SFConfig globalConfig;
 
-void getConfiguraion();
+void checkProcessor();

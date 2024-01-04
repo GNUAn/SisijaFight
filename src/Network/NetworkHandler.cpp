@@ -4,10 +4,11 @@
 #include <zlib.h>
 #include <vector>
 #include <string>
+#include <chrono>
 #include <thread>
 #include "NetworkHandler.hpp"
+#include "../globals.hpp"
 
-ENetPeer* peer;
 int clientID = 62;
 
 // Kompressions- und Dekompressionsfunktionen
@@ -30,46 +31,38 @@ std::string decompressData(const Bytef* compressedData, size_t compressedSize) {
 }
 
 void Network::processRequest(ENetPacket* packet) {
-    std::string decompressedData = decompressData(packet->data, packet->dataLength);
-    try {
-        auto json = nlohmann::json::parse(decompressedData);
-        if (json.contains("CLIENTID")) {
-            clientID = json["CLIENTID"].get<int>();
-            std::cout << "Client ID: " << clientID << std::endl;
+        std::string decompressedData = decompressData(packet->data, packet->dataLength);
+        try {
+            auto json = nlohmann::json::parse(decompressedData);
+            if (json.contains("CLIENTID")) {
+                clientID = json["CLIENTID"].get<int>();
+                device->getLogger()->log(std::string(std::string("Client ID is: ") + (const char*)clientID).c_str(), ELL_DEBUG, "NetworkManager, ClientID");
+            }
+            // Session->gamemode()->handleNetwork(json); // not implemented
         }
-        // Session->gamemode()->handleNetwork(json);
-    }
-    catch (const std::exception& e) {
-        std::cerr << "Error: " << e.what() << std::endl;
-    }
+        catch (const std::exception& e) {
+            device->getLogger()->log(e.what(), ELL_ERROR, "NetworkManager, Request Handler");
+        }
 }
 
 void Network::send(const std::string& data) {
-    auto compressedData = compressData(data);
-    ENetPacket* packet = enet_packet_create(compressedData.data(), compressedData.size(), ENET_PACKET_FLAG_RELIABLE);
-    enet_peer_send(peer, 0, packet);
-    enet_host_flush(peer->host);
+        _isPeerUsedByThread = true;
+        auto compressedData = compressData(data);
+        ENetPacket* packet = enet_packet_create(compressedData.data(), compressedData.size(), ENET_PACKET_FLAG_RELIABLE);
+        enet_peer_send(peer, 0, packet);
+        enet_host_flush(peer->host);
+        _isPeerUsedByThread = false;
 }
 
 void Network::internalThreadInit(std::string serverAddress, uint8_t serverPort) {
-    ENetHost* client;
-    ENetAddress address;
-    ENetEvent event;
-
-    if (enet_initialize() != 0) {
-        fprintf(stderr, "An error occurred while initializing ENet.\n");
-        return;
-    }
-    atexit(enet_deinitialize);
-
-    client = enet_host_create(NULL, 1, 2, 57600 / 8, 14400 / 8);
+    client = enet_host_create(NULL, 1, 2, 107600 / 8, 10400 / 8);
     if (client == NULL) {
         fprintf(stderr, "An error occurred while trying to create an ENet client host.\n");
         return;
     }
 
-    enet_address_set_host(&address, "localhost");
-    address.port = 65432;
+    enet_address_set_host(&address, serverAddress.c_str());
+    address.port = serverPort;
     peer = enet_host_connect(client, &address, 2, 0);
     if (peer == NULL) {
         fprintf(stderr, "No available peers for initiating an ENet connection.\n");
@@ -83,7 +76,8 @@ void Network::internalThreadInit(std::string serverAddress, uint8_t serverPort) 
         enet_peer_reset(peer);
         puts("Connection to SisijaFight.local failed.");
     }
-    while (true) {
+    while (isRunning) {
+        while (_isPeerUsedByThread);
         while (enet_host_service(client, &event, 1000) > 0) {
             switch (event.type) {
             case ENET_EVENT_TYPE_RECEIVE:
@@ -91,6 +85,7 @@ void Network::internalThreadInit(std::string serverAddress, uint8_t serverPort) 
                 enet_packet_destroy(event.packet);
                 break;
             }
+            std::this_thread::sleep_for(std::chrono::milliseconds(2));
         }
     }
     enet_host_destroy(client);
@@ -102,6 +97,7 @@ void Network::startNetwork(std::string serverAddress, uint8_t serverPort) {
 }
 
 void Network::end() {
+    isRunning = false;
     if (peer != nullptr) {
         ENetEvent event;
 

@@ -6,11 +6,14 @@ using namespace pugi;
 World::World(IrrlichtDevice* dev, std::string path) {
 	xml_document d;
 	auto success = d.load_file(path.c_str());
-	if (!success) { std::cerr << "Error, world could't be loaded" << std::endl; exit(5); }
+	if (!success) { dev->getLogger()->log(success.description(), ELL_ERROR, "WorldLoader, PugiXML"); exit(5); }
 	xml_node root = d.child("world");
 
 	xml_node model = root.child("modelFile");
-	IAnimatedMesh* _mesh = dev->getSceneManager()->getMesh(("data/worlds/" + std::string(model.text().get())).c_str());
+	
+	io::path worldPath = dev->getFileSystem()->getFileDir(path.c_str());
+
+	IAnimatedMesh* _mesh = dev->getSceneManager()->getMesh((std::string(worldPath.c_str()) + "/" + std::string(model.text().get())).c_str());
 	_node = dev->getSceneManager()->addAnimatedMeshSceneNode(_mesh);
 	_node->setMaterialFlag(EMF_LIGHTING, false);
 

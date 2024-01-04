@@ -16,7 +16,7 @@ namespace translator {
 	bool isDefaultLanguage = false;
 
 	void initTranslator() {
-		SConfig c = globalConfig;
+		SFConfig c = globalConfig;
 
 		isDefaultLanguage = c.lang == "en";
 		if (isDefaultLanguage) { return; }

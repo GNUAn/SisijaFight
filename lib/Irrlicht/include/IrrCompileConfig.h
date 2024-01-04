@@ -683,7 +683,7 @@ precision will be lower but speed higher. currently X86 only
 #ifdef IRRLICHT_EXPORTS
 #define IRRLICHT_API __declspec(dllexport)
 #else
-#define IRRLICHT_API
+#define IRRLICHT_API __declspec(dllimport)
 #endif // IRRLICHT_EXPORT
 #else
 #define IRRLICHT_API

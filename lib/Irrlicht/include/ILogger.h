@@ -61,7 +61,7 @@ public:
 	is just an informational text, set it to ELL_INFORMATION. Texts are
 	filtered with these levels. If you want to be a text displayed,
 	independent on what level filter is set, use ELL_NONE. */
-	virtual void log(const c8* text, ELOG_LEVEL ll=ELL_INFORMATION) = 0;
+	virtual void log(const c8* text, ELOG_LEVEL ll=ELL_INFORMATION, const char* caller="IrrlichtEngine") = 0;
 
 	//! Prints out a text into the log
 	/** \param text: Text to print out.

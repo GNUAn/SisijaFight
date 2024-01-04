@@ -1,8 +1,13 @@
 #pragma once
-#include "../../Gamemodes/Gamemodes.hpp"
-#include "Elements/SuperTable.hpp"
 #include <string>
 #include <irrlicht.h>
+#include "../../Tools/GUITools.hpp"
+#include "../../Gamemodes/Gamemodes.hpp"
+#include "Elements/SuperTable.hpp"
+
+inline std::wstring translate(const std::string arg) {
+	return stringToWString(translator::translate(arg));
+}
 
 using namespace irr;
 
