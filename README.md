@@ -12,4 +12,4 @@ SisijaFight is a little bit different from other shooters:
  * so that's the way to get new players
  * 
 !!!Attention!!!
-this Game is in an early developmwnt state and chrrently unplayable!
+this Game is in an early development state and currently unplayable!
