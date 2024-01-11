@@ -4,6 +4,7 @@
 #include <irrlicht.h>
 #include <json.hpp>
 #include <irrlicht.h>
+#include <irrBullet.h>
 
 using namespace irr;
 using namespace core;
@@ -26,13 +27,12 @@ struct PlayerConfiguration{
 class Player {
 public:
 	Player(std::string name, std::string path, int ID, World* world, irr::IrrlichtDevice* device, bool localPlayer=false);
-	void updatePositionAndRotationStep(f32 delta);
 	void setDirections(irr::core::vector3df position, irr::core::vector3df rotation);
-
 private:
 	int ID;
 	std::string name, path;
 	xml_document def;
 	Weapon* gun;
+	IRigidBody
 	friend class Weapon;
 };

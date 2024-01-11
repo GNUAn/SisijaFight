@@ -17,3 +17,7 @@ Player::Player(std::string name, std::string path, int ID, World* world, irr::Ir
 {
 
 }
+
+void Player::setDirections(irr::core::vector3df position, irr::core::vector3df rotation)
+{
+}
