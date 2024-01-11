@@ -1,0 +1,25 @@
+\doxysection{Lobby\+EVR.\+hpp}
+\hypertarget{_lobby_e_v_r_8hpp_source}{}\label{_lobby_e_v_r_8hpp_source}\index{src/Game/EventReceivers/LobbyEVR.hpp@{src/Game/EventReceivers/LobbyEVR.hpp}}
+\mbox{\hyperlink{_lobby_e_v_r_8hpp}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <irrlicht.h>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{using\ namespace\ }irr;}
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ namespace\ }gui;}
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ namespace\ }core;}
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ namespace\ }video;}
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }scene;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_g_u_i}{SGUI}};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_event_receiver}{GUIEventReceiver}}\ :\ \textcolor{keyword}{public}\ IEventReceiver\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_event_receiver_a9003483c8347fa27a2a4413e5b613634}{GUIEventReceiver}}(\mbox{\hyperlink{class_s_g_u_i}{SGUI}}*\ env)\ :\ subsystem(env)\ \{\};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_g_u_i_event_receiver_a742bbb8fd528f1a885b488d51dc6a933}{OnEvent}}(\textcolor{keyword}{const}\ SEvent\&\ event);}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_s_g_u_i}{SGUI}}*\ subsystem;}
+\DoxyCodeLine{00019\ \};}
+
+\end{DoxyCode}

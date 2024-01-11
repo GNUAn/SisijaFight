@@ -9,6 +9,8 @@
 #include <Irrlicht/CGUIMeshViewer.h>
 #include "../Session.hpp"
 
+/// @brief Creates the lobby elements
+/// @param dev the Irrlicht Device
 void Lobby::draw(IrrlichtDevice* dev) {
 
 	static ITexture* worldPreviewImage;

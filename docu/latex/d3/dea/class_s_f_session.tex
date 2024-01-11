@@ -1,0 +1,108 @@
+\doxysection{SFSession Klassenreferenz}
+\hypertarget{class_s_f_session}{}\label{class_s_f_session}\index{SFSession@{SFSession}}
+
+
+{\ttfamily \#include $<$Session.\+hpp$>$}
+
+\doxysubsubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_f_session_ad9e724cfb2de6c6763ccc412b6e5d357}{SFSession}} (Irrlicht\+Device \texorpdfstring{$\ast$}{*}dev)
+\item 
+void \mbox{\hyperlink{class_s_f_session_a7064e9ec45714172b5f4489b2332a90e}{end\+Game}} ()
+\begin{DoxyCompactList}\small\item\em End the game and clear RAM. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_f_session_a2a27f488b84db0bd13a15f246ec338a1}{start\+Game}} (\mbox{\hyperlink{struct_lobby_return_code}{Lobby\+Return\+Code}} c, bool is\+GMGUIDone)
+\begin{DoxyCompactList}\small\item\em Starts the Game based on the data of the \doxylink{class_lobby}{Lobby}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_mode}{Game\+Mode}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_s_f_session_a994a79fb9c61df636fa0a5f10cd420a3}{gamemode}} ()
+\begin{DoxyCompactList}\small\item\em Gets the gamemode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_lobby}{Lobby}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_s_f_session_ac8b59254fa9edebc550bd5bf844ae06a}{lobby}} ()
+\begin{DoxyCompactList}\small\item\em Gets the lobby \doxylink{class_g_u_i_page}{GUIPage}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_f_session_a01648f5ead7a35f13e18e3e165306da0}{init}} ()
+\begin{DoxyCompactList}\small\item\em Ititializes the Session. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
+\Hypertarget{class_s_f_session_ad9e724cfb2de6c6763ccc412b6e5d357}\label{class_s_f_session_ad9e724cfb2de6c6763ccc412b6e5d357} 
+\index{SFSession@{SFSession}!SFSession@{SFSession}}
+\index{SFSession@{SFSession}!SFSession@{SFSession}}
+\doxysubsubsection{\texorpdfstring{SFSession()}{SFSession()}}
+{\footnotesize\ttfamily SFSession\+::\+SFSession (\begin{DoxyParamCaption}\item[{Irrlicht\+Device \texorpdfstring{$\ast$}{*}}]{dev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Dokumentation der Elementfunktionen}
+\Hypertarget{class_s_f_session_a7064e9ec45714172b5f4489b2332a90e}\label{class_s_f_session_a7064e9ec45714172b5f4489b2332a90e} 
+\index{SFSession@{SFSession}!endGame@{endGame}}
+\index{endGame@{endGame}!SFSession@{SFSession}}
+\doxysubsubsection{\texorpdfstring{endGame()}{endGame()}}
+{\footnotesize\ttfamily void SFSession\+::end\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+End the game and clear RAM. 
+
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:
+% FIG 0
+\Hypertarget{class_s_f_session_a994a79fb9c61df636fa0a5f10cd420a3}\label{class_s_f_session_a994a79fb9c61df636fa0a5f10cd420a3} 
+\index{SFSession@{SFSession}!gamemode@{gamemode}}
+\index{gamemode@{gamemode}!SFSession@{SFSession}}
+\doxysubsubsection{\texorpdfstring{gamemode()}{gamemode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_mode}{Game\+Mode}} \texorpdfstring{$\ast$}{*} SFSession\+::gamemode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the gamemode. 
+
+\begin{DoxyReturn}{Rückgabe}
+The pointer to the Gamemode 
+\end{DoxyReturn}
+\Hypertarget{class_s_f_session_a01648f5ead7a35f13e18e3e165306da0}\label{class_s_f_session_a01648f5ead7a35f13e18e3e165306da0} 
+\index{SFSession@{SFSession}!init@{init}}
+\index{init@{init}!SFSession@{SFSession}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void SFSession\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ititializes the Session. 
+
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:
+% FIG 1
+\Hypertarget{class_s_f_session_ac8b59254fa9edebc550bd5bf844ae06a}\label{class_s_f_session_ac8b59254fa9edebc550bd5bf844ae06a} 
+\index{SFSession@{SFSession}!lobby@{lobby}}
+\index{lobby@{lobby}!SFSession@{SFSession}}
+\doxysubsubsection{\texorpdfstring{lobby()}{lobby()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_lobby}{Lobby}} \texorpdfstring{$\ast$}{*} SFSession\+::lobby (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the lobby \doxylink{class_g_u_i_page}{GUIPage}. 
+
+\begin{DoxyReturn}{Rückgabe}
+The Pointer to the lobby \doxylink{class_g_u_i_page}{GUIPage} 
+\end{DoxyReturn}
+\Hypertarget{class_s_f_session_a2a27f488b84db0bd13a15f246ec338a1}\label{class_s_f_session_a2a27f488b84db0bd13a15f246ec338a1} 
+\index{SFSession@{SFSession}!startGame@{startGame}}
+\index{startGame@{startGame}!SFSession@{SFSession}}
+\doxysubsubsection{\texorpdfstring{startGame()}{startGame()}}
+{\footnotesize\ttfamily void SFSession\+::start\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_lobby_return_code}{Lobby\+Return\+Code}}}]{c,  }\item[{bool}]{is\+GMGUIDone }\end{DoxyParamCaption})}
+
+
+
+Starts the Game based on the data of the \doxylink{class_lobby}{Lobby}. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em c} & the \doxylink{struct_lobby_return_code}{Lobby\+Return\+Code} object \\
+\hline
+{\em is\+GMGUIDone} & Only for GUI reasons. Use is\+GMGUIDone only, if the GUI of the gamemode has already shown! \\
+\hline
+\end{DoxyParams}
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:
+% FIG 2
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Game/\mbox{\hyperlink{_session_8hpp}{Session.\+hpp}}\item 
+src/\+Game/\mbox{\hyperlink{_session_8cpp}{Session.\+cpp}}\end{DoxyCompactItemize}

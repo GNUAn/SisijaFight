@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SisijaFight: src/Game/Player/Player.hpp Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SisijaFight
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Suchen');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('d0/d16/_player_8hpp_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Player.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d0/d16/_player_8hpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;pugixml.hpp&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;irrlicht.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;json.hpp&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;irrlicht.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using namespace </span>irr;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">using namespace </span>core;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">using namespace </span>scene;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">using namespace </span>gui;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">using namespace </span>io;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">using namespace </span>pugi;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">using namespace </span>pugi;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">class </span><a class="code hl_class" href="../../d3/d21/class_world.html">World</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">class </span><a class="code hl_class" href="../../db/de5/class_weapon.html">Weapon</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../d7/d8c/struct_player_configuration.html">   21</a></span><span class="keyword">struct </span><a class="code hl_struct" href="../../d7/d8c/struct_player_configuration.html">PlayerConfiguration</a>{</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../d7/d8c/struct_player_configuration.html#a7907ee7ee0b4d1cf3a8335ce31d8542b">   22</a></span>    std::string <a class="code hl_variable" href="../../d7/d8c/struct_player_configuration.html#a7907ee7ee0b4d1cf3a8335ce31d8542b">weaponPath</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../d7/d8c/struct_player_configuration.html#a7ad8827c5d2199fac22bf01e3e3751b8">   23</a></span>    nlohmann::json <a class="code hl_variable" href="../../d7/d8c/struct_player_configuration.html#a7ad8827c5d2199fac22bf01e3e3751b8">archievements</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>};</div>
+</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../d8/d53/class_player.html">   26</a></span><span class="keyword">class </span><a class="code hl_class" href="../../d8/d53/class_player.html">Player</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_function" href="../../d8/d53/class_player.html#a16e973e1cf7ffcda4c4dce07c53c1634">Player</a>(std::string name, std::string path, <span class="keywordtype">int</span> ID, <a class="code hl_class" href="../../d3/d21/class_world.html">World</a>* world, irr::IrrlichtDevice* <a class="code hl_variable" href="../../d5/d82/globals_8hpp.html#a3f4aa71242d090e6f84100dbf2d69424">device</a>, <span class="keywordtype">bool</span> localPlayer=<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../d8/d53/class_player.html#a6d864d656bd36ffb8b7e8babd9a2be73">   29</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d8/d53/class_player.html#a6d864d656bd36ffb8b7e8babd9a2be73">updatePositionAndRotationStep</a>(f32 delta);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="../../d8/d53/class_player.html#a2f0cfe369ddc2499d481a5d3c0bf5e1a">   30</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d8/d53/class_player.html#a2f0cfe369ddc2499d481a5d3c0bf5e1a">setDirections</a>(irr::core::vector3df position, irr::core::vector3df rotation);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">int</span> ID;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    std::string name, path;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    xml_document def;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_class" href="../../db/de5/class_weapon.html">Weapon</a>* gun;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../d8/d53/class_player.html#ab356dbee0f1e915287732c65e8ef61e1">   37</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="../../db/de5/class_weapon.html">Weapon</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>};</div>
+</div>
+<div class="ttc" id="aclass_player_html"><div class="ttname"><a href="../../d8/d53/class_player.html">Player</a></div><div class="ttdef"><b>Definition</b> Player.hpp:26</div></div>
+<div class="ttc" id="aclass_player_html_a16e973e1cf7ffcda4c4dce07c53c1634"><div class="ttname"><a href="../../d8/d53/class_player.html#a16e973e1cf7ffcda4c4dce07c53c1634">Player::Player</a></div><div class="ttdeci">Player(std::string name, std::string path, int ID, World *world, irr::IrrlichtDevice *device, bool localPlayer=false)</div><div class="ttdoc">Create a Player.</div><div class="ttdef"><b>Definition</b> Player.cpp:16</div></div>
+<div class="ttc" id="aclass_player_html_a2f0cfe369ddc2499d481a5d3c0bf5e1a"><div class="ttname"><a href="../../d8/d53/class_player.html#a2f0cfe369ddc2499d481a5d3c0bf5e1a">Player::setDirections</a></div><div class="ttdeci">void setDirections(irr::core::vector3df position, irr::core::vector3df rotation)</div></div>
+<div class="ttc" id="aclass_player_html_a6d864d656bd36ffb8b7e8babd9a2be73"><div class="ttname"><a href="../../d8/d53/class_player.html#a6d864d656bd36ffb8b7e8babd9a2be73">Player::updatePositionAndRotationStep</a></div><div class="ttdeci">void updatePositionAndRotationStep(f32 delta)</div></div>
+<div class="ttc" id="aclass_weapon_html"><div class="ttname"><a href="../../db/de5/class_weapon.html">Weapon</a></div><div class="ttdef"><b>Definition</b> Weapon.hpp:7</div></div>
+<div class="ttc" id="aclass_world_html"><div class="ttname"><a href="../../d3/d21/class_world.html">World</a></div><div class="ttdef"><b>Definition</b> World.hpp:11</div></div>
+<div class="ttc" id="aglobals_8hpp_html_a3f4aa71242d090e6f84100dbf2d69424"><div class="ttname"><a href="../../d5/d82/globals_8hpp.html#a3f4aa71242d090e6f84100dbf2d69424">device</a></div><div class="ttdeci">irr::IrrlichtDevice * device</div><div class="ttdef"><b>Definition</b> main.cpp:11</div></div>
+<div class="ttc" id="astruct_player_configuration_html"><div class="ttname"><a href="../../d7/d8c/struct_player_configuration.html">PlayerConfiguration</a></div><div class="ttdoc">The Config container wich contains the Archivements and the Armor/Weapon.</div><div class="ttdef"><b>Definition</b> Player.hpp:21</div></div>
+<div class="ttc" id="astruct_player_configuration_html_a7907ee7ee0b4d1cf3a8335ce31d8542b"><div class="ttname"><a href="../../d7/d8c/struct_player_configuration.html#a7907ee7ee0b4d1cf3a8335ce31d8542b">PlayerConfiguration::weaponPath</a></div><div class="ttdeci">std::string weaponPath</div><div class="ttdef"><b>Definition</b> Player.hpp:22</div></div>
+<div class="ttc" id="astruct_player_configuration_html_a7ad8827c5d2199fac22bf01e3e3751b8"><div class="ttname"><a href="../../d7/d8c/struct_player_configuration.html#a7ad8827c5d2199fac22bf01e3e3751b8">PlayerConfiguration::archievements</a></div><div class="ttdeci">nlohmann::json archievements</div><div class="ttdef"><b>Definition</b> Player.hpp:23</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_b43036362fece0f978c3c8156df55d19.html">Game</a></li><li class="navelem"><a class="el" href="../../dir_9005fe5b28db546b1d36da4232922983.html">Player</a></li><li class="navelem"><a class="el" href="../../d0/d16/_player_8hpp.html">Player.hpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>

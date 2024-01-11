@@ -1,0 +1,74 @@
+\doxysection{src/\+Tools/\+GUITools.hpp File Reference}
+\hypertarget{_g_u_i_tools_8hpp}{}\label{_g_u_i_tools_8hpp}\index{src/Tools/GUITools.hpp@{src/Tools/GUITools.hpp}}
+{\ttfamily \#include "{}../globals.\+hpp"{}}\newline
+{\ttfamily \#include $<$irrlicht.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include "{}Translation/\+Translator.\+hpp"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_g_u_i_tools_8hpp_a82fd79cf9bba1177f3d73951019db68f}{gettext}}(arg)~\mbox{\hyperlink{_g_u_i_8hpp_abb2832fff46b1326bbb9480dd50db007}{translate}}(arg)
+\item 
+\#define \mbox{\hyperlink{_g_u_i_tools_8hpp_a8cc25fef9449102f0d45c080136dad0e}{\+\_\+}}(arg)~\mbox{\hyperlink{_g_u_i_tools_8hpp_a82fd79cf9bba1177f3d73951019db68f}{gettext}}(arg)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+SColor \mbox{\hyperlink{_g_u_i_tools_8hpp_a8c3b4fad8088c15c415bac422f78d3d0}{get\+New\+Color}} ()
+\item 
+int \mbox{\hyperlink{_g_u_i_tools_8hpp_ae7b0729f419d2f4f78860cb41ecebdb2}{p}} (int, int)
+\item 
+float \mbox{\hyperlink{_g_u_i_tools_8hpp_af1742da03ebc73569988e1bede947ec3}{p}} (float, float)
+\item 
+irr\+::core\+::recti \mbox{\hyperlink{_g_u_i_tools_8hpp_aa9b85d2dd3bd11b2bfffdb26e2e8d7fc}{s\+\_\+rect}} (int pX, int pY, int pW, int pH)
+\item 
+std\+::wstring \mbox{\hyperlink{_g_u_i_tools_8hpp_a268235fc7077e49fb7623d477c5005ef}{string\+To\+WString}} (const std\+::string \&str)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_g_u_i_tools_8hpp_a8cc25fef9449102f0d45c080136dad0e}\label{_g_u_i_tools_8hpp_a8cc25fef9449102f0d45c080136dad0e} 
+\index{GUITools.hpp@{GUITools.hpp}!\_@{\_}}
+\index{\_@{\_}!GUITools.hpp@{GUITools.hpp}}
+\doxysubsubsection{\texorpdfstring{\_}{\_}}
+{\footnotesize\ttfamily \#define \+\_\+(\begin{DoxyParamCaption}\item[{}]{arg }\end{DoxyParamCaption})~\mbox{\hyperlink{_g_u_i_tools_8hpp_a82fd79cf9bba1177f3d73951019db68f}{gettext}}(arg)}
+
+\Hypertarget{_g_u_i_tools_8hpp_a82fd79cf9bba1177f3d73951019db68f}\label{_g_u_i_tools_8hpp_a82fd79cf9bba1177f3d73951019db68f} 
+\index{GUITools.hpp@{GUITools.hpp}!gettext@{gettext}}
+\index{gettext@{gettext}!GUITools.hpp@{GUITools.hpp}}
+\doxysubsubsection{\texorpdfstring{gettext}{gettext}}
+{\footnotesize\ttfamily \#define gettext(\begin{DoxyParamCaption}\item[{}]{arg }\end{DoxyParamCaption})~\mbox{\hyperlink{_g_u_i_8hpp_abb2832fff46b1326bbb9480dd50db007}{translate}}(arg)}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_g_u_i_tools_8hpp_a8c3b4fad8088c15c415bac422f78d3d0}\label{_g_u_i_tools_8hpp_a8c3b4fad8088c15c415bac422f78d3d0} 
+\index{GUITools.hpp@{GUITools.hpp}!getNewColor@{getNewColor}}
+\index{getNewColor@{getNewColor}!GUITools.hpp@{GUITools.hpp}}
+\doxysubsubsection{\texorpdfstring{getNewColor()}{getNewColor()}}
+{\footnotesize\ttfamily SColor get\+New\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{_g_u_i_tools_8hpp_af1742da03ebc73569988e1bede947ec3}\label{_g_u_i_tools_8hpp_af1742da03ebc73569988e1bede947ec3} 
+\index{GUITools.hpp@{GUITools.hpp}!p@{p}}
+\index{p@{p}!GUITools.hpp@{GUITools.hpp}}
+\doxysubsubsection{\texorpdfstring{p()}{p()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily float p (\begin{DoxyParamCaption}\item[{float}]{v,  }\item[{float}]{p }\end{DoxyParamCaption})}
+
+\Hypertarget{_g_u_i_tools_8hpp_ae7b0729f419d2f4f78860cb41ecebdb2}\label{_g_u_i_tools_8hpp_ae7b0729f419d2f4f78860cb41ecebdb2} 
+\index{GUITools.hpp@{GUITools.hpp}!p@{p}}
+\index{p@{p}!GUITools.hpp@{GUITools.hpp}}
+\doxysubsubsection{\texorpdfstring{p()}{p()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int p (\begin{DoxyParamCaption}\item[{int}]{v,  }\item[{int}]{p }\end{DoxyParamCaption})}
+
+\Hypertarget{_g_u_i_tools_8hpp_aa9b85d2dd3bd11b2bfffdb26e2e8d7fc}\label{_g_u_i_tools_8hpp_aa9b85d2dd3bd11b2bfffdb26e2e8d7fc} 
+\index{GUITools.hpp@{GUITools.hpp}!s\_rect@{s\_rect}}
+\index{s\_rect@{s\_rect}!GUITools.hpp@{GUITools.hpp}}
+\doxysubsubsection{\texorpdfstring{s\_rect()}{s\_rect()}}
+{\footnotesize\ttfamily irr\+::core\+::recti s\+\_\+rect (\begin{DoxyParamCaption}\item[{int}]{pX,  }\item[{int}]{pY,  }\item[{int}]{pW,  }\item[{int}]{pH }\end{DoxyParamCaption})}
+
+\Hypertarget{_g_u_i_tools_8hpp_a268235fc7077e49fb7623d477c5005ef}\label{_g_u_i_tools_8hpp_a268235fc7077e49fb7623d477c5005ef} 
+\index{GUITools.hpp@{GUITools.hpp}!stringToWString@{stringToWString}}
+\index{stringToWString@{stringToWString}!GUITools.hpp@{GUITools.hpp}}
+\doxysubsubsection{\texorpdfstring{stringToWString()}{stringToWString()}}
+{\footnotesize\ttfamily std\+::wstring string\+To\+WString (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})}
+

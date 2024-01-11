@@ -52,7 +52,7 @@ if(UNIX AND NOT APPLE)
 endif()
 
 include_directories("lib/Irrlicht/include")
-include_directories("lib/angelscript/include")
+include_directories("lib/angelscript/include" "lib/angelscript/addons")
 include_directories("lib/Irrlicht/aesGladman")
 include_directories("lib/Irrlicht/bzip2")
 include_directories("lib/Irrlicht/jpeglib")
@@ -119,7 +119,7 @@ if(MSVC)
     set(CMAKE_DEBUG_POSTFIX "d")  
 endif()
 
-add_executable (SisijaFight "src/main.cpp" "src/Gamemodes/ClassicFight.cpp" "src/SGE/SisijaGraphicsUnitSubsystem.cpp" "src/SGE/SGU-S.hpp" "lib/json.hpp" ${IRR_SRC} ${SOLOUD_SRC} ${PUGIXML_SRC} ${IBULLET_SRC} ${ENET_SRC} ${AS_SRC} "src/Game/Audio/Backend.hpp" "src/Game/Audio/Backend.cpp" "src/globals.hpp" "src/Game/Session.hpp" "src/Game/Session.cpp" "src/Game/EventReceivers/InGameEVR.hpp"  "src/Game/EventReceivers/LobbyEVR.hpp"  "src/Game/GUI/GUI.hpp" "src/Gamemodes/Gamemodes.hpp" "src/Network/NetworkHandler.hpp" "src/Network/NetworkHandler.cpp" "src/Game/Player/Player.hpp" "src/Game/Player/Player.cpp" "src/Game/World/World.hpp" "src/Game/World/World.cpp" "src/Game/EventReceivers/InGameEVR.cpp" "src/Game/EventReceivers/LobbyEVR.cpp"  "src/Game/GUI/Lobby.cpp" "src/Tools/GUITools.hpp" "src/Tools/GUITools.cpp" "src/Game/GUI/Elements/SuperTable.hpp" "src/Game/GUI/Elements/SuperTable.cpp" "src/Game/GUI/helpers/helpers.hpp" "src/Game/GUI/helpers/helpers.cpp"  "src/SGE/SCamera.cpp" "src/Game/World/SPHSplash/Splatter.hpp" "src/Game/World/SPHSplash/Splatter.cpp"  "src/Tools/Translation/Translator.cpp" "src/Configurator.cpp" "src/compileConfig.h" "src/Game/Network/NetworkTools.cpp" "src/Game/GUI/Widgets.cpp")
+add_executable (SisijaFight "src/main.cpp" "src/Gamemodes/ClassicFight.cpp" "src/SGE/SisijaGraphicsUnitSubsystem.cpp" "src/SGE/SGU-S.hpp" "lib/json.hpp" ${IRR_SRC} ${SOLOUD_SRC} ${PUGIXML_SRC} ${IBULLET_SRC} ${ENET_SRC} ${AS_SRC} "src/Game/Audio/Backend.hpp" "src/Game/Audio/Backend.cpp" "src/globals.hpp" "src/Game/Session.hpp" "src/Game/Session.cpp" "src/Game/EventReceivers/InGameEVR.hpp"  "src/Game/EventReceivers/LobbyEVR.hpp"  "src/Game/GUI/GUI.hpp" "src/Gamemodes/Gamemodes.hpp" "src/Network/NetworkHandler.hpp" "src/Network/NetworkHandler.cpp" "src/Game/Player/Player.hpp" "src/Game/Player/Player.cpp" "src/Game/World/World.hpp" "src/Game/World/World.cpp" "src/Game/EventReceivers/InGameEVR.cpp" "src/Game/EventReceivers/LobbyEVR.cpp"  "src/Game/GUI/Lobby.cpp" "src/Tools/GUITools.hpp" "src/Tools/GUITools.cpp" "src/Game/GUI/Elements/SuperTable.hpp" "src/Game/GUI/Elements/SuperTable.cpp" "src/Game/GUI/helpers/helpers.hpp" "src/Game/GUI/helpers/helpers.cpp"  "src/SGE/SCamera.cpp" "src/Game/World/SPHSplash/Splatter.hpp" "src/Game/World/SPHSplash/Splatter.cpp"  "src/Tools/Translation/Translator.cpp" "src/Configurator.cpp" "src/compileConfig.h" "src/Game/Network/NetworkTools.cpp" "src/Game/GUI/Widgets.cpp" "src/SGE/Scripting.cpp")
 
 if(WIN32)
     target_link_libraries(SisijaFight wsock32 ws2_32)

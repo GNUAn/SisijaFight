@@ -1,0 +1,33 @@
+digraph "src/Game"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_68267d1309a1af8e8297ef4c3efbcdba {
+    graph [ bgcolor="#d4ebf6", pencolor="grey25", label="src", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_68267d1309a1af8e8297ef4c3efbcdba.html",tooltip=""]
+  dir_09d3de0cdb6c3faf35bcc2927f80f957 [label="Gamemodes", fillcolor="#3ca3d7", color="grey25", style="filled", URL="dir_09d3de0cdb6c3faf35bcc2927f80f957.html",tooltip=""];
+  dir_0c0333544ec44c57ec7d33d873fe36a2 [label="Network", fillcolor="#3ca3d7", color="grey25", style="filled", URL="dir_0c0333544ec44c57ec7d33d873fe36a2.html",tooltip=""];
+  dir_dafca7420d63a6464529a0509014eb92 [label="SGE", fillcolor="#3ca3d7", color="grey25", style="filled", URL="dir_dafca7420d63a6464529a0509014eb92.html",tooltip=""];
+  dir_b90d73d79b67ccd72c2aaf78972ad885 [label="Tools", fillcolor="#3ca3d7", color="red", style="filled", URL="dir_b90d73d79b67ccd72c2aaf78972ad885.html",tooltip=""];
+  subgraph clusterdir_b43036362fece0f978c3c8156df55d19 {
+    graph [ bgcolor="#d4ebf6", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_b43036362fece0f978c3c8156df55d19.html",tooltip=""]
+    dir_b43036362fece0f978c3c8156df55d19 [shape=plaintext, label="Game"];
+  dir_d2dab967ce2aeb43b5a12ae9bf5e33c6 [label="Audio", fillcolor="#3ca3d7", color="grey25", style="filled", URL="dir_d2dab967ce2aeb43b5a12ae9bf5e33c6.html",tooltip=""];
+  dir_99b5c9578d1abe325be387a7a9e006ae [label="EventReceivers", fillcolor="#3ca3d7", color="grey25", style="filled", URL="dir_99b5c9578d1abe325be387a7a9e006ae.html",tooltip=""];
+  dir_ab649f3768326b210867dcadba9ef820 [label="GUI", fillcolor="#3ca3d7", color="grey25", style="filled", URL="dir_ab649f3768326b210867dcadba9ef820.html",tooltip=""];
+  dir_3eae3d34184565db26686e999348b63a [label="Network", fillcolor="#3ca3d7", color="grey25", style="filled", URL="dir_3eae3d34184565db26686e999348b63a.html",tooltip=""];
+  dir_9005fe5b28db546b1d36da4232922983 [label="Player", fillcolor="#3ca3d7", color="grey25", style="filled", URL="dir_9005fe5b28db546b1d36da4232922983.html",tooltip=""];
+  dir_1caa183872bda9e28fcc9b569f9b8054 [label="World", fillcolor="#3ca3d7", color="grey25", style="filled", URL="dir_1caa183872bda9e28fcc9b569f9b8054.html",tooltip=""];
+  }
+  }
+  dir_b43036362fece0f978c3c8156df55d19->dir_09d3de0cdb6c3faf35bcc2927f80f957 [headlabel="2", labeldistance=1.5 headhref="dir_000003_000004.html" href="dir_000003_000004.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_b43036362fece0f978c3c8156df55d19->dir_0c0333544ec44c57ec7d33d873fe36a2 [headlabel="1", labeldistance=1.5 headhref="dir_000003_000008.html" href="dir_000003_000008.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_b43036362fece0f978c3c8156df55d19->dir_99b5c9578d1abe325be387a7a9e006ae [headlabel="2", labeldistance=1.5 headhref="dir_000003_000002.html" href="dir_000003_000002.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_b43036362fece0f978c3c8156df55d19->dir_ab649f3768326b210867dcadba9ef820 [headlabel="3", labeldistance=1.5 headhref="dir_000003_000005.html" href="dir_000003_000005.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_99b5c9578d1abe325be387a7a9e006ae->dir_dafca7420d63a6464529a0509014eb92 [headlabel="1", labeldistance=1.5 headhref="dir_000002_000010.html" href="dir_000002_000010.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_ab649f3768326b210867dcadba9ef820->dir_09d3de0cdb6c3faf35bcc2927f80f957 [headlabel="1", labeldistance=1.5 headhref="dir_000005_000004.html" href="dir_000005_000004.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_ab649f3768326b210867dcadba9ef820->dir_b90d73d79b67ccd72c2aaf78972ad885 [headlabel="1", labeldistance=1.5 headhref="dir_000005_000013.html" href="dir_000005_000013.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_9005fe5b28db546b1d36da4232922983->dir_1caa183872bda9e28fcc9b569f9b8054 [headlabel="1", labeldistance=1.5 headhref="dir_000009_000015.html" href="dir_000009_000015.html" color="steelblue1" fontcolor="steelblue1"];
+}

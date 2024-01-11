@@ -1,0 +1,45 @@
+\doxysection{GUI.\+hpp}
+\hypertarget{_g_u_i_8hpp_source}{}\label{_g_u_i_8hpp_source}\index{src/Game/GUI/GUI.hpp@{src/Game/GUI/GUI.hpp}}
+\mbox{\hyperlink{_g_u_i_8hpp}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <irrlicht.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_g_u_i_tools_8hpp}{../../Tools/GUITools.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_gamemodes_8hpp}{../../Gamemodes/Gamemodes.hpp}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_super_table_8hpp}{Elements/SuperTable.hpp}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{inline}\ std::wstring\ \mbox{\hyperlink{_g_u_i_8hpp_abb2832fff46b1326bbb9480dd50db007}{translate}}(\textcolor{keyword}{const}\ std::string\ arg)\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{_g_u_i_tools_8cpp_a268235fc7077e49fb7623d477c5005ef}{stringToWString}}(\mbox{\hyperlink{namespacetranslator_a305c2b757c273e94e3d15960546f3e06}{translator::translate}}(arg));}
+\DoxyCodeLine{00010\ \}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{using\ namespace\ }irr;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_lobby_return_code}{LobbyReturnCode}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_game_mode}{GameMode}}*\ \mbox{\hyperlink{struct_lobby_return_code_aca244cf6efdfcd1e45cb948ed77e68d9}{gamemode}};}
+\DoxyCodeLine{00016\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_lobby_return_code_a12f3adbf26303352286583021b72a86b}{playerPath}};}
+\DoxyCodeLine{00017\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_lobby_return_code_a77b6d960d86d37e994b813c4b4356028}{worldPath}};}
+\DoxyCodeLine{00018\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_lobby_return_code_a323f0fe273ede1b3097fe053b96dee6b}{serverAddress}};}
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_page}{GUIPage}}\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_page_a9044c1149baf573a686bf9915b26bd31}{draw}}(IrrlichtDevice*\ dev);}
+\DoxyCodeLine{00024\ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_g_u_i_page_a23fb5458abbc07f697f12a83c80d6905}{isFinished}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_page_a5b5a65347808b474553034a407af0e0b}{onFinish}}(std::function<\textcolor{keywordtype}{void}()>\ f);}
+\DoxyCodeLine{00026\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ std::function<void()>\ end;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ finished;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ finish();}
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_class}{GUIClass}}\ \{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_class_a568109e606acc2a8a28bc2bb6beda51d}{draw}}(IrrlichtDevice*\ dev);}
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_lobby}{Lobby}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_g_u_i_class}{GUIClass}}\ \{}
+\DoxyCodeLine{00037\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lobby_aee4f54bc11ec940ad70c0e6e6da56d2e}{draw}}(IrrlichtDevice*\ dev)\ ;}
+\DoxyCodeLine{00039\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,58 @@
+\doxysection{Super\+Table.\+hpp}
+\hypertarget{_super_table_8hpp_source}{}\label{_super_table_8hpp_source}\index{src/Game/GUI/Elements/SuperTable.hpp@{src/Game/GUI/Elements/SuperTable.hpp}}
+\mbox{\hyperlink{_super_table_8hpp}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CUSTOMTABLE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CUSTOMTABLE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <irrlicht.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ namespace\ }irr;}
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }gui;}
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ namespace\ }core;}
+\DoxyCodeLine{00010\ \textcolor{keyword}{using\ namespace\ }video;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_custom_table}{CustomTable}}\ :\ \textcolor{keyword}{public}\ IGUIElement\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_custom_table_afbeae6fd37d93f73cd892a2c61f600af}{CustomTable}}(IGUIEnvironment*\ env,\ IGUIElement*\ parent,\ s32\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ core::rect<s32>\&\ rectangle);}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_custom_table_a8c290e64ad47de1c0eaf5149bf241177}{\string~CustomTable}}();}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_custom_table_a78c7101e488c791590ff9c8a9d1f4044}{addRow}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{wchar\_t}*\ text,\ \textcolor{keyword}{const}\ io::path\&\ imageFile);}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_custom_table_a909c003c8785bdb30f8a9285f7a0d072}{draw}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{struct\ }TableEntry\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ u32\ imageIndex;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ core::stringw\ text;}
+\DoxyCodeLine{00024\ \ \ \ \ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ IGUISpriteBank*\ spriteBank;}
+\DoxyCodeLine{00027\ \ \ \ \ std::vector<TableEntry>\ entries;}
+\DoxyCodeLine{00028\ \ \ \ \ f32\ imageSize;}
+\DoxyCodeLine{00029\ \ \ \ \ IGUIScrollBar*\ scrollbar;\ \ \textcolor{comment}{//\ Scrollbar\ für die\ Tabelle}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ scrollPosition;\ \ \ \ \ \textcolor{comment}{//\ Aktuelle\ Scroll-\/Position}}
+\DoxyCodeLine{00031\ \};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_line}{GUILine}}\ :\ \textcolor{keyword}{public}\ IGUIElement}
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00035\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//\ Konstruktor\ ohne\ rect,\ fügt sich\ selbst\ zum\ GUI-\/Umfeld\ hinzu}}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_line_a7e43e4b16c3cdb98480c80bc19b17f6f}{GUILine}}(IGUIEnvironment*\ env,\ IGUIElement*\ parent,\ s32\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_line_a4ef2ff110efd0166e2a6dcba94ca9bf1}{draw}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_line_a34b5be7e9ae4baf5d2841e6606db844e}{setLineColor}}(video::SColor\ color);}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_line_ab52a9151fb420fa83060ee9c7a458a65}{setLineThickness}}(f32\ thickness);}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_line_a1779ef1bdfaed2d09eff04e9f7db879d}{setLineStartEnd}}(\textcolor{keyword}{const}\ core::position2di\&\ start,\ \textcolor{keyword}{const}\ core::position2di\&\ end);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00046\ \ \ \ \ video::SColor\ LineColor;}
+\DoxyCodeLine{00047\ \ \ \ \ f32\ LineThickness;}
+\DoxyCodeLine{00048\ \ \ \ \ core::position2di\ LineStart;}
+\DoxyCodeLine{00049\ \ \ \ \ core::position2di\ LineEnd;}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CUSTOMTABLE\_H}}
+
+\end{DoxyCode}

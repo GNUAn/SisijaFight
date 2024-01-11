@@ -8,10 +8,11 @@ SFConfig globalConfig;
 void checkProcessor() {
 	IOSOperator* o = device->getOSOperator();
 	u32 ps;
-	o->getProcessorSpeedMHz(&ps);
-	if (ps < 6000) {
+	if(!o->getProcessorSpeedMHz(&ps)){
+		exit(2);
+	}
+	if (ps < 2500) {
 		SErrorWidget* w = new SErrorWidget();
-		w->show(device->getGUIEnvironment(), translator::translate("Your Processor is very slow! So the game could run slow!"), SErrorWidget::WARN_LEVEL::SF_SEW_WARN);
-
+		w->show(device->getGUIEnvironment(), translator::translate("Your Processor is very slow! So the game could run slow!") + "\n" + translator::translate("Your Processor Speed is: ") + std::to_string(ps) + translator::translate(" MHz"), SErrorWidget::WARN_LEVEL::SF_SEW_WARN);
 	}
 }

@@ -1,0 +1,42 @@
+\doxysection{Player.\+hpp}
+\hypertarget{_player_8hpp_source}{}\label{_player_8hpp_source}\index{src/Game/Player/Player.hpp@{src/Game/Player/Player.hpp}}
+\mbox{\hyperlink{_player_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <pugixml.hpp>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <irrlicht.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <json.hpp>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <irrlicht.h>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }irr;}
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ namespace\ }core;}
+\DoxyCodeLine{00010\ \textcolor{keyword}{using\ namespace\ }scene;}
+\DoxyCodeLine{00011\ \textcolor{keyword}{using\ namespace\ }gui;}
+\DoxyCodeLine{00012\ \textcolor{keyword}{using\ namespace\ }io;}
+\DoxyCodeLine{00013\ \textcolor{keyword}{using\ namespace\ }pugi;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{using\ namespace\ }pugi;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_world}{World}};}
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_weapon}{Weapon}};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_player_configuration}{PlayerConfiguration}}\{}
+\DoxyCodeLine{00022\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_player_configuration_a7907ee7ee0b4d1cf3a8335ce31d8542b}{weaponPath}};}
+\DoxyCodeLine{00023\ \ \ \ \ nlohmann::json\ \mbox{\hyperlink{struct_player_configuration_a7ad8827c5d2199fac22bf01e3e3751b8}{archievements}};}
+\DoxyCodeLine{00024\ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player}{Player}}\ \{}
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_player_a16e973e1cf7ffcda4c4dce07c53c1634}{Player}}(std::string\ name,\ std::string\ path,\ \textcolor{keywordtype}{int}\ ID,\ \mbox{\hyperlink{class_world}{World}}*\ world,\ irr::IrrlichtDevice*\ \mbox{\hyperlink{globals_8hpp_a3f4aa71242d090e6f84100dbf2d69424}{device}},\ \textcolor{keywordtype}{bool}\ localPlayer=\textcolor{keyword}{false});}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_a6d864d656bd36ffb8b7e8babd9a2be73}{updatePositionAndRotationStep}}(f32\ delta);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ ID;}
+\DoxyCodeLine{00033\ \ \ \ \ std::string\ name,\ path;}
+\DoxyCodeLine{00034\ \ \ \ \ xml\_document\ def;}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_weapon}{Weapon}}*\ gun;}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_weapon}{Weapon}};}
+\DoxyCodeLine{00037\ \};}
+
+\end{DoxyCode}

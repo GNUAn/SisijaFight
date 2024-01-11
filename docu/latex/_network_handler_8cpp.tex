@@ -1,0 +1,48 @@
+\doxysection{src/\+Network/\+Network\+Handler.cpp File Reference}
+\hypertarget{_network_handler_8cpp}{}\label{_network_handler_8cpp}\index{src/Network/NetworkHandler.cpp@{src/Network/NetworkHandler.cpp}}
+{\ttfamily \#include $<$enet/enet.\+h$>$}\newline
+{\ttfamily \#include $<$json.\+hpp$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$zlib.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include "{}Network\+Handler.\+hpp"{}}\newline
+{\ttfamily \#include "{}../globals.\+hpp"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ Bytef $>$ \mbox{\hyperlink{_network_handler_8cpp_ac1d283235222476857906683aa76ff3c}{compress\+Data}} (const std\+::string \&str)
+\item 
+std\+::string \mbox{\hyperlink{_network_handler_8cpp_ae9eb24e2ad394f25450114afcea26171}{decompress\+Data}} (const Bytef \texorpdfstring{$\ast$}{*}compressed\+Data, size\+\_\+t compressed\+Size)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_network_handler_8cpp_a2e938cd63a2404d0902c57205706872a}{client\+ID}} = 62
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_network_handler_8cpp_ac1d283235222476857906683aa76ff3c}\label{_network_handler_8cpp_ac1d283235222476857906683aa76ff3c} 
+\index{NetworkHandler.cpp@{NetworkHandler.cpp}!compressData@{compressData}}
+\index{compressData@{compressData}!NetworkHandler.cpp@{NetworkHandler.cpp}}
+\doxysubsubsection{\texorpdfstring{compressData()}{compressData()}}
+{\footnotesize\ttfamily std\+::vector$<$ Bytef $>$ compress\+Data (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+\Hypertarget{_network_handler_8cpp_ae9eb24e2ad394f25450114afcea26171}\label{_network_handler_8cpp_ae9eb24e2ad394f25450114afcea26171} 
+\index{NetworkHandler.cpp@{NetworkHandler.cpp}!decompressData@{decompressData}}
+\index{decompressData@{decompressData}!NetworkHandler.cpp@{NetworkHandler.cpp}}
+\doxysubsubsection{\texorpdfstring{decompressData()}{decompressData()}}
+{\footnotesize\ttfamily std\+::string decompress\+Data (\begin{DoxyParamCaption}\item[{const Bytef \texorpdfstring{$\ast$}{*}}]{compressed\+Data,  }\item[{size\+\_\+t}]{compressed\+Size }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_network_handler_8cpp_a2e938cd63a2404d0902c57205706872a}\label{_network_handler_8cpp_a2e938cd63a2404d0902c57205706872a} 
+\index{NetworkHandler.cpp@{NetworkHandler.cpp}!clientID@{clientID}}
+\index{clientID@{clientID}!NetworkHandler.cpp@{NetworkHandler.cpp}}
+\doxysubsubsection{\texorpdfstring{clientID}{clientID}}
+{\footnotesize\ttfamily int client\+ID = 62}
+

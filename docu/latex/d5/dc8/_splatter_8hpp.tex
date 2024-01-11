@@ -1,0 +1,56 @@
+\doxysection{src/\+Game/\+World/\+SPHSplash/\+Splatter.hpp-\/\+Dateireferenz}
+\hypertarget{_splatter_8hpp}{}\label{_splatter_8hpp}\index{src/Game/World/SPHSplash/Splatter.hpp@{src/Game/World/SPHSplash/Splatter.hpp}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$irrlicht.\+h$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$irr\+Bullet.\+h$>$}\newline
+Include-\/\+Abhängigkeitsdiagramm für Splatter.\+hpp\+:
+% FIG 0
+Dieser Graph zeigt, welche Datei direkt oder indirekt diese Datei enthält\+:
+% FIG 1
+\doxysubsubsection*{Klassen}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_s_p_h_particle}{SPHParticle}}
+\item 
+struct \mbox{\hyperlink{struct_paintball}{Paintball}}
+\item 
+class \mbox{\hyperlink{class_paintball_simulator}{Paintball\+Simulator}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Makrodefinitionen}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_splatter_8hpp_aa4c8c0bfe709a40904ae6992b50bbebc}{PARTICLE\+\_\+\+DISTANCE}}~4
+\item 
+\#define \mbox{\hyperlink{_splatter_8hpp_a64dbccc85b4694fc914db28668bf47f5}{PARTICLE\+\_\+\+NUMBER\+\_\+\+PER\+\_\+\+SPLASH}}~60
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typdefinitionen}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::unordered\+\_\+map$<$ irr\+::scene\+::\+IScene\+Node \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{struct_s_p_h_particle}{SPHParticle}} $>$ \mbox{\hyperlink{_splatter_8hpp_aaef9384f20174e375b932da1324d1078}{Particle\+By\+Scene\+Node}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Makro-\/\+Dokumentation}
+\Hypertarget{_splatter_8hpp_aa4c8c0bfe709a40904ae6992b50bbebc}\label{_splatter_8hpp_aa4c8c0bfe709a40904ae6992b50bbebc} 
+\index{Splatter.hpp@{Splatter.hpp}!PARTICLE\_DISTANCE@{PARTICLE\_DISTANCE}}
+\index{PARTICLE\_DISTANCE@{PARTICLE\_DISTANCE}!Splatter.hpp@{Splatter.hpp}}
+\doxysubsubsection{\texorpdfstring{PARTICLE\_DISTANCE}{PARTICLE\_DISTANCE}}
+{\footnotesize\ttfamily \#define PARTICLE\+\_\+\+DISTANCE~4}
+
+\Hypertarget{_splatter_8hpp_a64dbccc85b4694fc914db28668bf47f5}\label{_splatter_8hpp_a64dbccc85b4694fc914db28668bf47f5} 
+\index{Splatter.hpp@{Splatter.hpp}!PARTICLE\_NUMBER\_PER\_SPLASH@{PARTICLE\_NUMBER\_PER\_SPLASH}}
+\index{PARTICLE\_NUMBER\_PER\_SPLASH@{PARTICLE\_NUMBER\_PER\_SPLASH}!Splatter.hpp@{Splatter.hpp}}
+\doxysubsubsection{\texorpdfstring{PARTICLE\_NUMBER\_PER\_SPLASH}{PARTICLE\_NUMBER\_PER\_SPLASH}}
+{\footnotesize\ttfamily \#define PARTICLE\+\_\+\+NUMBER\+\_\+\+PER\+\_\+\+SPLASH~60}
+
+
+
+\doxysubsection{Dokumentation der benutzerdefinierten Typen}
+\Hypertarget{_splatter_8hpp_aaef9384f20174e375b932da1324d1078}\label{_splatter_8hpp_aaef9384f20174e375b932da1324d1078} 
+\index{Splatter.hpp@{Splatter.hpp}!ParticleBySceneNode@{ParticleBySceneNode}}
+\index{ParticleBySceneNode@{ParticleBySceneNode}!Splatter.hpp@{Splatter.hpp}}
+\doxysubsubsection{\texorpdfstring{ParticleBySceneNode}{ParticleBySceneNode}}
+{\footnotesize\ttfamily typedef std\+::unordered\+\_\+map$<$irr\+::scene\+::\+IScene\+Node\texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{struct_s_p_h_particle}{SPHParticle}}$>$ \mbox{\hyperlink{_splatter_8hpp_aaef9384f20174e375b932da1324d1078}{Particle\+By\+Scene\+Node}}}
+

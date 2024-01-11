@@ -1,0 +1,26 @@
+\doxysection{Widgets.\+hpp}
+\hypertarget{_widgets_8hpp_source}{}\label{_widgets_8hpp_source}\index{src/Game/GUI/Widgets.hpp@{src/Game/GUI/Widgets.hpp}}
+\mbox{\hyperlink{_widgets_8hpp}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_g_u_i_8hpp}{GUI.hpp}}"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_error_widget}{SErrorWidget}}\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3}{WARN\_LEVEL}}\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3a26a8ce05bccb60eb62f328c12ff6effb}{SF\_SEW\_INFO}},\ \mbox{\hyperlink{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3aa79aa44d365b7fcfc879eeb486c4c05e}{SF\_SEW\_WARN}},\ \mbox{\hyperlink{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3ad78750408c73ead75b499a141506c015}{SF\_SEW\_ERROR}}}
+\DoxyCodeLine{00010\ \ \ \ \ \};}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_s_error_widget_a8546ca7871bffbbd931ae4fd0acdadda}{SF\_EVENT}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_s_error_widget_a8546ca7871bffbbd931ae4fd0acdaddaa829580e3a0805d442fd023cb827e284c}{SF\_BUTTON\_OK\_PRESSED}}}
+\DoxyCodeLine{00013\ \ \ \ \ \};}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_error_widget_a406371e249d931d2680f14c035343d6c}{show}}(IGUIEnvironment*\ env,\ std::string\ text,\ \mbox{\hyperlink{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3}{WARN\_LEVEL}}\ l);}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_error_widget_a748f03a6996ccbc6746f719dd849b430}{onEvent}}(\mbox{\hyperlink{class_s_error_widget_a8546ca7871bffbbd931ae4fd0acdadda}{SF\_EVENT}}\ e,\ std::function<\textcolor{keywordtype}{void}()>\ f)\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ pairs[e]\ =\ f;}
+\DoxyCodeLine{00017\ \ \ \ \ \}}
+\DoxyCodeLine{00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ \ \ \ \ std::map\ <\ \mbox{\hyperlink{class_s_error_widget_a8546ca7871bffbbd931ae4fd0acdadda}{SF\_EVENT}},\ std::function<void()>\ >\ pairs;}
+\DoxyCodeLine{00020\ \};}
+
+\end{DoxyCode}

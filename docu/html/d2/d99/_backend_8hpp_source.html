@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SisijaFight: src/Game/Audio/Backend.hpp Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SisijaFight
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Suchen');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('d2/d99/_backend_8hpp_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Backend.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d2/d99/_backend_8hpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;soloud.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;soloud_wav.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;soloud_wavstream.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="../../d0/d9e/class_sound.html">    8</a></span><span class="keyword">class </span><a class="code hl_class" href="../../d0/d9e/class_sound.html">Sound</a> {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <a class="code hl_function" href="../../d0/d9e/class_sound.html#a539c205cdf06fe2c621fd77c37bcfac9">Sound</a>();</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <a class="code hl_function" href="../../d0/d9e/class_sound.html#a0907389078bf740be2a5763366ad3376">~Sound</a>();</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d9e/class_sound.html#ad0973bf81303a25dd6edab68c6b11603">loadSound</a>(<span class="keyword">const</span> std::string&amp; filename, <span class="keywordtype">bool</span> streamed);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d9e/class_sound.html#aad595b0dc5459e110b53a4e6b2adb0e4">play</a>();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d9e/class_sound.html#a07c551ab56d2f83a861a2f7fd81b480a">stop</a>();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d9e/class_sound.html#aec4c57708809e4422ea01338903a8f9f">setVolume</a>(<span class="keywordtype">float</span> volume);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d9e/class_sound.html#a62709535a58619ea5ca3a640e75300fb">setPosition</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d9e/class_sound.html#a0c25ddb6408f519956bd9273273371d1">setLooping</a>(<span class="keywordtype">bool</span> loop);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    SoLoud::Wav mSound;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    SoLoud::WavStream mStreamedSound;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    SoLoud::handle mHandle;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">bool</span> mIsStreamed;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">bool</span> mIsLooping;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>};</div>
+</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">// Globale Instanz der SoLoud-Engine</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">extern</span> SoLoud::Soloud <a class="code hl_variable" href="../../d2/d99/_backend_8hpp.html#ae6a34d790bb4763140ec14ea305fd2d0">gSoloud</a>;</div>
+<div class="ttc" id="a_backend_8hpp_html_ae6a34d790bb4763140ec14ea305fd2d0"><div class="ttname"><a href="../../d2/d99/_backend_8hpp.html#ae6a34d790bb4763140ec14ea305fd2d0">gSoloud</a></div><div class="ttdeci">SoLoud::Soloud gSoloud</div><div class="ttdef"><b>Definition</b> Backend.cpp:4</div></div>
+<div class="ttc" id="aclass_sound_html"><div class="ttname"><a href="../../d0/d9e/class_sound.html">Sound</a></div><div class="ttdef"><b>Definition</b> Backend.hpp:8</div></div>
+<div class="ttc" id="aclass_sound_html_a07c551ab56d2f83a861a2f7fd81b480a"><div class="ttname"><a href="../../d0/d9e/class_sound.html#a07c551ab56d2f83a861a2f7fd81b480a">Sound::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdef"><b>Definition</b> Backend.cpp:40</div></div>
+<div class="ttc" id="aclass_sound_html_a0907389078bf740be2a5763366ad3376"><div class="ttname"><a href="../../d0/d9e/class_sound.html#a0907389078bf740be2a5763366ad3376">Sound::~Sound</a></div><div class="ttdeci">~Sound()</div><div class="ttdef"><b>Definition</b> Backend.cpp:11</div></div>
+<div class="ttc" id="aclass_sound_html_a0c25ddb6408f519956bd9273273371d1"><div class="ttname"><a href="../../d0/d9e/class_sound.html#a0c25ddb6408f519956bd9273273371d1">Sound::setLooping</a></div><div class="ttdeci">void setLooping(bool loop)</div><div class="ttdef"><b>Definition</b> Backend.cpp:52</div></div>
+<div class="ttc" id="aclass_sound_html_a539c205cdf06fe2c621fd77c37bcfac9"><div class="ttname"><a href="../../d0/d9e/class_sound.html#a539c205cdf06fe2c621fd77c37bcfac9">Sound::Sound</a></div><div class="ttdeci">Sound()</div><div class="ttdef"><b>Definition</b> Backend.cpp:6</div></div>
+<div class="ttc" id="aclass_sound_html_a62709535a58619ea5ca3a640e75300fb"><div class="ttname"><a href="../../d0/d9e/class_sound.html#a62709535a58619ea5ca3a640e75300fb">Sound::setPosition</a></div><div class="ttdeci">void setPosition(float x, float y, float z)</div><div class="ttdef"><b>Definition</b> Backend.cpp:48</div></div>
+<div class="ttc" id="aclass_sound_html_aad595b0dc5459e110b53a4e6b2adb0e4"><div class="ttname"><a href="../../d0/d9e/class_sound.html#aad595b0dc5459e110b53a4e6b2adb0e4">Sound::play</a></div><div class="ttdeci">void play()</div><div class="ttdef"><b>Definition</b> Backend.cpp:27</div></div>
+<div class="ttc" id="aclass_sound_html_ad0973bf81303a25dd6edab68c6b11603"><div class="ttname"><a href="../../d0/d9e/class_sound.html#ad0973bf81303a25dd6edab68c6b11603">Sound::loadSound</a></div><div class="ttdeci">void loadSound(const std::string &amp;filename, bool streamed)</div><div class="ttdef"><b>Definition</b> Backend.cpp:16</div></div>
+<div class="ttc" id="aclass_sound_html_aec4c57708809e4422ea01338903a8f9f"><div class="ttname"><a href="../../d0/d9e/class_sound.html#aec4c57708809e4422ea01338903a8f9f">Sound::setVolume</a></div><div class="ttdeci">void setVolume(float volume)</div><div class="ttdef"><b>Definition</b> Backend.cpp:44</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_b43036362fece0f978c3c8156df55d19.html">Game</a></li><li class="navelem"><a class="el" href="../../dir_d2dab967ce2aeb43b5a12ae9bf5e33c6.html">Audio</a></li><li class="navelem"><a class="el" href="../../d2/d99/_backend_8hpp.html">Backend.hpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>

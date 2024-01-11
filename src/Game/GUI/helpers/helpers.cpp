@@ -6,6 +6,9 @@
 using xml = pugi::xml_document;
 using node = pugi::xml_node;
 
+/// @brief Loads the world Index
+/// @param path The path to the index XML file (eg. 'worlds.xml')
+/// @return the vector with the wolds
 std::vector<WorldInGUI> getWorlds(std::string path) {
 	xml index;
 	auto cap = index.load_file(path.c_str());

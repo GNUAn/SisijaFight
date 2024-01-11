@@ -1,0 +1,61 @@
+\doxysection{Network Class Reference}
+\hypertarget{class_network}{}\label{class_network}\index{Network@{Network}}
+
+
+{\ttfamily \#include $<$Network\+Handler.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_network_a88953be8e3a31ab51cb8f111849ef307}{process\+Request}} (ENet\+Packet \texorpdfstring{$\ast$}{*}packet)
+\item 
+void \mbox{\hyperlink{class_network_ad61293f65794acb8f80e142ccdb6741b}{send}} (const std\+::string \&data)
+\item 
+void \mbox{\hyperlink{class_network_a1fb292284d6491c696d73b13d1df6ba1}{start\+Network}} (std\+::string server\+Address, unsigned int server\+Port)
+\begin{DoxyCompactList}\small\item\em Start the Client of Enet on\+: \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_network_ae7e75d5fe09a64823faf5bb1c0968eaa}{end}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_network_ae7e75d5fe09a64823faf5bb1c0968eaa}\label{class_network_ae7e75d5fe09a64823faf5bb1c0968eaa} 
+\index{Network@{Network}!end@{end}}
+\index{end@{end}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily void Network\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_network_a88953be8e3a31ab51cb8f111849ef307}\label{class_network_a88953be8e3a31ab51cb8f111849ef307} 
+\index{Network@{Network}!processRequest@{processRequest}}
+\index{processRequest@{processRequest}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{processRequest()}{processRequest()}}
+{\footnotesize\ttfamily void Network\+::process\+Request (\begin{DoxyParamCaption}\item[{ENet\+Packet \texorpdfstring{$\ast$}{*}}]{packet }\end{DoxyParamCaption})}
+
+\Hypertarget{class_network_ad61293f65794acb8f80e142ccdb6741b}\label{class_network_ad61293f65794acb8f80e142ccdb6741b} 
+\index{Network@{Network}!send@{send}}
+\index{send@{send}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily void Network\+::send (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{data }\end{DoxyParamCaption})}
+
+\Hypertarget{class_network_a1fb292284d6491c696d73b13d1df6ba1}\label{class_network_a1fb292284d6491c696d73b13d1df6ba1} 
+\index{Network@{Network}!startNetwork@{startNetwork}}
+\index{startNetwork@{startNetwork}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{startNetwork()}{startNetwork()}}
+{\footnotesize\ttfamily void Network\+::start\+Network (\begin{DoxyParamCaption}\item[{std\+::string}]{server\+Address,  }\item[{unsigned int}]{server\+Port }\end{DoxyParamCaption})}
+
+
+
+Start the Client of Enet on\+: 
+
+
+\begin{DoxyParams}{Parameters}
+{\em server\+Address} & The IP/\+DNS-\/\+Name \\
+\hline
+{\em server\+Port} & The Port (default 65432) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Network/\mbox{\hyperlink{_network_handler_8hpp}{Network\+Handler.\+hpp}}\item 
+src/\+Network/\mbox{\hyperlink{_network_handler_8cpp}{Network\+Handler.\+cpp}}\end{DoxyCompactItemize}

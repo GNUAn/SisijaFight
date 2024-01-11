@@ -1,0 +1,64 @@
+\doxysection{src/\+Tools/\+GUITools.cpp File Reference}
+\hypertarget{_g_u_i_tools_8cpp}{}\label{_g_u_i_tools_8cpp}\index{src/Tools/GUITools.cpp@{src/Tools/GUITools.cpp}}
+{\ttfamily \#include "{}GUITools.\+hpp"{}}\newline
+{\ttfamily \#include $<$codecvt$>$}\newline
+{\ttfamily \#include $<$locale$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_color}{Color}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{_g_u_i_tools_8cpp_a6a626c1dd0cfaa4ae2a9d4a6f2ca90d5}{p}} (float v, float p)
+\item 
+int \mbox{\hyperlink{_g_u_i_tools_8cpp_aadb4abcb813918cede5f382c4db07eee}{p}} (int v, int p)
+\item 
+irr\+::core\+::recti \mbox{\hyperlink{_g_u_i_tools_8cpp_aa9b85d2dd3bd11b2bfffdb26e2e8d7fc}{s\+\_\+rect}} (int pX, int pY, int pW, int pH)
+\item 
+\mbox{\hyperlink{struct_color}{Color}} \mbox{\hyperlink{_g_u_i_tools_8cpp_a8a7ac27f85c96d5f16e691dae0c54112}{HSVto\+RGB}} (double h, double s, double v, double a)
+\item 
+std\+::wstring \mbox{\hyperlink{_g_u_i_tools_8cpp_a268235fc7077e49fb7623d477c5005ef}{string\+To\+WString}} (const std\+::string \&str)
+\item 
+SColor \mbox{\hyperlink{_g_u_i_tools_8cpp_a8c3b4fad8088c15c415bac422f78d3d0}{get\+New\+Color}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_g_u_i_tools_8cpp_a8c3b4fad8088c15c415bac422f78d3d0}\label{_g_u_i_tools_8cpp_a8c3b4fad8088c15c415bac422f78d3d0} 
+\index{GUITools.cpp@{GUITools.cpp}!getNewColor@{getNewColor}}
+\index{getNewColor@{getNewColor}!GUITools.cpp@{GUITools.cpp}}
+\doxysubsubsection{\texorpdfstring{getNewColor()}{getNewColor()}}
+{\footnotesize\ttfamily SColor get\+New\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{_g_u_i_tools_8cpp_a8a7ac27f85c96d5f16e691dae0c54112}\label{_g_u_i_tools_8cpp_a8a7ac27f85c96d5f16e691dae0c54112} 
+\index{GUITools.cpp@{GUITools.cpp}!HSVtoRGB@{HSVtoRGB}}
+\index{HSVtoRGB@{HSVtoRGB}!GUITools.cpp@{GUITools.cpp}}
+\doxysubsubsection{\texorpdfstring{HSVtoRGB()}{HSVtoRGB()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_color}{Color}} HSVto\+RGB (\begin{DoxyParamCaption}\item[{double}]{h,  }\item[{double}]{s,  }\item[{double}]{v,  }\item[{double}]{a }\end{DoxyParamCaption})}
+
+\Hypertarget{_g_u_i_tools_8cpp_a6a626c1dd0cfaa4ae2a9d4a6f2ca90d5}\label{_g_u_i_tools_8cpp_a6a626c1dd0cfaa4ae2a9d4a6f2ca90d5} 
+\index{GUITools.cpp@{GUITools.cpp}!p@{p}}
+\index{p@{p}!GUITools.cpp@{GUITools.cpp}}
+\doxysubsubsection{\texorpdfstring{p()}{p()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily float p (\begin{DoxyParamCaption}\item[{float}]{v,  }\item[{float}]{p }\end{DoxyParamCaption})}
+
+\Hypertarget{_g_u_i_tools_8cpp_aadb4abcb813918cede5f382c4db07eee}\label{_g_u_i_tools_8cpp_aadb4abcb813918cede5f382c4db07eee} 
+\index{GUITools.cpp@{GUITools.cpp}!p@{p}}
+\index{p@{p}!GUITools.cpp@{GUITools.cpp}}
+\doxysubsubsection{\texorpdfstring{p()}{p()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int p (\begin{DoxyParamCaption}\item[{int}]{v,  }\item[{int}]{p }\end{DoxyParamCaption})}
+
+\Hypertarget{_g_u_i_tools_8cpp_aa9b85d2dd3bd11b2bfffdb26e2e8d7fc}\label{_g_u_i_tools_8cpp_aa9b85d2dd3bd11b2bfffdb26e2e8d7fc} 
+\index{GUITools.cpp@{GUITools.cpp}!s\_rect@{s\_rect}}
+\index{s\_rect@{s\_rect}!GUITools.cpp@{GUITools.cpp}}
+\doxysubsubsection{\texorpdfstring{s\_rect()}{s\_rect()}}
+{\footnotesize\ttfamily irr\+::core\+::recti s\+\_\+rect (\begin{DoxyParamCaption}\item[{int}]{pX,  }\item[{int}]{pY,  }\item[{int}]{pW,  }\item[{int}]{pH }\end{DoxyParamCaption})}
+
+\Hypertarget{_g_u_i_tools_8cpp_a268235fc7077e49fb7623d477c5005ef}\label{_g_u_i_tools_8cpp_a268235fc7077e49fb7623d477c5005ef} 
+\index{GUITools.cpp@{GUITools.cpp}!stringToWString@{stringToWString}}
+\index{stringToWString@{stringToWString}!GUITools.cpp@{GUITools.cpp}}
+\doxysubsubsection{\texorpdfstring{stringToWString()}{stringToWString()}}
+{\footnotesize\ttfamily std\+::wstring string\+To\+WString (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})}
+

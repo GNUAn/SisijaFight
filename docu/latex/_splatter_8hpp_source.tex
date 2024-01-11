@@ -1,0 +1,44 @@
+\doxysection{Splatter.\+hpp}
+\hypertarget{_splatter_8hpp_source}{}\label{_splatter_8hpp_source}\index{src/Game/World/SPHSplash/Splatter.hpp@{src/Game/World/SPHSplash/Splatter.hpp}}
+\mbox{\hyperlink{_splatter_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <irrlicht.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <irrBullet.h>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ PARTICLE\_DISTANCE\ 4}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ PARTICLE\_NUMBER\_PER\_SPLASH\ 60}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_s_p_h_particle}{SPHParticle}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ irr::core::vector3df\ \mbox{\hyperlink{struct_s_p_h_particle_ac2da5f95a1adeacea36b18a77c4b5f61}{position}};}
+\DoxyCodeLine{00013\ \ \ \ \ irr::scene::ISceneNode*\ \mbox{\hyperlink{struct_s_p_h_particle_a5e26ab81acb87775bb7be7f3744a23f1}{parent}};}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{struct_s_p_h_particle_a6f60943525b4b40a47ad51788a93d0b2}{id}};}
+\DoxyCodeLine{00015\ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_paintball}{Paintball}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ irr::core::vector3df\ \mbox{\hyperlink{struct_paintball_a8d7165958610e32b39e9ebfce61b3b0f}{position}};}
+\DoxyCodeLine{00019\ \ \ \ \ irr::core::vector3df\ \mbox{\hyperlink{struct_paintball_a8f7e359054da6d344d15cfb03c1d7eb1}{target}};}
+\DoxyCodeLine{00020\ \ \ \ \ irr::scene::IMeshSceneNode*\ \mbox{\hyperlink{struct_paintball_a305b514b2b1fabd477bc3a595531362b}{model}};}
+\DoxyCodeLine{00021\ \ \ \ \ IRigidBody*\ \mbox{\hyperlink{struct_paintball_af6bd4a9eceacfbc7e5f42f3a1387dd36}{rigidBody}};}
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{typedef}\ std::unordered\_map<irr::scene::ISceneNode*,\ SPHParticle>\ \mbox{\hyperlink{_splatter_8hpp_aaef9384f20174e375b932da1324d1078}{ParticleBySceneNode}};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_paintball_simulator}{PaintballSimulator}}\ \{}
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_paintball_simulator_ae60446de68f108620871ff3c972531b4}{simulate}}(\textcolor{keywordtype}{int}\ delta);}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_paintball_simulator_af4c75e65010189fd32219f00960bb6b5}{addSplash}}(irr::core::vector3df);}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_paintball_simulator_ab970b55b474900e75656b1d3231c3647}{addPaintball}}(irr::core::vector3df\ position,\ irr::core::vector3df\ target,\ irrBulletWorld*\ world);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_paintball_simulator_a36a3354e5993d1bd1099d4fab3551e46}{deleteAll}}();}
+\DoxyCodeLine{00032\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ calulateParticle(\mbox{\hyperlink{struct_s_p_h_particle}{SPHParticle}}\&\ \mbox{\hyperlink{_g_u_i_tools_8cpp_a6a626c1dd0cfaa4ae2a9d4a6f2ca90d5}{p}});}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ checkCollision(\mbox{\hyperlink{struct_s_p_h_particle}{SPHParticle}}\ a,\ \mbox{\hyperlink{struct_s_p_h_particle}{SPHParticle}}\ b);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ calculateSingleMesh(\mbox{\hyperlink{_splatter_8hpp_aaef9384f20174e375b932da1324d1078}{ParticleBySceneNode}}\&\ particles,\ irr::scene::ISceneNode*\ parent);}
+\DoxyCodeLine{00036\ \ \ \ \ std::vector<SPHParticle*>\ paticles;}
+\DoxyCodeLine{00037\ \ \ \ \ std::vector<Paintball*>\ paintballs;}
+\DoxyCodeLine{00038\ \};}
+
+\end{DoxyCode}

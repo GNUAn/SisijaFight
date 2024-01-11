@@ -91,7 +91,10 @@ void Network::internalThreadInit(std::string serverAddress, uint8_t serverPort) 
     enet_host_destroy(client);
 }
 
-void Network::startNetwork(std::string serverAddress, uint8_t serverPort) {
+/// @brief Start the Client of Enet on:
+/// @param serverAddress The IP/DNS-Name
+/// @param serverPort The Port (default 65432)
+void Network::startNetwork(std::string serverAddress, unsigned int serverPort) {
     std::thread networkThread(&Network::internalThreadInit, this, serverAddress, serverPort);
     networkThread.detach();
 }

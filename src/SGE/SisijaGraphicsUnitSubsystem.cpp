@@ -22,11 +22,11 @@ SGUI::SGUI(IrrlichtDevice* dev) : _device(dev) {
 
 	// Farben und Stil des Skins anpassen
  
-	skin->setColor(EGDC_BUTTON_TEXT, video::SColor(255, 255, 255, 255)); // Wei�er Text
-	skin->setColor(EGDC_HIGH_LIGHT, video::SColor(255, 100, 200, 100)); // Hervorhebungsfarbe
-	skin->setColor(EGDC_HIGH_LIGHT_TEXT, video::SColor(255, 255, 255, 255)); // Wei�er Text f�r Hervorhebungen
-	skin->setColor(EGDC_TOOLTIP_BACKGROUND, video::SColor(255, 50, 50, 50)); // Dunkelgrauer Tooltip-Hintergrund
-	skin->setColor(EGDC_TOOLTIP, video::SColor(255, 255, 255, 255)); // Wei�er Tooltip-Text
+	skin->setColor(EGDC_BUTTON_TEXT, video::SColor(255, 255, 255, 255));
+	skin->setColor(EGDC_HIGH_LIGHT, video::SColor(255, 100, 200, 100));
+	skin->setColor(EGDC_HIGH_LIGHT_TEXT, video::SColor(255, 255, 255, 255));
+	skin->setColor(EGDC_TOOLTIP_BACKGROUND, video::SColor(255, 50, 50, 50));
+	skin->setColor(EGDC_TOOLTIP, video::SColor(255, 255, 255, 255));
 
 }
 

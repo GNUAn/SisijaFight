@@ -12,7 +12,7 @@ class Network {
 public:
 	void processRequest(ENetPacket* packet);
 	void send(const std::string& data);
-	void startNetwork(std::string serverAddress, uint8_t serverPort);
+	void startNetwork(std::string serverAddress, unsigned int serverPort);
 	void end();
 private:
 	ENetPeer* peer;

@@ -1,0 +1,22 @@
+\doxysection{Scripting.\+hpp}
+\hypertarget{_scripting_8hpp_source}{}\label{_scripting_8hpp_source}\index{src/SGE/Scripting.hpp@{src/SGE/Scripting.hpp}}
+\mbox{\hyperlink{_scripting_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <angelscript.h>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{_scripting_8hpp_afe9c82c15e20af89ea9c02ea878a6b77}{RegistryType}}\{}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{_scripting_8hpp_afe9c82c15e20af89ea9c02ea878a6b77a05f213785c06735e6c186ce66a57df39}{SSE\_GLOBAL}},\ \mbox{\hyperlink{_scripting_8hpp_afe9c82c15e20af89ea9c02ea878a6b77a5bc5817210b71c0cf6ddb03ce0a7f747}{SSE\_CLASS}},\ \mbox{\hyperlink{_scripting_8hpp_afe9c82c15e20af89ea9c02ea878a6b77aab7f6da3ce57cad7220f21b1a9d9ca9c}{SSE\_NAMESPACE}}}
+\DoxyCodeLine{00008\ \};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_scripter_sub}{ScripterSub}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scripter_sub_aaed587173a7d34f1e7c4fd6e2764a190}{init}}();}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scripter_sub_a7afe89d196482f9435d661410fc4aefa}{registerFunction}}(std::function<\textcolor{keywordtype}{void}(Args...)>\ callb,\ std::string\ name,\ \mbox{\hyperlink{_scripting_8hpp_afe9c82c15e20af89ea9c02ea878a6b77}{RegistryType}}\ type,\ std::string\ cls=\textcolor{stringliteral}{"{}"{}},\ std::string\ nmspc=\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00017\ \ \ \ \ asIScriptEngine*\ \mbox{\hyperlink{class_scripter_sub_a47e7379a9616268e6fea1e69f814b5ac}{engine}};}
+\DoxyCodeLine{00018\ \}}
+
+\end{DoxyCode}

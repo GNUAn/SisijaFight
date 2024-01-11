@@ -1,0 +1,81 @@
+\doxysection{Scripter\+Sub Klassenreferenz}
+\hypertarget{class_scripter_sub}{}\label{class_scripter_sub}\index{ScripterSub@{ScripterSub}}
+
+
+Simple Scripter Subsystem.  
+
+
+
+
+{\ttfamily \#include $<$Scripting.\+hpp$>$}
+
+\doxysubsubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_scripter_sub_aaed587173a7d34f1e7c4fd6e2764a190}{init}} ()
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\void \mbox{\hyperlink{class_scripter_sub_a7afe89d196482f9435d661410fc4aefa}{register\+Function}} (std\+::function$<$ void(Args...)$>$ callb, std\+::string name, \mbox{\hyperlink{_scripting_8hpp_afe9c82c15e20af89ea9c02ea878a6b77}{Registry\+Type}} type, std\+::string cls="{}"{}, std\+::string nmspc="{}"{})
+\begin{DoxyCompactList}\small\item\em Register a Function to Angelscript. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Geschützte Attribute}
+\begin{DoxyCompactItemize}
+\item 
+as\+IScript\+Engine \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_scripter_sub_a47e7379a9616268e6fea1e69f814b5ac}{engine}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Ausführliche Beschreibung}
+Simple Scripter Subsystem. 
+
+\doxysubsection{Dokumentation der Elementfunktionen}
+\Hypertarget{class_scripter_sub_aaed587173a7d34f1e7c4fd6e2764a190}\label{class_scripter_sub_aaed587173a7d34f1e7c4fd6e2764a190} 
+\index{ScripterSub@{ScripterSub}!init@{init}}
+\index{init@{init}!ScripterSub@{ScripterSub}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Scripter\+Sub\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:
+% FIG 0
+\Hypertarget{class_scripter_sub_a7afe89d196482f9435d661410fc4aefa}\label{class_scripter_sub_a7afe89d196482f9435d661410fc4aefa} 
+\index{ScripterSub@{ScripterSub}!registerFunction@{registerFunction}}
+\index{registerFunction@{registerFunction}!ScripterSub@{ScripterSub}}
+\doxysubsubsection{\texorpdfstring{registerFunction()}{registerFunction()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+void Scripter\+Sub\+::register\+Function (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(Args...)$>$}]{callb,  }\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{_scripting_8hpp_afe9c82c15e20af89ea9c02ea878a6b77}{Registry\+Type}}}]{type,  }\item[{std\+::string}]{cls = {\ttfamily "{}"{}},  }\item[{std\+::string}]{nmspc = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Register a Function to Angelscript. 
+
+
+\begin{DoxyTemplParams}{Template-\/\+Parameter}
+{\em ...\+Args} & The Function Arguments template \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameter}
+{\em callb} & callback function \\
+\hline
+{\em name} & name of the function (e.\+g. void print(string data)) \\
+\hline
+{\em type} & Type\+: Class member, namespace member or global function \\
+\hline
+{\em cls} & Optional\+: Class name \\
+\hline
+{\em nmspc} & Optional\+: Namespace name \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentation der Datenelemente}
+\Hypertarget{class_scripter_sub_a47e7379a9616268e6fea1e69f814b5ac}\label{class_scripter_sub_a47e7379a9616268e6fea1e69f814b5ac} 
+\index{ScripterSub@{ScripterSub}!engine@{engine}}
+\index{engine@{engine}!ScripterSub@{ScripterSub}}
+\doxysubsubsection{\texorpdfstring{engine}{engine}}
+{\footnotesize\ttfamily as\+IScript\+Engine\texorpdfstring{$\ast$}{*} Scripter\+Sub\+::engine\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+\item 
+src/\+SGE/\mbox{\hyperlink{_scripting_8hpp}{Scripting.\+hpp}}\item 
+src/\+SGE/\mbox{\hyperlink{_scripting_8cpp}{Scripting.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,35 @@
+\doxysection{Backend.\+hpp}
+\hypertarget{_backend_8hpp_source}{}\label{_backend_8hpp_source}\index{src/Game/Audio/Backend.hpp@{src/Game/Audio/Backend.hpp}}
+\mbox{\hyperlink{_backend_8hpp}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}soloud.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}soloud\_wav.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}soloud\_wavstream.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sound}{Sound}}\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_sound_a539c205cdf06fe2c621fd77c37bcfac9}{Sound}}();}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_sound_a0907389078bf740be2a5763366ad3376}{\string~Sound}}();}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sound_ad0973bf81303a25dd6edab68c6b11603}{loadSound}}(\textcolor{keyword}{const}\ std::string\&\ filename,\ \textcolor{keywordtype}{bool}\ streamed);}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sound_aad595b0dc5459e110b53a4e6b2adb0e4}{play}}();}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sound_a07c551ab56d2f83a861a2f7fd81b480a}{stop}}();}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sound_aec4c57708809e4422ea01338903a8f9f}{setVolume}}(\textcolor{keywordtype}{float}\ volume);}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sound_a62709535a58619ea5ca3a640e75300fb}{setPosition}}(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z);}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sound_a0c25ddb6408f519956bd9273273371d1}{setLooping}}(\textcolor{keywordtype}{bool}\ loop);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ SoLoud::Wav\ mSound;}
+\DoxyCodeLine{00022\ \ \ \ \ SoLoud::WavStream\ mStreamedSound;}
+\DoxyCodeLine{00023\ \ \ \ \ SoLoud::handle\ mHandle;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ mIsStreamed;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{bool}\ mIsLooping;}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ Globale\ Instanz\ der\ SoLoud-\/Engine}}
+\DoxyCodeLine{00029\ \textcolor{keyword}{extern}\ SoLoud::Soloud\ \mbox{\hyperlink{_backend_8hpp_ae6a34d790bb4763140ec14ea305fd2d0}{gSoloud}};}
+
+\end{DoxyCode}

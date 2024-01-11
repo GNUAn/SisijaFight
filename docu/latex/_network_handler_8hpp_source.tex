@@ -1,0 +1,34 @@
+\doxysection{Network\+Handler.\+hpp}
+\hypertarget{_network_handler_8hpp_source}{}\label{_network_handler_8hpp_source}\index{src/Network/NetworkHandler.hpp@{src/Network/NetworkHandler.hpp}}
+\mbox{\hyperlink{_network_handler_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ NETWORK\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ NETWORK\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <enet/enet.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_network_handler_8hpp_a2e938cd63a2404d0902c57205706872a}{clientID}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_network}{Network}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_a88953be8e3a31ab51cb8f111849ef307}{processRequest}}(ENetPacket*\ packet);}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_ad61293f65794acb8f80e142ccdb6741b}{send}}(\textcolor{keyword}{const}\ std::string\&\ data);}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_a1fb292284d6491c696d73b13d1df6ba1}{startNetwork}}(std::string\ serverAddress,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ serverPort);}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_ae7e75d5fe09a64823faf5bb1c0968eaa}{end}}();}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ ENetPeer*\ peer;}
+\DoxyCodeLine{00019\ \ \ \ \ ENetAddress\ address;}
+\DoxyCodeLine{00020\ \ \ \ \ ENetHost*\ client;}
+\DoxyCodeLine{00021\ \ \ \ \ ENetEvent\ event;}
+\DoxyCodeLine{00022\ \ \ \ \ std::function<void(std::string)>\ fCallback;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ \_isPeerUsedByThread\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ isRunning\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ internalThreadInit(std::string\ serverAddress,\ uint8\_t\ serverPort);}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ NETWORK\_H}}
+
+\end{DoxyCode}

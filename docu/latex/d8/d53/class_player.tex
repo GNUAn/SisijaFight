@@ -1,0 +1,78 @@
+\doxysection{Player Klassenreferenz}
+\hypertarget{class_player}{}\label{class_player}\index{Player@{Player}}
+
+
+{\ttfamily \#include $<$Player.\+hpp$>$}
+
+\doxysubsubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_a16e973e1cf7ffcda4c4dce07c53c1634}{Player}} (std\+::string name, std\+::string path, int ID, \mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}world, irr\+::\+Irrlicht\+Device \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{globals_8hpp_a3f4aa71242d090e6f84100dbf2d69424}{device}}, bool local\+Player=false)
+\begin{DoxyCompactList}\small\item\em Create a \doxylink{class_player}{Player}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a6d864d656bd36ffb8b7e8babd9a2be73}{update\+Position\+And\+Rotation\+Step}} (f32 delta)
+\item 
+void \mbox{\hyperlink{class_player_a2f0cfe369ddc2499d481a5d3c0bf5e1a}{set\+Directions}} (irr\+::core\+::vector3df position, irr\+::core\+::vector3df rotation)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Freundbeziehungen}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_player_ab356dbee0f1e915287732c65e8ef61e1}{Weapon}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
+\Hypertarget{class_player_a16e973e1cf7ffcda4c4dce07c53c1634}\label{class_player_a16e973e1cf7ffcda4c4dce07c53c1634} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::string}]{path,  }\item[{int}]{ID,  }\item[{\mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}}]{world,  }\item[{irr\+::\+Irrlicht\+Device \texorpdfstring{$\ast$}{*}}]{device,  }\item[{bool}]{local\+Player = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Create a \doxylink{class_player}{Player}. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em name} & The name of the \doxylink{class_player}{Player} (Gamertag) \\
+\hline
+{\em path} & The XML-\/\+Player-\/\+Definition path \\
+\hline
+{\em ID} & The Client\+ID \\
+\hline
+{\em world} & The \doxylink{class_world}{World} for Physics reasons \\
+\hline
+{\em device} & The Irrlicht Device \\
+\hline
+{\em local\+Player} & Defines if the \doxylink{class_player}{Player} is the Main\+Player of this Computer \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentation der Elementfunktionen}
+\Hypertarget{class_player_a2f0cfe369ddc2499d481a5d3c0bf5e1a}\label{class_player_a2f0cfe369ddc2499d481a5d3c0bf5e1a} 
+\index{Player@{Player}!setDirections@{setDirections}}
+\index{setDirections@{setDirections}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{setDirections()}{setDirections()}}
+{\footnotesize\ttfamily void Player\+::set\+Directions (\begin{DoxyParamCaption}\item[{irr\+::core\+::vector3df}]{position,  }\item[{irr\+::core\+::vector3df}]{rotation }\end{DoxyParamCaption})}
+
+\Hypertarget{class_player_a6d864d656bd36ffb8b7e8babd9a2be73}\label{class_player_a6d864d656bd36ffb8b7e8babd9a2be73} 
+\index{Player@{Player}!updatePositionAndRotationStep@{updatePositionAndRotationStep}}
+\index{updatePositionAndRotationStep@{updatePositionAndRotationStep}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{updatePositionAndRotationStep()}{updatePositionAndRotationStep()}}
+{\footnotesize\ttfamily void Player\+::update\+Position\+And\+Rotation\+Step (\begin{DoxyParamCaption}\item[{f32}]{delta }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Freundbeziehungen und Funktionsdokumentation}
+\Hypertarget{class_player_ab356dbee0f1e915287732c65e8ef61e1}\label{class_player_ab356dbee0f1e915287732c65e8ef61e1} 
+\index{Player@{Player}!Weapon@{Weapon}}
+\index{Weapon@{Weapon}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Weapon}{Weapon}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_weapon}{Weapon}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Game/\+Player/\mbox{\hyperlink{_player_8hpp}{Player.\+hpp}}\item 
+src/\+Game/\+Player/\mbox{\hyperlink{_player_8cpp}{Player.\+cpp}}\end{DoxyCompactItemize}

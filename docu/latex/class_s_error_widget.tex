@@ -1,0 +1,93 @@
+\doxysection{SError\+Widget Class Reference}
+\hypertarget{class_s_error_widget}{}\label{class_s_error_widget}\index{SErrorWidget@{SErrorWidget}}
+
+
+{\ttfamily \#include $<$Widgets.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3}{WARN\+\_\+\+LEVEL}} \{ \mbox{\hyperlink{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3a26a8ce05bccb60eb62f328c12ff6effb}{SF\+\_\+\+SEW\+\_\+\+INFO}}
+, \mbox{\hyperlink{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3aa79aa44d365b7fcfc879eeb486c4c05e}{SF\+\_\+\+SEW\+\_\+\+WARN}}
+, \mbox{\hyperlink{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3ad78750408c73ead75b499a141506c015}{SF\+\_\+\+SEW\+\_\+\+ERROR}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_s_error_widget_a8546ca7871bffbbd931ae4fd0acdadda}{SF\+\_\+\+EVENT}} \{ \mbox{\hyperlink{class_s_error_widget_a8546ca7871bffbbd931ae4fd0acdaddaa829580e3a0805d442fd023cb827e284c}{SF\+\_\+\+BUTTON\+\_\+\+OK\+\_\+\+PRESSED}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_s_error_widget_a406371e249d931d2680f14c035343d6c}{show}} (IGUIEnvironment \texorpdfstring{$\ast$}{*}env, std\+::string text, \mbox{\hyperlink{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3}{WARN\+\_\+\+LEVEL}} l)
+\begin{DoxyCompactList}\small\item\em Shows a Error, Warning or Info Dialog. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_error_widget_a748f03a6996ccbc6746f719dd849b430}{on\+Event}} (\mbox{\hyperlink{class_s_error_widget_a8546ca7871bffbbd931ae4fd0acdadda}{SF\+\_\+\+EVENT}} e, std\+::function$<$ void()$>$ f)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_s_error_widget_a8546ca7871bffbbd931ae4fd0acdadda}\label{class_s_error_widget_a8546ca7871bffbbd931ae4fd0acdadda} 
+\index{SErrorWidget@{SErrorWidget}!SF\_EVENT@{SF\_EVENT}}
+\index{SF\_EVENT@{SF\_EVENT}!SErrorWidget@{SErrorWidget}}
+\doxysubsubsection{\texorpdfstring{SF\_EVENT}{SF\_EVENT}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_s_error_widget_a8546ca7871bffbbd931ae4fd0acdadda}{SError\+Widget\+::\+SF\+\_\+\+EVENT}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SF\_BUTTON\_OK\_PRESSED@{SF\_BUTTON\_OK\_PRESSED}!SErrorWidget@{SErrorWidget}}\index{SErrorWidget@{SErrorWidget}!SF\_BUTTON\_OK\_PRESSED@{SF\_BUTTON\_OK\_PRESSED}}}\Hypertarget{class_s_error_widget_a8546ca7871bffbbd931ae4fd0acdaddaa829580e3a0805d442fd023cb827e284c}\label{class_s_error_widget_a8546ca7871bffbbd931ae4fd0acdaddaa829580e3a0805d442fd023cb827e284c} 
+SF\+\_\+\+BUTTON\+\_\+\+OK\+\_\+\+PRESSED&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3}\label{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3} 
+\index{SErrorWidget@{SErrorWidget}!WARN\_LEVEL@{WARN\_LEVEL}}
+\index{WARN\_LEVEL@{WARN\_LEVEL}!SErrorWidget@{SErrorWidget}}
+\doxysubsubsection{\texorpdfstring{WARN\_LEVEL}{WARN\_LEVEL}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3}{SError\+Widget\+::\+WARN\+\_\+\+LEVEL}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SF\_SEW\_INFO@{SF\_SEW\_INFO}!SErrorWidget@{SErrorWidget}}\index{SErrorWidget@{SErrorWidget}!SF\_SEW\_INFO@{SF\_SEW\_INFO}}}\Hypertarget{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3a26a8ce05bccb60eb62f328c12ff6effb}\label{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3a26a8ce05bccb60eb62f328c12ff6effb} 
+SF\+\_\+\+SEW\+\_\+\+INFO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SF\_SEW\_WARN@{SF\_SEW\_WARN}!SErrorWidget@{SErrorWidget}}\index{SErrorWidget@{SErrorWidget}!SF\_SEW\_WARN@{SF\_SEW\_WARN}}}\Hypertarget{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3aa79aa44d365b7fcfc879eeb486c4c05e}\label{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3aa79aa44d365b7fcfc879eeb486c4c05e} 
+SF\+\_\+\+SEW\+\_\+\+WARN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SF\_SEW\_ERROR@{SF\_SEW\_ERROR}!SErrorWidget@{SErrorWidget}}\index{SErrorWidget@{SErrorWidget}!SF\_SEW\_ERROR@{SF\_SEW\_ERROR}}}\Hypertarget{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3ad78750408c73ead75b499a141506c015}\label{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3ad78750408c73ead75b499a141506c015} 
+SF\+\_\+\+SEW\+\_\+\+ERROR&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_s_error_widget_a748f03a6996ccbc6746f719dd849b430}\label{class_s_error_widget_a748f03a6996ccbc6746f719dd849b430} 
+\index{SErrorWidget@{SErrorWidget}!onEvent@{onEvent}}
+\index{onEvent@{onEvent}!SErrorWidget@{SErrorWidget}}
+\doxysubsubsection{\texorpdfstring{onEvent()}{onEvent()}}
+{\footnotesize\ttfamily void SError\+Widget\+::on\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_error_widget_a8546ca7871bffbbd931ae4fd0acdadda}{SF\+\_\+\+EVENT}}}]{e,  }\item[{std\+::function$<$ void()$>$}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_s_error_widget_a406371e249d931d2680f14c035343d6c}\label{class_s_error_widget_a406371e249d931d2680f14c035343d6c} 
+\index{SErrorWidget@{SErrorWidget}!show@{show}}
+\index{show@{show}!SErrorWidget@{SErrorWidget}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily void SError\+Widget\+::show (\begin{DoxyParamCaption}\item[{IGUIEnvironment \texorpdfstring{$\ast$}{*}}]{env,  }\item[{std\+::string}]{text,  }\item[{\mbox{\hyperlink{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3}{WARN\+\_\+\+LEVEL}}}]{l }\end{DoxyParamCaption})}
+
+
+
+Shows a Error, Warning or Info Dialog. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em env} & The Irrlicht GUI-\/\+Environment \\
+\hline
+{\em text} & The Error Message \\
+\hline
+{\em l} & The Waning Level use like this \textquotesingle{}..., \doxylink{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3}{SError\+Widget\+::\+WARN\+\_\+\+LEVEL}\+:\+:...\textquotesingle{} supported levels are SF\+\_\+\+SEW\+\_\+\+ERROR, SF\+\_\+\+SEW\+\_\+\+WARNING and SF\+\_\+\+SEW\+\_\+\+INFO \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Game/\+GUI/\mbox{\hyperlink{_widgets_8hpp}{Widgets.\+hpp}}\item 
+src/\+Game/\+GUI/\mbox{\hyperlink{_widgets_8cpp}{Widgets.\+cpp}}\end{DoxyCompactItemize}
