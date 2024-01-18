@@ -1,0 +1,25 @@
+{
+  "OutputFoldersPerTargetSystem": {
+    "Lokaler Computer": [
+      "..\\SisijaFight-data\\application\\windows",
+      "out\\install\\x64-debug",
+      "out\\install\\x64-release",
+      "out\\install\\x86-debug",
+      "out\\install\\x86-release"
+    ]
+  },
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\Game",
+    "\\src\\Game\\GUI",
+    "\\src\\Game\\World",
+    "\\src\\Game\\World\\SPHSplash",
+    "\\src\\Network",
+    "\\src\\SGE",
+    "\\src\\Tools",
+    "\\src\\Tools\\Translation"
+  ],
+  "SelectedNode": "\\src\\SGE\\SisijaGraphicsUnitSubsystem.cpp",
+  "PreviewInSolutionExplorer": false
+}

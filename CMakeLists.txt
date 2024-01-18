@@ -24,7 +24,6 @@ file(GLOB_RECURSE IBULLET_SRC "lib/irrbullet/*.cpp" "lib/irrbullet/.c" "lib/Bull
 file(GLOB_RECURSE ENET_SRC "lib/enet/*.c")
 file(GLOB_RECURSE AS_SRC "lib/angelscript/*.cpp" "lib/angelscript/*.c")
 
-
 set(DIRR_STATIC_LIB_)
 
 set(JPEG_LIB_PATH "lib/Irrlicht/jpeglib")
