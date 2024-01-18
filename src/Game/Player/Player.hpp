@@ -20,6 +20,7 @@ class Player {
 public:
 	Player(std::string name, std::string path, int ID, World* world, irr::IrrlichtDevice* device, bool localPlayer=false);
 	void setDirections(irr::core::vector3df speed, irr::core::vector3df rotation);
+	void spawn(irr::core::vector3df position);
 private:
 	int ID;
 	std::string name, path;

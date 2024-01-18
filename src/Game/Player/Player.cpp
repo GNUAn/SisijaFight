@@ -34,3 +34,7 @@ void Player::setDirections(irr::core::vector3df speed, irr::core::vector3df rota
     mat.transformVect(rotatedSpeed, speed);
     physics->setLinearVelocity(rotatedSpeed);
 }
+
+void Player::spawn(vector3df position){
+    
+}
