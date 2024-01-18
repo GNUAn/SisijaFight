@@ -11,6 +11,9 @@ endif()
 
 project ("SisijaFight")
 
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_C_VERSION 11)
+
 # Fügen Sie der ausführbaren Datei dieses Projekts eine Quelle hinzu.
 
 file(GLOB_RECURSE IRR_SRC "lib/Irrlicht/*.cpp" "lib/Irrlicht/*.c")
@@ -20,6 +23,7 @@ file(GLOB_RECURSE OPENCL_SRC "lib/OpenCL/src/*.c" "lib/OpenCL/src/*.cpp")
 file(GLOB_RECURSE IBULLET_SRC "lib/irrbullet/*.cpp" "lib/irrbullet/.c" "lib/Bullet/*.cpp" "lib/Bullet/*.c")
 file(GLOB_RECURSE ENET_SRC "lib/enet/*.c")
 file(GLOB_RECURSE AS_SRC "lib/angelscript/*.cpp" "lib/angelscript/*.c")
+
 
 set(DIRR_STATIC_LIB_)
 

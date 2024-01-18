@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <vector3d.h>
+#include <json.hpp>
 
 class Player;
 

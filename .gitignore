@@ -32,3 +32,5 @@
 *.db
 *.db-wal
 *.sqlite
+*vs/*
+*vscode/*

@@ -1,3 +1,4 @@
+#pragma once
 #include <angelscript.h>
 #include <string>
 #include <functional>
