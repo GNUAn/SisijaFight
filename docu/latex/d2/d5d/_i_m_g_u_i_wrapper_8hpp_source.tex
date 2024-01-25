@@ -1,0 +1,108 @@
+\doxysection{IMGUIWrapper.\+hpp}
+\hypertarget{_i_m_g_u_i_wrapper_8hpp_source}{}\label{_i_m_g_u_i_wrapper_8hpp_source}\index{src/SGE/IMGUIWrapper.hpp@{src/SGE/IMGUIWrapper.hpp}}
+\mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <IrrIMGUI/IrrIMGUI.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <IrrIMGUI/IncludeIrrlicht.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <irrlicht.h>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ namespace\ }IrrIMGUI;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_af673abfde02eb3e79d399c0005b0ed2f}{GUIEvent}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_af673abfde02eb3e79d399c0005b0ed2faf46fb970a9a28aa03fa3e048f22c85ac}{SG\_BUTTON\_PRESSED}},\ \mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_af673abfde02eb3e79d399c0005b0ed2fa13cc3c9b34f635f956b033e955b9f8ba}{SG\_TEXTFIELD\_CHANGED}}}
+\DoxyCodeLine{00013\ \};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ ImVec2\ \mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_ac48d753b585cb7eb1c7fa6ceda071967}{ivec22imvec2}}(irr::core::recti\ size);}
+\DoxyCodeLine{00016\ ImVec2\ \mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_ac48d753b585cb7eb1c7fa6ceda071967}{ivec22imvec2}}(irr::core::dimension2du\ size);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_element}{GUIElement}};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_environment_aab6944b8fe4d40ccb9447dc6c3bd0913}{GUIEnvironment}}(irr::IrrlichtDevice*\ \mbox{\hyperlink{globals_8hpp_a3f4aa71242d090e6f84100dbf2d69424}{device}});}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_environment_ade07a451bf3f954ef76ec06d0a01de0e}{drawAll}}();}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_environment_aae5a7a91662a2089cc349251be64809f}{addObject}}(\mbox{\hyperlink{class_g_u_i_element}{GUIElement}}*\ e)\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ children.push\_back(e);}
+\DoxyCodeLine{00026\ \ \ \ \ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_environment_a7eb1316d72255436a1c8fc1dddfe9444}{removeObject}}(\mbox{\hyperlink{class_g_u_i_element}{GUIElement}}*\ e)\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ std::remove(children.begin(),\ children.end(),\ e);}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ children.erase(it,\ children.end());}
+\DoxyCodeLine{00030\ \ \ \ \ \}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{inline}\ CIMGUIEventReceiver*\ \mbox{\hyperlink{class_g_u_i_environment_ad60884639887dde801ead1a5540741a3}{getEventReceiver}}()\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ recv;}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+\DoxyCodeLine{00034\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_element}{GUIElement}}*\ root;}
+\DoxyCodeLine{00036\ \ \ \ \ CIMGUIEventReceiver*\ recv;}
+\DoxyCodeLine{00037\ \ \ \ \ IIMGUIHandle*\ pGUI;}
+\DoxyCodeLine{00038\ \ \ \ \ std::vector<GUIElement*>\ children;}
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_element}{GUIElement}}\ \{}
+\DoxyCodeLine{00042\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{inline}\ \mbox{\hyperlink{class_g_u_i_element_a039ca1ec2cd382e36b4e0625bc2e5dc3}{GUIElement}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env,\ irr::core::recti\ rect)\ :\ \mbox{\hyperlink{class_g_u_i_element_ae04cdbd7ab66b6a0e5db18c1a31045b5}{\_env}}(env),\ \mbox{\hyperlink{class_g_u_i_element_ac8c7e942cc02d5b3139c80bf85aa0bbb}{\_rect}}(rect)\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ...}}
+\DoxyCodeLine{00045\ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_element_a7654ac16a368633c81538f13b9299f63}{draw}}()\ =\ 0;}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_element_a13b0bdccd797f10cefef14d181571dab}{remove}}()\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_u_i_element_ae04cdbd7ab66b6a0e5db18c1a31045b5}{\_env}}-\/>\mbox{\hyperlink{class_g_u_i_environment_a7eb1316d72255436a1c8fc1dddfe9444}{removeObject}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_element_affb9974f9bd55e8ea09a14c973c18adc}{setText}}(std::string\ text)\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_u_i_element_aa5cbff9d22ef8be1d18ea081a4162558}{\_text}}\ =\ text;}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_element_aaeb6baf885f83d20e406ce2f497a8dfe}{addChild}}(\mbox{\hyperlink{class_g_u_i_element}{GUIElement}}*\ e)\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_u_i_element_a2e4312a2ef8032761df8cda5183d68fa}{children}}.push\_back(e);}
+\DoxyCodeLine{00055\ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_element_a45b3752a4730fce4898921696c61c91c}{setParent}}(\mbox{\hyperlink{class_g_u_i_element}{GUIElement}}*\ \mbox{\hyperlink{_g_u_i_tools_8cpp_a6a626c1dd0cfaa4ae2a9d4a6f2ca90d5}{p}})\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_g_u_i_tools_8cpp_a6a626c1dd0cfaa4ae2a9d4a6f2ca90d5}{p}}-\/>addChild(\textcolor{keyword}{this});}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_u_i_element_ae04cdbd7ab66b6a0e5db18c1a31045b5}{\_env}}-\/>\mbox{\hyperlink{class_g_u_i_environment_a7eb1316d72255436a1c8fc1dddfe9444}{removeObject}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_element_a82fefd8e188a8297ee03c24524c7ee2e}{addCallback}}(std::function<\textcolor{keywordtype}{void}(\mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_af673abfde02eb3e79d399c0005b0ed2f}{GUIEvent}}\ e)>\ cback)\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_u_i_element_a2f11b33e40bca36d44f9e42cbf0216fc}{callback}}\ =\ cback;}
+\DoxyCodeLine{00062\ \ \ \ \ \}}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_element_ae35bc07f8a7896151caa62a51acaacea}{setVisible}}(\textcolor{keywordtype}{bool}\ v)\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_u_i_element_a9385814f8643bdb096013a3846c2516b}{visible}}\ =\ v;}
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+\DoxyCodeLine{00066\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00067\ \ \ \ \ irr::core::recti\ \mbox{\hyperlink{class_g_u_i_element_ac8c7e942cc02d5b3139c80bf85aa0bbb}{\_rect}};}
+\DoxyCodeLine{00068\ \ \ \ \ std::vector<GUIElement*>\ \mbox{\hyperlink{class_g_u_i_element_a2e4312a2ef8032761df8cda5183d68fa}{children}};}
+\DoxyCodeLine{00069\ \ \ \ \ std::function<void(\mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_af673abfde02eb3e79d399c0005b0ed2f}{GUIEvent}})>\ \mbox{\hyperlink{class_g_u_i_element_a2f11b33e40bca36d44f9e42cbf0216fc}{callback}};}
+\DoxyCodeLine{00070\ \ \ \ \ std::string\ \mbox{\hyperlink{class_g_u_i_element_aa5cbff9d22ef8be1d18ea081a4162558}{\_text}};}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ \mbox{\hyperlink{class_g_u_i_element_ae04cdbd7ab66b6a0e5db18c1a31045b5}{\_env}};}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_g_u_i_element_a9385814f8643bdb096013a3846c2516b}{visible}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00073\ \};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_window}{GUIWindow}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_g_u_i_element}{GUIElement}}\ \{}
+\DoxyCodeLine{00076\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_window_aeb231f99b5728cf6c3f5dbe0b0b0a715}{GUIWindow}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env,\ irr::core::recti\ rect,\ std::string\ text);}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_window_ac0da92120ad578921168f8fa2e864e7a}{draw}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_window_ad898ec07971ab810e0350e64dc4178b2}{setDraggable}}(\textcolor{keywordtype}{bool}\ c);}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_window_a6a5aa3e9f710eb6aad645a755d04e907}{setModal}}(\textcolor{keywordtype}{bool}\ c);}
+\DoxyCodeLine{00081\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_g_u_i_window_a33c03b1315ebd13cf0c9f3adfe71edb2}{active}};}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_g_u_i_window_a23dd18feefe666fd16288ad707327f92}{modal}};}
+\DoxyCodeLine{00084\ \};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_button}{GUIButton}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_g_u_i_element}{GUIElement}}\ \{}
+\DoxyCodeLine{00087\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_button_a8aa16f2efd3bd90491fb62f2bbd9f971}{GUIButton}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env,\ irr::core::recti\ rect,\ std::string\ text);}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_button_a4da7801a69c5b30a2e6fc413da739730}{draw}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_button_a60004c8c10b259cc7fb1b06b75ac75f4}{setActive}}(\textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_g_u_i_button_a0b3ebd7401868d78808d83421a9fd76d}{active}});}
+\DoxyCodeLine{00091\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_g_u_i_button_a0b3ebd7401868d78808d83421a9fd76d}{active}};}
+\DoxyCodeLine{00093\ \};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_image}{GUIImage}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_g_u_i_element}{GUIElement}}\ \{}
+\DoxyCodeLine{00096\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00097\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_image_ac41b2356004e99582b4949cfe9f73a66}{GUIImage}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env,\ irr::core::recti\ rect);}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_image_a48db30277f7459a28e85051b21bc395c}{draw}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_image_ab8a8b2ff0cb9843a62f59b9674731c1b}{setScaleImage}}(\textcolor{keywordtype}{bool}\ c);}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_image_a7ec3e99b1fa81648d7b33131c033ae00}{setImage}}(irr::video::ITexture*\ tex);}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_image_ac790dd2ba58aeb8847b5fe3363e55d98}{setImage}}(irr::video::IImage*\ img);}
+\DoxyCodeLine{00102\ \};}
+
+\end{DoxyCode}

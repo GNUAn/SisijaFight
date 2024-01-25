@@ -23,7 +23,7 @@ Lobby* SFSession::lobby() {
 void SFSession::init() {
 	this->setEventReceiver(S_EVR_LOBBY);
 	this->_lobby = new Lobby();
-	_lobby->draw(_device);
+	_lobby->draw(guienv);
 }
 
 /// @brief Starts the Game based on the data of the Lobby
@@ -59,7 +59,7 @@ void SFSession::startGameInternal(LobbyReturnCode c) {
 void SFSession::setEventReceiver(S_EVR_CODE c) {
 	switch (c) {
 	case S_EVR_LOBBY:
-		_evr = new GUIEventReceiver(GUIEngine);
+		_evr = guienv->getEventReceiver();
 		_device->setEventReceiver(_evr);
 		break;
 	case S_EVR_GAME:

@@ -6,6 +6,7 @@
 /// @param l The Waning Level use like this '..., SErrorWidget::WARN_LEVEL::...' supported levels are SF_SEW_ERROR, SF_SEW_WARNING and SF_SEW_INFO
 void SErrorWidget::show(IGUIEnvironment* env, std::string text, WARN_LEVEL l)
 {
+	/*
 	static IGUIWindow* w = env->addWindow(s_rect(30, 30, 40, 40), false, l == SF_SEW_ERROR ? translate("ERROR").c_str() : (l == SF_SEW_WARN ? translate("WARNING").c_str() : translate("INFO").c_str()));
 	recti ws = s_rect(30, 30, 40, 40);
 	ITexture* img = env->getVideoDriver()->getTexture(l == SF_SEW_ERROR ? "data/images/GUI/Error.png" : (l == SF_SEW_WARN ? "data/images/GUI/Warn.png" : "data/images/GUI/Info.png"));
@@ -25,4 +26,5 @@ void SErrorWidget::show(IGUIEnvironment* env, std::string text, WARN_LEVEL l)
 		w->drop();
 		}
 	});
+	*/
 }

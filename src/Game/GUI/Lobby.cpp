@@ -11,8 +11,14 @@
 
 /// @brief Creates the lobby elements
 /// @param dev the Irrlicht Device
-void Lobby::draw(IrrlichtDevice* dev) {
 
+void Lobby::draw(GUIEnvironment* env) {
+	GUIWindow* w = new GUIWindow(env, recti(), "Test");
+	GUIButton* b = new GUIButton(env, recti(1, 1, 100, 30), "TestButton");
+	b->setParent(w);
+	b->addCallback([](GUIEvent e) {});
+
+	/*
 	static ITexture* worldPreviewImage;
 	static IGUIImage* worldPreview;
 	static IGUIStaticText* worldLabelAuthor, * worldMaxPlayerSupport;
@@ -134,4 +140,5 @@ void Lobby::draw(IrrlichtDevice* dev) {
 	gamemodeSelection[0]->setText(translate("Classic Fight").c_str());
 	gamemodeSelection[1]->setText(translate("Tactic Fight").c_str());
 	gamemodeSelection[2]->setText(translate("Story Mode").c_str());
+	*/
 }

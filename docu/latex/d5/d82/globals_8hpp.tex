@@ -1,13 +1,9 @@
-\doxysection{src/globals.hpp-\/\+Dateireferenz}
+\doxysection{src/globals.hpp File Reference}
 \hypertarget{globals_8hpp}{}\label{globals_8hpp}\index{src/globals.hpp@{src/globals.hpp}}
 {\ttfamily \#include "{}Configurator.\+hpp"{}}\newline
 {\ttfamily \#include "{}compile\+Config.\+h"{}}\newline
 {\ttfamily \#include $<$irrlicht.\+h$>$}\newline
-Include-\/\+Abhängigkeitsdiagramm für globals.\+hpp\+:
-% FIG 0
-Dieser Graph zeigt, welche Datei direkt oder indirekt diese Datei enthält\+:
-% FIG 1
-\doxysubsubsection*{Makrodefinitionen}
+\doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
 \#define \mbox{\hyperlink{globals_8hpp_a3df23b4d7275a08016cdc56a066c9691}{WORLD\+\_\+\+INDEX\+\_\+\+PATH\+\_\+\+DATA}}~"{}data/worlds/index.\+xml"{}
@@ -24,22 +20,20 @@ Dieser Graph zeigt, welche Datei direkt oder indirekt diese Datei enthält\+:
 \item 
 \#define \mbox{\hyperlink{globals_8hpp_a64711275ed7de3d0be36ce3b37d24e3d}{STD\+\_\+\+CYAN}}~SColor(255, 0, 255, 255)
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Variablen}
+\doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_s_f_session}{SFSession}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{globals_8hpp_a9bee5eba1149cf0ee3cb49c8b9de2795}{Session}}
 \item 
-\mbox{\hyperlink{class_s_g_e_s}{SGES}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{globals_8hpp_ae679b1636a58b572403bb2ad300ef740}{GEngine}}
-\item 
-\mbox{\hyperlink{class_s_g_u_i}{SGUI}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{globals_8hpp_af01d29a2e1fad65024bed844673ea210}{GUIEngine}}
-\item 
 irr\+::\+Irrlicht\+Device \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{globals_8hpp_a3f4aa71242d090e6f84100dbf2d69424}{device}}
+\item 
+\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{globals_8hpp_a89da51dc188deeafdb16b0eba9b9e56c}{guienv}}
 \item 
 irr\+::core\+::dimension2du \mbox{\hyperlink{globals_8hpp_ae83eb1285851d17f4612d2f6d2d94cd2}{screen\+Size}}
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Makro-\/\+Dokumentation}
+\doxysubsection{Macro Definition Documentation}
 \Hypertarget{globals_8hpp_af0329d8f2d5cecb34c3c99513fd8096c}\label{globals_8hpp_af0329d8f2d5cecb34c3c99513fd8096c} 
 \index{globals.hpp@{globals.hpp}!STD\_BLUE@{STD\_BLUE}}
 \index{STD\_BLUE@{STD\_BLUE}!globals.hpp@{globals.hpp}}
@@ -84,24 +78,18 @@ irr\+::core\+::dimension2du \mbox{\hyperlink{globals_8hpp_ae83eb1285851d17f4612d
 
 
 
-\doxysubsection{Variablen-\/\+Dokumentation}
+\doxysubsection{Variable Documentation}
 \Hypertarget{globals_8hpp_a3f4aa71242d090e6f84100dbf2d69424}\label{globals_8hpp_a3f4aa71242d090e6f84100dbf2d69424} 
 \index{globals.hpp@{globals.hpp}!device@{device}}
 \index{device@{device}!globals.hpp@{globals.hpp}}
 \doxysubsubsection{\texorpdfstring{device}{device}}
 {\footnotesize\ttfamily irr\+::\+Irrlicht\+Device\texorpdfstring{$\ast$}{*} device\hspace{0.3cm}{\ttfamily [extern]}}
 
-\Hypertarget{globals_8hpp_ae679b1636a58b572403bb2ad300ef740}\label{globals_8hpp_ae679b1636a58b572403bb2ad300ef740} 
-\index{globals.hpp@{globals.hpp}!GEngine@{GEngine}}
-\index{GEngine@{GEngine}!globals.hpp@{globals.hpp}}
-\doxysubsubsection{\texorpdfstring{GEngine}{GEngine}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_e_s}{SGES}}\texorpdfstring{$\ast$}{*} GEngine\hspace{0.3cm}{\ttfamily [extern]}}
-
-\Hypertarget{globals_8hpp_af01d29a2e1fad65024bed844673ea210}\label{globals_8hpp_af01d29a2e1fad65024bed844673ea210} 
-\index{globals.hpp@{globals.hpp}!GUIEngine@{GUIEngine}}
-\index{GUIEngine@{GUIEngine}!globals.hpp@{globals.hpp}}
-\doxysubsubsection{\texorpdfstring{GUIEngine}{GUIEngine}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_u_i}{SGUI}}\texorpdfstring{$\ast$}{*} GUIEngine\hspace{0.3cm}{\ttfamily [extern]}}
+\Hypertarget{globals_8hpp_a89da51dc188deeafdb16b0eba9b9e56c}\label{globals_8hpp_a89da51dc188deeafdb16b0eba9b9e56c} 
+\index{globals.hpp@{globals.hpp}!guienv@{guienv}}
+\index{guienv@{guienv}!globals.hpp@{globals.hpp}}
+\doxysubsubsection{\texorpdfstring{guienv}{guienv}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}\texorpdfstring{$\ast$}{*} guienv\hspace{0.3cm}{\ttfamily [extern]}}
 
 \Hypertarget{globals_8hpp_ae83eb1285851d17f4612d2f6d2d94cd2}\label{globals_8hpp_ae83eb1285851d17f4612d2f6d2d94cd2} 
 \index{globals.hpp@{globals.hpp}!screenSize@{screenSize}}

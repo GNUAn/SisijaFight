@@ -23,6 +23,7 @@ file(GLOB_RECURSE OPENCL_SRC "lib/OpenCL/src/*.c" "lib/OpenCL/src/*.cpp")
 file(GLOB_RECURSE IBULLET_SRC "lib/irrbullet/*.cpp" "lib/irrbullet/.c" "lib/Bullet/*.cpp" "lib/Bullet/*.c")
 file(GLOB_RECURSE ENET_SRC "lib/enet/*.c")
 file(GLOB_RECURSE AS_SRC "lib/angelscript/*.cpp" "lib/angelscript/*.c")
+file(GLOB_RECURSE GUI_SRC "lib/gui/*.cpp" "lib/gui/*.c")
 
 set(DIRR_STATIC_LIB_)
 
@@ -67,6 +68,11 @@ include_directories("lib/irrbullet/include")
 include_directories("lib/Bullet/src")
 include_directories("lib/pugixml")
 include_directories("lib")
+include_directories("lib/gui/imgui"
+    "lib/gui/imgui/IMGUI"
+    "lib/gui/ImGuizmo"
+    "lib/gui/Irrlicht-ImGui/includes"
+    "lib/gui/imgui-node-editor")
 include_directories("lib/enet/include")
 include_directories("lib/Bullet/Extras/BulletRoboticsGUI" "lib/Bullet/Extras/ConvexDecomposition" "lib/Bullet/Extras/GIMPACTUtils" "lib/Bullet/Extras/HACD" "lib/Bullet/Extras/InverseDynamics" "lib/Bullet/Extras/obj2sdf" "lib/Bullet/Extras/Serialize" "lib/Bullet/Extras/VHACD/inc" "lib/Bullet/Extras/BulletRobotics" "C:/Users/Lucas Gola/Desktop/Sisija/SisijaFight/SisijaFight/lib/Bullet/Extras/Serialize/BulletFileLoader"
  "lib/Bullet/Extras/Serialize/BulletWorldImporter"
@@ -76,7 +82,7 @@ include_directories("lib/Bullet/Extras/BulletRoboticsGUI" "lib/Bullet/Extras/Con
  "lib/Bullet/Extras/Serialize/ReadBulletSample"
  "lib/Bullet/Extras/Serialize/BlenderSerialize")
 
- set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D_IRR_STATIC_LIB_")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}" " -D_IRR_STATIC_LIB_ ")
 
 # for angelscript
 set(ARCHFLAGS "${CMAKE_SYSTEM_PROCESSOR}")
@@ -122,7 +128,12 @@ if(MSVC)
     set(CMAKE_DEBUG_POSTFIX "d")  
 endif()
 
-add_executable (SisijaFight "src/main.cpp" "src/Gamemodes/ClassicFight.cpp" "src/SGE/SisijaGraphicsUnitSubsystem.cpp" "src/SGE/SGU-S.hpp" "lib/json.hpp" ${IRR_SRC} ${SOLOUD_SRC} ${PUGIXML_SRC} ${IBULLET_SRC} ${ENET_SRC} ${AS_SRC} "src/Game/Audio/Backend.hpp" "src/Game/Audio/Backend.cpp" "src/globals.hpp" "src/Game/Session.hpp" "src/Game/Session.cpp" "src/Game/EventReceivers/InGameEVR.hpp"  "src/Game/EventReceivers/LobbyEVR.hpp"  "src/Game/GUI/GUI.hpp" "src/Gamemodes/Gamemodes.hpp" "src/Network/NetworkHandler.hpp" "src/Network/NetworkHandler.cpp" "src/Game/Player/Player.hpp" "src/Game/Player/Player.cpp" "src/Game/World/World.hpp" "src/Game/World/World.cpp" "src/Game/EventReceivers/InGameEVR.cpp" "src/Game/EventReceivers/LobbyEVR.cpp"  "src/Game/GUI/Lobby.cpp" "src/Tools/GUITools.hpp" "src/Tools/GUITools.cpp" "src/Game/GUI/Elements/SuperTable.hpp" "src/Game/GUI/Elements/SuperTable.cpp" "src/Game/GUI/helpers/helpers.hpp" "src/Game/GUI/helpers/helpers.cpp"  "src/SGE/SCamera.cpp" "src/Game/World/SPHSplash/Splatter.hpp" "src/Game/World/SPHSplash/Splatter.cpp"  "src/Tools/Translation/Translator.cpp" "src/Configurator.cpp" "src/compileConfig.h" "src/Game/Network/NetworkTools.cpp" "src/Game/GUI/Widgets.cpp" "src/SGE/Scripting.cpp")
+add_subdirectory("lib/whispercpp")
+include_directories("lib/whispercpp")
+add_subdirectory("lib/portaudio")
+include_directories("lib/portaudio/include")
+
+add_executable (SisijaFight "src/main.cpp" "src/Gamemodes/ClassicFight.cpp" "src/SGE/SisijaGraphicsUnitSubsystem.cpp" "src/SGE/SGU-S.hpp" "lib/json.hpp" ${IRR_SRC} ${SOLOUD_SRC} ${PUGIXML_SRC} ${IBULLET_SRC} ${ENET_SRC} ${AS_SRC} ${GUI_SRC} "src/Game/Audio/Backend.hpp" "src/Game/Audio/Backend.cpp" "src/globals.hpp" "src/Game/Session.hpp" "src/Game/Session.cpp" "src/Game/EventReceivers/InGameEVR.hpp"  "src/Game/EventReceivers/LobbyEVR.hpp"  "src/Game/GUI/GUI.hpp" "src/Gamemodes/Gamemodes.hpp" "src/Network/NetworkHandler.hpp" "src/Network/NetworkHandler.cpp" "src/Game/Player/Player.hpp" "src/Game/Player/Player.cpp" "src/Game/World/World.hpp" "src/Game/World/World.cpp" "src/Game/EventReceivers/InGameEVR.cpp" "src/Game/EventReceivers/LobbyEVR.cpp"  "src/Game/GUI/Lobby.cpp" "src/Tools/GUITools.hpp" "src/Tools/GUITools.cpp" "src/Game/GUI/Elements/SuperTable.hpp" "src/Game/GUI/Elements/SuperTable.cpp" "src/Game/GUI/helpers/helpers.hpp" "src/Game/GUI/helpers/helpers.cpp"  "src/SGE/SCamera.cpp" "src/Game/World/SPHSplash/Splatter.hpp" "src/Game/World/SPHSplash/Splatter.cpp"  "src/Tools/Translation/Translator.cpp" "src/Configurator.cpp" "src/compileConfig.h" "src/Game/Network/NetworkTools.cpp" "src/Game/GUI/Widgets.cpp" "src/SGE/Scripting.cpp" "src/SGE/IMGUIWrapper.cpp" "src/AI/Transcriber.cpp")
 
 if(WIN32)
     target_link_libraries(SisijaFight wsock32 ws2_32)
@@ -134,3 +145,6 @@ elseif(APPLE)
     find_library(IOKIT_LIBRARY IOKit)
     target_link_libraries(SisijaFight ${COCOA_LIBRARY} ${IOKIT_LIBRARY})
 endif()
+
+target_link_libraries(SisijaFight whisper)
+target_link_libraries(SisijaFight portaudio)

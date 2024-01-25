@@ -1,26 +1,26 @@
-\doxysection{Player Klassenreferenz}
+\doxysection{Player Class Reference}
 \hypertarget{class_player}{}\label{class_player}\index{Player@{Player}}
 
 
 {\ttfamily \#include $<$Player.\+hpp$>$}
 
-\doxysubsubsection*{Öffentliche Methoden}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_player_a16e973e1cf7ffcda4c4dce07c53c1634}{Player}} (std\+::string name, std\+::string path, int ID, \mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}world, irr\+::\+Irrlicht\+Device \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{globals_8hpp_a3f4aa71242d090e6f84100dbf2d69424}{device}}, bool local\+Player=false)
 \begin{DoxyCompactList}\small\item\em Create a \doxylink{class_player}{Player}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_player_a6d864d656bd36ffb8b7e8babd9a2be73}{update\+Position\+And\+Rotation\+Step}} (f32 delta)
-\item 
-void \mbox{\hyperlink{class_player_a2f0cfe369ddc2499d481a5d3c0bf5e1a}{set\+Directions}} (irr\+::core\+::vector3df position, irr\+::core\+::vector3df rotation)
+void \mbox{\hyperlink{class_player_a6c80ac509f35cb805ccfe5414a858b3d}{set\+Directions}} (irr\+::core\+::vector3df speed, irr\+::core\+::vector3df rotation)
+\begin{DoxyCompactList}\small\item\em Set the velocities of the Players. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_ad50193ed428892bb159fbdd1ac210a4f}{spawn}} (irr\+::core\+::vector3df position)
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Freundbeziehungen}
+\doxysubsubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{class_player_ab356dbee0f1e915287732c65e8ef61e1}{Weapon}}
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
+\doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_player_a16e973e1cf7ffcda4c4dce07c53c1634}\label{class_player_a16e973e1cf7ffcda4c4dce07c53c1634} 
 \index{Player@{Player}!Player@{Player}}
 \index{Player@{Player}!Player@{Player}}
@@ -32,7 +32,7 @@ class \mbox{\hyperlink{class_player_ab356dbee0f1e915287732c65e8ef61e1}{Weapon}}
 Create a \doxylink{class_player}{Player}. 
 
 
-\begin{DoxyParams}{Parameter}
+\begin{DoxyParams}{Parameters}
 {\em name} & The name of the \doxylink{class_player}{Player} (Gamertag) \\
 \hline
 {\em path} & The XML-\/\+Player-\/\+Definition path \\
@@ -48,22 +48,33 @@ Create a \doxylink{class_player}{Player}.
 \end{DoxyParams}
 
 
-\doxysubsection{Dokumentation der Elementfunktionen}
-\Hypertarget{class_player_a2f0cfe369ddc2499d481a5d3c0bf5e1a}\label{class_player_a2f0cfe369ddc2499d481a5d3c0bf5e1a} 
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_player_a6c80ac509f35cb805ccfe5414a858b3d}\label{class_player_a6c80ac509f35cb805ccfe5414a858b3d} 
 \index{Player@{Player}!setDirections@{setDirections}}
 \index{setDirections@{setDirections}!Player@{Player}}
 \doxysubsubsection{\texorpdfstring{setDirections()}{setDirections()}}
-{\footnotesize\ttfamily void Player\+::set\+Directions (\begin{DoxyParamCaption}\item[{irr\+::core\+::vector3df}]{position,  }\item[{irr\+::core\+::vector3df}]{rotation }\end{DoxyParamCaption})}
-
-\Hypertarget{class_player_a6d864d656bd36ffb8b7e8babd9a2be73}\label{class_player_a6d864d656bd36ffb8b7e8babd9a2be73} 
-\index{Player@{Player}!updatePositionAndRotationStep@{updatePositionAndRotationStep}}
-\index{updatePositionAndRotationStep@{updatePositionAndRotationStep}!Player@{Player}}
-\doxysubsubsection{\texorpdfstring{updatePositionAndRotationStep()}{updatePositionAndRotationStep()}}
-{\footnotesize\ttfamily void Player\+::update\+Position\+And\+Rotation\+Step (\begin{DoxyParamCaption}\item[{f32}]{delta }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Player\+::set\+Directions (\begin{DoxyParamCaption}\item[{irr\+::core\+::vector3df}]{speed,  }\item[{irr\+::core\+::vector3df}]{rotation }\end{DoxyParamCaption})}
 
 
 
-\doxysubsection{Freundbeziehungen und Funktionsdokumentation}
+Set the velocities of the Players. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & The target \\
+\hline
+{\em rotation} & the Rotation \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_ad50193ed428892bb159fbdd1ac210a4f}\label{class_player_ad50193ed428892bb159fbdd1ac210a4f} 
+\index{Player@{Player}!spawn@{spawn}}
+\index{spawn@{spawn}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{spawn()}{spawn()}}
+{\footnotesize\ttfamily void Player\+::spawn (\begin{DoxyParamCaption}\item[{irr\+::core\+::vector3df}]{position }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
 \Hypertarget{class_player_ab356dbee0f1e915287732c65e8ef61e1}\label{class_player_ab356dbee0f1e915287732c65e8ef61e1} 
 \index{Player@{Player}!Weapon@{Weapon}}
 \index{Weapon@{Weapon}!Player@{Player}}
@@ -72,7 +83,7 @@ Create a \doxylink{class_player}{Player}.
 
 
 
-Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 src/\+Game/\+Player/\mbox{\hyperlink{_player_8hpp}{Player.\+hpp}}\item 
 src/\+Game/\+Player/\mbox{\hyperlink{_player_8cpp}{Player.\+cpp}}\end{DoxyCompactItemize}

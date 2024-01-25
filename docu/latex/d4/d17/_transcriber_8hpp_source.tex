@@ -1,0 +1,30 @@
+\doxysection{Transcriber.\+hpp}
+\hypertarget{_transcriber_8hpp_source}{}\label{_transcriber_8hpp_source}\index{src/AI/Transcriber.hpp@{src/AI/Transcriber.hpp}}
+\mbox{\hyperlink{_transcriber_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ WhisperTranscriber.h}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ WHISPER\_TRANSCRIBER\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ WHISPER\_TRANSCRIBER\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_whisper_transcriber}{WhisperTranscriber}}\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_whisper_transcriber_ad3e88db82e8517293b1779af21b4d8f1}{WhisperTranscriber}}(\textcolor{keyword}{const}\ std::string\&\ model\_path,\ \textcolor{keywordtype}{bool}\ use\_gpu\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_whisper_transcriber_a9b3f1e0de086dcd75acc58bda18e7578}{setLanguage}}(\textcolor{keyword}{const}\ std::string\&\ language\_code);}
+\DoxyCodeLine{00012\ \ \ \ \ std::string\ \mbox{\hyperlink{class_whisper_transcriber_a3cac419c539d017072fd64028e31904d}{transcribe}}(\textcolor{keyword}{const}\ std::string\&\ audio\_path);}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{class_whisper_transcriber_a0d6bffad365a5a8e08db5f8b6f5a6c9a}{\string~WhisperTranscriber}}();}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{struct\ }whisper\_context*\ ctx;}
+\DoxyCodeLine{00017\ \ \ \ \ std::string\ language;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{bool}\ use\_gpu;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ loadModel(\textcolor{keyword}{const}\ std::string\&\ model\_path);}
+\DoxyCodeLine{00021\ \ \ \ \ std::vector<float>\ loadWav(\textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ WHISPER\_TRANSCRIBER\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,130 @@
+\doxysection{GUIWindow Class Reference}
+\hypertarget{class_g_u_i_window}{}\label{class_g_u_i_window}\index{GUIWindow@{GUIWindow}}
+
+
+{\ttfamily \#include $<$IMGUIWrapper.\+hpp$>$}
+
+Inheritance diagram for GUIWindow\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d4/d38/class_g_u_i_window}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_u_i_window_aeb231f99b5728cf6c3f5dbe0b0b0a715}{GUIWindow}} (\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}} \texorpdfstring{$\ast$}{*}env, irr\+::core\+::recti rect, std\+::string text)
+\begin{DoxyCompactList}\small\item\em Adds a window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_u_i_window_ac0da92120ad578921168f8fa2e864e7a}{draw}} () override
+\item 
+void \mbox{\hyperlink{class_g_u_i_window_ad898ec07971ab810e0350e64dc4178b2}{set\+Draggable}} (bool c)
+\item 
+void \mbox{\hyperlink{class_g_u_i_window_a6a5aa3e9f710eb6aad645a755d04e907}{set\+Modal}} (bool c)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_g_u_i_element}{GUIElement}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_u_i_element_a039ca1ec2cd382e36b4e0625bc2e5dc3}{GUIElement}} (\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}} \texorpdfstring{$\ast$}{*}env, irr\+::core\+::recti rect)
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_a13b0bdccd797f10cefef14d181571dab}{remove}} ()
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_affb9974f9bd55e8ea09a14c973c18adc}{set\+Text}} (std\+::string text)
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_aaeb6baf885f83d20e406ce2f497a8dfe}{add\+Child}} (\mbox{\hyperlink{class_g_u_i_element}{GUIElement}} \texorpdfstring{$\ast$}{*}e)
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_a45b3752a4730fce4898921696c61c91c}{set\+Parent}} (\mbox{\hyperlink{class_g_u_i_element}{GUIElement}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{_g_u_i_tools_8cpp_a6a626c1dd0cfaa4ae2a9d4a6f2ca90d5}{p}})
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_a82fefd8e188a8297ee03c24524c7ee2e}{add\+Callback}} (std\+::function$<$ void(\mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_af673abfde02eb3e79d399c0005b0ed2f}{GUIEvent}} e)$>$ cback)
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_ae35bc07f8a7896151caa62a51acaacea}{set\+Visible}} (bool v)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_g_u_i_window_a33c03b1315ebd13cf0c9f3adfe71edb2}{active}}
+\item 
+bool \mbox{\hyperlink{class_g_u_i_window_a23dd18feefe666fd16288ad707327f92}{modal}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_g_u_i_element}{GUIElement}}}
+\begin{DoxyCompactItemize}
+\item 
+irr\+::core\+::recti \mbox{\hyperlink{class_g_u_i_element_ac8c7e942cc02d5b3139c80bf85aa0bbb}{\+\_\+rect}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_g_u_i_element}{GUIElement}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_g_u_i_element_a2e4312a2ef8032761df8cda5183d68fa}{children}}
+\item 
+std\+::function$<$ void(\mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_af673abfde02eb3e79d399c0005b0ed2f}{GUIEvent}})$>$ \mbox{\hyperlink{class_g_u_i_element_a2f11b33e40bca36d44f9e42cbf0216fc}{callback}}
+\item 
+std\+::string \mbox{\hyperlink{class_g_u_i_element_aa5cbff9d22ef8be1d18ea081a4162558}{\+\_\+text}}
+\item 
+\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_g_u_i_element_ae04cdbd7ab66b6a0e5db18c1a31045b5}{\+\_\+env}}
+\item 
+bool \mbox{\hyperlink{class_g_u_i_element_a9385814f8643bdb096013a3846c2516b}{visible}} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_g_u_i_window_aeb231f99b5728cf6c3f5dbe0b0b0a715}\label{class_g_u_i_window_aeb231f99b5728cf6c3f5dbe0b0b0a715} 
+\index{GUIWindow@{GUIWindow}!GUIWindow@{GUIWindow}}
+\index{GUIWindow@{GUIWindow}!GUIWindow@{GUIWindow}}
+\doxysubsubsection{\texorpdfstring{GUIWindow()}{GUIWindow()}}
+{\footnotesize\ttfamily GUIWindow\+::\+GUIWindow (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}} \texorpdfstring{$\ast$}{*}}]{env,  }\item[{irr\+::core\+::recti}]{rect,  }\item[{std\+::string}]{text }\end{DoxyParamCaption})}
+
+
+
+Adds a window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em env} & the Environment \\
+\hline
+{\em rect} & the bounding box \\
+\hline
+{\em text} & the window text \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_u_i_window_ac0da92120ad578921168f8fa2e864e7a}\label{class_g_u_i_window_ac0da92120ad578921168f8fa2e864e7a} 
+\index{GUIWindow@{GUIWindow}!draw@{draw}}
+\index{draw@{draw}!GUIWindow@{GUIWindow}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void GUIWindow\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_g_u_i_element_a7654ac16a368633c81538f13b9299f63}{GUIElement}}.
+
+\Hypertarget{class_g_u_i_window_ad898ec07971ab810e0350e64dc4178b2}\label{class_g_u_i_window_ad898ec07971ab810e0350e64dc4178b2} 
+\index{GUIWindow@{GUIWindow}!setDraggable@{setDraggable}}
+\index{setDraggable@{setDraggable}!GUIWindow@{GUIWindow}}
+\doxysubsubsection{\texorpdfstring{setDraggable()}{setDraggable()}}
+{\footnotesize\ttfamily void GUIWindow\+::set\+Draggable (\begin{DoxyParamCaption}\item[{bool}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_g_u_i_window_a6a5aa3e9f710eb6aad645a755d04e907}\label{class_g_u_i_window_a6a5aa3e9f710eb6aad645a755d04e907} 
+\index{GUIWindow@{GUIWindow}!setModal@{setModal}}
+\index{setModal@{setModal}!GUIWindow@{GUIWindow}}
+\doxysubsubsection{\texorpdfstring{setModal()}{setModal()}}
+{\footnotesize\ttfamily void GUIWindow\+::set\+Modal (\begin{DoxyParamCaption}\item[{bool}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_g_u_i_window_a33c03b1315ebd13cf0c9f3adfe71edb2}\label{class_g_u_i_window_a33c03b1315ebd13cf0c9f3adfe71edb2} 
+\index{GUIWindow@{GUIWindow}!active@{active}}
+\index{active@{active}!GUIWindow@{GUIWindow}}
+\doxysubsubsection{\texorpdfstring{active}{active}}
+{\footnotesize\ttfamily bool GUIWindow\+::active\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_g_u_i_window_a23dd18feefe666fd16288ad707327f92}\label{class_g_u_i_window_a23dd18feefe666fd16288ad707327f92} 
+\index{GUIWindow@{GUIWindow}!modal@{modal}}
+\index{modal@{modal}!GUIWindow@{GUIWindow}}
+\doxysubsubsection{\texorpdfstring{modal}{modal}}
+{\footnotesize\ttfamily bool GUIWindow\+::modal\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+SGE/\mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp}{IMGUIWrapper.\+hpp}}\item 
+src/\+SGE/\mbox{\hyperlink{_i_m_g_u_i_wrapper_8cpp}{IMGUIWrapper.\+cpp}}\end{DoxyCompactItemize}

@@ -1,10 +1,10 @@
-\doxysection{SError\+Widget Klassenreferenz}
+\doxysection{SError\+Widget Class Reference}
 \hypertarget{class_s_error_widget}{}\label{class_s_error_widget}\index{SErrorWidget@{SErrorWidget}}
 
 
 {\ttfamily \#include $<$Widgets.\+hpp$>$}
 
-\doxysubsubsection*{Öffentliche Typen}
+\doxysubsubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
 enum \mbox{\hyperlink{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3}{WARN\+\_\+\+LEVEL}} \{ \mbox{\hyperlink{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3a26a8ce05bccb60eb62f328c12ff6effb}{SF\+\_\+\+SEW\+\_\+\+INFO}}
@@ -15,7 +15,7 @@ enum \mbox{\hyperlink{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3}{WA
 enum \mbox{\hyperlink{class_s_error_widget_a8546ca7871bffbbd931ae4fd0acdadda}{SF\+\_\+\+EVENT}} \{ \mbox{\hyperlink{class_s_error_widget_a8546ca7871bffbbd931ae4fd0acdaddaa829580e3a0805d442fd023cb827e284c}{SF\+\_\+\+BUTTON\+\_\+\+OK\+\_\+\+PRESSED}}
  \}
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Öffentliche Methoden}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_s_error_widget_a406371e249d931d2680f14c035343d6c}{show}} (IGUIEnvironment \texorpdfstring{$\ast$}{*}env, std\+::string text, \mbox{\hyperlink{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3}{WARN\+\_\+\+LEVEL}} l)
@@ -24,14 +24,14 @@ void \mbox{\hyperlink{class_s_error_widget_a748f03a6996ccbc6746f719dd849b430}{on
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Dokumentation der Aufzählungstypen}
+\doxysubsection{Member Enumeration Documentation}
 \Hypertarget{class_s_error_widget_a8546ca7871bffbbd931ae4fd0acdadda}\label{class_s_error_widget_a8546ca7871bffbbd931ae4fd0acdadda} 
 \index{SErrorWidget@{SErrorWidget}!SF\_EVENT@{SF\_EVENT}}
 \index{SF\_EVENT@{SF\_EVENT}!SErrorWidget@{SErrorWidget}}
 \doxysubsubsection{\texorpdfstring{SF\_EVENT}{SF\_EVENT}}
 {\footnotesize\ttfamily enum \mbox{\hyperlink{class_s_error_widget_a8546ca7871bffbbd931ae4fd0acdadda}{SError\+Widget\+::\+SF\+\_\+\+EVENT}}}
 
-\begin{DoxyEnumFields}{Aufzählungswerte}
+\begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{SF\_BUTTON\_OK\_PRESSED@{SF\_BUTTON\_OK\_PRESSED}!SErrorWidget@{SErrorWidget}}\index{SErrorWidget@{SErrorWidget}!SF\_BUTTON\_OK\_PRESSED@{SF\_BUTTON\_OK\_PRESSED}}}\Hypertarget{class_s_error_widget_a8546ca7871bffbbd931ae4fd0acdaddaa829580e3a0805d442fd023cb827e284c}\label{class_s_error_widget_a8546ca7871bffbbd931ae4fd0acdaddaa829580e3a0805d442fd023cb827e284c} 
 SF\+\_\+\+BUTTON\+\_\+\+OK\+\_\+\+PRESSED&\\
 \hline
@@ -43,7 +43,7 @@ SF\+\_\+\+BUTTON\+\_\+\+OK\+\_\+\+PRESSED&\\
 \doxysubsubsection{\texorpdfstring{WARN\_LEVEL}{WARN\_LEVEL}}
 {\footnotesize\ttfamily enum \mbox{\hyperlink{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3}{SError\+Widget\+::\+WARN\+\_\+\+LEVEL}}}
 
-\begin{DoxyEnumFields}{Aufzählungswerte}
+\begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{SF\_SEW\_INFO@{SF\_SEW\_INFO}!SErrorWidget@{SErrorWidget}}\index{SErrorWidget@{SErrorWidget}!SF\_SEW\_INFO@{SF\_SEW\_INFO}}}\Hypertarget{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3a26a8ce05bccb60eb62f328c12ff6effb}\label{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3a26a8ce05bccb60eb62f328c12ff6effb} 
 SF\+\_\+\+SEW\+\_\+\+INFO&\\
 \hline
@@ -59,7 +59,7 @@ SF\+\_\+\+SEW\+\_\+\+ERROR&\\
 \end{DoxyEnumFields}
 
 
-\doxysubsection{Dokumentation der Elementfunktionen}
+\doxysubsection{Member Function Documentation}
 \Hypertarget{class_s_error_widget_a748f03a6996ccbc6746f719dd849b430}\label{class_s_error_widget_a748f03a6996ccbc6746f719dd849b430} 
 \index{SErrorWidget@{SErrorWidget}!onEvent@{onEvent}}
 \index{onEvent@{onEvent}!SErrorWidget@{SErrorWidget}}
@@ -77,7 +77,7 @@ SF\+\_\+\+SEW\+\_\+\+ERROR&\\
 Shows a Error, Warning or Info Dialog. 
 
 
-\begin{DoxyParams}{Parameter}
+\begin{DoxyParams}{Parameters}
 {\em env} & The Irrlicht GUI-\/\+Environment \\
 \hline
 {\em text} & The Error Message \\
@@ -85,11 +85,9 @@ Shows a Error, Warning or Info Dialog.
 {\em l} & The Waning Level use like this \textquotesingle{}..., \doxylink{class_s_error_widget_a146cffeea3bbaccd8b429333399d0fa3}{SError\+Widget\+::\+WARN\+\_\+\+LEVEL}\+:\+:...\textquotesingle{} supported levels are SF\+\_\+\+SEW\+\_\+\+ERROR, SF\+\_\+\+SEW\+\_\+\+WARNING and SF\+\_\+\+SEW\+\_\+\+INFO \\
 \hline
 \end{DoxyParams}
-Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:
-% FIG 0
 
 
-Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 src/\+Game/\+GUI/\mbox{\hyperlink{_widgets_8hpp}{Widgets.\+hpp}}\item 
 src/\+Game/\+GUI/\mbox{\hyperlink{_widgets_8cpp}{Widgets.\+cpp}}\end{DoxyCompactItemize}

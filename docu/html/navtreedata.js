@@ -25,37 +25,37 @@
 var NAVTREE =
 [
   [ "SisijaFight", "index.html", [
-    [ "Namensbereiche", "namespaces.html", [
-      [ "Liste aller Namensbereiche", "namespaces.html", "namespaces_dup" ],
-      [ "Elemente eines Namensbereiches", "namespacemembers.html", [
-        [ "Alle", "namespacemembers.html", null ],
-        [ "Funktionen", "namespacemembers_func.html", null ],
-        [ "Variablen", "namespacemembers_vars.html", null ]
+    [ "Namespaces", "namespaces.html", [
+      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Variables", "namespacemembers_vars.html", null ]
       ] ]
     ] ],
-    [ "Klassen", "annotated.html", [
-      [ "Auflistung der Klassen", "annotated.html", "annotated_dup" ],
-      [ "Klassen-Verzeichnis", "classes.html", null ],
-      [ "Klassenhierarchie", "hierarchy.html", "hierarchy" ],
-      [ "Klassen-Elemente", "functions.html", [
-        [ "Alle", "functions.html", null ],
-        [ "Funktionen", "functions_func.html", null ],
-        [ "Variablen", "functions_vars.html", null ],
-        [ "Aufzählungen", "functions_enum.html", null ],
-        [ "Aufzählungswerte", "functions_eval.html", null ],
-        [ "Verwandte Funktionen", "functions_rela.html", null ]
+    [ "Classes", "annotated.html", [
+      [ "Class List", "annotated.html", "annotated_dup" ],
+      [ "Class Index", "classes.html", null ],
+      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
+      [ "Class Members", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ],
+        [ "Enumerations", "functions_enum.html", null ],
+        [ "Enumerator", "functions_eval.html", null ],
+        [ "Related Symbols", "functions_rela.html", null ]
       ] ]
     ] ],
-    [ "Dateien", "files.html", [
-      [ "Auflistung der Dateien", "files.html", "files_dup" ],
-      [ "Datei-Elemente", "globals.html", [
-        [ "Alle", "globals.html", null ],
-        [ "Funktionen", "globals_func.html", null ],
-        [ "Variablen", "globals_vars.html", null ],
-        [ "Typdefinitionen", "globals_type.html", null ],
-        [ "Aufzählungen", "globals_enum.html", null ],
-        [ "Aufzählungswerte", "globals_eval.html", null ],
-        [ "Makrodefinitionen", "globals_defs.html", null ]
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ],
+      [ "File Members", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ],
+        [ "Typedefs", "globals_type.html", null ],
+        [ "Enumerations", "globals_enum.html", null ],
+        [ "Enumerator", "globals_eval.html", null ],
+        [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
   ] ]
@@ -64,8 +64,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"dd/d99/class_g_u_i_line.html#a7e43e4b16c3cdb98480c80bc19b17f6f"
+"db/d5e/class_g_u_i_element.html#ae35bc07f8a7896151caa62a51acaacea"
 ];
 
-var SYNCONMSG = 'Klicken um Panelsynchronisation auszuschalten';
-var SYNCOFFMSG = 'Klicken um Panelsynchronisation einzuschalten';
+var SYNCONMSG = 'click to disable panel synchronisation';
+var SYNCOFFMSG = 'click to enable panel synchronisation';

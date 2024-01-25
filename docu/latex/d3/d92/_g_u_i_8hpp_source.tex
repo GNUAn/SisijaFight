@@ -1,6 +1,6 @@
 \doxysection{GUI.\+hpp}
 \hypertarget{_g_u_i_8hpp_source}{}\label{_g_u_i_8hpp_source}\index{src/Game/GUI/GUI.hpp@{src/Game/GUI/GUI.hpp}}
-\mbox{\hyperlink{_g_u_i_8hpp}{gehe zur Dokumentation dieser Datei}}
+\mbox{\hyperlink{_g_u_i_8hpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
@@ -34,12 +34,12 @@
 \DoxyCodeLine{00030\ \};}
 \DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_class}{GUIClass}}\ \{}
 \DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00033\ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_class_a568109e606acc2a8a28bc2bb6beda51d}{draw}}(IrrlichtDevice*\ dev);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_class_a190ed33f73de56c9c36f90a10c4f7702}{draw}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env)=0;}
 \DoxyCodeLine{00034\ \};}
 \DoxyCodeLine{00035\ }
 \DoxyCodeLine{00036\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_lobby}{Lobby}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_g_u_i_class}{GUIClass}}\ \{}
 \DoxyCodeLine{00037\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lobby_aee4f54bc11ec940ad70c0e6e6da56d2e}{draw}}(IrrlichtDevice*\ dev)\ ;}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lobby_aee99c730e1824ca6ba0dd90323a32242}{draw}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env)\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00039\ \};}
 
 \end{DoxyCode}

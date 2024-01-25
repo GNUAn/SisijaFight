@@ -7,7 +7,7 @@ var indexSectionsWithContent =
   4: "acdeghilmoprstuw~",
   5: "_abcdegilmnprstvw",
   6: "jnpx",
-  7: "rsw",
+  7: "grsw",
   8: "s",
   9: "pw",
   10: "_gpsw"
@@ -30,16 +30,16 @@ var indexSectionNames =
 
 var indexSectionLabels =
 {
-  0: "Alle",
-  1: "Klassen",
-  2: "Namensbereiche",
-  3: "Dateien",
-  4: "Funktionen",
-  5: "Variablen",
-  6: "Typdefinitionen",
-  7: "Aufzählungen",
-  8: "Aufzählungswerte",
-  9: "Freundbeziehungen",
-  10: "Makrodefinitionen"
+  0: "All",
+  1: "Classes",
+  2: "Namespaces",
+  3: "Files",
+  4: "Functions",
+  5: "Variables",
+  6: "Typedefs",
+  7: "Enumerations",
+  8: "Enumerator",
+  9: "Friends",
+  10: "Macros"
 };
 

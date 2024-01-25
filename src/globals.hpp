@@ -22,9 +22,9 @@ using namespace video;
 class SFSession;
 class SGES;
 class SGUI;
+class GUIEnvironment;
 
 extern SFSession* Session;
-extern SGES* GEngine;
-extern SGUI* GUIEngine;
 extern irr::IrrlichtDevice* device;
+extern GUIEnvironment* guienv;
 extern irr::core::dimension2du screenSize;

@@ -23,19 +23,19 @@
  @licend  The above is the entire license notice for the JavaScript code in this file
 */
 var menudata={children:[
-{text:"Hauptseite",url:"index.html"},
-{text:"Namensbereiche",url:"namespaces.html",children:[
-{text:"Liste aller Namensbereiche",url:"namespaces.html"},
-{text:"Elemente eines Namensbereiches",url:"namespacemembers.html",children:[
-{text:"Alle",url:"namespacemembers.html"},
-{text:"Funktionen",url:"namespacemembers_func.html"},
-{text:"Variablen",url:"namespacemembers_vars.html"}]}]},
-{text:"Klassen",url:"annotated.html",children:[
-{text:"Auflistung der Klassen",url:"annotated.html"},
-{text:"Klassen-Verzeichnis",url:"classes.html"},
-{text:"Klassenhierarchie",url:"inherits.html"},
-{text:"Klassen-Elemente",url:"functions.html",children:[
-{text:"Alle",url:"functions.html",children:[
+{text:"Main Page",url:"index.html"},
+{text:"Namespaces",url:"namespaces.html",children:[
+{text:"Namespace List",url:"namespaces.html"},
+{text:"Namespace Members",url:"namespacemembers.html",children:[
+{text:"All",url:"namespacemembers.html"},
+{text:"Functions",url:"namespacemembers_func.html"},
+{text:"Variables",url:"namespacemembers_vars.html"}]}]},
+{text:"Classes",url:"annotated.html",children:[
+{text:"Class List",url:"annotated.html"},
+{text:"Class Index",url:"classes.html"},
+{text:"Class Hierarchy",url:"hierarchy.html"},
+{text:"Class Members",url:"functions.html",children:[
+{text:"All",url:"functions.html",children:[
 {text:"_",url:"functions.html#index__5F"},
 {text:"a",url:"functions.html#index_a"},
 {text:"b",url:"functions.html#index_b"},
@@ -57,7 +57,7 @@ var menudata={children:[
 {text:"v",url:"functions.html#index_v"},
 {text:"w",url:"functions.html#index_w"},
 {text:"~",url:"functions.html#index__7E"}]},
-{text:"Funktionen",url:"functions_func.html",children:[
+{text:"Functions",url:"functions_func.html",children:[
 {text:"a",url:"functions_func.html#index_a"},
 {text:"c",url:"functions_func.html#index_c"},
 {text:"d",url:"functions_func.html#index_d"},
@@ -70,10 +70,11 @@ var menudata={children:[
 {text:"p",url:"functions_func.html#index_p"},
 {text:"r",url:"functions_func.html#index_r"},
 {text:"s",url:"functions_func.html#index_s"},
+{text:"t",url:"functions_func.html#index_t"},
 {text:"u",url:"functions_func.html#index_u"},
 {text:"w",url:"functions_func.html#index_w"},
 {text:"~",url:"functions_func.html#index__7E"}]},
-{text:"Variablen",url:"functions_vars.html",children:[
+{text:"Variables",url:"functions_vars.html",children:[
 {text:"_",url:"functions_vars.html#index__5F"},
 {text:"a",url:"functions_vars.html#index_a"},
 {text:"b",url:"functions_vars.html#index_b"},
@@ -91,18 +92,19 @@ var menudata={children:[
 {text:"t",url:"functions_vars.html#index_t"},
 {text:"v",url:"functions_vars.html#index_v"},
 {text:"w",url:"functions_vars.html#index_w"}]},
-{text:"Aufzählungen",url:"functions_enum.html"},
-{text:"Aufzählungswerte",url:"functions_eval.html"},
-{text:"Verwandte Funktionen",url:"functions_rela.html"}]}]},
-{text:"Dateien",url:"files.html",children:[
-{text:"Auflistung der Dateien",url:"files.html"},
-{text:"Datei-Elemente",url:"globals.html",children:[
-{text:"Alle",url:"globals.html",children:[
+{text:"Enumerations",url:"functions_enum.html"},
+{text:"Enumerator",url:"functions_eval.html"},
+{text:"Related Symbols",url:"functions_rela.html"}]}]},
+{text:"Files",url:"files.html",children:[
+{text:"File List",url:"files.html"},
+{text:"File Members",url:"globals.html",children:[
+{text:"All",url:"globals.html",children:[
 {text:"_",url:"globals.html#index__5F"},
 {text:"c",url:"globals.html#index_c"},
 {text:"d",url:"globals.html#index_d"},
 {text:"g",url:"globals.html#index_g"},
 {text:"h",url:"globals.html#index_h"},
+{text:"i",url:"globals.html#index_i"},
 {text:"j",url:"globals.html#index_j"},
 {text:"m",url:"globals.html#index_m"},
 {text:"n",url:"globals.html#index_n"},
@@ -112,9 +114,9 @@ var menudata={children:[
 {text:"t",url:"globals.html#index_t"},
 {text:"w",url:"globals.html#index_w"},
 {text:"x",url:"globals.html#index_x"}]},
-{text:"Funktionen",url:"globals_func.html"},
-{text:"Variablen",url:"globals_vars.html"},
-{text:"Typdefinitionen",url:"globals_type.html"},
-{text:"Aufzählungen",url:"globals_enum.html"},
-{text:"Aufzählungswerte",url:"globals_eval.html"},
-{text:"Makrodefinitionen",url:"globals_defs.html"}]}]}]}
+{text:"Functions",url:"globals_func.html"},
+{text:"Variables",url:"globals_vars.html"},
+{text:"Typedefs",url:"globals_type.html"},
+{text:"Enumerations",url:"globals_enum.html"},
+{text:"Enumerator",url:"globals_eval.html"},
+{text:"Macros",url:"globals_defs.html"}]}]}]}

@@ -30,10 +30,10 @@ private:
 };
 class GUIClass {
 public:
-	 void draw(IrrlichtDevice* dev);
+	 virtual void draw(GUIEnvironment* env)=0;
 };
 
 class Lobby : public GUIClass {
 public:
-	void draw(IrrlichtDevice* dev) ;
+	void draw(GUIEnvironment* env) override;
 };

@@ -6,6 +6,7 @@
 #include <functional>
 #include <map>
 #include <irrBullet.h>
+#include "IMGUIWrapper.hpp"
 
 using namespace irr;
 using namespace gui;
@@ -19,30 +20,6 @@ enum SGEvent {
 struct SceneNodeAndRigidBody {
 	ISceneNode* sceneNode;
 	IRigidBody* rigidBody;
-};
-
-class SGUI {
-public:
-	SGUI(IrrlichtDevice* dev);
-	void handle(SEvent::SGUIEvent event);
-	void addObject(IGUIElement* object, std::function<void(SEvent::SGUIEvent)> callback);
-	void removeObject(IGUIElement* element);
-	void clearAll();
-private:
-	IrrlichtDevice* _device;
-	std::map<int, std::function<void(SEvent::SGUIEvent)>> _handler_and_object_id;
-	int _current_id_counter=0;
-};
-
-class SGES {
-public:
-	SGES(IrrlichtDevice* dev);
-	void addObject(ISceneNode* node, IRigidBody* body, std::function<void(SGEvent)> callback);
-	void handle(irrBulletWorld* world);
-	void removeAllCallbacks();
-private:
-	std::map<int, std::function<void(SGEvent)>> _handler_and_object_id;
-	int _current_id_counter = 0;
 };
 
 class SCamera{

@@ -7,6 +7,12 @@ var hierarchy =
     [ "GUIClass", "de/d55/class_g_u_i_class.html", [
       [ "Lobby", "db/dd7/class_lobby.html", null ]
     ] ],
+    [ "GUIElement", "db/d5e/class_g_u_i_element.html", [
+      [ "GUIButton", "db/d66/class_g_u_i_button.html", null ],
+      [ "GUIImage", "d1/d27/class_g_u_i_image.html", null ],
+      [ "GUIWindow", "d4/d38/class_g_u_i_window.html", null ]
+    ] ],
+    [ "GUIEnvironment", "de/da7/class_g_u_i_environment.html", null ],
     [ "GUIPage", "df/d2a/class_g_u_i_page.html", null ],
     [ "IEventReceiver", null, [
       [ "GUIEventReceiver", "d5/d4d/class_g_u_i_event_receiver.html", null ]
@@ -28,11 +34,10 @@ var hierarchy =
     [ "server", "d2/d0e/structserver.html", null ],
     [ "SFConfig", "d4/d58/struct_s_f_config.html", null ],
     [ "SFSession", "d3/dea/class_s_f_session.html", null ],
-    [ "SGES", "db/de7/class_s_g_e_s.html", null ],
-    [ "SGUI", "d8/d56/class_s_g_u_i.html", null ],
     [ "Sound", "d0/d9e/class_sound.html", null ],
     [ "SPHParticle", "de/dc9/struct_s_p_h_particle.html", null ],
     [ "Weapon", "db/de5/class_weapon.html", null ],
+    [ "WhisperTranscriber", "d1/d05/class_whisper_transcriber.html", null ],
     [ "World", "d3/d21/class_world.html", null ],
     [ "WorldInGUI", "d0/d07/struct_world_in_g_u_i.html", null ]
 ];

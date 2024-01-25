@@ -1,6 +1,6 @@
 \doxysection{SGU-\/S.hpp}
 \hypertarget{_s_g_u-_s_8hpp_source}{}\label{_s_g_u-_s_8hpp_source}\index{src/SGE/SGU-\/S.hpp@{src/SGE/SGU-\/S.hpp}}
-\mbox{\hyperlink{_s_g_u-_s_8hpp}{gehe zur Dokumentation dieser Datei}}
+\mbox{\hyperlink{_s_g_u-_s_8hpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{comment}{/*This\ File\ contains\ the\ Class\ for\ SGU-\/S\ (SisijaGraphicsUnit-\/Subsystem)}}
 \DoxyCodeLine{00002\ \textcolor{comment}{*\ (C)\ 2023\ Lucas\ Gola}}
@@ -10,55 +10,32 @@
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <functional>}}
 \DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <map>}}
 \DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <irrBullet.h>}}
-\DoxyCodeLine{00009\ }
-\DoxyCodeLine{00010\ \textcolor{keyword}{using\ namespace\ }irr;}
-\DoxyCodeLine{00011\ \textcolor{keyword}{using\ namespace\ }gui;}
-\DoxyCodeLine{00012\ \textcolor{keyword}{using\ namespace\ }video;}
-\DoxyCodeLine{00013\ \textcolor{keyword}{using\ namespace\ }scene;}
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{_s_g_u-_s_8hpp_a0a79f5b0f1b9cd714effafc863893c00}{SGEvent}}\ \{}
-\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{_s_g_u-_s_8hpp_a0a79f5b0f1b9cd714effafc863893c00ada5901833b32afd7ef06ce779cbd721e}{SGE\_COLLISION}},\ \textcolor{comment}{//\ TODO:\ add\ other\ events}}
-\DoxyCodeLine{00017\ \};}
-\DoxyCodeLine{00018\ }
-\DoxyCodeLine{00019\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_scene_node_and_rigid_body}{SceneNodeAndRigidBody}}\ \{}
-\DoxyCodeLine{00020\ \ \ \ \ ISceneNode*\ \mbox{\hyperlink{struct_scene_node_and_rigid_body_aa6ce76b64cdac7dda9f4ccf4f45bf85d}{sceneNode}};}
-\DoxyCodeLine{00021\ \ \ \ \ IRigidBody*\ \mbox{\hyperlink{struct_scene_node_and_rigid_body_a01d6d8c2849cdc1c99148672af814c81}{rigidBody}};}
-\DoxyCodeLine{00022\ \};}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_g_u_i}{SGUI}}\ \{}
-\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_s_g_u_i_ac038db6f7f858146f002f66211e26719}{SGUI}}(IrrlichtDevice*\ dev);}
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_g_u_i_a0b8021b6e20c9d2e14c25c964c88d7f1}{handle}}(SEvent::SGUIEvent\ event);}
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_g_u_i_a14b6f7fd445b35893014839e8ba0c0d5}{addObject}}(IGUIElement*\ \textcolor{keywordtype}{object},\ std::function<\textcolor{keywordtype}{void}(SEvent::SGUIEvent)>\ callback);}
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_g_u_i_af103a86c945ee4249ddbc398d8670f83}{removeObject}}(IGUIElement*\ element);}
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_g_u_i_a0cde42498ace19415a19a2ed79ce94c1}{clearAll}}();}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp}{IMGUIWrapper.hpp}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{using\ namespace\ }irr;}
+\DoxyCodeLine{00012\ \textcolor{keyword}{using\ namespace\ }gui;}
+\DoxyCodeLine{00013\ \textcolor{keyword}{using\ namespace\ }video;}
+\DoxyCodeLine{00014\ \textcolor{keyword}{using\ namespace\ }scene;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{_s_g_u-_s_8hpp_a0a79f5b0f1b9cd714effafc863893c00}{SGEvent}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{_s_g_u-_s_8hpp_a0a79f5b0f1b9cd714effafc863893c00ada5901833b32afd7ef06ce779cbd721e}{SGE\_COLLISION}},\ \textcolor{comment}{//\ TODO:\ add\ other\ events}}
+\DoxyCodeLine{00018\ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_scene_node_and_rigid_body}{SceneNodeAndRigidBody}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ ISceneNode*\ \mbox{\hyperlink{struct_scene_node_and_rigid_body_aa6ce76b64cdac7dda9f4ccf4f45bf85d}{sceneNode}};}
+\DoxyCodeLine{00022\ \ \ \ \ IRigidBody*\ \mbox{\hyperlink{struct_scene_node_and_rigid_body_a01d6d8c2849cdc1c99148672af814c81}{rigidBody}};}
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_camera}{SCamera}}\{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_s_camera_acf18e689ca45bb91dbec2ed738e62939}{SCamera}}(ISceneManager*\ smgr);}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_s_camera_a45be5933d1d3e5540b3c64c0cf8949ec}{\string~SCamera}}();}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_camera_a22464325b7306d3444ff837fad87f396}{attachTo}}(IBoneSceneNode*\ parent);}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_camera_a2c5108bb65ca85b7d2f9fc8ccebdeb59}{updateRotationX}}(f32\ rot);}
 \DoxyCodeLine{00031\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00032\ \ \ \ \ IrrlichtDevice*\ \_device;}
-\DoxyCodeLine{00033\ \ \ \ \ std::map<int,\ std::function<void(SEvent::SGUIEvent)>>\ \_handler\_and\_object\_id;}
-\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ \_current\_id\_counter=0;}
+\DoxyCodeLine{00032\ \ \ \ \ ICameraSceneNode*\ \_internal\_camera;}
+\DoxyCodeLine{00033\ \ \ \ \ IBoneSceneNode*\ \_parent;}
+\DoxyCodeLine{00034\ \ \ \ \ ISceneManager*\ \_smgr;}
 \DoxyCodeLine{00035\ \};}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00037\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_g_e_s}{SGES}}\ \{}
-\DoxyCodeLine{00038\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_s_g_e_s_af4fb1f227bdba980dc2eda9dab691b77}{SGES}}(IrrlichtDevice*\ dev);}
-\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_g_e_s_a6c8b47cba2d0a4a2af8895e3fd551a64}{addObject}}(ISceneNode*\ \mbox{\hyperlink{helpers_8cpp_ab03727d664d6a75901f9c3c59711995f}{node}},\ IRigidBody*\ body,\ std::function<\textcolor{keywordtype}{void}(\mbox{\hyperlink{_s_g_u-_s_8hpp_a0a79f5b0f1b9cd714effafc863893c00}{SGEvent}})>\ callback);}
-\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_g_e_s_a1e3e7b19890d9220ca569fb2d0cf281f}{handle}}(irrBulletWorld*\ world);}
-\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_g_e_s_afbb2dc0231a94a500c54067c5679800a}{removeAllCallbacks}}();}
-\DoxyCodeLine{00043\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00044\ \ \ \ \ std::map<int,\ std::function<void(\mbox{\hyperlink{_s_g_u-_s_8hpp_a0a79f5b0f1b9cd714effafc863893c00}{SGEvent}})>>\ \_handler\_and\_object\_id;}
-\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{int}\ \_current\_id\_counter\ =\ 0;}
-\DoxyCodeLine{00046\ \};}
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00048\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_camera}{SCamera}}\{}
-\DoxyCodeLine{00049\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{class_s_camera_acf18e689ca45bb91dbec2ed738e62939}{SCamera}}(ISceneManager*\ smgr);}
-\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_s_camera_a45be5933d1d3e5540b3c64c0cf8949ec}{\string~SCamera}}();}
-\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_camera_a22464325b7306d3444ff837fad87f396}{attachTo}}(IBoneSceneNode*\ parent);}
-\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_camera_a2c5108bb65ca85b7d2f9fc8ccebdeb59}{updateRotationX}}(f32\ rot);}
-\DoxyCodeLine{00054\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00055\ \ \ \ \ ICameraSceneNode*\ \_internal\_camera;}
-\DoxyCodeLine{00056\ \ \ \ \ IBoneSceneNode*\ \_parent;}
-\DoxyCodeLine{00057\ \ \ \ \ ISceneManager*\ \_smgr;}
-\DoxyCodeLine{00058\ \};}
 
 \end{DoxyCode}

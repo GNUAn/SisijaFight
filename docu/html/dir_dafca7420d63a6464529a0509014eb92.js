@@ -1,5 +1,7 @@
 var dir_dafca7420d63a6464529a0509014eb92 =
 [
+    [ "IMGUIWrapper.cpp", "da/d8e/_i_m_g_u_i_wrapper_8cpp.html", "da/d8e/_i_m_g_u_i_wrapper_8cpp" ],
+    [ "IMGUIWrapper.hpp", "d2/d5d/_i_m_g_u_i_wrapper_8hpp.html", "d2/d5d/_i_m_g_u_i_wrapper_8hpp" ],
     [ "SCamera.cpp", "d0/d50/_s_camera_8cpp.html", null ],
     [ "Scripting.cpp", "d6/d34/_scripting_8cpp.html", "d6/d34/_scripting_8cpp" ],
     [ "Scripting.hpp", "db/daf/_scripting_8hpp.html", "db/daf/_scripting_8hpp" ],

@@ -5,8 +5,7 @@
 #include "Game/Session.hpp"
 
 SFSession* Session;
-SGES* GEngine;
-SGUI* GUIEngine;
+GUIEnvironment* guienv;
 dimension2du screenSize;
 irr::IrrlichtDevice* device;
 
@@ -32,9 +31,10 @@ int main() {
 	device->setResizable(false);
 	device->maximizeWindow();
 
+	guienv = new GUIEnvironment(device);
+
 	IVideoDriver* driver = device->getVideoDriver();
 	ISceneManager* smgr = device->getSceneManager();
-	IGUIEnvironment* guienv = device->getGUIEnvironment();
 
 	translator::initTranslator();
 
@@ -42,9 +42,7 @@ int main() {
 
 	screenSize = driver->getScreenSize();
 
-	GEngine = new SGES(device);
 	Session = new SFSession(device);
-	GUIEngine = new SGUI(device);
 
 	Session->init();
 

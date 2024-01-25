@@ -6,8 +6,10 @@ var searchData=
   ['sf_5fsew_5ferror_3',['SF_SEW_ERROR',['../d1/d1e/class_s_error_widget.html#a146cffeea3bbaccd8b429333399d0fa3ad78750408c73ead75b499a141506c015',1,'SErrorWidget']]],
   ['sf_5fsew_5finfo_4',['SF_SEW_INFO',['../d1/d1e/class_s_error_widget.html#a146cffeea3bbaccd8b429333399d0fa3a26a8ce05bccb60eb62f328c12ff6effb',1,'SErrorWidget']]],
   ['sf_5fsew_5fwarn_5',['SF_SEW_WARN',['../d1/d1e/class_s_error_widget.html#a146cffeea3bbaccd8b429333399d0fa3aa79aa44d365b7fcfc879eeb486c4c05e',1,'SErrorWidget']]],
-  ['sge_5fcollision_6',['SGE_COLLISION',['../d0/d66/_s_g_u-_s_8hpp.html#a0a79f5b0f1b9cd714effafc863893c00ada5901833b32afd7ef06ce779cbd721e',1,'SGU-S.hpp']]],
-  ['sse_5fclass_7',['SSE_CLASS',['../db/daf/_scripting_8hpp.html#afe9c82c15e20af89ea9c02ea878a6b77a5bc5817210b71c0cf6ddb03ce0a7f747',1,'Scripting.hpp']]],
-  ['sse_5fglobal_8',['SSE_GLOBAL',['../db/daf/_scripting_8hpp.html#afe9c82c15e20af89ea9c02ea878a6b77a05f213785c06735e6c186ce66a57df39',1,'Scripting.hpp']]],
-  ['sse_5fnamespace_9',['SSE_NAMESPACE',['../db/daf/_scripting_8hpp.html#afe9c82c15e20af89ea9c02ea878a6b77aab7f6da3ce57cad7220f21b1a9d9ca9c',1,'Scripting.hpp']]]
+  ['sg_5fbutton_5fpressed_6',['SG_BUTTON_PRESSED',['../d2/d5d/_i_m_g_u_i_wrapper_8hpp.html#af673abfde02eb3e79d399c0005b0ed2faf46fb970a9a28aa03fa3e048f22c85ac',1,'IMGUIWrapper.hpp']]],
+  ['sg_5ftextfield_5fchanged_7',['SG_TEXTFIELD_CHANGED',['../d2/d5d/_i_m_g_u_i_wrapper_8hpp.html#af673abfde02eb3e79d399c0005b0ed2fa13cc3c9b34f635f956b033e955b9f8ba',1,'IMGUIWrapper.hpp']]],
+  ['sge_5fcollision_8',['SGE_COLLISION',['../d0/d66/_s_g_u-_s_8hpp.html#a0a79f5b0f1b9cd714effafc863893c00ada5901833b32afd7ef06ce779cbd721e',1,'SGU-S.hpp']]],
+  ['sse_5fclass_9',['SSE_CLASS',['../db/daf/_scripting_8hpp.html#afe9c82c15e20af89ea9c02ea878a6b77a5bc5817210b71c0cf6ddb03ce0a7f747',1,'Scripting.hpp']]],
+  ['sse_5fglobal_10',['SSE_GLOBAL',['../db/daf/_scripting_8hpp.html#afe9c82c15e20af89ea9c02ea878a6b77a05f213785c06735e6c186ce66a57df39',1,'Scripting.hpp']]],
+  ['sse_5fnamespace_11',['SSE_NAMESPACE',['../db/daf/_scripting_8hpp.html#afe9c82c15e20af89ea9c02ea878a6b77aab7f6da3ce57cad7220f21b1a9d9ca9c',1,'Scripting.hpp']]]
 ];

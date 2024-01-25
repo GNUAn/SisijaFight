@@ -8,8 +8,7 @@ var globals_8hpp =
     [ "STD_YELLOW", "d5/d82/globals_8hpp.html#a852ff50dec45cf5fd8860b4052ae8672", null ],
     [ "WORLD_INDEX_PATH_DATA", "d5/d82/globals_8hpp.html#a3df23b4d7275a08016cdc56a066c9691", null ],
     [ "device", "d5/d82/globals_8hpp.html#a3f4aa71242d090e6f84100dbf2d69424", null ],
-    [ "GEngine", "d5/d82/globals_8hpp.html#ae679b1636a58b572403bb2ad300ef740", null ],
-    [ "GUIEngine", "d5/d82/globals_8hpp.html#af01d29a2e1fad65024bed844673ea210", null ],
+    [ "guienv", "d5/d82/globals_8hpp.html#a89da51dc188deeafdb16b0eba9b9e56c", null ],
     [ "screenSize", "d5/d82/globals_8hpp.html#ae83eb1285851d17f4612d2f6d2d94cd2", null ],
     [ "Session", "d5/d82/globals_8hpp.html#a9bee5eba1149cf0ee3cb49c8b9de2795", null ]
 ];
