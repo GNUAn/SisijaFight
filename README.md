@@ -28,6 +28,7 @@ SisijaFight is a little bit different from other shooters:
 
 !!!Attention!!!
 this Game is in an early development state and currently unplayable!
+only the subsystem and some preimplementations of the main functions have currently been implemented
 
 ## Documentation
 * [Documentation](https://springtech-studios.github.io/SisijaFight/docu/html/index.html)
