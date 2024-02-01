@@ -25,6 +25,11 @@ SisijaFight is a little bit different from other shooters:
 * *Species:* Polar bear
 * The main character
 * The best character
+##### Kah
+* *Species:* Sneef-Viper
+* One of the Healer characters
+* One of the best characters
+* Needn't have a Paintball gun
 
 !!!Attention!!!
 this Game is in an early development state and currently unplayable!
