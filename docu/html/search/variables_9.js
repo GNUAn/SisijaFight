@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['modal_0',['modal',['../d4/d38/class_g_u_i_window.html#a23dd18feefe666fd16288ad707327f92',1,'GUIWindow']]],
-  ['model_1',['model',['../da/daa/struct_paintball.html#a305b514b2b1fabd477bc3a595531362b',1,'Paintball']]]
+  ['lang_0',['lang',['../d4/d58/struct_s_f_config.html#a3e18bc6ddf5a0d3a118bd19bb4224d7a',1,'SFConfig']]]
 ];

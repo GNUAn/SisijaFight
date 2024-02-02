@@ -13,7 +13,7 @@ Inheritance diagram for GUIRadio\+Button\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_g_u_i_radio_button_a471b0dcdf0df04d79afc5b4790d3d7b8}{GUIRadio\+Button}} (\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}} env, int \mbox{\hyperlink{class_g_u_i_radio_button_a38e4f26f3989e8d5e29ecab3328480b8}{callback\+Num}})
+\mbox{\hyperlink{class_g_u_i_radio_button_af9c7b96f07c49f2dde65001c3f523791}{GUIRadio\+Button}} (\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}} \texorpdfstring{$\ast$}{*}env, int \mbox{\hyperlink{class_g_u_i_radio_button_a38e4f26f3989e8d5e29ecab3328480b8}{callback\+Num}}, std\+::string text)
 \item 
 void \mbox{\hyperlink{class_g_u_i_radio_button_aa4e6baac125a241de447f02c406caa4b}{draw}} ()
 \end{DoxyCompactItemize}
@@ -33,6 +33,8 @@ virtual void \mbox{\hyperlink{class_g_u_i_element_a45b3752a4730fce4898921696c61c
 virtual void \mbox{\hyperlink{class_g_u_i_element_a82fefd8e188a8297ee03c24524c7ee2e}{add\+Callback}} (std\+::function$<$ void(\mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_af673abfde02eb3e79d399c0005b0ed2f}{GUIEvent}} e)$>$ cback)
 \item 
 virtual void \mbox{\hyperlink{class_g_u_i_element_ae35bc07f8a7896151caa62a51acaacea}{set\+Visible}} (bool v)
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_a6eb218e22cddb5039281f6d69cfee250}{set\+Active}} (bool a)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -52,16 +54,18 @@ std\+::string \mbox{\hyperlink{class_g_u_i_element_aa5cbff9d22ef8be1d18ea081a416
 \item 
 \mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_g_u_i_element_ae04cdbd7ab66b6a0e5db18c1a31045b5}{\+\_\+env}}
 \item 
+bool \mbox{\hyperlink{class_g_u_i_element_ab9949f41808cbaeaae5bebd4b81971f6}{\+\_\+active}} = true
+\item 
 bool \mbox{\hyperlink{class_g_u_i_element_a9385814f8643bdb096013a3846c2516b}{visible}} = true
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{class_g_u_i_radio_button_a471b0dcdf0df04d79afc5b4790d3d7b8}\label{class_g_u_i_radio_button_a471b0dcdf0df04d79afc5b4790d3d7b8} 
+\Hypertarget{class_g_u_i_radio_button_af9c7b96f07c49f2dde65001c3f523791}\label{class_g_u_i_radio_button_af9c7b96f07c49f2dde65001c3f523791} 
 \index{GUIRadioButton@{GUIRadioButton}!GUIRadioButton@{GUIRadioButton}}
 \index{GUIRadioButton@{GUIRadioButton}!GUIRadioButton@{GUIRadioButton}}
 \doxysubsubsection{\texorpdfstring{GUIRadioButton()}{GUIRadioButton()}}
-{\footnotesize\ttfamily GUIRadio\+Button\+::\+GUIRadio\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}}]{env,  }\item[{int}]{callback\+Num }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily GUIRadio\+Button\+::\+GUIRadio\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}} \texorpdfstring{$\ast$}{*}}]{env,  }\item[{int}]{callback\+Num,  }\item[{std\+::string}]{text }\end{DoxyParamCaption})}
 
 
 
@@ -87,6 +91,7 @@ Reimplemented from \mbox{\hyperlink{class_g_u_i_element_a4c8f72e584adac6fd2a2bc2
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/\+SGE/\mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp}{IMGUIWrapper.\+hpp}}\end{DoxyCompactItemize}
+src/\+SGE/\mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp}{IMGUIWrapper.\+hpp}}\item 
+src/\+SGE/\mbox{\hyperlink{_i_m_g_u_i_wrapper_8cpp}{IMGUIWrapper.\+cpp}}\end{DoxyCompactItemize}

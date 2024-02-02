@@ -15,9 +15,11 @@ Inheritance diagram for GUIButton\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{class_g_u_i_button_a8aa16f2efd3bd90491fb62f2bbd9f971}{GUIButton}} (\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}} \texorpdfstring{$\ast$}{*}env, irr\+::core\+::recti rect, std\+::string text)
 \begin{DoxyCompactList}\small\item\em Adds a button. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_g_u_i_button_a4da7801a69c5b30a2e6fc413da739730}{draw}} () override
+void \mbox{\hyperlink{class_g_u_i_button_a1b889b11101921fabc8f6ea7e5a59336}{set\+Color}} (irr\+::video\+::\+SColor bnormal, irr\+::video\+::\+SColor bhovered, irr\+::video\+::\+SColor bclicked)
 \item 
-void \mbox{\hyperlink{class_g_u_i_button_a60004c8c10b259cc7fb1b06b75ac75f4}{set\+Active}} (bool \mbox{\hyperlink{class_g_u_i_button_a0b3ebd7401868d78808d83421a9fd76d}{active}})
+void \mbox{\hyperlink{class_g_u_i_button_a63cfaf08822ed8b8696943c9ad67d453}{reset\+Color}} ()
+\item 
+void \mbox{\hyperlink{class_g_u_i_button_a4da7801a69c5b30a2e6fc413da739730}{draw}} () override
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_g_u_i_element}{GUIElement}}}
 \begin{DoxyCompactItemize}
@@ -35,12 +37,10 @@ virtual void \mbox{\hyperlink{class_g_u_i_element_a45b3752a4730fce4898921696c61c
 virtual void \mbox{\hyperlink{class_g_u_i_element_a82fefd8e188a8297ee03c24524c7ee2e}{add\+Callback}} (std\+::function$<$ void(\mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_af673abfde02eb3e79d399c0005b0ed2f}{GUIEvent}} e)$>$ cback)
 \item 
 virtual void \mbox{\hyperlink{class_g_u_i_element_ae35bc07f8a7896151caa62a51acaacea}{set\+Visible}} (bool v)
-\end{DoxyCompactItemize}
-\doxysubsubsection*{Protected Attributes}
-\begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{class_g_u_i_button_a0b3ebd7401868d78808d83421a9fd76d}{active}}
+virtual void \mbox{\hyperlink{class_g_u_i_element_a6eb218e22cddb5039281f6d69cfee250}{set\+Active}} (bool a)
 \end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_g_u_i_element}{GUIElement}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -53,6 +53,8 @@ std\+::function$<$ void(\mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_af673abfde02eb3
 std\+::string \mbox{\hyperlink{class_g_u_i_element_aa5cbff9d22ef8be1d18ea081a4162558}{\+\_\+text}}
 \item 
 \mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_g_u_i_element_ae04cdbd7ab66b6a0e5db18c1a31045b5}{\+\_\+env}}
+\item 
+bool \mbox{\hyperlink{class_g_u_i_element_ab9949f41808cbaeaae5bebd4b81971f6}{\+\_\+active}} = true
 \item 
 bool \mbox{\hyperlink{class_g_u_i_element_a9385814f8643bdb096013a3846c2516b}{visible}} = true
 \end{DoxyCompactItemize}
@@ -91,20 +93,17 @@ Adds a button.
 
 Reimplemented from \mbox{\hyperlink{class_g_u_i_element_a4c8f72e584adac6fd2a2bc2ee627ad43}{GUIElement}}.
 
-\Hypertarget{class_g_u_i_button_a60004c8c10b259cc7fb1b06b75ac75f4}\label{class_g_u_i_button_a60004c8c10b259cc7fb1b06b75ac75f4} 
-\index{GUIButton@{GUIButton}!setActive@{setActive}}
-\index{setActive@{setActive}!GUIButton@{GUIButton}}
-\doxysubsubsection{\texorpdfstring{setActive()}{setActive()}}
-{\footnotesize\ttfamily void GUIButton\+::set\+Active (\begin{DoxyParamCaption}\item[{bool}]{active }\end{DoxyParamCaption})}
+\Hypertarget{class_g_u_i_button_a63cfaf08822ed8b8696943c9ad67d453}\label{class_g_u_i_button_a63cfaf08822ed8b8696943c9ad67d453} 
+\index{GUIButton@{GUIButton}!resetColor@{resetColor}}
+\index{resetColor@{resetColor}!GUIButton@{GUIButton}}
+\doxysubsubsection{\texorpdfstring{resetColor()}{resetColor()}}
+{\footnotesize\ttfamily void GUIButton\+::reset\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-
-
-\doxysubsection{Member Data Documentation}
-\Hypertarget{class_g_u_i_button_a0b3ebd7401868d78808d83421a9fd76d}\label{class_g_u_i_button_a0b3ebd7401868d78808d83421a9fd76d} 
-\index{GUIButton@{GUIButton}!active@{active}}
-\index{active@{active}!GUIButton@{GUIButton}}
-\doxysubsubsection{\texorpdfstring{active}{active}}
-{\footnotesize\ttfamily bool GUIButton\+::active\hspace{0.3cm}{\ttfamily [protected]}}
+\Hypertarget{class_g_u_i_button_a1b889b11101921fabc8f6ea7e5a59336}\label{class_g_u_i_button_a1b889b11101921fabc8f6ea7e5a59336} 
+\index{GUIButton@{GUIButton}!setColor@{setColor}}
+\index{setColor@{setColor}!GUIButton@{GUIButton}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily void GUIButton\+::set\+Color (\begin{DoxyParamCaption}\item[{irr\+::video\+::\+SColor}]{bnormal,  }\item[{irr\+::video\+::\+SColor}]{bhovered,  }\item[{irr\+::video\+::\+SColor}]{bclicked }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 

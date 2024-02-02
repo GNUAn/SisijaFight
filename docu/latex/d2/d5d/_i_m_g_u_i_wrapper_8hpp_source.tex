@@ -16,111 +16,170 @@
 \DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_af673abfde02eb3e79d399c0005b0ed2faf46fb970a9a28aa03fa3e048f22c85ac}{SG\_BUTTON\_PRESSED}},\ \mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_af673abfde02eb3e79d399c0005b0ed2fa13cc3c9b34f635f956b033e955b9f8ba}{SG\_TEXTFIELD\_CHANGED}}}
 \DoxyCodeLine{00013\ \};}
 \DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ ImVec2\ \mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_ac48d753b585cb7eb1c7fa6ceda071967}{ivec22imvec2}}(irr::core::recti\ size);}
-\DoxyCodeLine{00016\ ImVec2\ \mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_ac48d753b585cb7eb1c7fa6ceda071967}{ivec22imvec2}}(irr::core::dimension2du\ size);}
-\DoxyCodeLine{00017\ }
-\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_element}{GUIElement}};}
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}\ \{}
-\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_environment_aab6944b8fe4d40ccb9447dc6c3bd0913}{GUIEnvironment}}(irr::IrrlichtDevice*\ \mbox{\hyperlink{globals_8hpp_a3f4aa71242d090e6f84100dbf2d69424}{device}});}
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_environment_ade07a451bf3f954ef76ec06d0a01de0e}{drawAll}}();}
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_environment_aae5a7a91662a2089cc349251be64809f}{addObject}}(\mbox{\hyperlink{class_g_u_i_element}{GUIElement}}*\ e)\ \{}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ children.push\_back(e);}
-\DoxyCodeLine{00026\ \ \ \ \ \}}
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_environment_a7eb1316d72255436a1c8fc1dddfe9444}{removeObject}}(\mbox{\hyperlink{class_g_u_i_element}{GUIElement}}*\ e)\ \{}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ std::remove(children.begin(),\ children.end(),\ e);}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ children.erase(it,\ children.end());}
-\DoxyCodeLine{00030\ \ \ \ \ \}}
-\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{inline}\ CIMGUIEventReceiver*\ \mbox{\hyperlink{class_g_u_i_environment_ad60884639887dde801ead1a5540741a3}{getEventReceiver}}()\ \{}
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ recv;}
-\DoxyCodeLine{00033\ \ \ \ \ \}}
-\DoxyCodeLine{00034\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_element}{GUIElement}}*\ root;}
-\DoxyCodeLine{00036\ \ \ \ \ CIMGUIEventReceiver*\ recv;}
-\DoxyCodeLine{00037\ \ \ \ \ IIMGUIHandle*\ pGUI;}
-\DoxyCodeLine{00038\ \ \ \ \ std::vector<GUIElement*>\ children;}
-\DoxyCodeLine{00039\ \};}
-\DoxyCodeLine{00040\ }
-\DoxyCodeLine{00041\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_element}{GUIElement}}\ \{}
-\DoxyCodeLine{00042\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{inline}\ \mbox{\hyperlink{class_g_u_i_element_a039ca1ec2cd382e36b4e0625bc2e5dc3}{GUIElement}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env,\ irr::core::recti\ rect)\ :\ \mbox{\hyperlink{class_g_u_i_element_ae04cdbd7ab66b6a0e5db18c1a31045b5}{\_env}}(env),\ \mbox{\hyperlink{class_g_u_i_element_ac8c7e942cc02d5b3139c80bf85aa0bbb}{\_rect}}(rect)\ \{}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ...}}
-\DoxyCodeLine{00045\ \ \ \ \ \}}
-\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_element_a4c8f72e584adac6fd2a2bc2ee627ad43}{draw}}()\{}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ c\ :\ \mbox{\hyperlink{class_g_u_i_element_a2e4312a2ef8032761df8cda5183d68fa}{children}})\ \{}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ c-\/>draw();}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00050\ \ \ \ \ \}}
-\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_element_a13b0bdccd797f10cefef14d181571dab}{remove}}()\ \{}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_u_i_element_ae04cdbd7ab66b6a0e5db18c1a31045b5}{\_env}}-\/>\mbox{\hyperlink{class_g_u_i_environment_a7eb1316d72255436a1c8fc1dddfe9444}{removeObject}}(\textcolor{keyword}{this});}
-\DoxyCodeLine{00053\ \ \ \ \ \}}
-\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_element_affb9974f9bd55e8ea09a14c973c18adc}{setText}}(std::string\ text)\ \{}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_u_i_element_aa5cbff9d22ef8be1d18ea081a4162558}{\_text}}\ =\ text;}
-\DoxyCodeLine{00056\ \ \ \ \ \}}
-\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_element_aaeb6baf885f83d20e406ce2f497a8dfe}{addChild}}(\mbox{\hyperlink{class_g_u_i_element}{GUIElement}}*\ e)\ \{}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_u_i_element_a2e4312a2ef8032761df8cda5183d68fa}{children}}.push\_back(e);}
-\DoxyCodeLine{00059\ \ \ \ \ \}}
-\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_element_a45b3752a4730fce4898921696c61c91c}{setParent}}(\mbox{\hyperlink{class_g_u_i_element}{GUIElement}}*\ \mbox{\hyperlink{_g_u_i_tools_8cpp_a6a626c1dd0cfaa4ae2a9d4a6f2ca90d5}{p}})\ \{}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_g_u_i_tools_8cpp_a6a626c1dd0cfaa4ae2a9d4a6f2ca90d5}{p}}-\/>addChild(\textcolor{keyword}{this});}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_u_i_element_ae04cdbd7ab66b6a0e5db18c1a31045b5}{\_env}}-\/>\mbox{\hyperlink{class_g_u_i_environment_a7eb1316d72255436a1c8fc1dddfe9444}{removeObject}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00015\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_ac5a18a9a74c6a26edfab22bcaa343c49}{ThemeColor}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_ac5a18a9a74c6a26edfab22bcaa343c49ad3163c1fcda01965b692ec2c3122b743}{Red}},}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_ac5a18a9a74c6a26edfab22bcaa343c49ad0784a3f969fe736e8b271a5a161d106}{Green}},}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_ac5a18a9a74c6a26edfab22bcaa343c49ab548046646b36c12aa6ba841de500094}{White}},}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_ac5a18a9a74c6a26edfab22bcaa343c49af5e09dd1da4088464f264b7a3118bff8}{Blue}},}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_ac5a18a9a74c6a26edfab22bcaa343c49abf28513245738599d13e3ce36bd16c82}{Yellow}}}
+\DoxyCodeLine{00021\ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_a10c6071c8bbc93a5c38e1dd6659fdb8d}{SetGUIThemeColor}}(\mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_ac5a18a9a74c6a26edfab22bcaa343c49}{ThemeColor}}\ themeColor);}
+\DoxyCodeLine{00024\ ImVec2\ \mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_ac48d753b585cb7eb1c7fa6ceda071967}{ivec22imvec2}}(irr::core::recti\ size);}
+\DoxyCodeLine{00025\ ImVec2\ \mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_ac48d753b585cb7eb1c7fa6ceda071967}{ivec22imvec2}}(irr::core::dimension2du\ size);}
+\DoxyCodeLine{00026\ ImVec2\ \mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_a688ee6054b962505f552681e915337aa}{ivec2Pos2imvec2}}(irr::core::recti\ size);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_element}{GUIElement}};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}\ \{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_environment_aab6944b8fe4d40ccb9447dc6c3bd0913}{GUIEnvironment}}(irr::IrrlichtDevice*\ \mbox{\hyperlink{globals_8hpp_a3f4aa71242d090e6f84100dbf2d69424}{device}});}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_environment_ade07a451bf3f954ef76ec06d0a01de0e}{drawAll}}();}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_environment_aae5a7a91662a2089cc349251be64809f}{addObject}}(\mbox{\hyperlink{class_g_u_i_element}{GUIElement}}*\ e)\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ children.push\_back(e);}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_environment_af76a70d423f2e680730ededac90e882f}{setDefaultBackgroundWindow}}(\textcolor{keywordtype}{bool}\ c)\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ hasBackgroundWindow\ =\ c;}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_environment_a7eb1316d72255436a1c8fc1dddfe9444}{removeObject}}(\mbox{\hyperlink{class_g_u_i_element}{GUIElement}}*\ e)\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ std::remove(children.begin(),\ children.end(),\ e);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ children.erase(it,\ children.end());}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}(std::exception\ e)\{\}}
+\DoxyCodeLine{00046\ \ \ \ \ \}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{inline}\ CIMGUIEventReceiver*\ \mbox{\hyperlink{class_g_u_i_environment_ad60884639887dde801ead1a5540741a3}{getEventReceiver}}()\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ recv;}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_element}{GUIElement}}*\ root;}
+\DoxyCodeLine{00052\ \ \ \ \ CIMGUIEventReceiver*\ recv;}
+\DoxyCodeLine{00053\ \ \ \ \ IIMGUIHandle*\ pGUI;}
+\DoxyCodeLine{00054\ \ \ \ \ std::vector<GUIElement*>\ children;}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{bool}\ hasBackgroundWindow=\textcolor{keyword}{true};}
+\DoxyCodeLine{00056\ \ \ \ \ ImFont*\ arialFont;}
+\DoxyCodeLine{00057\ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_element}{GUIElement}}\ \{}
+\DoxyCodeLine{00060\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{inline}\ \mbox{\hyperlink{class_g_u_i_element_a039ca1ec2cd382e36b4e0625bc2e5dc3}{GUIElement}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env,\ irr::core::recti\ rect)\ :\ \mbox{\hyperlink{class_g_u_i_element_ae04cdbd7ab66b6a0e5db18c1a31045b5}{\_env}}(env),\ \mbox{\hyperlink{class_g_u_i_element_ac8c7e942cc02d5b3139c80bf85aa0bbb}{\_rect}}(rect)\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ...}}
 \DoxyCodeLine{00063\ \ \ \ \ \}}
-\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_element_a82fefd8e188a8297ee03c24524c7ee2e}{addCallback}}(std::function<\textcolor{keywordtype}{void}(\mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_af673abfde02eb3e79d399c0005b0ed2f}{GUIEvent}}\ e)>\ cback)\ \{}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_u_i_element_a2f11b33e40bca36d44f9e42cbf0216fc}{callback}}\ =\ cback;}
-\DoxyCodeLine{00066\ \ \ \ \ \}}
-\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_element_ae35bc07f8a7896151caa62a51acaacea}{setVisible}}(\textcolor{keywordtype}{bool}\ v)\ \{}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_u_i_element_a9385814f8643bdb096013a3846c2516b}{visible}}\ =\ v;}
-\DoxyCodeLine{00069\ \ \ \ \ \}}
-\DoxyCodeLine{00070\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00071\ \ \ \ \ irr::core::recti\ \mbox{\hyperlink{class_g_u_i_element_ac8c7e942cc02d5b3139c80bf85aa0bbb}{\_rect}};}
-\DoxyCodeLine{00072\ \ \ \ \ std::vector<GUIElement*>\ \mbox{\hyperlink{class_g_u_i_element_a2e4312a2ef8032761df8cda5183d68fa}{children}};}
-\DoxyCodeLine{00073\ \ \ \ \ std::function<void(\mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_af673abfde02eb3e79d399c0005b0ed2f}{GUIEvent}})>\ \mbox{\hyperlink{class_g_u_i_element_a2f11b33e40bca36d44f9e42cbf0216fc}{callback}};}
-\DoxyCodeLine{00074\ \ \ \ \ std::string\ \mbox{\hyperlink{class_g_u_i_element_aa5cbff9d22ef8be1d18ea081a4162558}{\_text}};}
-\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ \mbox{\hyperlink{class_g_u_i_element_ae04cdbd7ab66b6a0e5db18c1a31045b5}{\_env}};}
-\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_g_u_i_element_a9385814f8643bdb096013a3846c2516b}{visible}}\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00077\ \};}
-\DoxyCodeLine{00078\ }
-\DoxyCodeLine{00079\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_group}{GUIGroup}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_g_u_i_element}{GUIElement}}\{}
-\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_group_a8fc537bdf1422682a49f9b7dd11b4026}{GUIGroup}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env);}
-\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_group_ab611a49ed7ad86ea6cf139088dd50fe8}{draw}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00083\ \};}
-\DoxyCodeLine{00084\ }
-\DoxyCodeLine{00085\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_radio_button}{GUIRadioButton}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_g_u_i_element}{GUIElement}}\{}
-\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_radio_button_a471b0dcdf0df04d79afc5b4790d3d7b8}{GUIRadioButton}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}\ env,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_g_u_i_radio_button_a38e4f26f3989e8d5e29ecab3328480b8}{callbackNum}});}
-\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_radio_button_aa4e6baac125a241de447f02c406caa4b}{draw}}();}
-\DoxyCodeLine{00089\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_g_u_i_radio_button_a38e4f26f3989e8d5e29ecab3328480b8}{callbackNum}};}
-\DoxyCodeLine{00091\ \};}
-\DoxyCodeLine{00092\ }
-\DoxyCodeLine{00093\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_window}{GUIWindow}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_g_u_i_element}{GUIElement}}\ \{}
-\DoxyCodeLine{00094\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_window_a378e2fce4e022f9d2aadcc9089e0e533}{GUIWindow}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env,\ std::string\ text);}
-\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_window_ac0da92120ad578921168f8fa2e864e7a}{draw}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_window_ad898ec07971ab810e0350e64dc4178b2}{setDraggable}}(\textcolor{keywordtype}{bool}\ c);}
-\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_window_a6a5aa3e9f710eb6aad645a755d04e907}{setModal}}(\textcolor{keywordtype}{bool}\ c);}
-\DoxyCodeLine{00099\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_g_u_i_window_a33c03b1315ebd13cf0c9f3adfe71edb2}{active}};}
-\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_g_u_i_window_a23dd18feefe666fd16288ad707327f92}{modal}};}
-\DoxyCodeLine{00102\ \};}
-\DoxyCodeLine{00103\ }
-\DoxyCodeLine{00104\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_button}{GUIButton}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_g_u_i_element}{GUIElement}}\ \{}
-\DoxyCodeLine{00105\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00106\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_button_a8aa16f2efd3bd90491fb62f2bbd9f971}{GUIButton}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env,\ irr::core::recti\ rect,\ std::string\ text);}
-\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_button_a4da7801a69c5b30a2e6fc413da739730}{draw}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_button_a60004c8c10b259cc7fb1b06b75ac75f4}{setActive}}(\textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_g_u_i_button_a0b3ebd7401868d78808d83421a9fd76d}{active}});}
-\DoxyCodeLine{00109\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_g_u_i_button_a0b3ebd7401868d78808d83421a9fd76d}{active}};}
-\DoxyCodeLine{00111\ \};}
-\DoxyCodeLine{00112\ }
-\DoxyCodeLine{00113\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_image}{GUIImage}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_g_u_i_element}{GUIElement}}\ \{}
-\DoxyCodeLine{00114\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00115\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_image_ac41b2356004e99582b4949cfe9f73a66}{GUIImage}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env,\ irr::core::recti\ rect);}
-\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_image_a48db30277f7459a28e85051b21bc395c}{draw}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_image_ab8a8b2ff0cb9843a62f59b9674731c1b}{setScaleImage}}(\textcolor{keywordtype}{bool}\ c);}
-\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_image_a7ec3e99b1fa81648d7b33131c033ae00}{setImage}}(irr::video::ITexture*\ tex);}
-\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_image_ac790dd2ba58aeb8847b5fe3363e55d98}{setImage}}(irr::video::IImage*\ img);}
-\DoxyCodeLine{00120\ \};}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_element_a4c8f72e584adac6fd2a2bc2ee627ad43}{draw}}()\{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ c\ :\ \mbox{\hyperlink{class_g_u_i_element_a2e4312a2ef8032761df8cda5183d68fa}{children}})\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ c-\/>draw();}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00068\ \ \ \ \ \}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_element_a13b0bdccd797f10cefef14d181571dab}{remove}}()\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_u_i_element_ae04cdbd7ab66b6a0e5db18c1a31045b5}{\_env}}-\/>\mbox{\hyperlink{class_g_u_i_environment_a7eb1316d72255436a1c8fc1dddfe9444}{removeObject}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00071\ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_element_affb9974f9bd55e8ea09a14c973c18adc}{setText}}(std::string\ text)\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_u_i_element_aa5cbff9d22ef8be1d18ea081a4162558}{\_text}}\ =\ text;}
+\DoxyCodeLine{00074\ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_element_aaeb6baf885f83d20e406ce2f497a8dfe}{addChild}}(\mbox{\hyperlink{class_g_u_i_element}{GUIElement}}*\ e)\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_u_i_element_a2e4312a2ef8032761df8cda5183d68fa}{children}}.push\_back(e);}
+\DoxyCodeLine{00077\ \ \ \ \ \}}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_element_a45b3752a4730fce4898921696c61c91c}{setParent}}(\mbox{\hyperlink{class_g_u_i_element}{GUIElement}}*\ \mbox{\hyperlink{_g_u_i_tools_8cpp_a6a626c1dd0cfaa4ae2a9d4a6f2ca90d5}{p}})\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_g_u_i_tools_8cpp_a6a626c1dd0cfaa4ae2a9d4a6f2ca90d5}{p}}-\/>addChild(\textcolor{keyword}{this});}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_u_i_element_ae04cdbd7ab66b6a0e5db18c1a31045b5}{\_env}}-\/>\mbox{\hyperlink{class_g_u_i_environment_a7eb1316d72255436a1c8fc1dddfe9444}{removeObject}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00081\ \ \ \ \ \}}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_element_a82fefd8e188a8297ee03c24524c7ee2e}{addCallback}}(std::function<\textcolor{keywordtype}{void}(\mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_af673abfde02eb3e79d399c0005b0ed2f}{GUIEvent}}\ e)>\ cback)\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_u_i_element_a2f11b33e40bca36d44f9e42cbf0216fc}{callback}}\ =\ cback;}
+\DoxyCodeLine{00084\ \ \ \ \ \}}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_element_ae35bc07f8a7896151caa62a51acaacea}{setVisible}}(\textcolor{keywordtype}{bool}\ v)\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_u_i_element_a9385814f8643bdb096013a3846c2516b}{visible}}\ =\ v;}
+\DoxyCodeLine{00087\ \ \ \ \ \}}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_element_a6eb218e22cddb5039281f6d69cfee250}{setActive}}(\textcolor{keywordtype}{bool}\ a)\ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_u_i_element_ab9949f41808cbaeaae5bebd4b81971f6}{\_active}}\ =\ a;}
+\DoxyCodeLine{00090\ \ \ \ \ \}}
+\DoxyCodeLine{00091\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00092\ \ \ \ \ irr::core::recti\ \mbox{\hyperlink{class_g_u_i_element_ac8c7e942cc02d5b3139c80bf85aa0bbb}{\_rect}};}
+\DoxyCodeLine{00093\ \ \ \ \ std::vector<GUIElement*>\ \mbox{\hyperlink{class_g_u_i_element_a2e4312a2ef8032761df8cda5183d68fa}{children}};}
+\DoxyCodeLine{00094\ \ \ \ \ std::function<void(\mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_af673abfde02eb3e79d399c0005b0ed2f}{GUIEvent}})>\ \mbox{\hyperlink{class_g_u_i_element_a2f11b33e40bca36d44f9e42cbf0216fc}{callback}};}
+\DoxyCodeLine{00095\ \ \ \ \ std::string\ \mbox{\hyperlink{class_g_u_i_element_aa5cbff9d22ef8be1d18ea081a4162558}{\_text}};}
+\DoxyCodeLine{00096\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ \mbox{\hyperlink{class_g_u_i_element_ae04cdbd7ab66b6a0e5db18c1a31045b5}{\_env}};}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_g_u_i_element_ab9949f41808cbaeaae5bebd4b81971f6}{\_active}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_g_u_i_element_a9385814f8643bdb096013a3846c2516b}{visible}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00099\ \};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_group}{GUIGroup}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_g_u_i_element}{GUIElement}}\{}
+\DoxyCodeLine{00102\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00103\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_group_a8fc537bdf1422682a49f9b7dd11b4026}{GUIGroup}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env);}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_group_ab611a49ed7ad86ea6cf139088dd50fe8}{draw}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00105\ \};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_same_line_seperator}{GUISameLineSeperator}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_g_u_i_group}{GUIGroup}}\ \{}
+\DoxyCodeLine{00108\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00109\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_same_line_seperator_aa1c98f3e1aa3c0382b97b49791a20f91}{GUISameLineSeperator}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_g_u_i_same_line_seperator_add70b8a3c01ace1d6148329a42496841}{a}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_g_u_i_same_line_seperator_a64ea7bfce4bb35b4b45571f6c3bfb1a4}{b}});}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_same_line_seperator_ae34f13ecc491310bc40f806b96b116ef}{draw}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00111\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_g_u_i_same_line_seperator_add70b8a3c01ace1d6148329a42496841}{a}},\ \mbox{\hyperlink{class_g_u_i_same_line_seperator_a64ea7bfce4bb35b4b45571f6c3bfb1a4}{b}};}
+\DoxyCodeLine{00113\ \};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_radio_button}{GUIRadioButton}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_g_u_i_element}{GUIElement}}\{}
+\DoxyCodeLine{00116\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00117\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_radio_button_af9c7b96f07c49f2dde65001c3f523791}{GUIRadioButton}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_g_u_i_radio_button_a38e4f26f3989e8d5e29ecab3328480b8}{callbackNum}},\ std::string\ text);}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_radio_button_aa4e6baac125a241de447f02c406caa4b}{draw}}();}
+\DoxyCodeLine{00119\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_g_u_i_radio_button_a38e4f26f3989e8d5e29ecab3328480b8}{callbackNum}};}
+\DoxyCodeLine{00121\ \};}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_window}{GUIWindow}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_g_u_i_element}{GUIElement}}\ \{}
+\DoxyCodeLine{00124\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00125\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_window_abf11ae16fad315761881c88b338b72a1}{GUIWindow}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env,\ std::string\ text,\ irr::core::recti\ rect);}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_window_ac0da92120ad578921168f8fa2e864e7a}{draw}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_window_ad898ec07971ab810e0350e64dc4178b2}{setDraggable}}(\textcolor{keywordtype}{bool}\ c);}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_window_a6a5aa3e9f710eb6aad645a755d04e907}{setModal}}(\textcolor{keywordtype}{bool}\ c)\ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_u_i_window_a23dd18feefe666fd16288ad707327f92}{modal}}\ =\ c;}
+\DoxyCodeLine{00130\ \ \ \ \ \}}
+\DoxyCodeLine{00131\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_g_u_i_window_a33c03b1315ebd13cf0c9f3adfe71edb2}{active}};}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_g_u_i_window_a23dd18feefe666fd16288ad707327f92}{modal}};}
+\DoxyCodeLine{00134\ \};}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_inv_window}{GUIInvWindow}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_g_u_i_window}{GUIWindow}}\ \{}
+\DoxyCodeLine{00137\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00138\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_inv_window_a4f8b4b48961fe8784550eee72ffbda0b}{GUIInvWindow}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env,\ std::string\ text,\ irr::core::recti\ rect);}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_inv_window_a5e4fbfa377f5d9489310c9322e76364f}{draw}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00140\ \};}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_button}{GUIButton}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_g_u_i_element}{GUIElement}}\ \{}
+\DoxyCodeLine{00143\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00144\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_button_a8aa16f2efd3bd90491fb62f2bbd9f971}{GUIButton}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env,\ irr::core::recti\ rect,\ std::string\ text);}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_button_a1b889b11101921fabc8f6ea7e5a59336}{setColor}}(irr::video::SColor\ bnormal,\ irr::video::SColor\ bhovered,\ irr::video::SColor\ bclicked)\ \{}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \_bnormal\ =\ bnormal;}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \_bhovered\ =\ bhovered;}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \_bclicked\ =\ bclicked;}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ useColor\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00150\ \ \ \ \ \}}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_button_a63cfaf08822ed8b8696943c9ad67d453}{resetColor}}()\ \{}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ useColor\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00153\ \ \ \ \ \}}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_button_a4da7801a69c5b30a2e6fc413da739730}{draw}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00155\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00156\ \ \ \ \ irr::video::SColor\ \_bnormal,\ \_bhovered,\ \_bclicked;}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{bool}\ useColor=\textcolor{keyword}{false};}
+\DoxyCodeLine{00158\ \};}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_sidebar_menu}{GUISidebarMenu}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_g_u_i_element}{GUIElement}}\ \{}
+\DoxyCodeLine{00161\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_g_u_i_sidebar_menu_a274af0eb564301e5e719ca78411d5321}{SGUI\_SIDEBAR\_MENU\_TYPE}}\ \{\ \mbox{\hyperlink{class_g_u_i_sidebar_menu_a274af0eb564301e5e719ca78411d5321a1d3c74447e037cf960d39c35f0c9edf7}{SGUI\_SIDEBAR\_LEFT}},\ \mbox{\hyperlink{class_g_u_i_sidebar_menu_a274af0eb564301e5e719ca78411d5321aecbdfa9fdc3b5eb438c8ac3de6a7bb6b}{SGUI\_SIDEBAR\_UP}}\ \};}
+\DoxyCodeLine{00163\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_sidebar_menu_a0aa13bf33dd158e6e91f97f4ce1a4f05}{GUISidebarMenu}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env,\ \mbox{\hyperlink{class_g_u_i_sidebar_menu_a274af0eb564301e5e719ca78411d5321}{SGUI\_SIDEBAR\_MENU\_TYPE}}\ t,\ irr::core::recti\ size,\ \textcolor{keywordtype}{int}\ numRows,\ std::vector<std::string>\ names);}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_sidebar_menu_a6a2c516d3de0fc7daf0b3b548e343656}{draw}}();}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_sidebar_menu_adb547a2bb99a648eb02ba52557162152}{addCallback}}(std::function<\textcolor{keywordtype}{void}(\textcolor{keywordtype}{int}\ e)>\ cback)\ \{}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_u_i_sidebar_menu_a2bdb5edf47ef445c717eae5e918a35ad}{\_callback}}\ =\ cback;}
+\DoxyCodeLine{00167\ \ \ \ \ \}}
+\DoxyCodeLine{00168\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00169\ \ \ \ \ std::function<void(\textcolor{keywordtype}{int}\ e)>\ \mbox{\hyperlink{class_g_u_i_sidebar_menu_a2bdb5edf47ef445c717eae5e918a35ad}{\_callback}};}
+\DoxyCodeLine{00170\ \ \ \ \ std::vector<GUIButton*>\ \mbox{\hyperlink{class_g_u_i_sidebar_menu_a8a3ecb0dd2b1c1af9030cb8538b0910b}{btns}};}
+\DoxyCodeLine{00171\ \};}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_image}{GUIImage}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_g_u_i_element}{GUIElement}}\ \{}
+\DoxyCodeLine{00174\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00175\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_image_ac41b2356004e99582b4949cfe9f73a66}{GUIImage}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env,\ irr::core::recti\ rect);}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_image_a48db30277f7459a28e85051b21bc395c}{draw}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_image_ab8a8b2ff0cb9843a62f59b9674731c1b}{setScaleImage}}(\textcolor{keywordtype}{bool}\ c);}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_image_a7ec3e99b1fa81648d7b33131c033ae00}{setImage}}(irr::video::ITexture*\ tex);}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_image_ac790dd2ba58aeb8847b5fe3363e55d98}{setImage}}(irr::video::IImage*\ img);}
+\DoxyCodeLine{00180\ \};}
 
 \end{DoxyCode}

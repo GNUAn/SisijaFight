@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['_7ecustomtable_0',['~CustomTable',['../d6/dd2/class_custom_table.html#a8c290e64ad47de1c0eaf5149bf241177',1,'CustomTable']]],
-  ['_7escamera_1',['~SCamera',['../d1/d63/class_s_camera.html#a45be5933d1d3e5540b3c64c0cf8949ec',1,'SCamera']]],
-  ['_7esound_2',['~Sound',['../d0/d9e/class_sound.html#a0907389078bf740be2a5763366ad3376',1,'Sound']]],
-  ['_7ewhispertranscriber_3',['~WhisperTranscriber',['../d1/d05/class_whisper_transcriber.html#a0d6bffad365a5a8e08db5f8b6f5a6c9a',1,'WhisperTranscriber']]],
-  ['_7eworld_4',['~World',['../d3/d21/class_world.html#a8c73fba541a5817fff65147ba47cd827',1,'World']]]
+  ['weapon_0',['Weapon',['../db/de5/class_weapon.html#ab0c971875d85b0863de565103cfa74c0',1,'Weapon']]],
+  ['whispertranscriber_1',['WhisperTranscriber',['../d1/d05/class_whisper_transcriber.html#ad3e88db82e8517293b1779af21b4d8f1',1,'WhisperTranscriber']]],
+  ['world_2',['World',['../d3/d21/class_world.html#abbf18778faae521434ebaa84b9be8bb0',1,'World']]]
 ];

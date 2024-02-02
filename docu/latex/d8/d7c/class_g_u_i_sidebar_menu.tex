@@ -1,0 +1,139 @@
+\doxysection{GUISidebar\+Menu Class Reference}
+\hypertarget{class_g_u_i_sidebar_menu}{}\label{class_g_u_i_sidebar_menu}\index{GUISidebarMenu@{GUISidebarMenu}}
+
+
+{\ttfamily \#include $<$IMGUIWrapper.\+hpp$>$}
+
+Inheritance diagram for GUISidebar\+Menu\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d8/d7c/class_g_u_i_sidebar_menu}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_g_u_i_sidebar_menu_a274af0eb564301e5e719ca78411d5321}{SGUI\+\_\+\+SIDEBAR\+\_\+\+MENU\+\_\+\+TYPE}} \{ \mbox{\hyperlink{class_g_u_i_sidebar_menu_a274af0eb564301e5e719ca78411d5321a1d3c74447e037cf960d39c35f0c9edf7}{SGUI\+\_\+\+SIDEBAR\+\_\+\+LEFT}}
+, \mbox{\hyperlink{class_g_u_i_sidebar_menu_a274af0eb564301e5e719ca78411d5321aecbdfa9fdc3b5eb438c8ac3de6a7bb6b}{SGUI\+\_\+\+SIDEBAR\+\_\+\+UP}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_u_i_sidebar_menu_a0aa13bf33dd158e6e91f97f4ce1a4f05}{GUISidebar\+Menu}} (\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}} \texorpdfstring{$\ast$}{*}env, \mbox{\hyperlink{class_g_u_i_sidebar_menu_a274af0eb564301e5e719ca78411d5321}{SGUI\+\_\+\+SIDEBAR\+\_\+\+MENU\+\_\+\+TYPE}} t, irr\+::core\+::recti size, int num\+Rows, std\+::vector$<$ std\+::string $>$ names)
+\item 
+void \mbox{\hyperlink{class_g_u_i_sidebar_menu_a6a2c516d3de0fc7daf0b3b548e343656}{draw}} ()
+\item 
+void \mbox{\hyperlink{class_g_u_i_sidebar_menu_adb547a2bb99a648eb02ba52557162152}{add\+Callback}} (std\+::function$<$ void(int e)$>$ cback)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_g_u_i_element}{GUIElement}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_u_i_element_a039ca1ec2cd382e36b4e0625bc2e5dc3}{GUIElement}} (\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}} \texorpdfstring{$\ast$}{*}env, irr\+::core\+::recti rect)
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_a13b0bdccd797f10cefef14d181571dab}{remove}} ()
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_affb9974f9bd55e8ea09a14c973c18adc}{set\+Text}} (std\+::string text)
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_aaeb6baf885f83d20e406ce2f497a8dfe}{add\+Child}} (\mbox{\hyperlink{class_g_u_i_element}{GUIElement}} \texorpdfstring{$\ast$}{*}e)
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_a45b3752a4730fce4898921696c61c91c}{set\+Parent}} (\mbox{\hyperlink{class_g_u_i_element}{GUIElement}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{_g_u_i_tools_8cpp_a6a626c1dd0cfaa4ae2a9d4a6f2ca90d5}{p}})
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_a82fefd8e188a8297ee03c24524c7ee2e}{add\+Callback}} (std\+::function$<$ void(\mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_af673abfde02eb3e79d399c0005b0ed2f}{GUIEvent}} e)$>$ cback)
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_ae35bc07f8a7896151caa62a51acaacea}{set\+Visible}} (bool v)
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_a6eb218e22cddb5039281f6d69cfee250}{set\+Active}} (bool a)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::function$<$ void(int e)$>$ \mbox{\hyperlink{class_g_u_i_sidebar_menu_a2bdb5edf47ef445c717eae5e918a35ad}{\+\_\+callback}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_g_u_i_button}{GUIButton}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_g_u_i_sidebar_menu_a8a3ecb0dd2b1c1af9030cb8538b0910b}{btns}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_g_u_i_element}{GUIElement}}}
+\begin{DoxyCompactItemize}
+\item 
+irr\+::core\+::recti \mbox{\hyperlink{class_g_u_i_element_ac8c7e942cc02d5b3139c80bf85aa0bbb}{\+\_\+rect}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_g_u_i_element}{GUIElement}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_g_u_i_element_a2e4312a2ef8032761df8cda5183d68fa}{children}}
+\item 
+std\+::function$<$ void(\mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_af673abfde02eb3e79d399c0005b0ed2f}{GUIEvent}})$>$ \mbox{\hyperlink{class_g_u_i_element_a2f11b33e40bca36d44f9e42cbf0216fc}{callback}}
+\item 
+std\+::string \mbox{\hyperlink{class_g_u_i_element_aa5cbff9d22ef8be1d18ea081a4162558}{\+\_\+text}}
+\item 
+\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_g_u_i_element_ae04cdbd7ab66b6a0e5db18c1a31045b5}{\+\_\+env}}
+\item 
+bool \mbox{\hyperlink{class_g_u_i_element_ab9949f41808cbaeaae5bebd4b81971f6}{\+\_\+active}} = true
+\item 
+bool \mbox{\hyperlink{class_g_u_i_element_a9385814f8643bdb096013a3846c2516b}{visible}} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_g_u_i_sidebar_menu_a274af0eb564301e5e719ca78411d5321}\label{class_g_u_i_sidebar_menu_a274af0eb564301e5e719ca78411d5321} 
+\index{GUISidebarMenu@{GUISidebarMenu}!SGUI\_SIDEBAR\_MENU\_TYPE@{SGUI\_SIDEBAR\_MENU\_TYPE}}
+\index{SGUI\_SIDEBAR\_MENU\_TYPE@{SGUI\_SIDEBAR\_MENU\_TYPE}!GUISidebarMenu@{GUISidebarMenu}}
+\doxysubsubsection{\texorpdfstring{SGUI\_SIDEBAR\_MENU\_TYPE}{SGUI\_SIDEBAR\_MENU\_TYPE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_g_u_i_sidebar_menu_a274af0eb564301e5e719ca78411d5321}{GUISidebar\+Menu\+::\+SGUI\+\_\+\+SIDEBAR\+\_\+\+MENU\+\_\+\+TYPE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SGUI\_SIDEBAR\_LEFT@{SGUI\_SIDEBAR\_LEFT}!GUISidebarMenu@{GUISidebarMenu}}\index{GUISidebarMenu@{GUISidebarMenu}!SGUI\_SIDEBAR\_LEFT@{SGUI\_SIDEBAR\_LEFT}}}\Hypertarget{class_g_u_i_sidebar_menu_a274af0eb564301e5e719ca78411d5321a1d3c74447e037cf960d39c35f0c9edf7}\label{class_g_u_i_sidebar_menu_a274af0eb564301e5e719ca78411d5321a1d3c74447e037cf960d39c35f0c9edf7} 
+SGUI\+\_\+\+SIDEBAR\+\_\+\+LEFT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SGUI\_SIDEBAR\_UP@{SGUI\_SIDEBAR\_UP}!GUISidebarMenu@{GUISidebarMenu}}\index{GUISidebarMenu@{GUISidebarMenu}!SGUI\_SIDEBAR\_UP@{SGUI\_SIDEBAR\_UP}}}\Hypertarget{class_g_u_i_sidebar_menu_a274af0eb564301e5e719ca78411d5321aecbdfa9fdc3b5eb438c8ac3de6a7bb6b}\label{class_g_u_i_sidebar_menu_a274af0eb564301e5e719ca78411d5321aecbdfa9fdc3b5eb438c8ac3de6a7bb6b} 
+SGUI\+\_\+\+SIDEBAR\+\_\+\+UP&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_g_u_i_sidebar_menu_a0aa13bf33dd158e6e91f97f4ce1a4f05}\label{class_g_u_i_sidebar_menu_a0aa13bf33dd158e6e91f97f4ce1a4f05} 
+\index{GUISidebarMenu@{GUISidebarMenu}!GUISidebarMenu@{GUISidebarMenu}}
+\index{GUISidebarMenu@{GUISidebarMenu}!GUISidebarMenu@{GUISidebarMenu}}
+\doxysubsubsection{\texorpdfstring{GUISidebarMenu()}{GUISidebarMenu()}}
+{\footnotesize\ttfamily GUISidebar\+Menu\+::\+GUISidebar\+Menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}} \texorpdfstring{$\ast$}{*}}]{env,  }\item[{\mbox{\hyperlink{class_g_u_i_sidebar_menu_a274af0eb564301e5e719ca78411d5321}{SGUI\+\_\+\+SIDEBAR\+\_\+\+MENU\+\_\+\+TYPE}}}]{t,  }\item[{irr\+::core\+::recti}]{size,  }\item[{int}]{num\+Rows,  }\item[{std\+::vector$<$ std\+::string $>$}]{names }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_u_i_sidebar_menu_adb547a2bb99a648eb02ba52557162152}\label{class_g_u_i_sidebar_menu_adb547a2bb99a648eb02ba52557162152} 
+\index{GUISidebarMenu@{GUISidebarMenu}!addCallback@{addCallback}}
+\index{addCallback@{addCallback}!GUISidebarMenu@{GUISidebarMenu}}
+\doxysubsubsection{\texorpdfstring{addCallback()}{addCallback()}}
+{\footnotesize\ttfamily void GUISidebar\+Menu\+::add\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(int e)$>$}]{cback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_g_u_i_sidebar_menu_a6a2c516d3de0fc7daf0b3b548e343656}\label{class_g_u_i_sidebar_menu_a6a2c516d3de0fc7daf0b3b548e343656} 
+\index{GUISidebarMenu@{GUISidebarMenu}!draw@{draw}}
+\index{draw@{draw}!GUISidebarMenu@{GUISidebarMenu}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void GUISidebar\+Menu\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_g_u_i_element_a4c8f72e584adac6fd2a2bc2ee627ad43}{GUIElement}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_g_u_i_sidebar_menu_a2bdb5edf47ef445c717eae5e918a35ad}\label{class_g_u_i_sidebar_menu_a2bdb5edf47ef445c717eae5e918a35ad} 
+\index{GUISidebarMenu@{GUISidebarMenu}!\_callback@{\_callback}}
+\index{\_callback@{\_callback}!GUISidebarMenu@{GUISidebarMenu}}
+\doxysubsubsection{\texorpdfstring{\_callback}{\_callback}}
+{\footnotesize\ttfamily std\+::function$<$void(int e)$>$ GUISidebar\+Menu\+::\+\_\+callback\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_g_u_i_sidebar_menu_a8a3ecb0dd2b1c1af9030cb8538b0910b}\label{class_g_u_i_sidebar_menu_a8a3ecb0dd2b1c1af9030cb8538b0910b} 
+\index{GUISidebarMenu@{GUISidebarMenu}!btns@{btns}}
+\index{btns@{btns}!GUISidebarMenu@{GUISidebarMenu}}
+\doxysubsubsection{\texorpdfstring{btns}{btns}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_g_u_i_button}{GUIButton}}\texorpdfstring{$\ast$}{*}$>$ GUISidebar\+Menu\+::btns\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+SGE/\mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp}{IMGUIWrapper.\+hpp}}\item 
+src/\+SGE/\mbox{\hyperlink{_i_m_g_u_i_wrapper_8cpp}{IMGUIWrapper.\+cpp}}\end{DoxyCompactItemize}

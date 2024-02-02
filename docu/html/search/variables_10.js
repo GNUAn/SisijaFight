@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['weaponpath_0',['weaponPath',['../d7/d8c/struct_player_configuration.html#a7907ee7ee0b4d1cf3a8335ce31d8542b',1,'PlayerConfiguration']]],
-  ['worldpath_1',['worldPath',['../d2/d90/struct_lobby_return_code.html#a77b6d960d86d37e994b813c4b4356028',1,'LobbyReturnCode']]]
+  ['version_0',['version',['../d4/d58/struct_s_f_config.html#ac211ed27a4dfa3510135586213f95e2f',1,'SFConfig']]],
+  ['visible_1',['visible',['../db/d5e/class_g_u_i_element.html#a9385814f8643bdb096013a3846c2516b',1,'GUIElement']]]
 ];

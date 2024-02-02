@@ -1,0 +1,35 @@
+\doxysection{Lobby.\+hpp}
+\hypertarget{_lobby_8hpp_source}{}\label{_lobby_8hpp_source}\index{src/Game/GUI/Pages/Lobby/Lobby.hpp@{src/Game/GUI/Pages/Lobby/Lobby.hpp}}
+\mbox{\hyperlink{_lobby_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_g_u_i_8hpp}{Game/GUI/GUI.hpp}}"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_lobby_return_code}{LobbyReturnCode}}\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \mbox{\hyperlink{class_game_mode}{GameMode}}*\ \mbox{\hyperlink{struct_lobby_return_code_aca244cf6efdfcd1e45cb948ed77e68d9}{gamemode}};}
+\DoxyCodeLine{00006\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_lobby_return_code_a12f3adbf26303352286583021b72a86b}{playerPath}};}
+\DoxyCodeLine{00007\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_lobby_return_code_a77b6d960d86d37e994b813c4b4356028}{worldPath}};}
+\DoxyCodeLine{00008\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_lobby_return_code_a323f0fe273ede1b3097fe053b96dee6b}{serverAddress}};}
+\DoxyCodeLine{00009\ \};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_lobby}{Lobby}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_g_u_i_class}{GUIClass}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lobby_aee99c730e1824ca6ba0dd90323a32242}{draw}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00014\ \};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_gamemode_selection}{GamemodeSelection}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_g_u_i_page}{GUIPage}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_gamemode_selection_a2c10597e1d52975c6a2728a2db8fb283}{draw}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_world_selection}{WorldSelection}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_g_u_i_page}{GUIPage}}\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_world_selection_a60bad6487b3c6d9359d1d530d5f466c6}{draw}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00024\ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_server_selection}{ServerSelection}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_g_u_i_page}{GUIPage}}\ \{}
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_server_selection_a2dee3516b60d7f3fd8764663894d9c66}{draw}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ \};}
+
+\end{DoxyCode}

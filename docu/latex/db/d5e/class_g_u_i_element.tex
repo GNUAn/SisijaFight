@@ -7,7 +7,7 @@
 Inheritance diagram for GUIElement\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{db/d5e/class_g_u_i_element}
+\includegraphics[height=1.854305cm]{db/d5e/class_g_u_i_element}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
@@ -28,6 +28,8 @@ virtual void \mbox{\hyperlink{class_g_u_i_element_a45b3752a4730fce4898921696c61c
 virtual void \mbox{\hyperlink{class_g_u_i_element_a82fefd8e188a8297ee03c24524c7ee2e}{add\+Callback}} (std\+::function$<$ void(\mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_af673abfde02eb3e79d399c0005b0ed2f}{GUIEvent}} e)$>$ cback)
 \item 
 virtual void \mbox{\hyperlink{class_g_u_i_element_ae35bc07f8a7896151caa62a51acaacea}{set\+Visible}} (bool v)
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_a6eb218e22cddb5039281f6d69cfee250}{set\+Active}} (bool a)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -41,6 +43,8 @@ std\+::function$<$ void(\mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_af673abfde02eb3
 std\+::string \mbox{\hyperlink{class_g_u_i_element_aa5cbff9d22ef8be1d18ea081a4162558}{\+\_\+text}}
 \item 
 \mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_g_u_i_element_ae04cdbd7ab66b6a0e5db18c1a31045b5}{\+\_\+env}}
+\item 
+bool \mbox{\hyperlink{class_g_u_i_element_ab9949f41808cbaeaae5bebd4b81971f6}{\+\_\+active}} = true
 \item 
 bool \mbox{\hyperlink{class_g_u_i_element_a9385814f8643bdb096013a3846c2516b}{visible}} = true
 \end{DoxyCompactItemize}
@@ -76,13 +80,19 @@ bool \mbox{\hyperlink{class_g_u_i_element_a9385814f8643bdb096013a3846c2516b}{vis
 
 
 
-Reimplemented in \mbox{\hyperlink{class_g_u_i_radio_button_aa4e6baac125a241de447f02c406caa4b}{GUIRadio\+Button}}, \mbox{\hyperlink{class_g_u_i_group_ab611a49ed7ad86ea6cf139088dd50fe8}{GUIGroup}}, \mbox{\hyperlink{class_g_u_i_window_ac0da92120ad578921168f8fa2e864e7a}{GUIWindow}}, \mbox{\hyperlink{class_g_u_i_button_a4da7801a69c5b30a2e6fc413da739730}{GUIButton}}, and \mbox{\hyperlink{class_g_u_i_image_a48db30277f7459a28e85051b21bc395c}{GUIImage}}.
+Reimplemented in \mbox{\hyperlink{class_g_u_i_radio_button_aa4e6baac125a241de447f02c406caa4b}{GUIRadio\+Button}}, \mbox{\hyperlink{class_g_u_i_sidebar_menu_a6a2c516d3de0fc7daf0b3b548e343656}{GUISidebar\+Menu}}, \mbox{\hyperlink{class_g_u_i_group_ab611a49ed7ad86ea6cf139088dd50fe8}{GUIGroup}}, \mbox{\hyperlink{class_g_u_i_same_line_seperator_ae34f13ecc491310bc40f806b96b116ef}{GUISame\+Line\+Seperator}}, \mbox{\hyperlink{class_g_u_i_window_ac0da92120ad578921168f8fa2e864e7a}{GUIWindow}}, \mbox{\hyperlink{class_g_u_i_inv_window_a5e4fbfa377f5d9489310c9322e76364f}{GUIInv\+Window}}, \mbox{\hyperlink{class_g_u_i_button_a4da7801a69c5b30a2e6fc413da739730}{GUIButton}}, and \mbox{\hyperlink{class_g_u_i_image_a48db30277f7459a28e85051b21bc395c}{GUIImage}}.
 
 \Hypertarget{class_g_u_i_element_a13b0bdccd797f10cefef14d181571dab}\label{class_g_u_i_element_a13b0bdccd797f10cefef14d181571dab} 
 \index{GUIElement@{GUIElement}!remove@{remove}}
 \index{remove@{remove}!GUIElement@{GUIElement}}
 \doxysubsubsection{\texorpdfstring{remove()}{remove()}}
 {\footnotesize\ttfamily virtual void GUIElement\+::remove (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_g_u_i_element_a6eb218e22cddb5039281f6d69cfee250}\label{class_g_u_i_element_a6eb218e22cddb5039281f6d69cfee250} 
+\index{GUIElement@{GUIElement}!setActive@{setActive}}
+\index{setActive@{setActive}!GUIElement@{GUIElement}}
+\doxysubsubsection{\texorpdfstring{setActive()}{setActive()}}
+{\footnotesize\ttfamily virtual void GUIElement\+::set\+Active (\begin{DoxyParamCaption}\item[{bool}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 \Hypertarget{class_g_u_i_element_a45b3752a4730fce4898921696c61c91c}\label{class_g_u_i_element_a45b3752a4730fce4898921696c61c91c} 
 \index{GUIElement@{GUIElement}!setParent@{setParent}}
@@ -105,6 +115,12 @@ Reimplemented in \mbox{\hyperlink{class_g_u_i_radio_button_aa4e6baac125a241de447
 
 
 \doxysubsection{Member Data Documentation}
+\Hypertarget{class_g_u_i_element_ab9949f41808cbaeaae5bebd4b81971f6}\label{class_g_u_i_element_ab9949f41808cbaeaae5bebd4b81971f6} 
+\index{GUIElement@{GUIElement}!\_active@{\_active}}
+\index{\_active@{\_active}!GUIElement@{GUIElement}}
+\doxysubsubsection{\texorpdfstring{\_active}{\_active}}
+{\footnotesize\ttfamily bool GUIElement\+::\+\_\+active = true\hspace{0.3cm}{\ttfamily [protected]}}
+
 \Hypertarget{class_g_u_i_element_ae04cdbd7ab66b6a0e5db18c1a31045b5}\label{class_g_u_i_element_ae04cdbd7ab66b6a0e5db18c1a31045b5} 
 \index{GUIElement@{GUIElement}!\_env@{\_env}}
 \index{\_env@{\_env}!GUIElement@{GUIElement}}

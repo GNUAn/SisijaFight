@@ -93,70 +93,191 @@ $(function(){initNavTree('df/d2a/class_g_u_i_page.html','../../'); initResizable
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="../../dd/db9/class_g_u_i_page-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">GUIPage Class Reference</div></div>
+  <div class="headertitle"><div class="title">GUIPage Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="../../d3/d92/_g_u_i_8hpp_source.html">GUI.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for GUIPage:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../df/d2a/class_g_u_i_page.png" usemap="#GUIPage_map" alt=""/>
+  <map id="GUIPage_map" name="GUIPage_map">
+<area href="../../dc/d61/class_gamemode_selection.html" alt="GamemodeSelection" shape="rect" coords="0,56,126,80"/>
+<area href="../../d1/d96/class_server_selection.html" alt="ServerSelection" shape="rect" coords="136,56,262,80"/>
+<area href="../../d9/d36/class_world_selection.html" alt="WorldSelection" shape="rect" coords="272,56,398,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9044c1149baf573a686bf9915b26bd31" id="r_a9044c1149baf573a686bf9915b26bd31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9044c1149baf573a686bf9915b26bd31">draw</a> (IrrlichtDevice *dev)</td></tr>
-<tr class="separator:a9044c1149baf573a686bf9915b26bd31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23fb5458abbc07f697f12a83c80d6905" id="r_a23fb5458abbc07f697f12a83c80d6905"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23fb5458abbc07f697f12a83c80d6905">isFinished</a> ()</td></tr>
-<tr class="separator:a23fb5458abbc07f697f12a83c80d6905"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b5a65347808b474553034a407af0e0b" id="r_a5b5a65347808b474553034a407af0e0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b5a65347808b474553034a407af0e0b">onFinish</a> (std::function&lt; void()&gt; f)</td></tr>
-<tr class="separator:a5b5a65347808b474553034a407af0e0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a353f48fd582710bc7d5861070a367a71" id="r_a353f48fd582710bc7d5861070a367a71"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a353f48fd582710bc7d5861070a367a71">draw</a> (<a class="el" href="../../de/da7/class_g_u_i_environment.html">GUIEnvironment</a> *dev)=0</td></tr>
+<tr class="separator:a353f48fd582710bc7d5861070a367a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1153bca340605497226d70b51b7b228e" id="r_a1153bca340605497226d70b51b7b228e"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1153bca340605497226d70b51b7b228e">isFinished</a> ()</td></tr>
+<tr class="separator:a1153bca340605497226d70b51b7b228e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac47d64122823de10363af8227b312817" id="r_ac47d64122823de10363af8227b312817"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac47d64122823de10363af8227b312817">onFinish</a> (std::function&lt; void()&gt; f)</td></tr>
+<tr class="separator:ac47d64122823de10363af8227b312817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a09f8e0757c7221763ded6cc7469a8061" id="r_a09f8e0757c7221763ded6cc7469a8061"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09f8e0757c7221763ded6cc7469a8061">finish</a> ()</td></tr>
+<tr class="separator:a09f8e0757c7221763ded6cc7469a8061"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:ac378fe8995f20cfbf0b04892710fee99" id="r_ac378fe8995f20cfbf0b04892710fee99"><td class="memItemLeft" align="right" valign="top">std::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac378fe8995f20cfbf0b04892710fee99">end</a></td></tr>
+<tr class="separator:ac378fe8995f20cfbf0b04892710fee99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb68f2a4b000cf9730a8ab648d7562b0" id="r_abb68f2a4b000cf9730a8ab648d7562b0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb68f2a4b000cf9730a8ab648d7562b0">finished</a> = false</td></tr>
+<tr class="separator:abb68f2a4b000cf9730a8ab648d7562b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a9044c1149baf573a686bf9915b26bd31" name="a9044c1149baf573a686bf9915b26bd31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9044c1149baf573a686bf9915b26bd31">&#9670;&#160;</a></span>draw()</h2>
+<a id="a353f48fd582710bc7d5861070a367a71" name="a353f48fd582710bc7d5861070a367a71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a353f48fd582710bc7d5861070a367a71">&#9670;&#160;</a></span>draw()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void GUIPage::draw </td>
+          <td class="memname">virtual void GUIPage::draw </td>
           <td>(</td>
-          <td class="paramtype">IrrlichtDevice *</td>          <td class="paramname"><span class="paramname"><em>dev</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../de/da7/class_g_u_i_environment.html">GUIEnvironment</a> *</td>          <td class="paramname"><span class="paramname"><em>dev</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="../../dc/d61/class_gamemode_selection.html#a2c10597e1d52975c6a2728a2db8fb283">GamemodeSelection</a>, <a class="el" href="../../d9/d36/class_world_selection.html#a60bad6487b3c6d9359d1d530d5f466c6">WorldSelection</a>, and <a class="el" href="../../d1/d96/class_server_selection.html#a2dee3516b60d7f3fd8764663894d9c66">ServerSelection</a>.</p>
 
 </div>
 </div>
-<a id="a23fb5458abbc07f697f12a83c80d6905" name="a23fb5458abbc07f697f12a83c80d6905"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23fb5458abbc07f697f12a83c80d6905">&#9670;&#160;</a></span>isFinished()</h2>
+<a id="a09f8e0757c7221763ded6cc7469a8061" name="a09f8e0757c7221763ded6cc7469a8061"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09f8e0757c7221763ded6cc7469a8061">&#9670;&#160;</a></span>finish()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool GUIPage::isFinished </td>
+          <td class="memname">virtual void GUIPage::finish </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a5b5a65347808b474553034a407af0e0b" name="a5b5a65347808b474553034a407af0e0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b5a65347808b474553034a407af0e0b">&#9670;&#160;</a></span>onFinish()</h2>
+<a id="a1153bca340605497226d70b51b7b228e" name="a1153bca340605497226d70b51b7b228e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1153bca340605497226d70b51b7b228e">&#9670;&#160;</a></span>isFinished()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void GUIPage::onFinish </td>
+          <td class="memname">virtual bool GUIPage::isFinished </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac47d64122823de10363af8227b312817" name="ac47d64122823de10363af8227b312817"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac47d64122823de10363af8227b312817">&#9670;&#160;</a></span>onFinish()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void GUIPage::onFinish </td>
           <td>(</td>
           <td class="paramtype">std::function&lt; void()&gt;</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ac378fe8995f20cfbf0b04892710fee99" name="ac378fe8995f20cfbf0b04892710fee99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac378fe8995f20cfbf0b04892710fee99">&#9670;&#160;</a></span>end</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;void()&gt; GUIPage::end</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb68f2a4b000cf9730a8ab648d7562b0" name="abb68f2a4b000cf9730a8ab648d7562b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb68f2a4b000cf9730a8ab648d7562b0">&#9670;&#160;</a></span>finished</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GUIPage::finished = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
