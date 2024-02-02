@@ -9,6 +9,13 @@ GUIEnvironment* guienv;
 dimension2du screenSize;
 irr::IrrlichtDevice* device;
 
+/**
+ * @mainpage SisijaFight 0.1.0
+ *
+ * SisijaFight is an open-source virtual paintball shooter with animal characters.
+ *
+ */
+
 int main() {
 	SIrrlichtCreationParameters params = SIrrlichtCreationParameters();
 	params.AntiAlias = true;

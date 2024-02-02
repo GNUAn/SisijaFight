@@ -2,6 +2,7 @@
 #include <irrlicht.h>
 #include "GUI/GUI.hpp"
 #include "../Gamemodes/Gamemodes.hpp"
+#include "Game/GUI/Pages/Lobby/Lobby.hpp"
 
 using namespace irr;
 using namespace gui;

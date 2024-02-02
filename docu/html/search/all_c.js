@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['name_0',['name',['../d0/d07/struct_world_in_g_u_i.html#ad9a10f9423be8db113f4cbe5bb0adc71',1,'WorldInGUI::name'],['../d2/d0e/structserver.html#a955045eb298ade34b83c7d09a685d220',1,'server::name']]],
-  ['network_1',['Network',['../de/de1/class_network.html',1,'']]],
-  ['networkhandler_2ecpp_2',['NetworkHandler.cpp',['../d4/d5a/_network_handler_8cpp.html',1,'']]],
-  ['networkhandler_2ehpp_3',['NetworkHandler.hpp',['../dd/d0c/_network_handler_8hpp.html',1,'']]],
-  ['networktools_2ecpp_4',['NetworkTools.cpp',['../d2/d4b/_network_tools_8cpp.html',1,'']]],
-  ['networktools_2ehpp_5',['NetworkTools.hpp',['../d9/d50/_network_tools_8hpp.html',1,'']]],
-  ['node_6',['node',['../d2/df4/helpers_8cpp.html#ab03727d664d6a75901f9c3c59711995f',1,'helpers.cpp']]]
+  ['lang_0',['lang',['../d4/d58/struct_s_f_config.html#a3e18bc6ddf5a0d3a118bd19bb4224d7a',1,'SFConfig']]],
+  ['loadentities_1',['loadEntities',['../d3/d21/class_world.html#aae565d4789691bcefbff4c8446948530',1,'World']]],
+  ['loadsound_2',['loadSound',['../d0/d9e/class_sound.html#ad0973bf81303a25dd6edab68c6b11603',1,'Sound']]],
+  ['lobby_3',['Lobby',['../db/dd7/class_lobby.html',1,'']]],
+  ['lobby_4',['lobby',['../d3/dea/class_s_f_session.html#ac8b59254fa9edebc550bd5bf844ae06a',1,'SFSession']]],
+  ['lobby_2ecpp_5',['Lobby.cpp',['../d0/d2c/_lobby_8cpp.html',1,'']]],
+  ['lobbyevr_2ecpp_6',['LobbyEVR.cpp',['../d0/d9d/_lobby_e_v_r_8cpp.html',1,'']]],
+  ['lobbyevr_2ehpp_7',['LobbyEVR.hpp',['../df/dec/_lobby_e_v_r_8hpp.html',1,'']]],
+  ['lobbyreturncode_8',['LobbyReturnCode',['../d2/d90/struct_lobby_return_code.html',1,'']]]
 ];

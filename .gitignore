@@ -34,3 +34,7 @@
 *.sqlite
 *vs/*
 *vscode/*
+
+# Secret files
+
+*_SECRET_*

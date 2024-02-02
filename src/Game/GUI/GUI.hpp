@@ -11,29 +11,30 @@ inline std::wstring translate(const std::string arg) {
 
 using namespace irr;
 
-struct LobbyReturnCode {
-	GameMode* gamemode;
-	std::string playerPath;
-	std::string worldPath;
-	std::string serverAddress;
-};
-
 class GUIPage {
 public:
-	 void draw(IrrlichtDevice* dev);
-	 bool isFinished();
-	 void onFinish(std::function<void()> f);
-private:
+	 virtual void draw(GUIEnvironment* dev)=0;
+	 inline virtual bool isFinished() {
+		 return finished;
+	 };
+	 inline virtual void onFinish(std::function<void()> f) {
+		 end = f;
+	 }
+protected:
 	std::function<void()> end;
-	bool finished;
-	void finish();
+	bool finished = false;
+	inline virtual void finish() {
+		finished = true;
+		end();
+	}
 };
 class GUIClass {
 public:
 	 virtual void draw(GUIEnvironment* env)=0;
 };
 
-class Lobby : public GUIClass {
+/// @brief A complex Widget similar to GUIPage but needn't delete the background. (A window)
+class GUIWidget {
 public:
-	void draw(GUIEnvironment* env) override;
+	virtual void draw(GUIEnvironment* env)=0;
 };

@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "SisijaFight", "index.html", [
+    [ "SisijaFight 0.1.0", "index.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -64,7 +65,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"db/d5e/class_g_u_i_element.html#ae35bc07f8a7896151caa62a51acaacea"
+"db/d5e/class_g_u_i_element.html#a2e4312a2ef8032761df8cda5183d68fa"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

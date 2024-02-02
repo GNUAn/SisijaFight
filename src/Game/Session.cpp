@@ -1,8 +1,8 @@
 #include "Session.hpp"
-#include "../Network/NetworkHandler.hpp"
+#include "Network/NetworkHandler.hpp"
 #include "EventReceivers/LobbyEVR.hpp"
 #include "EventReceivers/InGameEVR.hpp"
-#include "../globals.hpp"
+#include "globals.hpp"
 
 bool game = false;
 

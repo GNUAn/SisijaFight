@@ -24,8 +24,7 @@ file(GLOB_RECURSE IBULLET_SRC "lib/irrbullet/*.cpp" "lib/irrbullet/.c" "lib/Bull
 file(GLOB_RECURSE ENET_SRC "lib/enet/*.c")
 file(GLOB_RECURSE AS_SRC "lib/angelscript/*.cpp" "lib/angelscript/*.c")
 file(GLOB_RECURSE GUI_SRC "lib/gui/*.cpp" "lib/gui/*.c")
-
-set(DIRR_STATIC_LIB_)
+file(GLOB_RECURSE OPENAI "lib/openai/*.cpp")
 
 set(JPEG_LIB_PATH "lib/Irrlicht/jpeglib")
 
@@ -81,8 +80,10 @@ include_directories("lib/Bullet/Extras/BulletRoboticsGUI" "lib/Bullet/Extras/Con
  "lib/Bullet/Extras/Serialize/makesdna"
  "lib/Bullet/Extras/Serialize/ReadBulletSample"
  "lib/Bullet/Extras/Serialize/BlenderSerialize")
+ include_directories("lib/openai/include")
+ include_directories("src")
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}" " -D_IRR_STATIC_LIB_ ")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}" " -D_IRR_STATIC_LIB_ -D_CURL_STATICLIB")
 
 # for angelscript
 set(ARCHFLAGS "${CMAKE_SYSTEM_PROCESSOR}")
@@ -132,8 +133,10 @@ add_subdirectory("lib/whispercpp")
 include_directories("lib/whispercpp")
 add_subdirectory("lib/portaudio")
 include_directories("lib/portaudio/include")
+add_subdirectory("lib/curl")
+include_directories("lib/curl/include")
 
-add_executable (SisijaFight "src/main.cpp" "src/Gamemodes/ClassicFight.cpp" "src/SGE/SisijaGraphicsUnitSubsystem.cpp" "src/SGE/SGU-S.hpp" "lib/json.hpp" ${IRR_SRC} ${SOLOUD_SRC} ${PUGIXML_SRC} ${IBULLET_SRC} ${ENET_SRC} ${AS_SRC} ${GUI_SRC} "src/Game/Audio/Backend.hpp" "src/Game/Audio/Backend.cpp" "src/globals.hpp" "src/Game/Session.hpp" "src/Game/Session.cpp" "src/Game/EventReceivers/InGameEVR.hpp"  "src/Game/EventReceivers/LobbyEVR.hpp"  "src/Game/GUI/GUI.hpp" "src/Gamemodes/Gamemodes.hpp" "src/Network/NetworkHandler.hpp" "src/Network/NetworkHandler.cpp" "src/Game/Player/Player.hpp" "src/Game/Player/Player.cpp" "src/Game/World/World.hpp" "src/Game/World/World.cpp" "src/Game/EventReceivers/InGameEVR.cpp" "src/Game/EventReceivers/LobbyEVR.cpp"  "src/Game/GUI/Lobby.cpp" "src/Tools/GUITools.hpp" "src/Tools/GUITools.cpp" "src/Game/GUI/Elements/SuperTable.hpp" "src/Game/GUI/Elements/SuperTable.cpp" "src/Game/GUI/helpers/helpers.hpp" "src/Game/GUI/helpers/helpers.cpp"  "src/SGE/SCamera.cpp" "src/Game/World/SPHSplash/Splatter.hpp" "src/Game/World/SPHSplash/Splatter.cpp"  "src/Tools/Translation/Translator.cpp" "src/Configurator.cpp" "src/compileConfig.h" "src/Game/Network/NetworkTools.cpp" "src/Game/GUI/Widgets.cpp" "src/SGE/Scripting.cpp" "src/SGE/IMGUIWrapper.cpp" "src/AI/Transcriber.cpp")
+add_executable (SisijaFight "src/main.cpp" "src/Gamemodes/ClassicFight.cpp" "src/SGE/SisijaGraphicsUnitSubsystem.cpp" "src/SGE/SGU-S.hpp" "lib/json.hpp" ${IRR_SRC} ${SOLOUD_SRC} ${PUGIXML_SRC} ${IBULLET_SRC} ${ENET_SRC} ${AS_SRC} ${GUI_SRC} ${OPENAI} "src/Game/Audio/Backend.hpp" "src/Game/Audio/Backend.cpp" "src/globals.hpp" "src/Game/Session.hpp" "src/Game/Session.cpp" "src/Game/EventReceivers/InGameEVR.hpp"  "src/Game/EventReceivers/LobbyEVR.hpp"  "src/Game/GUI/GUI.hpp" "src/Gamemodes/Gamemodes.hpp" "src/Network/NetworkHandler.hpp" "src/Network/NetworkHandler.cpp" "src/Game/Player/Player.hpp" "src/Game/Player/Player.cpp" "src/Game/World/World.hpp" "src/Game/World/World.cpp" "src/Game/EventReceivers/InGameEVR.cpp" "src/Game/EventReceivers/LobbyEVR.cpp"  "src/Game/GUI/Pages/Lobby/Lobby.cpp" "src/Tools/GUITools.hpp" "src/Tools/GUITools.cpp" "src/Game/GUI/Elements/SuperTable.hpp" "src/Game/GUI/Elements/SuperTable.cpp" "src/Game/GUI/helpers/helpers.hpp" "src/Game/GUI/helpers/helpers.cpp"  "src/SGE/SCamera.cpp" "src/Game/World/SPHSplash/Splatter.hpp" "src/Game/World/SPHSplash/Splatter.cpp"  "src/Tools/Translation/Translator.cpp" "src/Configurator.cpp" "src/compileConfig.h" "src/Game/Network/NetworkTools.cpp" "src/Game/GUI/Widgets.cpp" "src/SGE/Scripting.cpp" "src/SGE/IMGUIWrapper.cpp" "src/AI/Transcriber.cpp" "src/AI/GPT.cpp" "src/Game/GUI/Pages/Lobby/GameModeSelection.cpp" "src/Game/GUI/Pages/Lobby/ServerSelection.cpp" "src/Game/GUI/Pages/Lobby/WorldSelection.cpp" "src/Game/GUI/Pages/Chat/Chat.cpp")
 
 if(WIN32)
     target_link_libraries(SisijaFight wsock32 ws2_32)
@@ -148,3 +151,4 @@ endif()
 
 target_link_libraries(SisijaFight whisper)
 target_link_libraries(SisijaFight portaudio)
+target_link_libraries(SisijaFight CURL::libcurl)

@@ -4,12 +4,15 @@ var hierarchy =
     [ "GameMode", "dc/da8/class_game_mode.html", [
       [ "ClassicFight", "df/d9b/class_classic_fight.html", null ]
     ] ],
+    [ "GPTResponder", "db/dfc/class_g_p_t_responder.html", null ],
     [ "GUIClass", "de/d55/class_g_u_i_class.html", [
       [ "Lobby", "db/dd7/class_lobby.html", null ]
     ] ],
     [ "GUIElement", "db/d5e/class_g_u_i_element.html", [
       [ "GUIButton", "db/d66/class_g_u_i_button.html", null ],
+      [ "GUIGroup", "d7/d78/class_g_u_i_group.html", null ],
       [ "GUIImage", "d1/d27/class_g_u_i_image.html", null ],
+      [ "GUIRadioButton", "d1/dcc/class_g_u_i_radio_button.html", null ],
       [ "GUIWindow", "d4/d38/class_g_u_i_window.html", null ]
     ] ],
     [ "GUIEnvironment", "de/da7/class_g_u_i_environment.html", null ],

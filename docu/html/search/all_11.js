@@ -1,13 +1,9 @@
 var searchData=
 [
-  ['tag_0',['tag',['../d4/d58/struct_s_f_config.html#a08e254c4b1d05f9e255d305d47891ce6',1,'SFConfig']]],
-  ['target_1',['target',['../da/daa/struct_paintball.html#a8f7e359054da6d344d15cfb03c1d7eb1',1,'Paintball']]],
-  ['transcribe_2',['transcribe',['../d1/d05/class_whisper_transcriber.html#a3cac419c539d017072fd64028e31904d',1,'WhisperTranscriber']]],
-  ['transcriber_2ecpp_3',['Transcriber.cpp',['../d6/d88/_transcriber_8cpp.html',1,'']]],
-  ['transcriber_2ehpp_4',['Transcriber.hpp',['../d4/d17/_transcriber_8hpp.html',1,'']]],
-  ['translate_5',['translate',['../d3/d92/_g_u_i_8hpp.html#abb2832fff46b1326bbb9480dd50db007',1,'translate():&#160;GUI.hpp'],['../da/d98/namespacetranslator.html#a305c2b757c273e94e3d15960546f3e06',1,'translator::translate(std::string text)'],['../da/d98/namespacetranslator.html#ae2c2411f0171db3fc6e59e640a32a0f1',1,'translator::translate(wchar_t *text)']]],
-  ['translationfile_6',['translationFile',['../da/d98/namespacetranslator.html#a3ceba32ad43c7d3d3e1914f55c04f3e5',1,'translator']]],
-  ['translator_7',['translator',['../da/d98/namespacetranslator.html',1,'']]],
-  ['translator_2ecpp_8',['Translator.cpp',['../d7/d0c/_translator_8cpp.html',1,'']]],
-  ['translator_2ehpp_9',['Translator.hpp',['../da/dcc/_translator_8hpp.html',1,'']]]
+  ['r_0',['r',['../d9/d44/struct_color.html#a12b28b8a60c6add344b485d12e1d2168',1,'Color']]],
+  ['registerfunction_1',['registerFunction',['../d9/dcb/class_scripter_sub.html#a7afe89d196482f9435d661410fc4aefa',1,'ScripterSub']]],
+  ['registrytype_2',['RegistryType',['../db/daf/_scripting_8hpp.html#afe9c82c15e20af89ea9c02ea878a6b77',1,'Scripting.hpp']]],
+  ['remove_3',['remove',['../db/d5e/class_g_u_i_element.html#a13b0bdccd797f10cefef14d181571dab',1,'GUIElement']]],
+  ['removeobject_4',['removeObject',['../de/da7/class_g_u_i_environment.html#a7eb1316d72255436a1c8fc1dddfe9444',1,'GUIEnvironment']]],
+  ['rigidbody_5',['rigidBody',['../da/daa/struct_paintball.html#af6bd4a9eceacfbc7e5f42f3a1387dd36',1,'Paintball::rigidBody'],['../d3/d13/struct_scene_node_and_rigid_body.html#a01d6d8c2849cdc1c99148672af814c81',1,'SceneNodeAndRigidBody::rigidBody']]]
 ];

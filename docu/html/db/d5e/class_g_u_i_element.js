@@ -3,7 +3,7 @@ var class_g_u_i_element =
     [ "GUIElement", "db/d5e/class_g_u_i_element.html#a039ca1ec2cd382e36b4e0625bc2e5dc3", null ],
     [ "addCallback", "db/d5e/class_g_u_i_element.html#a82fefd8e188a8297ee03c24524c7ee2e", null ],
     [ "addChild", "db/d5e/class_g_u_i_element.html#aaeb6baf885f83d20e406ce2f497a8dfe", null ],
-    [ "draw", "db/d5e/class_g_u_i_element.html#a7654ac16a368633c81538f13b9299f63", null ],
+    [ "draw", "db/d5e/class_g_u_i_element.html#a4c8f72e584adac6fd2a2bc2ee627ad43", null ],
     [ "remove", "db/d5e/class_g_u_i_element.html#a13b0bdccd797f10cefef14d181571dab", null ],
     [ "setParent", "db/d5e/class_g_u_i_element.html#a45b3752a4730fce4898921696c61c91c", null ],
     [ "setText", "db/d5e/class_g_u_i_element.html#affb9974f9bd55e8ea09a14c973c18adc", null ],

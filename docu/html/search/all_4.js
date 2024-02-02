@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['decompressdata_0',['decompressData',['../d4/d5a/_network_handler_8cpp.html#ae9eb24e2ad394f25450114afcea26171',1,'NetworkHandler.cpp']]],
-  ['deleteall_1',['deleteAll',['../df/de6/class_paintball_simulator.html#a36a3354e5993d1bd1099d4fab3551e46',1,'PaintballSimulator']]],
-  ['description_2',['description',['../d2/d0e/structserver.html#a5d6d272211c059c8834500788c5f10f5',1,'server']]],
-  ['device_3',['device',['../d5/d82/globals_8hpp.html#a3f4aa71242d090e6f84100dbf2d69424',1,'device:&#160;main.cpp'],['../df/d0a/main_8cpp.html#a3f4aa71242d090e6f84100dbf2d69424',1,'device:&#160;main.cpp']]],
-  ['draw_4',['draw',['../d6/dd2/class_custom_table.html#a909c003c8785bdb30f8a9285f7a0d072',1,'CustomTable::draw()'],['../dd/d99/class_g_u_i_line.html#a4ef2ff110efd0166e2a6dcba94ca9bf1',1,'GUILine::draw()'],['../df/d2a/class_g_u_i_page.html#a9044c1149baf573a686bf9915b26bd31',1,'GUIPage::draw()'],['../de/d55/class_g_u_i_class.html#a190ed33f73de56c9c36f90a10c4f7702',1,'GUIClass::draw()'],['../db/dd7/class_lobby.html#aee99c730e1824ca6ba0dd90323a32242',1,'Lobby::draw()'],['../db/d5e/class_g_u_i_element.html#a7654ac16a368633c81538f13b9299f63',1,'GUIElement::draw()'],['../d4/d38/class_g_u_i_window.html#ac0da92120ad578921168f8fa2e864e7a',1,'GUIWindow::draw()'],['../db/d66/class_g_u_i_button.html#a4da7801a69c5b30a2e6fc413da739730',1,'GUIButton::draw()'],['../d1/d27/class_g_u_i_image.html#a48db30277f7459a28e85051b21bc395c',1,'GUIImage::draw()']]],
-  ['drawall_5',['drawAll',['../de/da7/class_g_u_i_environment.html#ade07a451bf3f954ef76ec06d0a01de0e',1,'GUIEnvironment']]]
+  ['b_0',['b',['../d9/d44/struct_color.html#a37683f9d882695ac49f945d52158055a',1,'Color']]],
+  ['backend_2ecpp_1',['Backend.cpp',['../d5/df3/_backend_8cpp.html',1,'']]],
+  ['backend_2ehpp_2',['Backend.hpp',['../d2/d99/_backend_8hpp.html',1,'']]]
 ];

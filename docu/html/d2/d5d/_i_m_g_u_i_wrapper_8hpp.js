@@ -2,6 +2,8 @@ var _i_m_g_u_i_wrapper_8hpp =
 [
     [ "GUIEnvironment", "de/da7/class_g_u_i_environment.html", "de/da7/class_g_u_i_environment" ],
     [ "GUIElement", "db/d5e/class_g_u_i_element.html", "db/d5e/class_g_u_i_element" ],
+    [ "GUIGroup", "d7/d78/class_g_u_i_group.html", "d7/d78/class_g_u_i_group" ],
+    [ "GUIRadioButton", "d1/dcc/class_g_u_i_radio_button.html", "d1/dcc/class_g_u_i_radio_button" ],
     [ "GUIWindow", "d4/d38/class_g_u_i_window.html", "d4/d38/class_g_u_i_window" ],
     [ "GUIButton", "db/d66/class_g_u_i_button.html", "db/d66/class_g_u_i_button" ],
     [ "GUIImage", "d1/d27/class_g_u_i_image.html", "d1/d27/class_g_u_i_image" ],
