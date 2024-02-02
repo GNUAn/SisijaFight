@@ -11,9 +11,29 @@ SisijaFight is a little bit different from other shooters:
 * Orderkiller: You get a Player to kill, if you have eliminated him, you get another one to kill untill you are dead
 * Story mode: play in different worlds and universes to free characters, wich will appear in the lobby to use!
  * so that's the way to get new players
- * 
+#### Features
+* Integrated Ai chat and speech controlling in Game
+* Real-time SPH color splash float simulation
+* Cross platform support
+* Addons
+* online multi-player support
+* Scripting for world maps
+#### Players
+* different dance moves
+* different guns and ammo
+##### Sisija
+* *Species:* Polar bear
+* The main character
+* The best character
+##### Kah
+* *Species:* Sneef-Viper
+* One of the Healer characters
+* One of the best characters
+* Needn't have a Paintball gun
+
 !!!Attention!!!
 this Game is in an early development state and currently unplayable!
+only the subsystem and some preimplementations of the main functions have currently been implemented
 
 ## Documentation
 * [Documentation](https://springtech-studios.github.io/SisijaFight/docu/html/index.html)
