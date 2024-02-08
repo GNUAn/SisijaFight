@@ -8,12 +8,19 @@
 #include <pugixml.hpp>
 #include <Irrlicht/CGUIMeshViewer.h>
 #include "Game/Session.hpp"
+#include "Game/Audio/Backend.hpp"
 
 /// @brief Creates the lobby elements
 /// @param dev the Irrlicht Device
 
 void Lobby::draw(GUIEnvironment* env) {
-	SetGUIThemeColor(ThemeColor::Red);
+
+	static Sound s;
+	s.loadSound("data/audio/music/Menu.ogg", true);
+	s.play();
+	s.setLooping(true);
+
+	//SetGUIThemeColor(ThemeColor::Blue);
 
 	GUIPage* gamemodeSelection = new GamemodeSelection();
 	gamemodeSelection->draw(env);

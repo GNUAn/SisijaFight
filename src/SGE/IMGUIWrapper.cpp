@@ -120,7 +120,7 @@ inline ImVec4 sc2imv4(irr::video::SColor c) {
 
 // Basic stuff
 inline ImVec2 ivec22imvec2(irr::core::recti size) {
-	return ImVec2(size.LowerRightCorner.X, size.LowerRightCorner.Y);
+	return ImVec2(size.LowerRightCorner.X - size.UpperLeftCorner.X, size.LowerRightCorner.Y - size.UpperLeftCorner.Y);
 }
 inline ImVec2 ivec22imvec2(irr::core::dimension2du size) {
 	return ImVec2(size.Width, size.Height);
@@ -138,7 +138,7 @@ GUIEnvironment::GUIEnvironment(irr::IrrlichtDevice* dev) {
 
 	ImGui::GetIO().IniFilename = NULL;  // Dont create InI files 
 
-	arialFont = pGUI->addFontFromFileTTF("data/fonts/arial.ttf", 22.0f);
+	arialFont = pGUI->addFontFromFileTTF("data/fonts/quantico.ttf", 28);
 	pGUI->compileFonts();
 
 }
@@ -249,7 +249,7 @@ void GUISameLineSeperator::draw() {
 }
 
 // Radio Button
-GUIRadioButton::GUIRadioButton(GUIEnvironment* env, int callbackNum, std::string text) : GUIElement(env, irr::core::recti()), callbackNum(callbackNum) {
+GUIRadioButton::GUIRadioButton(GUIEnvironment* env, irr::core::recti rect, int callbackNum, std::string text) : GUIElement(env, rect), callbackNum(callbackNum) {
 	_text = text;
 	env->addObject(this);
 }
@@ -257,7 +257,10 @@ GUIRadioButton::GUIRadioButton(GUIEnvironment* env, int callbackNum, std::string
 void GUIRadioButton::draw()
 {
 	if (visible) {
-		ImGui::RadioButton(_text.c_str(), _active);
+		ImGui::SetCursorPos(ivec2Pos2imvec2(_rect));
+		if (ImGui::RadioButton(_text.c_str(), &num, callbackNum)) {
+			callback(callbackNum);
+		}
 		GUIElement::draw();
 	}
 }
@@ -281,12 +284,12 @@ void GUIInvWindow::draw() {
 	ImGui::End();
 
 }
-
+#include <iostream>
 // Sidebar-Menu
 GUISidebarMenu::GUISidebarMenu(GUIEnvironment* env, SGUI_SIDEBAR_MENU_TYPE t, irr::core::recti size, int numRows, std::vector<std::string> names) : GUIElement(env, size) {
 	env->addObject(this);
 
-	int buttonWidth = (size.LowerRightCorner - size.UpperLeftCorner).X / numRows - 5*numRows-1;
+	int buttonWidth = (size.LowerRightCorner - size.UpperLeftCorner).X / numRows;
 	int buttonHeight = size.getHeight();
 
 	int bCount = 0;
@@ -296,7 +299,8 @@ GUISidebarMenu::GUISidebarMenu(GUIEnvironment* env, SGUI_SIDEBAR_MENU_TYPE t, ir
 	for (int i = 0; i < numRows; i++) {
 		GUIButton* b;
 		if (t == SGUI_SIDEBAR_UP) {
-			b = new GUIButton(env, irr::core::recti(size.UpperLeftCorner.X + bCount, size.UpperLeftCorner.Y, buttonWidth, buttonHeight), names[i]);
+			b = new GUIButton(env, irr::core::recti(size.UpperLeftCorner.X + bCount, size.UpperLeftCorner.Y, buttonWidth + size.UpperLeftCorner.X + bCount, buttonHeight), names[i]);
+			std::cout << size.UpperLeftCorner.X + bCount << std::endl;
 			bCount += buttonWidth;
 		}
 		else if(t==SGUI_SIDEBAR_LEFT) {
@@ -311,3 +315,64 @@ GUISidebarMenu::GUISidebarMenu(GUIEnvironment* env, SGUI_SIDEBAR_MENU_TYPE t, ir
 void GUISidebarMenu::draw() {
 	GUIElement::draw();
 }
+
+// RadioButtonGroup
+GUIRadioButtonGroup::GUIRadioButtonGroup(GUIEnvironment* env) : GUIGroup(env) {
+	GUIBTNN = 0;
+}
+
+void GUIRadioButtonGroup::draw(){
+	ImGui::BeginGroup();
+	for (auto b : btns) {
+		b->draw();
+	}
+	ImGui::EndGroup();
+}
+
+void GUIRadioButtonGroup::addRadioButton(GUIRadioButton* b) {
+	btns.push_back(b);
+	update();
+}
+
+void GUIRadioButtonGroup::update() {
+	for (auto b : btns) {
+		b->addCallback([this, b](int c) { callback(c); GUIBTNN = c; for (auto b : btns) { b->setNum(c); }});
+	}
+}
+
+// Slider
+GUISlider::GUISlider(GUIEnvironment* env, bool is_int_, bool vertical_, float from_, float to_, irr::core::recti pos) : GUIElement(env, pos), val(0), ival(0), from(from_), to(to_), is_int(is_int_), vertical(vertical_) {
+	env->addObject(this);
+}
+
+void GUISlider::draw() {
+	ImGui::SetCursorPos(ivec2Pos2imvec2(_rect));
+	if (vertical) {
+		if (is_int) {
+			if (ImGui::VSliderInt(_text.c_str(), ivec22imvec2(_rect), &ival, from, to)) {
+				_callback(ival);
+			}
+		}
+		else {
+			if (ImGui::VSliderFloat(_text.c_str(), ivec22imvec2(_rect), &val, from, to)) {
+				_callback(val);
+			}
+		}
+	}
+	else {
+		ImGui::PushItemWidth(ivec22imvec2(_rect).x);
+		if (is_int) {
+			if (ImGui::SliderInt(_text.c_str(), &ival, from, to)) {
+				_callback(ival);
+			}
+		}
+		else {
+			if (ImGui::SliderFloat(_text.c_str(), &val, from, to)) {
+				_callback(val);
+			}
+		}
+		ImGui::PopItemWidth();
+	}
+}
+
+// Text-Label

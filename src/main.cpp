@@ -27,7 +27,7 @@ int main() {
 	params.Stereobuffer = true;
 	params.Stencilbuffer = true;
 	params.DeviceType = EIDT_BEST;
-	params.Fullscreen = true;
+	params.Fullscreen = false;
 	params.DriverMultithreaded = false;
 	params.UsePerformanceTimer = true;
 	params.WithAlphaChannel = true;
@@ -35,8 +35,10 @@ int main() {
 	device = createDeviceEx(params);
 
 	device->setWindowCaption(L"SisijaFight");
-	device->setResizable(false);
+	device->setResizable(true);
 	device->maximizeWindow();
+
+	gSoloud.init();
 
 	guienv = new GUIEnvironment(device);
 
@@ -53,14 +55,7 @@ int main() {
 
 	Session->init();
 
-	gSoloud.init();
-
 	checkProcessor();
-
-	Sound s;
-	s.loadSound("test.ogg", true);
-	s.play();
-	s.setLooping(true);
 
 	while (device->run()) {
 		driver->beginScene(true, true, SColor(255, 0, 0, 0));

@@ -75,6 +75,9 @@ public:
 	inline virtual void addChild(GUIElement* e) {
 		children.push_back(e);
 	}
+	inline virtual void setPosition(irr::core::recti r) {
+		_rect = r;
+	}
 	inline virtual void setParent(GUIElement* p) {
 		p->addChild(this);
 		_env->removeObject(this);
@@ -98,10 +101,52 @@ protected:
 	bool visible = true;
 };
 
-class GUIGroup : public GUIElement{
+class GUIGroup : public GUIElement {
 public:
 	GUIGroup(GUIEnvironment* env);
 	void draw() override;
+};
+
+class GUIRadioButton : public GUIElement {
+public:
+	GUIRadioButton(GUIEnvironment* env, irr::core::recti rect, int callbackNum, std::string text);
+	void draw();
+	inline void addCallback(std::function<void(int c)> c) {
+		callback = c;
+	}
+	inline void setNum(int n) {
+		num = n;
+	}
+protected:
+	int callbackNum;
+	std::function<void(int c)> callback;
+	int num;
+	friend class GUIRadioButtonGroup;
+};
+
+class GUITextField : public GUIElement {
+public:
+	GUITextField(GUIEnvironment* env, irr::core::recti pos, bool useCFont = false, ImFont* overrideFont = nullptr);
+	void draw() override;
+	void setFont(ImFont* font);
+protected:
+	ImFont* _font;
+};
+
+class GUIRadioButtonGroup : public GUIGroup {
+public:
+	GUIRadioButtonGroup(GUIEnvironment* env);
+	void update();
+	void addRadioButton(GUIRadioButton* b);
+	inline void addCallback(std::function<void(int c)> c) {
+		callback = c;
+	}
+	void draw() override;
+	int GUIBTNN;
+private:
+	std::vector< GUIRadioButton* > btns;
+	std::function<void(int c)> callback;
+	friend class GUIRadioButton;
 };
 
 class GUISameLineSeperator : public GUIGroup {
@@ -112,12 +157,18 @@ protected:
 	int a, b;
 };
 
-class GUIRadioButton : public GUIElement{
+class GUISlider : public GUIElement {
 public:
-	GUIRadioButton(GUIEnvironment* env, int callbackNum, std::string text);
-	void draw();
+	GUISlider(GUIEnvironment* env, bool is_int, bool vertical, float from, float to, irr::core::recti pos);
+	inline void addCallback(std::function<void(float e)> cback) {
+		_callback = cback;
+	}
+	void draw() override;
 protected:
-	int callbackNum;
+	float val, from, to; 
+	int ival;
+	bool is_int, vertical;
+	std::function<void(float e)> _callback;
 };
 
 class GUIWindow : public GUIElement {

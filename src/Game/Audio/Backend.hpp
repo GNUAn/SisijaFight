@@ -5,6 +5,8 @@
 #include "soloud_wav.h"
 #include "soloud_wavstream.h"
 
+extern SoLoud::Soloud gSoloud;
+
 class Sound {
 public:
     Sound();
@@ -24,6 +26,3 @@ private:
     bool mIsStreamed;
     bool mIsLooping;
 };
-
-// Globale Instanz der SoLoud-Engine
-extern SoLoud::Soloud gSoloud;

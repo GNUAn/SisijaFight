@@ -4,10 +4,6 @@
 #include <string>
 #include "Translation/Translator.hpp"
 
-#define gettext(arg) translate(arg)
-
-#define _(arg) gettext(arg)
-
 SColor getNewColor();
 int p(int, int);
 float p(float, float);

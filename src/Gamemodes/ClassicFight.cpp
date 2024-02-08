@@ -3,8 +3,10 @@
 #include <extensions/IProgressbar.h>
 #include "../Game/GUI/GUI.hpp"
 
+using namespace translator;
+
 void ClassicFight::createInGameGUI(IGUIEnvironment* e) {
-	IGUIWindow* playerProperties = e->addWindow(recti(10,10,300,180), false, translate("Player properties").c_str());
+	IGUIWindow* playerProperties = e->addWindow(recti(10,10,300,180), false, stringToWString(translate("Player properties")).c_str());
 	playerProperties->setDrawBackground(true);
 
 	int scale = 18;

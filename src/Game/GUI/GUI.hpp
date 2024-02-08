@@ -5,10 +5,6 @@
 #include "../../Gamemodes/Gamemodes.hpp"
 #include "Elements/SuperTable.hpp"
 
-inline std::wstring translate(const std::string arg) {
-	return stringToWString(translator::translate(arg));
-}
-
 using namespace irr;
 
 class GUIPage {
