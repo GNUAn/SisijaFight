@@ -112,29 +112,73 @@ Inheritance diagram for GameMode:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a735029d7382c7b19fb71143e77956a43" id="r_a735029d7382c7b19fb71143e77956a43"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a735029d7382c7b19fb71143e77956a43">startGame</a> (<a class="el" href="../../d3/d21/class_world.html">World</a> *world, <a class="el" href="../../d8/d53/class_player.html">Player</a> *mainPlayer, IrrlichtDevice *dev)=0</td></tr>
-<tr class="separator:a735029d7382c7b19fb71143e77956a43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae602fcb6ec2330e89393539bdf2353cd" id="r_ae602fcb6ec2330e89393539bdf2353cd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae602fcb6ec2330e89393539bdf2353cd">handleNetwork</a> (nlohmann::json input)=0</td></tr>
-<tr class="separator:ae602fcb6ec2330e89393539bdf2353cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab643597113b464160d57bdd1dada41fc" id="r_ab643597113b464160d57bdd1dada41fc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab643597113b464160d57bdd1dada41fc">createGUI</a> (IGUIEnvironment *env)=0</td></tr>
-<tr class="separator:ab643597113b464160d57bdd1dada41fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a686ba6ba08bcc4b823e215cc2257a74d" id="r_a686ba6ba08bcc4b823e215cc2257a74d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a686ba6ba08bcc4b823e215cc2257a74d">createInGameGUI</a> (IGUIEnvironment *env)=0</td></tr>
-<tr class="separator:a686ba6ba08bcc4b823e215cc2257a74d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4499681cf47d0a43a92d0f240b0d542a" id="r_a4499681cf47d0a43a92d0f240b0d542a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4499681cf47d0a43a92d0f240b0d542a">hasGUI</a> ()=0</td></tr>
-<tr class="separator:a4499681cf47d0a43a92d0f240b0d542a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9704a9c891f5bd939d81557e5870d63f" id="r_a9704a9c891f5bd939d81557e5870d63f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9704a9c891f5bd939d81557e5870d63f">GameMode</a> (IrrlichtDevice *dev, <a class="el" href="../../de/da7/class_g_u_i_environment.html">GUIEnvironment</a> *env)</td></tr>
+<tr class="separator:a9704a9c891f5bd939d81557e5870d63f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae11a147ea308113bd37e52277a1475a4" id="r_ae11a147ea308113bd37e52277a1475a4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae11a147ea308113bd37e52277a1475a4">startGame</a> (<a class="el" href="../../d3/d21/class_world.html">World</a> *world, <a class="el" href="../../d8/d53/class_player.html">Player</a> *mainPlayer)=0</td></tr>
+<tr class="separator:ae11a147ea308113bd37e52277a1475a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35ac5839d51fed390f4105641e99b51e" id="r_a35ac5839d51fed390f4105641e99b51e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35ac5839d51fed390f4105641e99b51e">handleNetwork</a> (<a class="el" href="../../dd/d0c/_network_handler_8hpp.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a> input)</td></tr>
+<tr class="separator:a35ac5839d51fed390f4105641e99b51e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ee93407a8eaffa12f37a97d740037f4" id="r_a1ee93407a8eaffa12f37a97d740037f4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ee93407a8eaffa12f37a97d740037f4">preloadAll</a> ()</td></tr>
+<tr class="separator:a1ee93407a8eaffa12f37a97d740037f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa11435592031d53e843c6a15154e6325" id="r_aa11435592031d53e843c6a15154e6325"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa11435592031d53e843c6a15154e6325">createGUI</a> ()=0</td></tr>
+<tr class="separator:aa11435592031d53e843c6a15154e6325"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addd6d967633f65ba16d38739209863db" id="r_addd6d967633f65ba16d38739209863db"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addd6d967633f65ba16d38739209863db">createInGameGUI</a> ()=0</td></tr>
+<tr class="separator:addd6d967633f65ba16d38739209863db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af818cade73af59948bb01efaf85d8456" id="r_af818cade73af59948bb01efaf85d8456"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af818cade73af59948bb01efaf85d8456">handle</a> ()</td></tr>
+<tr class="separator:af818cade73af59948bb01efaf85d8456"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dd689c61a61a752dd322daa7923a138" id="r_a9dd689c61a61a752dd322daa7923a138"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9dd689c61a61a752dd322daa7923a138">hasGUI</a> ()</td></tr>
+<tr class="separator:a9dd689c61a61a752dd322daa7923a138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdc4010034648ca49e618ad8e60fb88c" id="r_acdc4010034648ca49e618ad8e60fb88c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdc4010034648ca49e618ad8e60fb88c">end</a> ()</td></tr>
+<tr class="separator:acdc4010034648ca49e618ad8e60fb88c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:acd17e82eba8e1c891fd937c57fc3c7dd" id="r_acd17e82eba8e1c891fd937c57fc3c7dd"><td class="memItemLeft" align="right" valign="top">IrrlichtDevice *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd17e82eba8e1c891fd937c57fc3c7dd">_device</a></td></tr>
 <tr class="separator:acd17e82eba8e1c891fd937c57fc3c7dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a646bde855aced3a8468e8ae2f50ce3a5" id="r_a646bde855aced3a8468e8ae2f50ce3a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/da7/class_g_u_i_environment.html">GUIEnvironment</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a646bde855aced3a8468e8ae2f50ce3a5">_guienv</a></td></tr>
+<tr class="separator:a646bde855aced3a8468e8ae2f50ce3a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e001771a1da575d9d1ef29fc2b297e4" id="r_a0e001771a1da575d9d1ef29fc2b297e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d53/class_player.html">Player</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e001771a1da575d9d1ef29fc2b297e4">_player</a></td></tr>
 <tr class="separator:a0e001771a1da575d9d1ef29fc2b297e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b4aefc9c8e2d620e6dd330347a421d0" id="r_a5b4aefc9c8e2d620e6dd330347a421d0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d8/d53/class_player.html">Player</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b4aefc9c8e2d620e6dd330347a421d0">_players</a></td></tr>
+<tr class="separator:a5b4aefc9c8e2d620e6dd330347a421d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae17322b71098cbda2e1cb61777e2c601" id="r_ae17322b71098cbda2e1cb61777e2c601"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/de1/class_network.html">Network</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae17322b71098cbda2e1cb61777e2c601">_networkClient</a></td></tr>
+<tr class="separator:ae17322b71098cbda2e1cb61777e2c601"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d286e766bcb6d09a906f010bd47c621" id="r_a8d286e766bcb6d09a906f010bd47c621"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d21/class_world.html">World</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d286e766bcb6d09a906f010bd47c621">_world</a></td></tr>
 <tr class="separator:a8d286e766bcb6d09a906f010bd47c621"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a9704a9c891f5bd939d81557e5870d63f" name="a9704a9c891f5bd939d81557e5870d63f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9704a9c891f5bd939d81557e5870d63f">&#9670;&#160;</a></span>GameMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameMode::GameMode </td>
+          <td>(</td>
+          <td class="paramtype">IrrlichtDevice *</td>          <td class="paramname"><span class="paramname"><em>dev</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../de/da7/class_g_u_i_environment.html">GUIEnvironment</a> *</td>          <td class="paramname"><span class="paramname"><em>env</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab643597113b464160d57bdd1dada41fc" name="ab643597113b464160d57bdd1dada41fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab643597113b464160d57bdd1dada41fc">&#9670;&#160;</a></span>createGUI()</h2>
+<a id="aa11435592031d53e843c6a15154e6325" name="aa11435592031d53e843c6a15154e6325"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa11435592031d53e843c6a15154e6325">&#9670;&#160;</a></span>createGUI()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -145,7 +189,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">virtual void GameMode::createGUI </td>
           <td>(</td>
-          <td class="paramtype">IGUIEnvironment *</td>          <td class="paramname"><span class="paramname"><em>env</em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -158,8 +202,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a686ba6ba08bcc4b823e215cc2257a74d" name="a686ba6ba08bcc4b823e215cc2257a74d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a686ba6ba08bcc4b823e215cc2257a74d">&#9670;&#160;</a></span>createInGameGUI()</h2>
+<a id="addd6d967633f65ba16d38739209863db" name="addd6d967633f65ba16d38739209863db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addd6d967633f65ba16d38739209863db">&#9670;&#160;</a></span>createInGameGUI()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -170,7 +214,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">virtual void GameMode::createInGameGUI </td>
           <td>(</td>
-          <td class="paramtype">IGUIEnvironment *</td>          <td class="paramname"><span class="paramname"><em>env</em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -183,8 +227,58 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae602fcb6ec2330e89393539bdf2353cd" name="ae602fcb6ec2330e89393539bdf2353cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae602fcb6ec2330e89393539bdf2353cd">&#9670;&#160;</a></span>handleNetwork()</h2>
+<a id="acdc4010034648ca49e618ad8e60fb88c" name="acdc4010034648ca49e618ad8e60fb88c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdc4010034648ca49e618ad8e60fb88c">&#9670;&#160;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameMode::end </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af818cade73af59948bb01efaf85d8456" name="af818cade73af59948bb01efaf85d8456"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af818cade73af59948bb01efaf85d8456">&#9670;&#160;</a></span>handle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameMode::handle </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35ac5839d51fed390f4105641e99b51e" name="a35ac5839d51fed390f4105641e99b51e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35ac5839d51fed390f4105641e99b51e">&#9670;&#160;</a></span>handleNetwork()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -195,21 +289,21 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">virtual void GameMode::handleNetwork </td>
           <td>(</td>
-          <td class="paramtype">nlohmann::json</td>          <td class="paramname"><span class="paramname"><em>input</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../dd/d0c/_network_handler_8hpp.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></td>          <td class="paramname"><span class="paramname"><em>input</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a4499681cf47d0a43a92d0f240b0d542a" name="a4499681cf47d0a43a92d0f240b0d542a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4499681cf47d0a43a92d0f240b0d542a">&#9670;&#160;</a></span>hasGUI()</h2>
+<a id="a9dd689c61a61a752dd322daa7923a138" name="a9dd689c61a61a752dd322daa7923a138"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dd689c61a61a752dd322daa7923a138">&#9670;&#160;</a></span>hasGUI()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -226,15 +320,40 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a735029d7382c7b19fb71143e77956a43" name="a735029d7382c7b19fb71143e77956a43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a735029d7382c7b19fb71143e77956a43">&#9670;&#160;</a></span>startGame()</h2>
+<a id="a1ee93407a8eaffa12f37a97d740037f4" name="a1ee93407a8eaffa12f37a97d740037f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ee93407a8eaffa12f37a97d740037f4">&#9670;&#160;</a></span>preloadAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameMode::preloadAll </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae11a147ea308113bd37e52277a1475a4" name="ae11a147ea308113bd37e52277a1475a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae11a147ea308113bd37e52277a1475a4">&#9670;&#160;</a></span>startGame()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -250,12 +369,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d8/d53/class_player.html">Player</a> *</td>          <td class="paramname"><span class="paramname"><em>mainPlayer</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">IrrlichtDevice *</td>          <td class="paramname"><span class="paramname"><em>dev</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d8/d53/class_player.html">Player</a> *</td>          <td class="paramname"><span class="paramname"><em>mainPlayer</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -290,6 +404,50 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a646bde855aced3a8468e8ae2f50ce3a5" name="a646bde855aced3a8468e8ae2f50ce3a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a646bde855aced3a8468e8ae2f50ce3a5">&#9670;&#160;</a></span>_guienv</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/da7/class_g_u_i_environment.html">GUIEnvironment</a>* GameMode::_guienv</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae17322b71098cbda2e1cb61777e2c601" name="ae17322b71098cbda2e1cb61777e2c601"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae17322b71098cbda2e1cb61777e2c601">&#9670;&#160;</a></span>_networkClient</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/de1/class_network.html">Network</a>* GameMode::_networkClient</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a0e001771a1da575d9d1ef29fc2b297e4" name="a0e001771a1da575d9d1ef29fc2b297e4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0e001771a1da575d9d1ef29fc2b297e4">&#9670;&#160;</a></span>_player</h2>
 
@@ -301,6 +459,28 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="../../d8/d53/class_player.html">Player</a>* GameMode::_player</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5b4aefc9c8e2d620e6dd330347a421d0" name="a5b4aefc9c8e2d620e6dd330347a421d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b4aefc9c8e2d620e6dd330347a421d0">&#9670;&#160;</a></span>_players</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="../../d8/d53/class_player.html">Player</a>*&gt; GameMode::_players</td>
         </tr>
       </table>
   </td>
@@ -334,8 +514,9 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/Gamemodes/<a class="el" href="../../d7/dd0/_gamemodes_8hpp_source.html">Gamemodes.hpp</a></li>
+<li>src/Gamemodes/<a class="el" href="../../de/dca/_gamemodes_8cpp.html">Gamemodes.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

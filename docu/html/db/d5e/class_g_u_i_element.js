@@ -1,12 +1,14 @@
 var class_g_u_i_element =
 [
     [ "GUIElement", "db/d5e/class_g_u_i_element.html#a039ca1ec2cd382e36b4e0625bc2e5dc3", null ],
+    [ "~GUIElement", "db/d5e/class_g_u_i_element.html#a96d6728fa2a9e92a5a0fe6481dfcae15", null ],
     [ "addCallback", "db/d5e/class_g_u_i_element.html#a82fefd8e188a8297ee03c24524c7ee2e", null ],
     [ "addChild", "db/d5e/class_g_u_i_element.html#aaeb6baf885f83d20e406ce2f497a8dfe", null ],
     [ "draw", "db/d5e/class_g_u_i_element.html#a4c8f72e584adac6fd2a2bc2ee627ad43", null ],
     [ "remove", "db/d5e/class_g_u_i_element.html#a13b0bdccd797f10cefef14d181571dab", null ],
     [ "setActive", "db/d5e/class_g_u_i_element.html#a6eb218e22cddb5039281f6d69cfee250", null ],
     [ "setParent", "db/d5e/class_g_u_i_element.html#a45b3752a4730fce4898921696c61c91c", null ],
+    [ "setPosition", "db/d5e/class_g_u_i_element.html#ade3ebf3bbd088d7869f5914a8971035f", null ],
     [ "setText", "db/d5e/class_g_u_i_element.html#affb9974f9bd55e8ea09a14c973c18adc", null ],
     [ "setVisible", "db/d5e/class_g_u_i_element.html#ae35bc07f8a7896151caa62a51acaacea", null ],
     [ "_active", "db/d5e/class_g_u_i_element.html#ab9949f41808cbaeaae5bebd4b81971f6", null ],

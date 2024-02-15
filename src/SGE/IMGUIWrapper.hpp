@@ -61,6 +61,9 @@ public:
 	inline GUIElement(GUIEnvironment* env, irr::core::recti rect) : _env(env), _rect(rect) {
 		// ...
 	}
+	inline ~GUIElement() {
+		_env->removeObject(this);
+	}
 	inline virtual void draw(){
 		for (auto c : children) {
 			c->draw();
@@ -124,9 +127,9 @@ protected:
 	friend class GUIRadioButtonGroup;
 };
 
-class GUITextField : public GUIElement {
+class GUITextLabel : public GUIElement {
 public:
-	GUITextField(GUIEnvironment* env, irr::core::recti pos, bool useCFont = false, ImFont* overrideFont = nullptr);
+	GUITextLabel(GUIEnvironment* env, irr::core::recti pos, bool useCFont = false, ImFont* overrideFont = nullptr);
 	void draw() override;
 	void setFont(ImFont* font);
 protected:

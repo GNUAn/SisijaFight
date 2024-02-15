@@ -6,27 +6,44 @@
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <json.hpp>}}
 \DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_player_8hpp}{../Game/Player/Player.hpp}}"{}}}
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_world_8hpp}{../Game/World/World.hpp}}"{}}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_s_g_u-_s_8hpp}{../SGE/SGU-\/S.hpp}}"{}}}
-\DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_mode}{GameMode}}\ \{}
-\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_mode_a735029d7382c7b19fb71143e77956a43}{startGame}}(\mbox{\hyperlink{class_world}{World}}*\ world,\ \mbox{\hyperlink{class_player}{Player}}*\ mainPlayer,\ IrrlichtDevice*\ dev)=0;}
-\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_mode_ae602fcb6ec2330e89393539bdf2353cd}{handleNetwork}}(nlohmann::json\ input)=0;}
-\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_mode_ab643597113b464160d57bdd1dada41fc}{createGUI}}(IGUIEnvironment*\ env)=0;}
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_mode_a686ba6ba08bcc4b823e215cc2257a74d}{createInGameGUI}}(IGUIEnvironment*\ env)\ =\ 0;}
-\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_mode_a4499681cf47d0a43a92d0f240b0d542a}{hasGUI}}()=0;}
-\DoxyCodeLine{00014\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00015\ \ \ \ \ IrrlichtDevice*\ \mbox{\hyperlink{class_game_mode_acd17e82eba8e1c891fd937c57fc3c7dd}{\_device}};}
-\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}*\ \mbox{\hyperlink{class_game_mode_a0e001771a1da575d9d1ef29fc2b297e4}{\_player}};}
-\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_world}{World}}*\ \mbox{\hyperlink{class_game_mode_a8d286e766bcb6d09a906f010bd47c621}{\_world}};}
-\DoxyCodeLine{00018\ \};}
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_classic_fight}{ClassicFight}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_mode}{GameMode}}\{}
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ startGame(\mbox{\hyperlink{class_world}{World}}*\ world,\ \mbox{\hyperlink{class_player}{Player}}*\ mainPlayer,\ IrrlichtDevice*\ dev)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ handleNetwork(nlohmann::json\ input)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ createGUI(IGUIEnvironment*\ env)\ \{\};}
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ createInGameGUI(IGUIEnvironment*\ env)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ hasGUI()\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \}}
-\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_network_handler_8hpp}{Network/NetworkHandler.hpp}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_s_g_u-_s_8hpp}{../SGE/SGU-\/S.hpp}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_mode}{GameMode}}\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{inline}\ \mbox{\hyperlink{class_game_mode_a9704a9c891f5bd939d81557e5870d63f}{GameMode}}(IrrlichtDevice*\ dev,\ \mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env)\ :\ \ \mbox{\hyperlink{class_game_mode_acd17e82eba8e1c891fd937c57fc3c7dd}{\_device}}(dev),\ \mbox{\hyperlink{class_game_mode_a646bde855aced3a8468e8ae2f50ce3a5}{\_guienv}}(env)\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_mode_ae17322b71098cbda2e1cb61777e2c601}{\_networkClient}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_network}{Network}}();}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_mode_ae17322b71098cbda2e1cb61777e2c601}{\_networkClient}}-\/>\mbox{\hyperlink{class_network_af84470d4ef4545b215ca00cf7bcfe585}{addCallback}}([\&,\ \textcolor{keyword}{this}](\mbox{\hyperlink{_network_handler_8hpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}}\ in)\ \{\ \mbox{\hyperlink{class_game_mode_a35ac5839d51fed390f4105641e99b51e}{handleNetwork}}(in);\ \});}
+\DoxyCodeLine{00013\ \ \ \ \ \}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_mode_ae11a147ea308113bd37e52277a1475a4}{startGame}}(\mbox{\hyperlink{class_world}{World}}*\ world,\ \mbox{\hyperlink{class_player}{Player}}*\ mainPlayer)=0;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_mode_a35ac5839d51fed390f4105641e99b51e}{handleNetwork}}(\mbox{\hyperlink{_network_handler_8hpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}}\ input)\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (input.contains(\textcolor{stringliteral}{"{}CLIENTID"{}}))\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_network_handler_8hpp_a2e938cd63a2404d0902c57205706872a}{clientID}}\ =\ input[\textcolor{stringliteral}{"{}CLIENTID"{}}].get<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \_player-\/>setID(clientID);}}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_mode_a1ee93407a8eaffa12f37a97d740037f4}{preloadAll}}();}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_mode_aa11435592031d53e843c6a15154e6325}{createGUI}}()=0;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_mode_addd6d967633f65ba16d38739209863db}{createInGameGUI}}()\ =\ 0;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_mode_af818cade73af59948bb01efaf85d8456}{handle}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_mode_a9dd689c61a61a752dd322daa7923a138}{hasGUI}}()\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_mode_acdc4010034648ca49e618ad8e60fb88c}{end}}();}
+\DoxyCodeLine{00027\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00028\ \ \ \ \ IrrlichtDevice*\ \mbox{\hyperlink{class_game_mode_acd17e82eba8e1c891fd937c57fc3c7dd}{\_device}};}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ \mbox{\hyperlink{class_game_mode_a646bde855aced3a8468e8ae2f50ce3a5}{\_guienv}};}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}*\ \mbox{\hyperlink{class_game_mode_a0e001771a1da575d9d1ef29fc2b297e4}{\_player}};}
+\DoxyCodeLine{00031\ \ \ \ \ std::vector<Player*>\ \mbox{\hyperlink{class_game_mode_a5b4aefc9c8e2d620e6dd330347a421d0}{\_players}};}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_network}{Network}}*\ \mbox{\hyperlink{class_game_mode_ae17322b71098cbda2e1cb61777e2c601}{\_networkClient}};}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_world}{World}}*\ \mbox{\hyperlink{class_game_mode_a8d286e766bcb6d09a906f010bd47c621}{\_world}};}
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_classic_fight}{ClassicFight}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_mode}{GameMode}}}
+\DoxyCodeLine{00037\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{inline}\ \mbox{\hyperlink{class_classic_fight}{ClassicFight}}(IrrlichtDevice*\ dev,\ \mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env)\ :\ \mbox{\hyperlink{class_game_mode_a9704a9c891f5bd939d81557e5870d63f}{GameMode}}(dev,\ env)\ \{\}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ startGame(\mbox{\hyperlink{class_world}{World}}*\ world,\ \mbox{\hyperlink{class_player}{Player}}*\ mainPlayer)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ handleNetwork(nlohmann::json\ input)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ createInGameGUI()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ hasGUI()\textcolor{keyword}{\ override\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00043\ \};}
 
 \end{DoxyCode}

@@ -1,5 +1,5 @@
 #include "Session.hpp"
-#include "Network/NetworkHandler.hpp"
+#include "Network/NetworkManager.hpp"
 #include "EventReceivers/LobbyEVR.hpp"
 #include "EventReceivers/InGameEVR.hpp"
 #include "globals.hpp"
@@ -32,7 +32,7 @@ void SFSession::init() {
 void SFSession::startGame(LobbyReturnCode c, bool isGMGUIDone) {
 	this->_gamemode = c.gamemode;
 	if (_gamemode->hasGUI() && isGMGUIDone) {
-		_gamemode->createGUI(_device->getGUIEnvironment());
+		_gamemode->createGUI();
 	}
 	else {
 		startGameInternal(c);
@@ -41,9 +41,7 @@ void SFSession::startGame(LobbyReturnCode c, bool isGMGUIDone) {
 
 /// @brief End the game and clear RAM
 void SFSession::endGame() {
-	delete _world;
-	delete _mainplayer;
-	_network->end();
+	_gamemode->end();
 }
 
 /// @brief 
@@ -51,10 +49,10 @@ void SFSession::endGame() {
 void SFSession::startGameInternal(LobbyReturnCode c) {
 	game = true;
 	this->setEventReceiver(S_EVR_GAME);
-	this->_world = new World(_device, c.worldPath);
-	this->_world->loadEntities();
-	this->_network->startNetwork(c.serverAddress, SF_STANDARD_NETWORK_PORT);
-	this->_gamemode->startGame(_world, _mainplayer, _device);
+	World* _world = new World(_device, c.worldPath);
+	_world->loadEntities();
+	Player* _mainplayer = new Player(NULL, NULL, NULL, nullptr, nullptr, true);
+	this->_gamemode->startGame(_world, _mainplayer);
 }
 void SFSession::setEventReceiver(S_EVR_CODE c) {
 	switch (c) {
@@ -65,4 +63,9 @@ void SFSession::setEventReceiver(S_EVR_CODE c) {
 	case S_EVR_GAME:
 		break;
 	}
+}
+
+void SFSession::loopRoutine() {
+	_gamemode->handle();
+	netmngr->handle();
 }

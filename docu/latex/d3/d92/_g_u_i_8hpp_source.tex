@@ -9,37 +9,33 @@
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_gamemodes_8hpp}{../../Gamemodes/Gamemodes.hpp}}"{}}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_super_table_8hpp}{Elements/SuperTable.hpp}}"{}}}
 \DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{keyword}{inline}\ std::wstring\ \mbox{\hyperlink{_g_u_i_8hpp_abb2832fff46b1326bbb9480dd50db007}{translate}}(\textcolor{keyword}{const}\ std::string\ arg)\ \{}
-\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{_g_u_i_tools_8cpp_a268235fc7077e49fb7623d477c5005ef}{stringToWString}}(\mbox{\hyperlink{namespacetranslator_a305c2b757c273e94e3d15960546f3e06}{translator::translate}}(arg));}
-\DoxyCodeLine{00010\ \}}
-\DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \textcolor{keyword}{using\ namespace\ }irr;}
-\DoxyCodeLine{00013\ }
-\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_page}{GUIPage}}\ \{}
-\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00016\ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_page_a353f48fd582710bc7d5861070a367a71}{draw}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ dev)=0;}
-\DoxyCodeLine{00017\ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_g_u_i_page_a1153bca340605497226d70b51b7b228e}{isFinished}}()\ \{}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_g_u_i_page_abb68f2a4b000cf9730a8ab648d7562b0}{finished}};}
-\DoxyCodeLine{00019\ \ \ \ \ \ \};}
-\DoxyCodeLine{00020\ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_page_ac47d64122823de10363af8227b312817}{onFinish}}(std::function<\textcolor{keywordtype}{void}()>\ f)\ \{}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_u_i_page_ac378fe8995f20cfbf0b04892710fee99}{end}}\ =\ f;}
-\DoxyCodeLine{00022\ \ \ \ \ \ \}}
-\DoxyCodeLine{00023\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00024\ \ \ \ \ std::function<void()>\ \mbox{\hyperlink{class_g_u_i_page_ac378fe8995f20cfbf0b04892710fee99}{end}};}
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_g_u_i_page_abb68f2a4b000cf9730a8ab648d7562b0}{finished}}\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_page_a09f8e0757c7221763ded6cc7469a8061}{finish}}()\ \{}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_u_i_page_abb68f2a4b000cf9730a8ab648d7562b0}{finished}}\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_u_i_page_ac378fe8995f20cfbf0b04892710fee99}{end}}();}
-\DoxyCodeLine{00029\ \ \ \ \ \}}
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }irr;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_page}{GUIPage}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_page_a353f48fd582710bc7d5861070a367a71}{draw}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ dev)=0;}
+\DoxyCodeLine{00013\ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_g_u_i_page_a1153bca340605497226d70b51b7b228e}{isFinished}}()\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_g_u_i_page_abb68f2a4b000cf9730a8ab648d7562b0}{finished}};}
+\DoxyCodeLine{00015\ \ \ \ \ \ \};}
+\DoxyCodeLine{00016\ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_page_ac47d64122823de10363af8227b312817}{onFinish}}(std::function<\textcolor{keywordtype}{void}()>\ f)\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_u_i_page_ac378fe8995f20cfbf0b04892710fee99}{end}}\ =\ f;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \}}
+\DoxyCodeLine{00019\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00020\ \ \ \ \ std::function<void()>\ \mbox{\hyperlink{class_g_u_i_page_ac378fe8995f20cfbf0b04892710fee99}{end}};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_g_u_i_page_abb68f2a4b000cf9730a8ab648d7562b0}{finished}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_page_a09f8e0757c7221763ded6cc7469a8061}{finish}}()\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_u_i_page_abb68f2a4b000cf9730a8ab648d7562b0}{finished}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_u_i_page_ac378fe8995f20cfbf0b04892710fee99}{end}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \}}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_class}{GUIClass}}\ \{}
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_class_a190ed33f73de56c9c36f90a10c4f7702}{draw}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env)=0;}
 \DoxyCodeLine{00030\ \};}
-\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_class}{GUIClass}}\ \{}
-\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00033\ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_class_a190ed33f73de56c9c36f90a10c4f7702}{draw}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env)=0;}
-\DoxyCodeLine{00034\ \};}
-\DoxyCodeLine{00035\ }
-\DoxyCodeLine{00037\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_widget}{GUIWidget}}\ \{}
-\DoxyCodeLine{00038\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_widget_a1d9338dcc0ff10fab47d928f243c8fd9}{draw}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env)=0;}
-\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_widget}{GUIWidget}}\ \{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_widget_a1d9338dcc0ff10fab47d928f243c8fd9}{draw}}(\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}*\ env)=0;}
+\DoxyCodeLine{00036\ \};}
 
 \end{DoxyCode}

@@ -5,5 +5,6 @@ var class_s_f_session =
     [ "gamemode", "d3/dea/class_s_f_session.html#a994a79fb9c61df636fa0a5f10cd420a3", null ],
     [ "init", "d3/dea/class_s_f_session.html#a01648f5ead7a35f13e18e3e165306da0", null ],
     [ "lobby", "d3/dea/class_s_f_session.html#ac8b59254fa9edebc550bd5bf844ae06a", null ],
+    [ "loopRoutine", "d3/dea/class_s_f_session.html#a63f2a1c9de9d34b320b3001475dc1f8e", null ],
     [ "startGame", "d3/dea/class_s_f_session.html#a2a27f488b84db0bd13a15f246ec338a1", null ]
 ];

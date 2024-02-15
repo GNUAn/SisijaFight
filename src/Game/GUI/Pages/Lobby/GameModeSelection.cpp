@@ -19,7 +19,8 @@ void GamemodeSelection::draw(GUIEnvironment* env) {
 	GUIRadioButton* b4 = new GUIRadioButton(env, s_rect(18, 20, 100, 100), 3, translate("Orderkiller"));
 	bg->addRadioButton(b4);
 
-
+	GUITextLabel* lab = new GUITextLabel(env, s_rect(15, 36, 100, 100));
+	lab->setText(translate("difficulty:"));
 	GUISlider* difficulty = new GUISlider(env, false, false, 1, 5, s_rect(15, 40, 70, 6));
 	difficulty->addCallback([](float v) {});
 

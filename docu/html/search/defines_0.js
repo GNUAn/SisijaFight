@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['_5f_0',['_',['../dd/df8/_game_mode_selection_8cpp.html#a8cc25fef9449102f0d45c080136dad0e',1,'_:&#160;GameModeSelection.cpp'],['../d9/d1f/_g_u_i_tools_8hpp.html#a8cc25fef9449102f0d45c080136dad0e',1,'_:&#160;GUITools.hpp']]]
+  ['particle_5fdistance_0',['PARTICLE_DISTANCE',['../d5/dc8/_splatter_8hpp.html#aa4c8c0bfe709a40904ae6992b50bbebc',1,'Splatter.hpp']]],
+  ['particle_5fnumber_5fper_5fsplash_1',['PARTICLE_NUMBER_PER_SPLASH',['../d5/dc8/_splatter_8hpp.html#a64dbccc85b4694fc914db28668bf47f5',1,'Splatter.hpp']]]
 ];

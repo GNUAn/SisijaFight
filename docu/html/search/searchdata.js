@@ -5,12 +5,12 @@ var indexSectionsWithContent =
   2: "t",
   3: "_bcghilmnpstw",
   4: "acdefghilmoprstuw~",
-  5: "_abcdefgilmnprstvw",
-  6: "jnpx",
+  5: "_abcdefghilmnprstvw",
+  6: "jlnpx",
   7: "grstw",
   8: "bgrswy",
-  9: "pw",
-  10: "_gpsw",
+  9: "gpw",
+  10: "psw",
   11: "01s"
 };
 

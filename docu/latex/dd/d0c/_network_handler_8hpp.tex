@@ -4,16 +4,39 @@
 {\ttfamily \#include $<$string$>$}\newline
 {\ttfamily \#include $<$thread$>$}\newline
 {\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$json.\+hpp$>$}\newline
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{class_network}{Network}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{_network_handler_8hpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} = nlohmann\+::json
+\item 
+typedef std\+::function$<$ void(\mbox{\hyperlink{_network_handler_8hpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} data)$>$ \mbox{\hyperlink{_network_handler_8hpp_ae207b65204b9c3ce7203f007db3d6f1f}{lambda\+\_\+callback\+\_\+packet}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{_network_handler_8hpp_a2e938cd63a2404d0902c57205706872a}{client\+ID}}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{_network_handler_8hpp_ab701e3ac61a85b337ec5c1abaad6742d}\label{_network_handler_8hpp_ab701e3ac61a85b337ec5c1abaad6742d} 
+\index{NetworkHandler.hpp@{NetworkHandler.hpp}!json@{json}}
+\index{json@{json}!NetworkHandler.hpp@{NetworkHandler.hpp}}
+\doxysubsubsection{\texorpdfstring{json}{json}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_network_handler_8hpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} = nlohmann\+::json}
+
+\Hypertarget{_network_handler_8hpp_ae207b65204b9c3ce7203f007db3d6f1f}\label{_network_handler_8hpp_ae207b65204b9c3ce7203f007db3d6f1f} 
+\index{NetworkHandler.hpp@{NetworkHandler.hpp}!lambda\_callback\_packet@{lambda\_callback\_packet}}
+\index{lambda\_callback\_packet@{lambda\_callback\_packet}!NetworkHandler.hpp@{NetworkHandler.hpp}}
+\doxysubsubsection{\texorpdfstring{lambda\_callback\_packet}{lambda\_callback\_packet}}
+{\footnotesize\ttfamily typedef std\+::function$<$void(\mbox{\hyperlink{_network_handler_8hpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} data)$>$ \mbox{\hyperlink{_network_handler_8hpp_ae207b65204b9c3ce7203f007db3d6f1f}{lambda\+\_\+callback\+\_\+packet}}}
+
 
 
 \doxysubsection{Variable Documentation}

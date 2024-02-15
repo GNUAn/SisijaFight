@@ -13,57 +13,98 @@ Inheritance diagram for Game\+Mode\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual void \mbox{\hyperlink{class_game_mode_a735029d7382c7b19fb71143e77956a43}{start\+Game}} (\mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}world, \mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}main\+Player, Irrlicht\+Device \texorpdfstring{$\ast$}{*}dev)=0
+\mbox{\hyperlink{class_game_mode_a9704a9c891f5bd939d81557e5870d63f}{Game\+Mode}} (Irrlicht\+Device \texorpdfstring{$\ast$}{*}dev, \mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}} \texorpdfstring{$\ast$}{*}env)
 \item 
-virtual void \mbox{\hyperlink{class_game_mode_ae602fcb6ec2330e89393539bdf2353cd}{handle\+Network}} (nlohmann\+::json input)=0
+virtual void \mbox{\hyperlink{class_game_mode_ae11a147ea308113bd37e52277a1475a4}{start\+Game}} (\mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}world, \mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}main\+Player)=0
 \item 
-virtual void \mbox{\hyperlink{class_game_mode_ab643597113b464160d57bdd1dada41fc}{create\+GUI}} (IGUIEnvironment \texorpdfstring{$\ast$}{*}env)=0
+virtual void \mbox{\hyperlink{class_game_mode_a35ac5839d51fed390f4105641e99b51e}{handle\+Network}} (\mbox{\hyperlink{_network_handler_8hpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} input)
 \item 
-virtual void \mbox{\hyperlink{class_game_mode_a686ba6ba08bcc4b823e215cc2257a74d}{create\+In\+Game\+GUI}} (IGUIEnvironment \texorpdfstring{$\ast$}{*}env)=0
+virtual void \mbox{\hyperlink{class_game_mode_a1ee93407a8eaffa12f37a97d740037f4}{preload\+All}} ()
 \item 
-virtual bool \mbox{\hyperlink{class_game_mode_a4499681cf47d0a43a92d0f240b0d542a}{has\+GUI}} ()=0
+virtual void \mbox{\hyperlink{class_game_mode_aa11435592031d53e843c6a15154e6325}{create\+GUI}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_game_mode_addd6d967633f65ba16d38739209863db}{create\+In\+Game\+GUI}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_game_mode_af818cade73af59948bb01efaf85d8456}{handle}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_game_mode_a9dd689c61a61a752dd322daa7923a138}{has\+GUI}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_mode_acdc4010034648ca49e618ad8e60fb88c}{end}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 Irrlicht\+Device \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_mode_acd17e82eba8e1c891fd937c57fc3c7dd}{\+\_\+device}}
 \item 
+\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_mode_a646bde855aced3a8468e8ae2f50ce3a5}{\+\_\+guienv}}
+\item 
 \mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_mode_a0e001771a1da575d9d1ef29fc2b297e4}{\+\_\+player}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_game_mode_a5b4aefc9c8e2d620e6dd330347a421d0}{\+\_\+players}}
+\item 
+\mbox{\hyperlink{class_network}{Network}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_mode_ae17322b71098cbda2e1cb61777e2c601}{\+\_\+network\+Client}}
 \item 
 \mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_mode_a8d286e766bcb6d09a906f010bd47c621}{\+\_\+world}}
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game_mode_a9704a9c891f5bd939d81557e5870d63f}\label{class_game_mode_a9704a9c891f5bd939d81557e5870d63f} 
+\index{GameMode@{GameMode}!GameMode@{GameMode}}
+\index{GameMode@{GameMode}!GameMode@{GameMode}}
+\doxysubsubsection{\texorpdfstring{GameMode()}{GameMode()}}
+{\footnotesize\ttfamily Game\+Mode\+::\+Game\+Mode (\begin{DoxyParamCaption}\item[{Irrlicht\+Device \texorpdfstring{$\ast$}{*}}]{dev,  }\item[{\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}} \texorpdfstring{$\ast$}{*}}]{env }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_game_mode_ab643597113b464160d57bdd1dada41fc}\label{class_game_mode_ab643597113b464160d57bdd1dada41fc} 
+\Hypertarget{class_game_mode_aa11435592031d53e843c6a15154e6325}\label{class_game_mode_aa11435592031d53e843c6a15154e6325} 
 \index{GameMode@{GameMode}!createGUI@{createGUI}}
 \index{createGUI@{createGUI}!GameMode@{GameMode}}
 \doxysubsubsection{\texorpdfstring{createGUI()}{createGUI()}}
-{\footnotesize\ttfamily virtual void Game\+Mode\+::create\+GUI (\begin{DoxyParamCaption}\item[{IGUIEnvironment \texorpdfstring{$\ast$}{*}}]{env }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Game\+Mode\+::create\+GUI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
-\Hypertarget{class_game_mode_a686ba6ba08bcc4b823e215cc2257a74d}\label{class_game_mode_a686ba6ba08bcc4b823e215cc2257a74d} 
+\Hypertarget{class_game_mode_addd6d967633f65ba16d38739209863db}\label{class_game_mode_addd6d967633f65ba16d38739209863db} 
 \index{GameMode@{GameMode}!createInGameGUI@{createInGameGUI}}
 \index{createInGameGUI@{createInGameGUI}!GameMode@{GameMode}}
 \doxysubsubsection{\texorpdfstring{createInGameGUI()}{createInGameGUI()}}
-{\footnotesize\ttfamily virtual void Game\+Mode\+::create\+In\+Game\+GUI (\begin{DoxyParamCaption}\item[{IGUIEnvironment \texorpdfstring{$\ast$}{*}}]{env }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Game\+Mode\+::create\+In\+Game\+GUI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
-\Hypertarget{class_game_mode_ae602fcb6ec2330e89393539bdf2353cd}\label{class_game_mode_ae602fcb6ec2330e89393539bdf2353cd} 
+\Hypertarget{class_game_mode_acdc4010034648ca49e618ad8e60fb88c}\label{class_game_mode_acdc4010034648ca49e618ad8e60fb88c} 
+\index{GameMode@{GameMode}!end@{end}}
+\index{end@{end}!GameMode@{GameMode}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily void Game\+Mode\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\Hypertarget{class_game_mode_af818cade73af59948bb01efaf85d8456}\label{class_game_mode_af818cade73af59948bb01efaf85d8456} 
+\index{GameMode@{GameMode}!handle@{handle}}
+\index{handle@{handle}!GameMode@{GameMode}}
+\doxysubsubsection{\texorpdfstring{handle()}{handle()}}
+{\footnotesize\ttfamily void Game\+Mode\+::handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\Hypertarget{class_game_mode_a35ac5839d51fed390f4105641e99b51e}\label{class_game_mode_a35ac5839d51fed390f4105641e99b51e} 
 \index{GameMode@{GameMode}!handleNetwork@{handleNetwork}}
 \index{handleNetwork@{handleNetwork}!GameMode@{GameMode}}
 \doxysubsubsection{\texorpdfstring{handleNetwork()}{handleNetwork()}}
-{\footnotesize\ttfamily virtual void Game\+Mode\+::handle\+Network (\begin{DoxyParamCaption}\item[{nlohmann\+::json}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Game\+Mode\+::handle\+Network (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_network_handler_8hpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}}}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
-\Hypertarget{class_game_mode_a4499681cf47d0a43a92d0f240b0d542a}\label{class_game_mode_a4499681cf47d0a43a92d0f240b0d542a} 
+\Hypertarget{class_game_mode_a9dd689c61a61a752dd322daa7923a138}\label{class_game_mode_a9dd689c61a61a752dd322daa7923a138} 
 \index{GameMode@{GameMode}!hasGUI@{hasGUI}}
 \index{hasGUI@{hasGUI}!GameMode@{GameMode}}
 \doxysubsubsection{\texorpdfstring{hasGUI()}{hasGUI()}}
-{\footnotesize\ttfamily virtual bool Game\+Mode\+::has\+GUI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual bool Game\+Mode\+::has\+GUI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
-\Hypertarget{class_game_mode_a735029d7382c7b19fb71143e77956a43}\label{class_game_mode_a735029d7382c7b19fb71143e77956a43} 
+\Hypertarget{class_game_mode_a1ee93407a8eaffa12f37a97d740037f4}\label{class_game_mode_a1ee93407a8eaffa12f37a97d740037f4} 
+\index{GameMode@{GameMode}!preloadAll@{preloadAll}}
+\index{preloadAll@{preloadAll}!GameMode@{GameMode}}
+\doxysubsubsection{\texorpdfstring{preloadAll()}{preloadAll()}}
+{\footnotesize\ttfamily void Game\+Mode\+::preload\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\Hypertarget{class_game_mode_ae11a147ea308113bd37e52277a1475a4}\label{class_game_mode_ae11a147ea308113bd37e52277a1475a4} 
 \index{GameMode@{GameMode}!startGame@{startGame}}
 \index{startGame@{startGame}!GameMode@{GameMode}}
 \doxysubsubsection{\texorpdfstring{startGame()}{startGame()}}
-{\footnotesize\ttfamily virtual void Game\+Mode\+::start\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}}]{world,  }\item[{\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}}]{main\+Player,  }\item[{Irrlicht\+Device \texorpdfstring{$\ast$}{*}}]{dev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Game\+Mode\+::start\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}}]{world,  }\item[{\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}}]{main\+Player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -74,11 +115,29 @@ Irrlicht\+Device \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_mode_acd
 \doxysubsubsection{\texorpdfstring{\_device}{\_device}}
 {\footnotesize\ttfamily Irrlicht\+Device\texorpdfstring{$\ast$}{*} Game\+Mode\+::\+\_\+device\hspace{0.3cm}{\ttfamily [protected]}}
 
+\Hypertarget{class_game_mode_a646bde855aced3a8468e8ae2f50ce3a5}\label{class_game_mode_a646bde855aced3a8468e8ae2f50ce3a5} 
+\index{GameMode@{GameMode}!\_guienv@{\_guienv}}
+\index{\_guienv@{\_guienv}!GameMode@{GameMode}}
+\doxysubsubsection{\texorpdfstring{\_guienv}{\_guienv}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}}\texorpdfstring{$\ast$}{*} Game\+Mode\+::\+\_\+guienv\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_game_mode_ae17322b71098cbda2e1cb61777e2c601}\label{class_game_mode_ae17322b71098cbda2e1cb61777e2c601} 
+\index{GameMode@{GameMode}!\_networkClient@{\_networkClient}}
+\index{\_networkClient@{\_networkClient}!GameMode@{GameMode}}
+\doxysubsubsection{\texorpdfstring{\_networkClient}{\_networkClient}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_network}{Network}}\texorpdfstring{$\ast$}{*} Game\+Mode\+::\+\_\+network\+Client\hspace{0.3cm}{\ttfamily [protected]}}
+
 \Hypertarget{class_game_mode_a0e001771a1da575d9d1ef29fc2b297e4}\label{class_game_mode_a0e001771a1da575d9d1ef29fc2b297e4} 
 \index{GameMode@{GameMode}!\_player@{\_player}}
 \index{\_player@{\_player}!GameMode@{GameMode}}
 \doxysubsubsection{\texorpdfstring{\_player}{\_player}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_player}{Player}}\texorpdfstring{$\ast$}{*} Game\+Mode\+::\+\_\+player\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_game_mode_a5b4aefc9c8e2d620e6dd330347a421d0}\label{class_game_mode_a5b4aefc9c8e2d620e6dd330347a421d0} 
+\index{GameMode@{GameMode}!\_players@{\_players}}
+\index{\_players@{\_players}!GameMode@{GameMode}}
+\doxysubsubsection{\texorpdfstring{\_players}{\_players}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_player}{Player}}\texorpdfstring{$\ast$}{*}$>$ Game\+Mode\+::\+\_\+players\hspace{0.3cm}{\ttfamily [protected]}}
 
 \Hypertarget{class_game_mode_a8d286e766bcb6d09a906f010bd47c621}\label{class_game_mode_a8d286e766bcb6d09a906f010bd47c621} 
 \index{GameMode@{GameMode}!\_world@{\_world}}
@@ -88,6 +147,7 @@ Irrlicht\+Device \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_mode_acd
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/\+Gamemodes/\mbox{\hyperlink{_gamemodes_8hpp}{Gamemodes.\+hpp}}\end{DoxyCompactItemize}
+src/\+Gamemodes/\mbox{\hyperlink{_gamemodes_8hpp}{Gamemodes.\+hpp}}\item 
+src/\+Gamemodes/\mbox{\hyperlink{_gamemodes_8cpp}{Gamemodes.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,109 @@
+\doxysection{GUIText\+Label Class Reference}
+\hypertarget{class_g_u_i_text_label}{}\label{class_g_u_i_text_label}\index{GUITextLabel@{GUITextLabel}}
+
+
+{\ttfamily \#include $<$IMGUIWrapper.\+hpp$>$}
+
+Inheritance diagram for GUIText\+Label\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d1/db3/class_g_u_i_text_label}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_u_i_text_label_a0654a7efc2e8e05d7af87c96c7ff680a}{GUIText\+Label}} (\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}} \texorpdfstring{$\ast$}{*}env, irr\+::core\+::recti pos, bool use\+CFont=false, Im\+Font \texorpdfstring{$\ast$}{*}override\+Font=nullptr)
+\item 
+void \mbox{\hyperlink{class_g_u_i_text_label_aedfcdd0f52aa4c321f3c592f15de33dd}{draw}} () override
+\item 
+void \mbox{\hyperlink{class_g_u_i_text_label_a6a831e7fba9ea7bfd4eb1e3c5b7daa56}{set\+Font}} (Im\+Font \texorpdfstring{$\ast$}{*}font)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_g_u_i_element}{GUIElement}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_u_i_element_a039ca1ec2cd382e36b4e0625bc2e5dc3}{GUIElement}} (\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}} \texorpdfstring{$\ast$}{*}env, irr\+::core\+::recti rect)
+\item 
+\mbox{\hyperlink{class_g_u_i_element_a96d6728fa2a9e92a5a0fe6481dfcae15}{\texorpdfstring{$\sim$}{\string~}\+GUIElement}} ()
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_a13b0bdccd797f10cefef14d181571dab}{remove}} ()
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_affb9974f9bd55e8ea09a14c973c18adc}{set\+Text}} (std\+::string text)
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_aaeb6baf885f83d20e406ce2f497a8dfe}{add\+Child}} (\mbox{\hyperlink{class_g_u_i_element}{GUIElement}} \texorpdfstring{$\ast$}{*}e)
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_ade3ebf3bbd088d7869f5914a8971035f}{set\+Position}} (irr\+::core\+::recti r)
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_a45b3752a4730fce4898921696c61c91c}{set\+Parent}} (\mbox{\hyperlink{class_g_u_i_element}{GUIElement}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{_g_u_i_tools_8cpp_a6a626c1dd0cfaa4ae2a9d4a6f2ca90d5}{p}})
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_a82fefd8e188a8297ee03c24524c7ee2e}{add\+Callback}} (std\+::function$<$ void(\mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_af673abfde02eb3e79d399c0005b0ed2f}{GUIEvent}} e)$>$ cback)
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_ae35bc07f8a7896151caa62a51acaacea}{set\+Visible}} (bool v)
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_a6eb218e22cddb5039281f6d69cfee250}{set\+Active}} (bool a)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Im\+Font \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_g_u_i_text_label_a83fccbc5527cdc7f7130e829261e78b7}{\+\_\+font}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_g_u_i_element}{GUIElement}}}
+\begin{DoxyCompactItemize}
+\item 
+irr\+::core\+::recti \mbox{\hyperlink{class_g_u_i_element_ac8c7e942cc02d5b3139c80bf85aa0bbb}{\+\_\+rect}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_g_u_i_element}{GUIElement}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_g_u_i_element_a2e4312a2ef8032761df8cda5183d68fa}{children}}
+\item 
+std\+::function$<$ void(\mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_af673abfde02eb3e79d399c0005b0ed2f}{GUIEvent}})$>$ \mbox{\hyperlink{class_g_u_i_element_a2f11b33e40bca36d44f9e42cbf0216fc}{callback}}
+\item 
+std\+::string \mbox{\hyperlink{class_g_u_i_element_aa5cbff9d22ef8be1d18ea081a4162558}{\+\_\+text}}
+\item 
+\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_g_u_i_element_ae04cdbd7ab66b6a0e5db18c1a31045b5}{\+\_\+env}}
+\item 
+bool \mbox{\hyperlink{class_g_u_i_element_ab9949f41808cbaeaae5bebd4b81971f6}{\+\_\+active}} = true
+\item 
+bool \mbox{\hyperlink{class_g_u_i_element_a9385814f8643bdb096013a3846c2516b}{visible}} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_g_u_i_text_label_a0654a7efc2e8e05d7af87c96c7ff680a}\label{class_g_u_i_text_label_a0654a7efc2e8e05d7af87c96c7ff680a} 
+\index{GUITextLabel@{GUITextLabel}!GUITextLabel@{GUITextLabel}}
+\index{GUITextLabel@{GUITextLabel}!GUITextLabel@{GUITextLabel}}
+\doxysubsubsection{\texorpdfstring{GUITextLabel()}{GUITextLabel()}}
+{\footnotesize\ttfamily GUIText\+Label\+::\+GUIText\+Label (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}} \texorpdfstring{$\ast$}{*}}]{env,  }\item[{irr\+::core\+::recti}]{pos,  }\item[{bool}]{use\+CFont = {\ttfamily false},  }\item[{Im\+Font \texorpdfstring{$\ast$}{*}}]{override\+Font = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_u_i_text_label_aedfcdd0f52aa4c321f3c592f15de33dd}\label{class_g_u_i_text_label_aedfcdd0f52aa4c321f3c592f15de33dd} 
+\index{GUITextLabel@{GUITextLabel}!draw@{draw}}
+\index{draw@{draw}!GUITextLabel@{GUITextLabel}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void GUIText\+Label\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_g_u_i_element_a4c8f72e584adac6fd2a2bc2ee627ad43}{GUIElement}}.
+
+\Hypertarget{class_g_u_i_text_label_a6a831e7fba9ea7bfd4eb1e3c5b7daa56}\label{class_g_u_i_text_label_a6a831e7fba9ea7bfd4eb1e3c5b7daa56} 
+\index{GUITextLabel@{GUITextLabel}!setFont@{setFont}}
+\index{setFont@{setFont}!GUITextLabel@{GUITextLabel}}
+\doxysubsubsection{\texorpdfstring{setFont()}{setFont()}}
+{\footnotesize\ttfamily void GUIText\+Label\+::set\+Font (\begin{DoxyParamCaption}\item[{Im\+Font \texorpdfstring{$\ast$}{*}}]{font }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_g_u_i_text_label_a83fccbc5527cdc7f7130e829261e78b7}\label{class_g_u_i_text_label_a83fccbc5527cdc7f7130e829261e78b7} 
+\index{GUITextLabel@{GUITextLabel}!\_font@{\_font}}
+\index{\_font@{\_font}!GUITextLabel@{GUITextLabel}}
+\doxysubsubsection{\texorpdfstring{\_font}{\_font}}
+{\footnotesize\ttfamily Im\+Font\texorpdfstring{$\ast$}{*} GUIText\+Label\+::\+\_\+font\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+SGE/\mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp}{IMGUIWrapper.\+hpp}}\item 
+src/\+SGE/\mbox{\hyperlink{_i_m_g_u_i_wrapper_8cpp}{IMGUIWrapper.\+cpp}}\end{DoxyCompactItemize}

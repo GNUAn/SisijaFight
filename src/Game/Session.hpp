@@ -22,6 +22,7 @@ public:
 	SFSession(IrrlichtDevice* dev) : _device(dev) {
 
 	}
+	void loopRoutine();
 	void endGame();
 	void startGame(LobbyReturnCode c, bool isGMGUIDone);
 	GameMode* gamemode();
@@ -31,10 +32,19 @@ private:
 	void setEventReceiver(S_EVR_CODE s);
 	void startGameInternal(LobbyReturnCode c);
 	GameMode* _gamemode;
-	Network* _network;
 	Lobby* _lobby;
-	World* _world;
-	Player* _mainplayer;
 	IEventReceiver* _evr;
 	IrrlichtDevice* _device;
+};
+
+class GUISession {
+public:
+	inline void setCurrentGUIPage(GUIPage* p) {
+		currentPage = p;
+	}
+	void resizeUI() {
+		currentPage->draw(guienv);
+	}
+private:
+	GUIPage* currentPage;
 };

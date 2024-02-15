@@ -80,11 +80,7 @@ void IKinematicCharacterController::setUseGhostSweepTest(bool useGhostObjectSwee
 {
 	Character->setUseGhostSweepTest(useGhostObjectSweepTest);
 }
-/*void IKinematicCharacterController::setUpAxis(irr::u32 axis)
-{
-	Character->setUpAxis(axis);
-}
-*/
+
 void IKinematicCharacterController::setPositionIncrementPerSimulatorStep(const irr::core::vector3df& increment)
 {
 	Character->setWalkDirection(irrlichtToBulletVector(increment));
@@ -97,7 +93,7 @@ void IKinematicCharacterController::setVelocityForTimeInterval(const irr::core::
 
 void IKinematicCharacterController::setGravity(irr::f32 gravity)
 {
-	Character->setGravity(btVector3(0,gravity,0));
+	Character->setGravity(btVector3 { 0, gravity, 0 });
 }
 
 void IKinematicCharacterController::setMaxSlope(irr::f32 slopeRadians)
@@ -134,7 +130,7 @@ void IKinematicCharacterController::setUpInterpolate(bool value)
 }
 irr::f32 IKinematicCharacterController::getGravity() const
 {
-	return Character->getGravity().getY();
+	return Character->getGravity().y();
 }
 
 irr::f32 IKinematicCharacterController::getMaxSlope() const

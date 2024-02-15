@@ -1,0 +1,157 @@
+\doxysection{GUISlider Class Reference}
+\hypertarget{class_g_u_i_slider}{}\label{class_g_u_i_slider}\index{GUISlider@{GUISlider}}
+
+
+{\ttfamily \#include $<$IMGUIWrapper.\+hpp$>$}
+
+Inheritance diagram for GUISlider\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d5/d09/class_g_u_i_slider}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_u_i_slider_aec1f0267d11897680940c4a181d8c88f}{GUISlider}} (\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}} \texorpdfstring{$\ast$}{*}env, bool \mbox{\hyperlink{class_g_u_i_slider_a5aebd303c32948d13f0c85e884c1b3b1}{is\+\_\+int}}, bool \mbox{\hyperlink{class_g_u_i_slider_a39e4de116be6293def04b1b8d5d6669f}{vertical}}, float \mbox{\hyperlink{class_g_u_i_slider_aa6d2ea69ccd7dba646063074afb15f0c}{from}}, float \mbox{\hyperlink{class_g_u_i_slider_abd7a1649a71485baf7a1d38a1bc3141b}{to}}, irr\+::core\+::recti pos)
+\item 
+void \mbox{\hyperlink{class_g_u_i_slider_a502680e021fa1598f87d0f1c5e5ce239}{add\+Callback}} (std\+::function$<$ void(float e)$>$ cback)
+\item 
+void \mbox{\hyperlink{class_g_u_i_slider_ad517a8d64d37a60735c6e4383ed25b31}{draw}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_g_u_i_element}{GUIElement}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_u_i_element_a039ca1ec2cd382e36b4e0625bc2e5dc3}{GUIElement}} (\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}} \texorpdfstring{$\ast$}{*}env, irr\+::core\+::recti rect)
+\item 
+\mbox{\hyperlink{class_g_u_i_element_a96d6728fa2a9e92a5a0fe6481dfcae15}{\texorpdfstring{$\sim$}{\string~}\+GUIElement}} ()
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_a13b0bdccd797f10cefef14d181571dab}{remove}} ()
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_affb9974f9bd55e8ea09a14c973c18adc}{set\+Text}} (std\+::string text)
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_aaeb6baf885f83d20e406ce2f497a8dfe}{add\+Child}} (\mbox{\hyperlink{class_g_u_i_element}{GUIElement}} \texorpdfstring{$\ast$}{*}e)
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_ade3ebf3bbd088d7869f5914a8971035f}{set\+Position}} (irr\+::core\+::recti r)
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_a45b3752a4730fce4898921696c61c91c}{set\+Parent}} (\mbox{\hyperlink{class_g_u_i_element}{GUIElement}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{_g_u_i_tools_8cpp_a6a626c1dd0cfaa4ae2a9d4a6f2ca90d5}{p}})
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_a82fefd8e188a8297ee03c24524c7ee2e}{add\+Callback}} (std\+::function$<$ void(\mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_af673abfde02eb3e79d399c0005b0ed2f}{GUIEvent}} e)$>$ cback)
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_ae35bc07f8a7896151caa62a51acaacea}{set\+Visible}} (bool v)
+\item 
+virtual void \mbox{\hyperlink{class_g_u_i_element_a6eb218e22cddb5039281f6d69cfee250}{set\+Active}} (bool a)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_g_u_i_slider_a6bf600a69c454554c467b218a13ee5c9}{val}}
+\item 
+float \mbox{\hyperlink{class_g_u_i_slider_aa6d2ea69ccd7dba646063074afb15f0c}{from}}
+\item 
+float \mbox{\hyperlink{class_g_u_i_slider_abd7a1649a71485baf7a1d38a1bc3141b}{to}}
+\item 
+int \mbox{\hyperlink{class_g_u_i_slider_acb12782d1c1b5e01730e714aa7eaacb8}{ival}}
+\item 
+bool \mbox{\hyperlink{class_g_u_i_slider_a5aebd303c32948d13f0c85e884c1b3b1}{is\+\_\+int}}
+\item 
+bool \mbox{\hyperlink{class_g_u_i_slider_a39e4de116be6293def04b1b8d5d6669f}{vertical}}
+\item 
+std\+::function$<$ void(float e)$>$ \mbox{\hyperlink{class_g_u_i_slider_a50b89638d44cc5c2dd0abeb19e912230}{\+\_\+callback}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_g_u_i_element}{GUIElement}}}
+\begin{DoxyCompactItemize}
+\item 
+irr\+::core\+::recti \mbox{\hyperlink{class_g_u_i_element_ac8c7e942cc02d5b3139c80bf85aa0bbb}{\+\_\+rect}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_g_u_i_element}{GUIElement}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_g_u_i_element_a2e4312a2ef8032761df8cda5183d68fa}{children}}
+\item 
+std\+::function$<$ void(\mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp_af673abfde02eb3e79d399c0005b0ed2f}{GUIEvent}})$>$ \mbox{\hyperlink{class_g_u_i_element_a2f11b33e40bca36d44f9e42cbf0216fc}{callback}}
+\item 
+std\+::string \mbox{\hyperlink{class_g_u_i_element_aa5cbff9d22ef8be1d18ea081a4162558}{\+\_\+text}}
+\item 
+\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_g_u_i_element_ae04cdbd7ab66b6a0e5db18c1a31045b5}{\+\_\+env}}
+\item 
+bool \mbox{\hyperlink{class_g_u_i_element_ab9949f41808cbaeaae5bebd4b81971f6}{\+\_\+active}} = true
+\item 
+bool \mbox{\hyperlink{class_g_u_i_element_a9385814f8643bdb096013a3846c2516b}{visible}} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_g_u_i_slider_aec1f0267d11897680940c4a181d8c88f}\label{class_g_u_i_slider_aec1f0267d11897680940c4a181d8c88f} 
+\index{GUISlider@{GUISlider}!GUISlider@{GUISlider}}
+\index{GUISlider@{GUISlider}!GUISlider@{GUISlider}}
+\doxysubsubsection{\texorpdfstring{GUISlider()}{GUISlider()}}
+{\footnotesize\ttfamily GUISlider\+::\+GUISlider (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_u_i_environment}{GUIEnvironment}} \texorpdfstring{$\ast$}{*}}]{env,  }\item[{bool}]{is\+\_\+int,  }\item[{bool}]{vertical,  }\item[{float}]{from,  }\item[{float}]{to,  }\item[{irr\+::core\+::recti}]{pos }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_u_i_slider_a502680e021fa1598f87d0f1c5e5ce239}\label{class_g_u_i_slider_a502680e021fa1598f87d0f1c5e5ce239} 
+\index{GUISlider@{GUISlider}!addCallback@{addCallback}}
+\index{addCallback@{addCallback}!GUISlider@{GUISlider}}
+\doxysubsubsection{\texorpdfstring{addCallback()}{addCallback()}}
+{\footnotesize\ttfamily void GUISlider\+::add\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(float e)$>$}]{cback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_g_u_i_slider_ad517a8d64d37a60735c6e4383ed25b31}\label{class_g_u_i_slider_ad517a8d64d37a60735c6e4383ed25b31} 
+\index{GUISlider@{GUISlider}!draw@{draw}}
+\index{draw@{draw}!GUISlider@{GUISlider}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void GUISlider\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_g_u_i_element_a4c8f72e584adac6fd2a2bc2ee627ad43}{GUIElement}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_g_u_i_slider_a50b89638d44cc5c2dd0abeb19e912230}\label{class_g_u_i_slider_a50b89638d44cc5c2dd0abeb19e912230} 
+\index{GUISlider@{GUISlider}!\_callback@{\_callback}}
+\index{\_callback@{\_callback}!GUISlider@{GUISlider}}
+\doxysubsubsection{\texorpdfstring{\_callback}{\_callback}}
+{\footnotesize\ttfamily std\+::function$<$void(float e)$>$ GUISlider\+::\+\_\+callback\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_g_u_i_slider_aa6d2ea69ccd7dba646063074afb15f0c}\label{class_g_u_i_slider_aa6d2ea69ccd7dba646063074afb15f0c} 
+\index{GUISlider@{GUISlider}!from@{from}}
+\index{from@{from}!GUISlider@{GUISlider}}
+\doxysubsubsection{\texorpdfstring{from}{from}}
+{\footnotesize\ttfamily float GUISlider\+::from\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_g_u_i_slider_a5aebd303c32948d13f0c85e884c1b3b1}\label{class_g_u_i_slider_a5aebd303c32948d13f0c85e884c1b3b1} 
+\index{GUISlider@{GUISlider}!is\_int@{is\_int}}
+\index{is\_int@{is\_int}!GUISlider@{GUISlider}}
+\doxysubsubsection{\texorpdfstring{is\_int}{is\_int}}
+{\footnotesize\ttfamily bool GUISlider\+::is\+\_\+int\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_g_u_i_slider_acb12782d1c1b5e01730e714aa7eaacb8}\label{class_g_u_i_slider_acb12782d1c1b5e01730e714aa7eaacb8} 
+\index{GUISlider@{GUISlider}!ival@{ival}}
+\index{ival@{ival}!GUISlider@{GUISlider}}
+\doxysubsubsection{\texorpdfstring{ival}{ival}}
+{\footnotesize\ttfamily int GUISlider\+::ival\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_g_u_i_slider_abd7a1649a71485baf7a1d38a1bc3141b}\label{class_g_u_i_slider_abd7a1649a71485baf7a1d38a1bc3141b} 
+\index{GUISlider@{GUISlider}!to@{to}}
+\index{to@{to}!GUISlider@{GUISlider}}
+\doxysubsubsection{\texorpdfstring{to}{to}}
+{\footnotesize\ttfamily float GUISlider\+::to\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_g_u_i_slider_a6bf600a69c454554c467b218a13ee5c9}\label{class_g_u_i_slider_a6bf600a69c454554c467b218a13ee5c9} 
+\index{GUISlider@{GUISlider}!val@{val}}
+\index{val@{val}!GUISlider@{GUISlider}}
+\doxysubsubsection{\texorpdfstring{val}{val}}
+{\footnotesize\ttfamily float GUISlider\+::val\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_g_u_i_slider_a39e4de116be6293def04b1b8d5d6669f}\label{class_g_u_i_slider_a39e4de116be6293def04b1b8d5d6669f} 
+\index{GUISlider@{GUISlider}!vertical@{vertical}}
+\index{vertical@{vertical}!GUISlider@{GUISlider}}
+\doxysubsubsection{\texorpdfstring{vertical}{vertical}}
+{\footnotesize\ttfamily bool GUISlider\+::vertical\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+SGE/\mbox{\hyperlink{_i_m_g_u_i_wrapper_8hpp}{IMGUIWrapper.\+hpp}}\item 
+src/\+SGE/\mbox{\hyperlink{_i_m_g_u_i_wrapper_8cpp}{IMGUIWrapper.\+cpp}}\end{DoxyCompactItemize}

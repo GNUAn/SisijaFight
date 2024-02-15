@@ -1,0 +1,30 @@
+\doxysection{Network\+Manager.\+hpp}
+\hypertarget{_network_manager_8hpp_source}{}\label{_network_manager_8hpp_source}\index{src/Network/NetworkManager.hpp@{src/Network/NetworkManager.hpp}}
+\mbox{\hyperlink{_network_manager_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_network}{Network}};}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_network_manager}{NetworkManager}}\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_manager_a7cf89f19b316c55b0e4fd278a5eb6fc7}{registerHandler}}(\mbox{\hyperlink{class_network}{Network}}*\ n)\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_manager_a75e700325ba2ed650482cbfdb32acb32}{handlers}}.push\_back(n);}
+\DoxyCodeLine{00010\ \ \ \ \ \}}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_manager_aa54038d37170c80544bee2a9560e9480}{handle}}()\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ h\ :\ \mbox{\hyperlink{class_network_manager_a75e700325ba2ed650482cbfdb32acb32}{handlers}})\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ h-\/>handleRoutine();}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00015\ \ \ \ \ \}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00017\ \ \ \ \ std::vector<Network*>\ \mbox{\hyperlink{class_network_manager_a75e700325ba2ed650482cbfdb32acb32}{handlers}};}
+\DoxyCodeLine{00018\ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{class_network_manager}{NetworkManager}}*\ \mbox{\hyperlink{_network_manager_8hpp_a35ee881249af4d979e538db65e2ee3bf}{netmngr}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_network_manager_8hpp_a56fb21fb5e701ba76fdb1eb248ec5783}{initNetworkManager}}()\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{_network_manager_8hpp_a35ee881249af4d979e538db65e2ee3bf}{netmngr}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_network_manager}{NetworkManager}}();}
+\DoxyCodeLine{00024\ \}}
+
+\end{DoxyCode}

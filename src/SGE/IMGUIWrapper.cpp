@@ -376,3 +376,15 @@ void GUISlider::draw() {
 }
 
 // Text-Label
+
+GUITextLabel::GUITextLabel(GUIEnvironment* env, irr::core::recti pos, bool useCFont, ImFont* overrideFont) : GUIElement(env, pos) {
+	// TODO: add font support
+	env->addObject(this);
+}
+
+void GUITextLabel::draw() {
+	ImGui::SetCursorPos(ivec2Pos2imvec2(_rect));
+	ImGui::PushItemWidth(ivec22imvec2(_rect).x);
+	ImGui::LabelText("Label", _text.c_str());
+	GUIElement::draw();
+}

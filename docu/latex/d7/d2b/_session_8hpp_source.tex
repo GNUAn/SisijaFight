@@ -26,21 +26,31 @@
 \DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_s_f_session_ad9e724cfb2de6c6763ccc412b6e5d357}{SFSession}}(IrrlichtDevice*\ dev)\ :\ \_device(dev)\ \{}
 \DoxyCodeLine{00023\ }
 \DoxyCodeLine{00024\ \ \ \ \ \}}
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_f_session_a7064e9ec45714172b5f4489b2332a90e}{endGame}}();}
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_f_session_a2a27f488b84db0bd13a15f246ec338a1}{startGame}}(\mbox{\hyperlink{struct_lobby_return_code}{LobbyReturnCode}}\ c,\ \textcolor{keywordtype}{bool}\ isGMGUIDone);}
-\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_game_mode}{GameMode}}*\ \mbox{\hyperlink{class_s_f_session_a994a79fb9c61df636fa0a5f10cd420a3}{gamemode}}();}
-\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_lobby}{Lobby}}*\ \mbox{\hyperlink{class_s_f_session_ac8b59254fa9edebc550bd5bf844ae06a}{lobby}}();}
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_f_session_a01648f5ead7a35f13e18e3e165306da0}{init}}();}
-\DoxyCodeLine{00030\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ setEventReceiver(\mbox{\hyperlink{_session_8hpp_adbe2257cbeda0fef09e10746a8ccb580}{S\_EVR\_CODE}}\ s);}
-\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ startGameInternal(\mbox{\hyperlink{struct_lobby_return_code}{LobbyReturnCode}}\ c);}
-\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_game_mode}{GameMode}}*\ \_gamemode;}
-\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_network}{Network}}*\ \_network;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_f_session_a63f2a1c9de9d34b320b3001475dc1f8e}{loopRoutine}}();}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_f_session_a7064e9ec45714172b5f4489b2332a90e}{endGame}}();}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_f_session_a2a27f488b84db0bd13a15f246ec338a1}{startGame}}(\mbox{\hyperlink{struct_lobby_return_code}{LobbyReturnCode}}\ c,\ \textcolor{keywordtype}{bool}\ isGMGUIDone);}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_game_mode}{GameMode}}*\ \mbox{\hyperlink{class_s_f_session_a994a79fb9c61df636fa0a5f10cd420a3}{gamemode}}();}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_lobby}{Lobby}}*\ \mbox{\hyperlink{class_s_f_session_ac8b59254fa9edebc550bd5bf844ae06a}{lobby}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_f_session_a01648f5ead7a35f13e18e3e165306da0}{init}}();}
+\DoxyCodeLine{00031\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ setEventReceiver(\mbox{\hyperlink{_session_8hpp_adbe2257cbeda0fef09e10746a8ccb580}{S\_EVR\_CODE}}\ s);}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ startGameInternal(\mbox{\hyperlink{struct_lobby_return_code}{LobbyReturnCode}}\ c);}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_game_mode}{GameMode}}*\ \_gamemode;}
 \DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_lobby}{Lobby}}*\ \_lobby;}
-\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_world}{World}}*\ \_world;}
-\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}*\ \_mainplayer;}
-\DoxyCodeLine{00038\ \ \ \ \ IEventReceiver*\ \_evr;}
-\DoxyCodeLine{00039\ \ \ \ \ IrrlichtDevice*\ \_device;}
-\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00036\ \ \ \ \ IEventReceiver*\ \_evr;}
+\DoxyCodeLine{00037\ \ \ \ \ IrrlichtDevice*\ \_device;}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i_session}{GUISession}}\ \{}
+\DoxyCodeLine{00041\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_session_af974ff4f05bbc1d0b7066d5f7c6a5d9a}{setCurrentGUIPage}}(\mbox{\hyperlink{class_g_u_i_page}{GUIPage}}*\ \mbox{\hyperlink{_g_u_i_tools_8cpp_a6a626c1dd0cfaa4ae2a9d4a6f2ca90d5}{p}})\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ currentPage\ =\ \mbox{\hyperlink{_g_u_i_tools_8cpp_a6a626c1dd0cfaa4ae2a9d4a6f2ca90d5}{p}};}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_session_a0223d88c8a8c7f5d5d46cc71d7648920}{resizeUI}}()\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ currentPage-\/>\mbox{\hyperlink{class_g_u_i_page_a353f48fd582710bc7d5861070a367a71}{draw}}(\mbox{\hyperlink{globals_8hpp_a89da51dc188deeafdb16b0eba9b9e56c}{guienv}});}
+\DoxyCodeLine{00047\ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_page}{GUIPage}}*\ currentPage;}
+\DoxyCodeLine{00050\ \};}
 
 \end{DoxyCode}

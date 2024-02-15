@@ -7,9 +7,10 @@
 #include <chrono>
 #include <thread>
 #include "NetworkHandler.hpp"
+#include "NetworkManager.hpp"
 #include "../globals.hpp"
 
-int clientID = 62;
+NetworkManager* netmngr;
 
 // Kompressions- und Dekompressionsfunktionen
 std::vector<Bytef> compressData(const std::string& str) {
@@ -34,11 +35,7 @@ void Network::processRequest(ENetPacket* packet) {
         std::string decompressedData = decompressData(packet->data, packet->dataLength);
         try {
             auto json = nlohmann::json::parse(decompressedData);
-            if (json.contains("CLIENTID")) {
-                clientID = json["CLIENTID"].get<int>();
-                device->getLogger()->log(std::string(std::string("Client ID is: ") + (const char*)clientID).c_str(), ELL_DEBUG, "NetworkManager, ClientID");
-            }
-            // Session->gamemode()->handleNetwork(json); // not implemented
+            callback(json);
         }
         catch (const std::exception& e) {
             device->getLogger()->log(e.what(), ELL_ERROR, "NetworkManager, Request Handler");
@@ -76,27 +73,25 @@ void Network::internalThreadInit(std::string serverAddress, uint8_t serverPort) 
         enet_peer_reset(peer);
         puts("Connection to SisijaFight.local failed.");
     }
-    while (isRunning) {
-        while (_isPeerUsedByThread);
-        while (enet_host_service(client, &event, 1000) > 0) {
-            switch (event.type) {
-            case ENET_EVENT_TYPE_RECEIVE:
-                processRequest(event.packet);
-                enet_packet_destroy(event.packet);
-                break;
-            }
-            std::this_thread::sleep_for(std::chrono::milliseconds(2));
-        }
-    }
-    enet_host_destroy(client);
 }
 
 /// @brief Start the Client of Enet on:
 /// @param serverAddress The IP/DNS-Name
 /// @param serverPort The Port (default 65432)
 void Network::startNetwork(std::string serverAddress, unsigned int serverPort) {
-    std::thread networkThread(&Network::internalThreadInit, this, serverAddress, serverPort);
-    networkThread.detach();
+    internalThreadInit(serverAddress, serverPort);
+    netmngr->registerHandler(this);
+}
+
+void Network::handleRoutine() {
+    while (enet_host_service(client, &event, 1000) > 0) {
+        switch (event.type) {
+        case ENET_EVENT_TYPE_RECEIVE:
+            processRequest(event.packet);
+            enet_packet_destroy(event.packet);
+            break;
+        }
+    }
 }
 
 void Network::end() {
@@ -120,4 +115,5 @@ void Network::end() {
         enet_peer_reset(peer);
         puts("Disconnection forced.");
     }
+    enet_host_destroy(client);
 }

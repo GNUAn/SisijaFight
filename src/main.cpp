@@ -3,6 +3,7 @@
 #include "Game/Audio/Backend.hpp"
 #include "Tools/Translation/Translator.hpp"
 #include "Game/Session.hpp"
+#include "Network/NetworkManager.hpp"
 
 SFSession* Session;
 GUIEnvironment* guienv;
@@ -41,6 +42,7 @@ int main() {
 	gSoloud.init();
 
 	guienv = new GUIEnvironment(device);
+	initNetworkManager();
 
 	IVideoDriver* driver = device->getVideoDriver();
 	ISceneManager* smgr = device->getSceneManager();
@@ -60,6 +62,7 @@ int main() {
 	while (device->run()) {
 		driver->beginScene(true, true, SColor(255, 0, 0, 0));
 		smgr->drawAll();
+		Session->loopRoutine();
 		guienv->drawAll();
 		driver->endScene();
 	}

@@ -14,8 +14,12 @@ var searchData=
   ['guiline_11',['GUILine',['../dd/d99/class_g_u_i_line.html',1,'']]],
   ['guipage_12',['GUIPage',['../df/d2a/class_g_u_i_page.html',1,'']]],
   ['guiradiobutton_13',['GUIRadioButton',['../d1/dcc/class_g_u_i_radio_button.html',1,'']]],
-  ['guisamelineseperator_14',['GUISameLineSeperator',['../d6/d54/class_g_u_i_same_line_seperator.html',1,'']]],
-  ['guisidebarmenu_15',['GUISidebarMenu',['../d8/d7c/class_g_u_i_sidebar_menu.html',1,'']]],
-  ['guiwidget_16',['GUIWidget',['../d2/d52/class_g_u_i_widget.html',1,'']]],
-  ['guiwindow_17',['GUIWindow',['../d4/d38/class_g_u_i_window.html',1,'']]]
+  ['guiradiobuttongroup_14',['GUIRadioButtonGroup',['../d4/d38/class_g_u_i_radio_button_group.html',1,'']]],
+  ['guisamelineseperator_15',['GUISameLineSeperator',['../d6/d54/class_g_u_i_same_line_seperator.html',1,'']]],
+  ['guisession_16',['GUISession',['../df/d20/class_g_u_i_session.html',1,'']]],
+  ['guisidebarmenu_17',['GUISidebarMenu',['../d8/d7c/class_g_u_i_sidebar_menu.html',1,'']]],
+  ['guislider_18',['GUISlider',['../d5/d09/class_g_u_i_slider.html',1,'']]],
+  ['guitextlabel_19',['GUITextLabel',['../d1/db3/class_g_u_i_text_label.html',1,'']]],
+  ['guiwidget_20',['GUIWidget',['../d2/d52/class_g_u_i_widget.html',1,'']]],
+  ['guiwindow_21',['GUIWindow',['../d4/d38/class_g_u_i_window.html',1,'']]]
 ];
