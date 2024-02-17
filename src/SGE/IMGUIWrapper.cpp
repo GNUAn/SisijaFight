@@ -1,5 +1,5 @@
 #include "IMGUIWrapper.hpp"
-
+#include "Game/GUI/Elements/Progressbar.hpp"
 // Set themes
 
 void SetGUIThemeColor(ThemeColor themeColor) {
@@ -7,6 +7,7 @@ void SetGUIThemeColor(ThemeColor themeColor) {
 
 	ImVec4 colorForText, colorForHead, colorForArea, colorForBody, colorForPops;
 	ImVec4 button, buttonHovered, buttonActive;
+
 
 	switch (themeColor) {
 	case ThemeColor::Red:
@@ -138,7 +139,7 @@ GUIEnvironment::GUIEnvironment(irr::IrrlichtDevice* dev) {
 
 	ImGui::GetIO().IniFilename = NULL;  // Dont create InI files 
 
-	arialFont = pGUI->addFontFromFileTTF("data/fonts/quantico.ttf", 28);
+	arialFont = pGUI->addFontFromFileTTF("data/fonts/graffiti.ttf", 28);
 	pGUI->compileFonts();
 
 }
@@ -387,4 +388,10 @@ void GUITextLabel::draw() {
 	ImGui::PushItemWidth(ivec22imvec2(_rect).x);
 	ImGui::LabelText("Label", _text.c_str());
 	GUIElement::draw();
+}
+
+// Progressbar
+
+GUIProgressbar::GUIProgressbar(GUIEnvironment* env, irr::core::recti pos, bool is_percent, int init_value) : GUIElement(env, pos) {
+	
 }

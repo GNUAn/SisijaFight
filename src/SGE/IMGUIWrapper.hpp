@@ -224,6 +224,11 @@ protected:
 	std::vector<GUIButton*> btns;
 };
 
+class GUIProgressbar : public GUIElement {
+public:
+	GUIProgressbar(GUIEnvironment* env, irr::core::recti pos, bool is_percent, int init_value);
+};
+
 class GUIImage : public GUIElement {
 public:
 	GUIImage(GUIEnvironment* env, irr::core::recti rect);

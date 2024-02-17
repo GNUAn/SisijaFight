@@ -4,7 +4,7 @@
 struct SFConfig {
 	//Localisation
 	const char* version = "0.2.1";
-	const char* lang = "de";
+	const char* lang = "en";
 	//Player specific stuff
 	const char* tag, * password;
 	//...

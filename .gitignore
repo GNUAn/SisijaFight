@@ -32,8 +32,12 @@
 *.db
 *.db-wal
 *.sqlite
-*vs/*
-*vscode/*
+.cache/
+.coreml/
+.test/
+.vs/
+.vscode/
+.DS_Store
 
 # Secret files
 

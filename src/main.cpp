@@ -39,10 +39,9 @@ int main() {
 	device->setResizable(true);
 	device->maximizeWindow();
 
-	gSoloud.init();
-
 	guienv = new GUIEnvironment(device);
 	initNetworkManager();
+	gSoloud.init();
 
 	IVideoDriver* driver = device->getVideoDriver();
 	ISceneManager* smgr = device->getSceneManager();

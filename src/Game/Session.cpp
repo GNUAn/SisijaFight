@@ -66,6 +66,7 @@ void SFSession::setEventReceiver(S_EVR_CODE c) {
 }
 
 void SFSession::loopRoutine() {
-	_gamemode->handle();
+	if (_gamemode) 
+		_gamemode->handle();
 	netmngr->handle();
 }
