@@ -38,8 +38,8 @@ only the subsystem and some preimplementations of the main functions have curren
 ## Documentation
 * [Documentation](https://springtech-studios.github.io/SisijaFight/docu/html/index.html)
 
- <one line to give the program's name and a brief idea of what it does.>
-    Copyright (C) <year>  <name of author>
+ SisijaFight - FLOSS shooter
+    Copyright (C) 2023, 2024  lulu-games and contributors
 
    This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
