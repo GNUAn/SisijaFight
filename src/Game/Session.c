@@ -1,10 +1,12 @@
+#define true 1
+#define false 0
 #include "Session.hpp"
 #include "Network/NetworkManager.hpp"
 #include "EventReceivers/LobbyEVR.hpp"
 #include "EventReceivers/InGameEVR.hpp"
 #include "globals.hpp"
 
-bool game = false;
+int game = false;
 
 /// @brief Gets the gamemode
 /// @return The pointer to the Gamemode
