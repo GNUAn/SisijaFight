@@ -8,15 +8,15 @@ SisijaFight is a little bit different from other shooters:
 #### There are different gamemodes:
 * Classic Fight: A typical deathmatch all-against-each-other (AAEO) with time/hits mode
 * Tactic Fight: There are different teams and each Player has its own role (e.g. healer, solidier, leader...)
-* Orderkiller: You get a Player to kill, if you have eliminated him, you get another one to kill untill you are dead
+* Orderkiller: You get a Player to kill, if you have eliminated him, you get another one to kill until you are dead
 * Story mode: play in different worlds and universes to free characters, wich will appear in the lobby to use!
  * so that's the way to get new players
 #### Features
 * Integrated Ai chat and speech controlling in Game
 * Real-time SPH color splash float simulation
 * Cross platform support
-* Addons
-* online multi-player support
+* Add-ons
+* Online multi-player support
 * Scripting for world maps
 #### Players
 * different dance moves
