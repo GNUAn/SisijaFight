@@ -38,8 +38,8 @@ only the subsystem and some preimplementations of the main functions have curren
 ## Documentation
 * [Documentation](https://springtech-studios.github.io/SisijaFight/docu/html/index.html)
 
- SisijaFight - FLOSS shooter
-    Copyright (C) 2023, 2024  lulu-games and contributors
+ SisijaFight - FLOSS paintball shooter
+    Copyright (C) 2023, 2024  Lucas Gola (lulu-games) and contributors
 
    This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -53,3 +53,4 @@ only the subsystem and some preimplementations of the main functions have curren
 
    You should have received a copy of the GNU General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
+* Attention: This Game may contain harmful content that is not made for children under 6 years!
