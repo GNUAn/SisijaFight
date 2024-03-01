@@ -37,6 +37,8 @@ only the subsystem and some preimplementations of the main functions have curren
 
 ## Documentation
 * [Documentation](https://springtech-studios.github.io/SisijaFight/docu/html/index.html)
+## Attention
+* Attention: This Game may contain harmful content that is not made for children under 7 years!
 
  SisijaFight - FLOSS paintball shooter
     Copyright (C) 2023, 2024  Lucas Gola (lulu-games) and contributors
@@ -53,4 +55,3 @@ only the subsystem and some preimplementations of the main functions have curren
 
    You should have received a copy of the GNU General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
-* Attention: This Game may contain harmful content that is not made for children under 6 years!
