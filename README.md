@@ -19,17 +19,8 @@ SisijaFight is a little bit different from other shooters:
 * Online multi-player support
 * Scripting for world maps
 #### Players
-* different dance moves
-* different guns and ammo
-##### Sisija
-* *Species:* Polar bear
-* The main character
-* The best character
-##### Kah
-* *Species:* Sneef-Viper
-* One of the Healer characters
-* One of the best characters
-* Doesn't need a Paintball gun
+* One Player that can modified customly (Sisija, the Polarbear)
+* You can change the fur style, the gun, the armor and many other custom things (even the eye and fur color!)
 
 !!!Attention!!!
 this Game is in an early development state and currently unplayable!
