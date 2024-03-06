@@ -9,7 +9,7 @@ SisijaFight is a little bit different from other shooters:
 * Classic Fight: A typical deathmatch all-against-each-other (AAEO) with time/hits mode
 * Tactic Fight: There are different teams and each Player has its own role (e.g. healer, solidier, leader...)
 * Orderkiller: You get a Player to kill, if you have eliminated him, you get another one to kill until you are dead
-* Story mode: play in different worlds and universes to do missions. Drady will always be there for you :)
+* Story mode: play in different worlds and universes to do missions. Drady (our Mascot, powered by the Ai) will always be there for you :)
 #### Features
 * Integrated Ai chat and speech controlling in Game
 * Real-time SPH color splash float simulation
