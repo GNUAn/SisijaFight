@@ -30,7 +30,7 @@ only the subsystem and some preimplementations of the main functions have curren
 ## Attention
 * Attention: This Game may contain harmful content that is not made for children under 7 years!
 
- SisijaFight - FLOSS paintball shooter
+ SisijaFight - free(as in freedom) paintball shooter
     Copyright (C) 2023, 2024  Lucas Gola (lulu-games)
 
    This program is free software: you can redistribute it and/or modify
