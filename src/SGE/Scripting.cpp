@@ -1,29 +1,30 @@
-#include <scriptstdstring/scriptstdstring.h>
-#include <scriptbuilder/scriptbuilder.h>
 #include "Scripting.hpp"
-#include "../globals.hpp"
+#include <stdexcept>
 
-void MessageCallback(const char* message){
-    device->getLogger()->log(message,"AS-Scripting Engine", ELL_ERROR);
+ScripterSub::ScripterSub() : engine(nullptr) {
+
 }
+
+ScripterSub::~ScripterSub() {
+    if (engine) {
+        engine->ShutDownAndRelease();
+    }
+}
+
+#include <scriptstdstring/scriptstdstring.h>
+#include <scriptarray/scriptarray.h>
+#include <assert.h>
 
 void ScripterSub::init() {
     engine = asCreateScriptEngine();
-    int r = engine->SetMessageCallback(asFUNCTION(MessageCallback), 0, asCALL_CDECL);
+    if (engine == nullptr) {
+        throw std::runtime_error("Failed to create script engine.");
+    }
+
     RegisterStdString(engine);
+    RegisterScriptArray(engine, false);
 }
 
-/// @brief Register a Function to Angelscript
-/// @tparam ...Args The Function Arguments template
-/// @param callb callback function
-/// @param name name of the function (e.g. void print(string data))
-/// @param type Type: Class member, namespace member or global function
-/// @param cls Optional: Class name
-/// @param nmspc Optional: Namespace name
-template <typename... Args>
-void ScripterSub::registerFunction(std::function<void(Args...)> callb, std::string name, RegistryType type, std::string cls, std::string nmspc){
-    switch(type){
-    case SSE_GLOBAL:
-        break;
-    }
+void ScripterSub::registerClass(const std::string& className, const std::string& typeName) {
+    engine->RegisterObjectType(className.c_str(), 0, asOBJ_REF | asOBJ_NOCOUNT);
 }

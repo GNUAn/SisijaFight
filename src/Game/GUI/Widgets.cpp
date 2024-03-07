@@ -1,4 +1,6 @@
 #include "Widgets.hpp"
+#include "SGE/GUIENvironment.hpp"
+#include "Tools/GUITools.hpp"
 
 /// @brief Shows a Error, Warning or Info Dialog
 /// @param env The Irrlicht GUI-Environment
@@ -27,4 +29,12 @@ void SErrorWidget::show(IGUIEnvironment* env, std::string text, WARN_LEVEL l)
 		}
 	});
 	*/
+}
+/// @brief Shows a music widget
+/// @param env The GUI-environment
+/// @param name The song name
+/// @param interpret The interpret name
+void MusicWidget::show(GUIEnvironment *env, std::string name, std::string interpret)
+{
+	
 }

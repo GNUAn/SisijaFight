@@ -1,7 +1,7 @@
 #include "Gamemodes.hpp"
 
 void GameMode::preloadAll() {
-	// ...
+	//_world->getScriptingEngine()->registerClassMethod<World>("World", "void loadEntities()", &World::loadEntities);
 }
 
 void GameMode::end(){

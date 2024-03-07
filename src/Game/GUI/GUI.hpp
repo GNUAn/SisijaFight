@@ -3,7 +3,6 @@
 #include <irrlicht.h>
 #include "../../Tools/GUITools.hpp"
 #include "../../Gamemodes/Gamemodes.hpp"
-#include "Elements/SuperTable.hpp"
 
 using namespace irr;
 
@@ -13,15 +12,15 @@ public:
 	 inline virtual bool isFinished() {
 		 return finished;
 	 };
-	 inline virtual void onFinish(std::function<void()> f) {
+	 inline virtual void onFinish(std::function<void(long callb)> f) {
 		 end = f;
 	 }
 protected:
-	std::function<void()> end;
+	std::function<void(long callb)> end;
 	bool finished = false;
-	inline virtual void finish() {
+	inline virtual void finish(int callback) {
 		finished = true;
-		end();
+		end(callback);
 	}
 };
 class GUIClass {

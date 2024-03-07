@@ -15,6 +15,7 @@ public:
 
 class GamemodeSelection : public GUIPage {
 public:
+	enum returnCodes { GMS_BAR_ONLINE=1, GMS_MODE_CLASSIC=2, GMS_MODE_TACTIC=4, GMS_MODE_ORDER=8, GMS_MODE_STORY=16 };
 	void draw(GUIEnvironment* env) override;
 };
 

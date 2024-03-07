@@ -19,7 +19,7 @@ public:
 		}
 	}
 	virtual void preloadAll();
-	virtual void createGUI()=0;
+	inline virtual void createGUI() {};
 	virtual void createInGameGUI() = 0;
 	virtual void handle();
 	inline virtual bool hasGUI() { return false; }
@@ -35,6 +35,7 @@ protected:
 
 class ClassicFight : public GameMode
 {
+	public:
 	inline ClassicFight(IrrlichtDevice* dev, GUIEnvironment* env) : GameMode(dev, env) {}
 	void startGame(World* world, Player* mainPlayer) override;
 	void handleNetwork(nlohmann::json input) override;

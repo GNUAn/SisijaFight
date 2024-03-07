@@ -9,6 +9,7 @@
 #include <Irrlicht/CGUIMeshViewer.h>
 #include "Game/Session.hpp"
 #include "Game/Audio/Backend.hpp"
+#include "Gamemodes/Gamemodes.hpp"
 
 /// @brief Creates the lobby elements
 /// @param dev the Irrlicht Device
@@ -16,16 +17,31 @@
 void Lobby::draw(GUIEnvironment* env) {
 
 	static Sound s;
-	s.loadSound("data/audio/music/Menu.ogg", true);
+	s.loadSound("data/audio/music/MainTheme.ogg", true);
 	s.play();
 	s.setLooping(true);
-
 	//SetGUIThemeColor(ThemeColor::Blue);
 
-	GUIPage* gamemodeSelection = new GamemodeSelection();
-	gamemodeSelection->draw(env);
-	GUIPage* serverSelection;
-	GUIPage* worldSelection;
+	LobbyReturnCode r;
+
+	env->registerNewFont("data/fonts/debrose.ttf", 20, "GUI_DEFAULT_FONT");
+	env->registerNewFont("data/fonts/graffiti.ttf", 18, "GUI_NUMBER_FONT");
+
+	static GUIPage* gamemodeSelection = new GamemodeSelection();
+	static GUIPage* serverSelection;
+	static GUIPage* worldSelection;
+
+	gamemodeSelection->onFinish([this, env, &r](long c){
+		if(c & GamemodeSelection::GMS_MODE_CLASSIC){
+			//ClassicFight* cs = new ClassicFight(device, env);
+			//r.gamemode = cs;
+		}
+		if(c & GamemodeSelection::GMS_BAR_ONLINE){
+			serverSelection = new ServerSelection();
+			env->setActiveGUIPage(serverSelection);
+		}
+	});
+	env->setActiveGUIPage(gamemodeSelection);
 
 	/*
 	static ITexture* worldPreviewImage;

@@ -5,8 +5,8 @@
         "name": "windows-base",
         "hidden": true,
         "generator": "Ninja",
-        "binaryDir": "${sourceDir}/../SisijaFight-data/application/windows",
-        "installDir": "${sourceDir}/../SisijaFight-data/application/windows",
+        "binaryDir": "${sourceDir}/../temp/${presetName}",
+        "installDir": "${sourceDir}/../Application/install",
         "cacheVariables": {
           "CMAKE_C_COMPILER": "cl.exe",
           "CMAKE_CXX_COMPILER": "cl.exe"
@@ -61,8 +61,8 @@
         "name": "linux-debug",
         "displayName": "Linux Debug",
         "generator": "Ninja",
-        "binaryDir": "{sourceDir}/../SisijaFight-data/application/linux",
-        "installDir": "{sourceDir}/../SisijaFight-data/application/linux",
+        "binaryDir": "${sourceDir}/../temp/${presetName}",
+        "installDir": "${sourceDir}/../Application/install",
         "cacheVariables": {
           "CMAKE_BUILD_TYPE": "Debug"
         },
@@ -81,8 +81,8 @@
         "name": "macos-debug",
         "displayName": "macOS Debug",
         "generator": "Ninja",
-        "binaryDir": "{sourceDir}/../SisijaFight-data/application/macOS",
-        "installDir": "{sourceDir}/../SisijaFight-data/application/macOS",
+        "binaryDir": "${sourceDir}/../temp/${presetName}",
+        "installDir": "${sourceDir}/../Application/install",
         "cacheVariables": {
           "CMAKE_BUILD_TYPE": "Debug"
         },

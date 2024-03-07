@@ -24,6 +24,9 @@ class SGES;
 class SGUI;
 class GUIEnvironment;
 
+template<typename Func, typename... Args>
+void addQueue(Func&& func, Args&&... args);
+
 extern SFSession* Session;
 extern irr::IrrlichtDevice* device;
 extern GUIEnvironment* guienv;

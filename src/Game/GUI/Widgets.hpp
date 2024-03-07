@@ -18,3 +18,8 @@ public:
 private:
 	std::map < SF_EVENT, std::function<void()> > pairs;
 };
+
+class MusicWidget {
+public:
+	void show(GUIEnvironment* env, std::string name, std::string interpret);
+};

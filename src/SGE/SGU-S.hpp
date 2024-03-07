@@ -6,7 +6,7 @@
 #include <functional>
 #include <map>
 #include <irrBullet.h>
-#include "IMGUIWrapper.hpp"
+#include "GUIEnvironment.hpp"
 
 using namespace irr;
 using namespace gui;

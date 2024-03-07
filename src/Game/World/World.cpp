@@ -23,15 +23,15 @@ World::World(IrrlichtDevice* dev, std::string path) {
 	IRigidBody* worldBody = _physics->addRigidBody(worldShape);
 	_mesh->drop();
 
+	scripting = new ScripterSub();
+	scripting->init();
+	scripting->registerClass("World", "World");
+
 	// TODO: add other xmls
 }
 
 void World::loadEntities() {
 
-}
-
-irrBulletWorld* World::getPhysicsWorld() {
-	return _physics;
 }
 
 IAnimatedMeshSceneNode* World::getSceneNode() {

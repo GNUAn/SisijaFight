@@ -1,3 +1,4 @@
 #pragma once
 #define SF_STANDARD_NETWORK_PORT 65432
+#define SF_DELTA_FACTOR_GUI 2
 

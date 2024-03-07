@@ -17,16 +17,15 @@ irr::core::recti s_rect(int pX, int pY, int pW, int pH) {
 }
 
 struct Color {
-    double r; // Rot
-    double g; // Grün
-    double b; // Blau
-    double a; // Alpha
+    double r;
+    double g;
+    double b;
+    double a;
 
     Color(double r, double g, double b, double a)
         : r(r), g(g), b(b), a(a) {}
 };
 
-// Funktion zur Umwandlung von HSV zu RGB
 Color HSVtoRGB(double h, double s, double v, double a) {
     double r, g, b;
 
@@ -54,14 +53,14 @@ std::wstring stringToWString(const std::string& str) {
 }
 
 
-// Funktion, die bei jedem Aufruf eine neue Farbe zurückgibt
+// Funktion, die bei jedem Aufruf eine neue Farbe zurï¿½ckgibt
 SColor getNewColor() {
     static double t = 0.0;
 
     // Erzeugen Sie eine Farbe im HSV-Farbraum und konvertieren Sie sie in RGB
     Color color = HSVtoRGB(t, 1.0, 1.0, 255.0);
 
-    // Aktualisieren Sie t für den nächsten Aufruf
+    // Aktualisieren Sie t fï¿½r den nï¿½chsten Aufruf
     t += 0.00003;
     if (t > 1.0) {
         t = 0.0;

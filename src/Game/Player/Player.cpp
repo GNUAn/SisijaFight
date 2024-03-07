@@ -3,6 +3,7 @@
 #include <irrlichtDevice.h>
 #include "Weapon.hpp"
 #include <irrlicht.h>
+#include "globals.hpp"
 #include <irrBullet.h>
 
 using namespace irr;
