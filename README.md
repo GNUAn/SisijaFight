@@ -21,6 +21,12 @@ SisijaFight is a little bit different from other shooters:
 * One Player that can modified customly (Sisija, the Polarbear)
 * You can change the fur style, the gun, the armor and many other custom things (even the eye and fur color!)
 
+Release cycle:
+main - not stable
+Nightly builds - every 2 weeks
+Stable - every 6 months, support and bugfixes for 9 months
+LTS - every 1.5 years, support and bugfixes for 5 years
+
 !!!Attention!!!
 this Game is in an early development state and currently unplayable!
 only the subsystem and some preimplementations of the main functions have currently been implemented
