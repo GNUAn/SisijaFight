@@ -8,4 +8,4 @@
 * Will speak with you via AI-text-2-speach
 * Knows everything about your metadata (position, world, Gamemode, ...)
 # The Gamemodes
-* Three Gamemodes are now planned
+* Four Gamemodes are now planned
