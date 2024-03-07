@@ -1,5 +1,5 @@
 # The AI:
-* Should be free but that isn't possile
+* Should be free but that isn't possile until we have enough money for some AI-Servers (with SpringAI) until then we will use ChatGPT3
 * Will be available in the PRO version or with own API key
 * PRO version will cost ca. 10$ per month
 * Is a chatbot with speech-detection wich ou can use with the key "G" while the game or in the chat-window
