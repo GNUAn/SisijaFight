@@ -22,10 +22,9 @@ SisijaFight is a little bit different from other shooters:
 * You can change the fur style, the gun, the armor and many other custom things (even the eye and fur color!)
 
 Release cycle:
-main - not stable
-Nightly builds - every 2 weeks
-Stable - every 6 months, support and bugfixes for 9 months
-LTS - every 1.5 years, support and bugfixes for 5 years
+main (Nightly) - not stable
+0.1.0 - First Playable version Maintained until Operation Splashdown
+Operation Splashdown - The STable version that is maintained for at least 5 Years (LTS)
 
 !!!Attention!!!
 this Game is in an early development state and currently unplayable!
