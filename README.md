@@ -23,9 +23,13 @@ SisijaFight is a little bit different from other shooters:
 
 Release cycle:
 main - not stable
+
 Nightly builds - every 2 weeks
+
 Stable - every 6 months, support and bugfixes for 9 months
+
 LTS - every 1.5 years, support and bugfixes for 5 years
+
 ELTS - every **VERY** stable LTS will have ELTS for additional 5 years.
 
 !!!Attention!!!
