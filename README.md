@@ -30,7 +30,8 @@ Stable - every 6 months, support and bugfixes for 9 months
 
 LTS - every 1.5 years, support and bugfixes for 5 years
 
-ELTS - every **VERY** stable LTS will have ELTS for additional 5 years.
+0.x = preview
+1.x = Operation Splashdown
 
 !!!Attention!!!
 this Game is in an early development state and currently unplayable!
