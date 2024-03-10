@@ -1,5 +1,5 @@
 # SisijaFight
-Open Source virtual paintball game with animal characters
+Libre virtual paintball game with animal characters
 ![SisijaFight Logo by Dalle 3](https://github.com/SpringTech-Studios/SisijaFight/assets/128484007/255be1bd-5894-488b-9702-efe52a035f87)
 
 
@@ -37,7 +37,7 @@ only the subsystem and some preimplementations of the main functions have curren
 ## Attention
 * Attention: This Game may contain harmful content that is not made for children under 7 years!
 
-      SisijaFight - free(as in freedom) paintball shooter
+      SisijaFight - libre paintball shooter
       Copyright (C) 2023, 2024  Lucas Gola (lulu-games)
       This program is free software: you can redistribute it and/or modify
       it under the terms of the GNU General Public License as published by
