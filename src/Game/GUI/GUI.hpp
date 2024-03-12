@@ -27,9 +27,3 @@ class GUIClass {
 public:
 	 virtual void draw(GUIEnvironment* env)=0;
 };
-
-/// @brief A complex Widget similar to GUIPage but needn't delete the background. (A window)
-class GUIWidget {
-public:
-	virtual void draw(GUIEnvironment* env)=0;
-};

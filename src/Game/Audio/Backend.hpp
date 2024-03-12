@@ -18,7 +18,6 @@ public:
     void setVolume(float volume);
     void setPosition(float x, float y, float z);
     void setLooping(bool loop);
-
 private:
     SoLoud::Wav mSound;
     SoLoud::WavStream mStreamedSound;

@@ -59,18 +59,32 @@ style->Colors[ImGuiCol_PlotLinesHovered]      = ImVec4(0.25f, 1.00f, 0.00f, 1.00
 style->Colors[ImGuiCol_PlotHistogram]         = ImVec4(0.40f, 0.39f, 0.38f, 0.63f);
 style->Colors[ImGuiCol_PlotHistogramHovered]  = ImVec4(0.25f, 1.00f, 0.00f, 1.00f);
 style->Colors[ImGuiCol_TextSelectedBg]        = ImVec4(0.25f, 1.00f, 0.00f, 0.43f);
+style->Colors[ImGuiCol_TableHeaderBg]         = ImVec4(0.00f, 0.00f, 0.00f, 0.10f);
+style->Colors[ImGuiCol_TableBorderLight]      = ImVec4(0.00f, 0.00f, 0.00f, 0.40f);
+style->Colors[ImGuiCol_TableBorderStrong]     = ImVec4(0.00f, 0.00f, 0.00f, 0.50f);
 }
 
 void GUIEnvironment::drawAll()
 {
     pGUI->startGUI();
     activeGUIPage->draw(this);
+    for(auto& w : widgets){
+        w->draw(this);
+    }
     pGUI->drawAll();
 }
 
 void GUIEnvironment::registerNewFont(std::string path, float size, std::string id)
 {
-    ImFont* f = pGUI->addFontFromFileTTF(path.c_str(), size);
-    pGUI->compileFonts();
-    registeredFonts[id] = f;
+    try{
+        if(registeredFonts[id]!=nullptr){
+            return;
+        } else {
+            throw std::exception("");
+        }
+    } catch(std::exception e){
+        ImFont* f = pGUI->addFontFromFileTTF(path.c_str(), size);
+        pGUI->compileFonts();
+        registeredFonts[id] = f;
+    }
 }

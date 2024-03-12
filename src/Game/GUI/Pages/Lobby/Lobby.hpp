@@ -1,5 +1,6 @@
 #pragma once
 #include "Game/GUI/GUI.hpp"
+#include "Tools/RetrieveServers.hpp"
 
 struct LobbyReturnCode {
 	GameMode* gamemode;
@@ -26,5 +27,9 @@ public:
 
 class ServerSelection : public GUIPage {
 public:
+	ServerSelection();
+	void updatePing();
 	void draw(GUIEnvironment* env) override;
+private:
+	std::vector<ServerInfo> servers;
 };

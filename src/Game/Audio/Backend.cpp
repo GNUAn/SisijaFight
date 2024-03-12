@@ -1,15 +1,12 @@
 #include "Backend.hpp"
 
-// Globale Instanz der SoLoud-Engine
 SoLoud::Soloud gSoloud;
 
 Sound::Sound() : mIsStreamed(false), mIsLooping(false) {
-    // Initialisiere die globale SoLoud-Engine
     gSoloud.init();
 }
 
 Sound::~Sound() {
-    // Aufräumarbeiten
     stop();
 }
 

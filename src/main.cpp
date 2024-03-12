@@ -89,3 +89,10 @@ int main() {
 		driver->endScene();
 	}
 }
+
+#ifdef WIN32
+#include <windows.h>
+int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine, int nCmdShow){
+	main();
+}
+#endif

@@ -15,17 +15,17 @@
 /// @param dev the Irrlicht Device
 
 void Lobby::draw(GUIEnvironment* env) {
-
 	static Sound s;
-	s.loadSound("data/audio/music/MainTheme.ogg", true);
+	s.loadSound("data/audio/music/MainTheme.ogg", false);
+	s.setVolume(0.5);
 	s.play();
 	s.setLooping(true);
 	//SetGUIThemeColor(ThemeColor::Blue);
 
 	LobbyReturnCode r;
 
-	env->registerNewFont("data/fonts/debrose.ttf", 20, "GUI_DEFAULT_FONT");
-	env->registerNewFont("data/fonts/graffiti.ttf", 18, "GUI_NUMBER_FONT");
+	env->registerNewFont("data/fonts/BlackOps.ttf", 22, "GUI_DEFAULT_FONT");
+	env->registerNewFont("data/fonts/BlackOps.ttf", 19, "GUI_NUMBER_FONT");
 
 	static GUIPage* gamemodeSelection = new GamemodeSelection();
 	static GUIPage* serverSelection;
